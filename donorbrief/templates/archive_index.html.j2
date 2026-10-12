@@ -1,0 +1,41 @@
+{% extends "_archive_base.html.j2" %}
+{% block title %}DonorBrief archive · Institute on Generosity{% endblock %}
+{% block style %}
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { border-bottom: 1px solid var(--rule); }
+.list a { display: grid; grid-template-columns: 132px 1fr; gap: 20px; padding: 22px 0; color: var(--black); }
+.list a:hover { text-decoration: none; }
+.list a:hover h2 { text-decoration: underline; }
+.list h2 { font-size: 22px; line-height: 1.25; margin: 0 0 6px; }
+.list p { margin: 0; font-size: 14.5px; color: var(--quiet); }
+.list .date { color: var(--green); padding-top: 6px; }
+.empty { padding: 40px 0; color: var(--quiet); }
+@media (max-width: 600px) { .list a { grid-template-columns: 1fr; gap: 6px; } .list .date { padding-top: 0; } }
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Archive</span>
+    <h1>DonorBrief</h1>
+    <p>A weekly briefing on what changed in philanthropy, nonprofits and generosity research, from the Institute on Generosity.</p>
+  </div>
+</section>
+<main class="wrap">
+  <div class="eyebrow label">{{ briefs|length }} {{ "brief" if briefs|length == 1 else "briefs" }}</div>
+  {% if briefs %}
+  <ul class="list">
+    {% for b in briefs %}
+    <li><a href="{{ b.slug }}/">
+      <div class="eyebrow date">{{ b.week_of }}</div>
+      <div>
+        <h2>{{ b.subject }}</h2>
+        <p>{{ b.intro|truncate(180) }}</p>
+      </div>
+    </a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty">The first brief will appear here once it's sent.</p>
+  {% endif %}
+</main>
+{% endblock %}

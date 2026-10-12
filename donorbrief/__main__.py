@@ -104,6 +104,9 @@ def write_outputs(out_dir: Path, brief: llm.Brief, sections: list[dict], week_of
         md += [f"- {r.source_id}: {r.error}" for r in failed]
     (out_dir / "brief.md").write_text("\n".join(md) + "\n")
     (out_dir / "brief.json").write_text(brief.model_dump_json(indent=2))
+    # Everything a reader sees, links resolved: the input for the archive and the edit page.
+    (out_dir / "rendered.json").write_text(json.dumps(
+        {"subject": brief.subject, "intro": brief.intro, "week_of": week_of, "sections": sections}, indent=2))
 
 
 if __name__ == "__main__":

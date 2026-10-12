@@ -1,0 +1,40 @@
+{% extends "_archive_base.html.j2" %}
+{% block title %}{{ brief.subject }} · DonorBrief{% endblock %}
+{% block description %}{{ brief.intro|truncate(155) }}{% endblock %}
+{% block nav %}<a href="../">All briefs</a>{% endblock %}
+{% block style %}
+.intro { font-size: 17px; margin: 32px 0 0; }
+.entry { padding: 20px 0 0; }
+.entry h3 { font-size: 21px; line-height: 1.28; margin: 0 0 6px; }
+.entry h3 a { color: var(--black); }
+.entry p { margin: 0 0 6px; font-size: 15.5px; }
+.entry .src { font-size: 12.5px; font-weight: 700; }
+.pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 14px; }
+.pager a { max-width: 48%; }
+.pager .next { text-align: right; margin-left: auto; }
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Week of {{ brief.week_of }}</span>
+    <h1>{{ brief.subject }}</h1>
+  </div>
+</section>
+<main class="wrap">
+  <p class="intro">{{ brief.intro }}</p>
+  {% for section in brief.sections %}
+  <h2 class="eyebrow label">{{ section.title }}</h2>
+  {% for e in section.entries %}
+  <article class="entry">
+    <h3><a href="{{ e.url }}">{{ e.headline }}</a></h3>
+    <p>{{ e.body }}</p>
+    <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>
+  </article>
+  {% endfor %}
+  {% endfor %}
+  <nav class="pager" aria-label="More briefs">
+    {% if older %}<a href="../{{ older.slug }}/">&larr; {{ older.subject }}</a>{% endif %}
+    {% if newer %}<a class="next" href="../{{ newer.slug }}/">{{ newer.subject }} &rarr;</a>{% endif %}
+  </nav>
+</main>
+{% endblock %}

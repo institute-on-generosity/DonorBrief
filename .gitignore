@@ -4,3 +4,5 @@ __pycache__/
 .env
 drafts/
 .DS_Store
+site/
+eval/runs/

@@ -143,3 +143,19 @@ def test_enrich_fills_thin_items_only():
     with mock_client(lambda req: httpx.Response(200, text=body)) as client:
         assert enrich([thin, full, gnews], client) == 1
     assert "useful detail" in thin.summary and full.summary == "x" * 400 and gnews.summary == ""
+
+
+def test_archive_builds_index_and_pages_newest_first(tmp_path):
+    import json
+    from donorbrief.archive import build
+    for slug, subject in [("2026-10-05", "Older <b>week</b>"), ("2026-10-12", "Newer week")]:
+        (tmp_path / "archive" / slug).mkdir(parents=True)
+        (tmp_path / "archive" / slug / "rendered.json").write_text(json.dumps({
+            "subject": subject, "intro": "Intro.", "week_of": slug,
+            "sections": [{"title": "Sector News", "entries": [{"headline": "H", "body": "B", "url": "https://e.org", "source": "Src"}]}]}))
+    assert build(tmp_path / "archive", tmp_path / "site") == 2
+    index = (tmp_path / "site" / "index.html").read_text()
+    assert index.index("Newer week") < index.index("Older")
+    assert "&lt;b&gt;" in index  # escaped
+    newer = (tmp_path / "site" / "2026-10-12" / "index.html").read_text()
+    assert 'href="../2026-10-05/"' in newer and "https://e.org" in newer

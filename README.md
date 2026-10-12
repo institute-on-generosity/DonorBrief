@@ -30,6 +30,16 @@ In GitHub, add `ANTHROPIC_API_KEY` and `CONGRESS_API_KEY` under **Settings → S
 
 Edit [`config/sources.yaml`](config/sources.yaml). Add a feed with `type: rss` and its URL. Pause a source with `enabled: false`. For broad sources, add `keywords:` so only matching items are kept. To add Google Alerts, set each alert's **Deliver to** to **RSS feed** and add its feed URL.
 
+## Public archive
+
+When a brief is sent, its `rendered.json` is copied to `archive/<YYYY-MM-DD>/`. Build the public archive (an index page plus one page per brief, in IoG's brand style) with:
+
+```bash
+.venv/bin/python -m donorbrief.archive   # writes site/
+```
+
+`site/` is plain HTML and can be hosted on Vercel, GitHub Pages, or IoG's website.
+
 ## Checking quality
 
 `eval/` holds a frozen week of items (`items-2026-10-12.json`) and hand labels for which ones belong in the brief (`labels-2026-10-12.yaml`). After changing prompts, models, or the relevance threshold, run:
@@ -54,4 +64,4 @@ Models are set in `config/sources.yaml` under `llm:`. Provider code lives in [`d
 - [x] Weekly GitHub Action with source-health report
 - [ ] Deliver the draft to IoG staff by email
 - [ ] Editing page and one-click send to subscribers
-- [ ] Public archive of past briefs
+- [x] Public archive pages (hosting to be decided)
