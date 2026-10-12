@@ -1,0 +1,51 @@
+name: Weekly brief
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"   # Mondays 10:00 UTC (6am Eastern in summer, 5am in winter)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Fetch sources only (no LLM calls)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Build draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+        run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Show draft in run summary
+        if: always()
+        run: |
+          f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
+          if [ -f "$f/brief.md" ]; then cat "$f/brief.md" >> "$GITHUB_STEP_SUMMARY"; fi
+          if [ -f "$f/sources.json" ]; then
+            echo -e "\n### Source health\n" >> "$GITHUB_STEP_SUMMARY"
+            python -c "import json,sys; [print(f\"- {'✅' if s['ok'] else '❌'} {s['source_id']}: {s['count'] if s['ok'] else s['error']}\") for s in json.load(open(sys.argv[1]))['sources']]" "$f/sources.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: donorbrief-draft-${{ github.run_number }}
+          path: drafts/
+          retention-days: 90

@@ -1,0 +1,83 @@
+# DonorBrief sources and settings.
+# IoG staff can edit this file to add, remove, or pause sources. No code changes needed.
+#
+# Source types:
+#   rss               any RSS/Atom feed (url)
+#   federal_register  Federal Register API search (agency + term); free, no key
+#   congress          Congress.gov API, recently updated bills (needs CONGRESS_API_KEY)
+#
+# keywords: optional; if set, an item is kept only when its title or summary matches one.
+#   Use this for broad sources (general economics papers, all of Congress).
+
+window_days: 7          # how far back to look each run
+
+sections:               # brief sections, in order (draft, to confirm with IoG)
+  - id: policy
+    title: Policy & Regulation
+    description: Federal legislation, IRS and Treasury guidance, court rulings, and state policy affecting charitable giving and nonprofits.
+  - id: sector
+    title: Sector News
+    description: Major news about nonprofits, foundations, donors, and philanthropic institutions.
+  - id: research
+    title: Research & Data
+    description: New studies, reports, and data on giving, generosity, volunteering, and the nonprofit sector.
+  - id: trends
+    title: Funders & Giving Trends
+    description: Major gifts, new funds and initiatives, shifts in how and where people and institutions give.
+
+llm:
+  provider: anthropic
+  triage_model: claude-haiku-5-5   # scores and summarizes every item (high volume, cheap)
+  editor_model: claude-opus-5-5    # writes the final brief from the top items
+  max_items_in_brief: 20
+  min_relevance: 6                 # 0-10; items below this are dropped
+
+sources:
+  - id: npq
+    name: NonProfit Quarterly
+    type: rss
+    url: https://nonprofitquarterly.org/feed/
+
+  - id: nptimes
+    name: The NonProfit Times
+    type: rss
+    url: https://www.thenonprofittimes.com/feed/
+
+  - id: ssir
+    name: Stanford Social Innovation Review
+    type: rss
+    url: https://ssir.org/site/rss_2.0
+
+  - id: givingusa
+    name: Giving USA
+    type: rss
+    url: https://givingusa.org/feed/
+
+  - id: chronicle
+    name: Chronicle of Philanthropy
+    type: rss
+    url: https://www.philanthropy.com/feed
+    note: Sometimes blocked by Cloudflare bot protection; ask the Chronicle about feed access.
+
+  - id: nber
+    name: NBER Working Papers
+    type: rss
+    url: https://www.nber.org/rss/new.xml
+    keywords: [charit, philanthrop, nonprofit, non-profit, donat, donor, giving, generosity, volunteer, altruis, prosocial, foundation]
+
+  - id: federal_register_irs
+    name: Federal Register (IRS)
+    type: federal_register
+    agency: internal-revenue-service
+    term: '"exempt organizations" OR charitable OR "private foundation" OR "donor advised"'
+
+  - id: congress
+    name: Congress.gov
+    type: congress
+    keywords: [charit, nonprofit, non-profit, tax-exempt, exempt organization, 501(c), philanthrop, private foundation, endowment, volunteer, giving]
+
+  # Google Alerts: in Google Alerts, set "Deliver to" -> "RSS feed", then add each alert here:
+  # - id: alert_iog
+  #   name: Google Alert - Institute on Generosity
+  #   type: rss
+  #   url: https://www.google.com/alerts/feeds/XXXX/YYYY
