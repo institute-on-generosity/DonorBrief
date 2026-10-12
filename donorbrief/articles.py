@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import logging
 import re
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 from typing import TYPE_CHECKING
+from urllib.parse import urlparse
 
 import httpx
 
@@ -74,16 +76,22 @@ def needs_article(item: "Item") -> bool:
 def enrich(items: list["Item"], client: httpx.Client, workers: int = 4) -> int:
     """Append article openings to thin items in place. Returns how many were filled in."""
     todo = [i for i in items if needs_article(i)]
+    misses: list[str] = []
 
     def fill(item: "Item") -> bool:
+        host = urlparse(item.url).netloc.removeprefix("www.")
         try:
             resp = client.get(item.url, timeout=15.0)
             resp.raise_for_status()
             text = opening_text(resp.text)
-        except Exception as e:  # noqa: BLE001 - a missing article just leaves the summary as is
-            log.debug("article fetch failed for %s: %s", item.url, e)
+        except httpx.HTTPStatusError as e:  # a missing article just leaves the summary as is
+            misses.append(f"{host} {e.response.status_code}")
+            return False
+        except Exception as e:  # noqa: BLE001
+            misses.append(f"{host} {type(e).__name__}")
             return False
         if len(text) <= len(item.summary):
+            misses.append(f"{host} no text")
             return False
         item.summary = f"{item.summary} {text}".strip() if item.summary not in text else text
         return True
@@ -91,4 +99,6 @@ def enrich(items: list["Item"], client: httpx.Client, workers: int = 4) -> int:
     with ThreadPoolExecutor(max_workers=workers) as pool:
         filled = sum(pool.map(fill, todo))
     log.info("Article text added to %d of %d thin items", filled, len(todo))
+    if misses:
+        log.info("  not added: %s", ", ".join(f"{m} x{n}" for m, n in Counter(misses).most_common()))
     return filled
