@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -43,7 +43,7 @@ jobs:
             python -c "import json,sys; [print(f\"- {'✅' if s['ok'] else '❌'} {s['source_id']}: {s['count'] if s['ok'] else s['error']}\") for s in json.load(open(sys.argv[1]))['sources']]" "$f/sources.json" >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: donorbrief-draft-${{ github.run_number }}

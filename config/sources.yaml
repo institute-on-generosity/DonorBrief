@@ -59,11 +59,63 @@ sources:
     url: https://www.philanthropy.com/feed
     note: Sometimes blocked by Cloudflare bot protection; ask the Chronicle about feed access.
 
+  - id: independentsector
+    name: Independent Sector
+    type: rss
+    url: https://independentsector.org/feed/
+
+  - id: roundtable
+    name: Philanthropy Roundtable
+    type: rss
+    url: https://www.philanthropyroundtable.org/feed/
+
+  - id: cep
+    name: Center for Effective Philanthropy
+    type: rss
+    url: https://cep.org/feed/
+
+  - id: alliance
+    name: Alliance Magazine
+    type: rss
+    url: https://www.alliancemagazine.org/feed/
+
+  - id: nonprofitpro
+    name: NonProfit PRO
+    type: rss
+    url: https://www.nonprofitpro.com/feed/
+
+  - id: givingtuesday
+    name: GivingTuesday
+    type: rss
+    url: https://www.givingtuesday.org/feed/
+
+  - id: givewell
+    name: GiveWell Blog
+    type: rss
+    url: https://blog.givewell.org/feed/
+
+  - id: nonprofitlaw
+    name: Nonprofit Law Blog
+    type: rss
+    url: https://www.nonprofitlawblog.com/feed/
+
+  - id: gnews_giving
+    name: Google News
+    type: rss
+    url: https://news.google.com/rss/search?q=%22charitable+giving%22+OR+%22donor-advised%22+OR+%22private+foundation%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    note: Mainstream press coverage; links go through Google News.
+
+  - id: gnews_philanthropy
+    name: Google News
+    type: rss
+    url: https://news.google.com/rss/search?q=philanthropy+OR+philanthropist+when:7d&hl=en-US&gl=US&ceid=US:en
+
   - id: nber
     name: NBER Working Papers
     type: rss
     url: https://www.nber.org/rss/new.xml
     keywords: [charit, philanthrop, nonprofit, non-profit, donat, donor, giving, generosity, volunteer, altruis, prosocial, foundation]
+    note: Blocks GitHub's servers (403) as of Oct 2026; works from other networks.
 
   - id: federal_register_irs
     name: Federal Register (IRS)

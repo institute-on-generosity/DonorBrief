@@ -72,7 +72,12 @@ def fetch_rss(src: dict, client: httpx.Client) -> list[Item]:
         t = e.get("published_parsed") or e.get("updated_parsed")
         published = datetime.fromtimestamp(calendar.timegm(t), tz=timezone.utc) if t else None
         summary = e.get("summary") or (e.get("content") or [{}])[0].get("value", "")
-        items.append(Item(src["id"], src["name"], clean_text(e.get("title", "")), e.get("link", ""), published, clean_text(summary)))
+        # Aggregators (Google News) name the original publisher per item.
+        publisher = (e.get("source") or {}).get("title") or src["name"]
+        title = clean_text(e.get("title", ""))
+        if publisher != src["name"] and title.endswith(f" - {publisher}"):
+            title = title[: -len(f" - {publisher}")]
+        items.append(Item(src["id"], publisher, title, e.get("link", ""), published, clean_text(summary)))
     return items
 
 
