@@ -164,7 +164,7 @@ def collect(config: dict, now: Optional[datetime] = None) -> tuple[list[Item], l
                 results.append(SourceResult(src["id"], True, len(items)))
                 log.info("%-22s %3d items", src["id"], len(items))
             except Exception as e:  # noqa: BLE001 - report and keep going
-                error = redact(str(e))[:200]
+                error = redact(str(e).splitlines()[0] if str(e) else type(e).__name__)[:200]
                 results.append(SourceResult(src["id"], False, error=error))
                 log.warning("%-22s FAILED: %s", src["id"], error)
     return dedupe(all_items), results
