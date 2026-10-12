@@ -78,6 +78,8 @@ sources:
     name: Alliance Magazine
     type: rss
     url: https://www.alliancemagazine.org/feed/
+    enabled: false
+    note: Blocks GitHub's servers (403) as of Oct 2026; works from other networks.
 
   - id: nonprofitpro
     name: NonProfit PRO
@@ -115,6 +117,7 @@ sources:
     type: rss
     url: https://www.nber.org/rss/new.xml
     keywords: [charit, philanthrop, nonprofit, non-profit, donat, donor, giving, generosity, volunteer, altruis, prosocial, foundation]
+    enabled: false
     note: Blocks GitHub's servers (403) as of Oct 2026; works from other networks.
 
   - id: federal_register_irs
