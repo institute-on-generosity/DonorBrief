@@ -19,6 +19,7 @@ log = logging.getLogger(__name__)
 USER_AGENT = "DonorBrief/0.1 (Institute on Generosity; +https://github.com/institute-on-generosity/DonorBrief)"
 TIMEOUT = httpx.Timeout(30.0)
 SUMMARY_CHARS = 1200
+MAX_CONGRESS_PAGES = 20  # 250 bills per page; a busy week is ~1,500 updated bills
 
 
 @dataclass
@@ -99,24 +100,27 @@ def fetch_congress(src: dict, client: httpx.Client, since: datetime) -> list[Ite
     if not key:
         raise ValueError("CONGRESS_API_KEY not set (free key: https://api.congress.gov/sign-up/)")
     items: list[Item] = []
-    url: Optional[str] = "https://api.congress.gov/v3/bill"
-    params: Optional[dict] = {
+    params = {
         "format": "json",
         "limit": 250,
         "sort": "updateDate desc",
         "fromDateTime": since.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "api_key": key,
     }
-    while url:
-        resp = client.get(url, params={**(params or {}), "api_key": key})
+    for page in range(MAX_CONGRESS_PAGES):
+        resp = client.get("https://api.congress.gov/v3/bill", params={**params, "offset": page * 250})
         resp.raise_for_status()
         data = resp.json()
+        if not data.get("bills"):
+            break
         for b in data.get("bills", []):
             latest = b.get("latestAction") or {}
             summary = f"Latest action ({latest.get('actionDate', '?')}): {latest.get('text', '')}"
             bill_url = f"https://www.congress.gov/bill/{b['congress']}th-congress/{_bill_path(b['type'])}/{b['number']}"
             updated = datetime.fromisoformat(b["updateDate"][:10]).replace(tzinfo=timezone.utc)
             items.append(Item(src["id"], src["name"], f"{b['type']} {b['number']}: {b['title']}", bill_url, updated, clean_text(summary)))
-        url, params = (data.get("pagination") or {}).get("next"), None  # "next" already carries the query
+        if len(data["bills"]) < params["limit"]:
+            break
     return items
 
 
@@ -155,9 +159,17 @@ def collect(config: dict, now: Optional[datetime] = None) -> tuple[list[Item], l
                 results.append(SourceResult(src["id"], True, len(items)))
                 log.info("%-22s %3d items", src["id"], len(items))
             except Exception as e:  # noqa: BLE001 - report and keep going
-                results.append(SourceResult(src["id"], False, error=str(e)[:200]))
-                log.warning("%-22s FAILED: %s", src["id"], e)
+                error = redact(str(e))[:200]
+                results.append(SourceResult(src["id"], False, error=error))
+                log.warning("%-22s FAILED: %s", src["id"], error)
     return dedupe(all_items), results
+
+
+def redact(text: str) -> str:
+    """Strip API keys from error text; errors are shown on public run pages."""
+    text = re.sub(r"(api_key=)[^&\s'\"]+", r"\1REDACTED", text)
+    key = os.environ.get("CONGRESS_API_KEY")
+    return text.replace(key, "REDACTED") if key else text
 
 
 def dedupe(items: list[Item]) -> list[Item]:
