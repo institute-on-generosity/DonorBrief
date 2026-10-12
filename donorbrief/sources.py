@@ -64,9 +64,9 @@ def fetch_rss(src: dict, client: httpx.Client) -> list[Item]:
     resp = client.get(src["url"])
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
-    if not feed.entries and feed.bozo:
+    if not feed.version:
         # Usually means we got an HTML page (bot block, login wall) instead of a feed.
-        raise ValueError(f"not a valid feed ({type(feed.bozo_exception).__name__})")
+        raise ValueError("not a valid feed (got a web page instead; possibly blocked)")
     items = []
     for e in feed.entries:
         t = e.get("published_parsed") or e.get("updated_parsed")

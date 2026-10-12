@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  issues: write   # source-health alerts
 
 jobs:
   build:
@@ -41,6 +42,28 @@ jobs:
           if [ -f "$f/sources.json" ]; then
             echo -e "\n### Source health\n" >> "$GITHUB_STEP_SUMMARY"
             python -c "import json,sys; [print(f\"- {'✅' if s['ok'] else '❌'} {s['source_id']}: {s['count'] if s['ok'] else s['error']}\") for s in json.load(open(sys.argv[1]))['sources']]" "$f/sources.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Alert on failing sources
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
+          [ -f "$f/sources.json" ] || exit 0
+          failed=$(python -c "import json,sys; print('\n'.join(f\"- **{s['source_id']}**: {s['error']}\" for s in json.load(open(sys.argv[1]))['sources'] if not s['ok']))" "$f/sources.json")
+          open=$(gh issue list --label source-health --state open --json number -q '.[0].number')
+          if [ -n "$failed" ]; then
+            body=$(printf 'These sources failed in [this run](%s). The brief was built without them.\n\n%s\n\nTo pause a source, set `enabled: false` for it in `config/sources.yaml`.' "$RUN_URL" "$failed")
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body "$body"
+            else
+              gh label create source-health --color d93f0b --description "A DonorBrief source is failing" --force
+              gh issue create --title "Some DonorBrief sources are failing" --label source-health --body "$body"
+            fi
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "All sources worked in [this run]($RUN_URL)."
           fi
 
       - uses: actions/upload-artifact@v7
