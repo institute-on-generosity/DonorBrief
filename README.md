@@ -6,7 +6,7 @@ Every Monday a GitHub Action gathers the past week's items from public sources, 
 
 ## How it works
 
-1. **Collect.** Fetch every source in [`config/sources.yaml`](config/sources.yaml): RSS feeds, the Federal Register API (IRS rules and notices), and the Congress.gov API (recently updated bills). Keep the last 7 days and remove duplicates. If one source fails, the run continues and reports which source failed.
+1. **Collect.** Fetch every source in [`config/sources.yaml`](config/sources.yaml): RSS feeds, the Federal Register API (IRS rules and notices), and the Congress.gov API (recently updated bills). Keep the last 7 days, remove duplicates, drop sponsored content, and for items with little text, add the article's opening paragraphs (Google News links can't be followed, so those stay headline-only). If one source fails, the run continues and reports which source failed.
 2. **Triage.** A fast, low-cost model (Claude Haiku) scores each item 0–10 for relevance, assigns a section, and writes a short factual summary.
 3. **Compose.** A stronger model (Claude Opus) writes the brief from the top-scoring items: a subject line, an intro, and entries grouped by section.
 4. **Render.** The run writes `drafts/<date>/` with `brief.html` (email-ready), `brief.md`, `brief.json`, and `sources.json` (everything fetched, plus each source's health).

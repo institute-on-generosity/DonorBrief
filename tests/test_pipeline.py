@@ -117,3 +117,29 @@ def test_eval_scoring_counts_misses_sections_and_leaks():
     assert result["section_accuracy"] == 0.0
     assert result["exclude_leak_rate"] == 1.0
     assert result["top"] == {"size": 3, "include": 1, "maybe": 1, "exclude": 1}
+
+
+def test_article_opening_skips_chrome_and_short_lines():
+    from donorbrief.articles import opening_text
+    page = ("<html><nav><p>" + "Menu item text that is long enough to count as a paragraph here." * 2 + "</p></nav>"
+            "<article><p>Photo: credit</p><p>" + "First real paragraph of the story. " * 4 + "</p>"
+            "<script>var x = '<p>not text</p>';</script><p>" + "Second paragraph continues the story. " * 4 + "</p></article></html>")
+    text = opening_text(page)
+    assert text.startswith("First real paragraph")
+    assert "Second paragraph" in text and "Menu item" not in text and "Photo" not in text
+
+
+def test_sponsored_items_detected():
+    from donorbrief.articles import is_sponsored
+    assert is_sponsored(item("How nonprofits can build", "https://www.philanthropy.com/sponsored/how-nonprofits"))
+    assert not is_sponsored(item("Real news", "https://www.philanthropy.com/news/real-news"))
+
+
+def test_enrich_fills_thin_items_only():
+    from donorbrief.articles import enrich
+    body = "<p>" + "The article explains what happened in useful detail. " * 3 + "</p>"
+    thin, full, gnews = item("Thin", "https://e.org/thin"), item("Full", "https://e.org/full"), item("G", "https://news.google.com/rss/articles/x")
+    full.summary = "x" * 400
+    with mock_client(lambda req: httpx.Response(200, text=body)) as client:
+        assert enrich([thin, full, gnews], client) == 1
+    assert "useful detail" in thin.summary and full.summary == "x" * 400 and gnews.summary == ""

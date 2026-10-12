@@ -14,6 +14,8 @@ from typing import Optional
 import feedparser
 import httpx
 
+from .articles import enrich, is_sponsored
+
 log = logging.getLogger(__name__)
 
 USER_AGENT = "DonorBrief/0.1 (Institute on Generosity; +https://github.com/institute-on-generosity/DonorBrief)"
@@ -167,7 +169,14 @@ def collect(config: dict, now: Optional[datetime] = None) -> tuple[list[Item], l
                 error = redact(str(e).splitlines()[0] if str(e) else type(e).__name__)[:200]
                 results.append(SourceResult(src["id"], False, error=error))
                 log.warning("%-22s FAILED: %s", src["id"], error)
-    return dedupe(all_items), results
+        all_items = dedupe(all_items)
+        sponsored = [i for i in all_items if is_sponsored(i)]
+        if sponsored:
+            log.info("Dropped %d sponsored items: %s", len(sponsored), "; ".join(i.title[:60] for i in sponsored))
+            all_items = [i for i in all_items if not is_sponsored(i)]
+        if config.get("fetch_articles", True):
+            enrich(all_items, client)
+    return all_items, results
 
 
 def redact(text: str) -> str:

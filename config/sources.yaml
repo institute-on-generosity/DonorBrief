@@ -10,6 +10,7 @@
 #   Use this for broad sources (general economics papers, all of Congress).
 
 window_days: 7          # how far back to look each run
+fetch_articles: true    # for items with little text, add the article's opening paragraphs
 
 sections:               # brief sections, in order (draft, to confirm with IoG)
   - id: policy
