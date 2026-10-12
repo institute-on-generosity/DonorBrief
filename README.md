@@ -30,6 +30,16 @@ In GitHub, add `ANTHROPIC_API_KEY` and `CONGRESS_API_KEY` under **Settings → S
 
 Edit [`config/sources.yaml`](config/sources.yaml). Add a feed with `type: rss` and its URL. Pause a source with `enabled: false`. For broad sources, add `keywords:` so only matching items are kept. To add Google Alerts, set each alert's **Deliver to** to **RSS feed** and add its feed URL.
 
+## Checking quality
+
+`eval/` holds a frozen week of items (`items-2026-10-12.json`) and hand labels for which ones belong in the brief (`labels-2026-10-12.yaml`). After changing prompts, models, or the relevance threshold, run:
+
+```bash
+.venv/bin/python -m donorbrief.evaluate
+```
+
+It runs the triage model on that week (well under a cent), saves the run in `eval/runs/`, and reports how many must-include items were kept, whether they landed in the right section, and how much noise got through. Re-score a saved run with `--replay eval/runs/<file>.json`. The labels are a first pass by Claude; IoG staff should review them.
+
 ## Design
 
 The email, edit page, and archive follow IoG's brand: see [`docs/STYLE.md`](docs/STYLE.md) for colors, type, and spacing.

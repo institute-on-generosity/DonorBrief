@@ -104,3 +104,16 @@ def test_render_uses_real_urls_drops_unknown_ids_and_escapes_html(tmp_path):
     html = (tmp_path / "brief.html").read_text()
     assert "<script>" not in html and "&lt;script&gt;" in html
     assert "Invented" not in html
+
+
+def test_eval_scoring_counts_misses_sections_and_leaks():
+    from donorbrief.evaluate import score
+    items = [item("Keep", "https://e.org/k"), item("Unsure", "https://e.org/u"), item("Noise", "https://e.org/n")]
+    keep, unsure, noise = (i.id for i in items)
+    a = lambda i, rel, sec: llm.ItemAssessment(id=i, relevance=rel, section=sec, summary="", why_it_matters="")
+    result = score(items, [a(keep, 8, "research"), a(unsure, 7, "sector"), a(noise, 9, "sector")],
+                   include={keep: ["policy"]}, maybe={unsure}, min_relevance=6, limit=20)
+    assert result["include_recall"] == 1.0
+    assert result["section_accuracy"] == 0.0
+    assert result["exclude_leak_rate"] == 1.0
+    assert result["top"] == {"size": 3, "include": 1, "maybe": 1, "exclude": 1}

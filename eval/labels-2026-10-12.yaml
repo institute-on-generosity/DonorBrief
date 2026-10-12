@@ -1,0 +1,85 @@
+# Hand labels for eval/items-2026-10-12.json (196 items, week of Oct 5-11, 2026).
+# include: belongs in the brief; sections lists every acceptable section.
+# maybe:   reasonable either way; not scored.
+# Any item not listed here should be excluded (local galas, obituaries, unrelated news,
+# fundraising how-tos, event listings, promotional posts).
+# Labeled by Claude for a first baseline; IoG staff should review and correct.
+
+include:
+  # Policy & Regulation
+  43238382b6: [policy]            # IRS/Treasury 2026-27 Priority Guidance Plan
+  72c22d6133: [policy]            # Federal scholarship tax credit rules out
+  aa90e3156c: [policy, sector]    # 10 nonprofits sue HUD over grant cancellations
+  c47f9f8333: [policy, sector]    # Independent Sector advocacy guidance
+  eb2998dfda: [policy]            # ABA Fall Tax Meeting, exempt orgs highlights
+  c723657706: [policy, trends]    # Roundtable: why regulate DAFs
+  581c7037db: [policy, sector, trends]  # Bellingcat: US DAFs fund groups tied to India's far right
+  # Sector News
+  64cab4815e: [sector, policy]    # Legal aid groups survived administration attacks
+  299c353c7a: [research, sector]  # CEP: foundation responses to a sector in crisis
+  a499b817c9: [research, sector]  # Independent Sector: roots of nonprofit burnout
+  # Research & Data
+  38247096b6: [research, trends]  # Giving to women's and girls' orgs tops $12B
+  5acc1c98c8: [research, trends]  # BofA: boomers doubt heirs will keep giving
+  9fcac4722f: [research]          # Americans noticing nonprofits in daily life (Lilly data)
+  9cab0bc281: [research, sector]  # Can belonging be measured?
+  2ecbbc8182: [research, trends]  # Parents don't trust kids with legacy giving
+  # Funders & Giving Trends
+  01f431ef83: [trends]            # Knight and Griffin billion-dollar gifts roundup
+  19f205b6fa: [trends, research]  # MacKenzie Scott = 1/3 of $19.2B megagifts
+  5ce08c1e72: [trends, research]  # Billionaires' giving not keeping up with wealth
+  9a8a3dd133: [trends]            # Ballmer Group: evolving our approach
+
+maybe:
+  - 2cba752871  # Nonprofit Security Grant Program bill (referred to committee)
+  - cc67a6d01f  # Fraternal benefit societies resolution (old)
+  - 04b1775a90  # Fraternal benefit societies resolution (old)
+  - e5bdb6442c  # Griffin $3B gift and donor cultivation (overlaps roundup)
+  - 70819ad9e9  # Daffy passes $2B in charitable assets
+  - 80a9266535  # Altruist adds DAFs (4 duplicate stories)
+  - 1f1326c41f
+  - b016ef40cb
+  - ba7b7a062f  # Fast Company: CEO behind Ballmer philanthropy
+  - 0408f4b594  # Nonprofit workers organizing
+  - e3a1e72981  # Podcast: philanthropy and democracy
+  - 24091b81a0  # Universal child care wins and funders
+  - 0ec507c6c5  # Leadership transitions lose major donors
+  - f62237b55e  # SSIR: the unfinished work of choosing well
+  - 36e5ef7e41  # Pittsburgh funder-organizer partnership
+  - e032bfb982  # CEP tidal foundations series (payout)
+  - bbde928662  # SSIR: organ donation consent infrastructure
+  - 15e4db4164  # JFNA: post-Oct. 7 Jewish engagement surge
+  - 38d53e3c6d  # How Oct. 7 reshaped Jewish nonprofits
+  - 52d419fb5a  # Jewish federations losing younger generation
+  - aeaecd461e  # Lilly Family School selects fellows
+  - 179b167bad  # Paul Allen's philanthropic ecosystem
+  - 852c3ec780  # Jeff Yass and school choice giving
+  - f9c7f855f8  # Younger donors reshape philanthropy
+  - 31512a3817  # Women redefining philanthropy
+  - 320c41942e  # Nicola Forrest $360M philanthropy
+  - 7f5a2d88e3  # Blavatnik $1.5B milestone
+  - ad2494d06a  # Messages for philanthropy from CGI 2026
+  - 46d6b4fc86  # One Health blind spot in big philanthropy
+  - d7c0373927  # Capacity to absorb AI philanthropy
+  - 4a45fcc95d  # Humanity AI at one year
+  - 052efb9daf  # Ackman: capitalism vs philanthropy
+  - 1d749db8a3  # DeVos Family Prize to Peter Lynch
+  - 55b61659f8  # Cutting off money as a weapon against civil rights movements
+  - f865d955e6  # Taxpayer Philanthropy investigation
+  - 24af0649cb  # JPMorgan: philanthropy and manufactured housing
+  - 69da259fa6  # Asia urged to unlock new mandate for philanthropy
+  - cde491055a  # African diaspora and US-Africa philanthropy
+  - d9560a01dc  # Checkout donation requests hurt customer satisfaction
+  - f6c5adde6d  # WSJ: tax law impact on wealthy retirees
+  - fa5b65ff07  # RMDs and charitable giving
+  - 80aedac3aa  # Philanthropy rethinks its purpose
+  - e1ecb1e080  # Philanthropy and a new way to learn math
+  - 721df3caaf  # AI and philanthropy for learning
+  - 3812e3c236  # Joe R. Long, transformative philanthropist (obituary)
+  - 7e38f3c7e3  # Joe Long obituary
+  - 5f93ee2110  # Wealth transfer and planned gifts
+  - 431c734983  # Five secrets to sustained fundraising growth
+  - 9bb84d517f  # College of the Ozarks private giving
+  - c31c7e1cbb  # Gary Community Ventures family office
+  - 135a7d7b83  # Indian American leaders and philanthropy
+  - 942ebc735c  # Dallas summit on US-India philanthropy
