@@ -30,6 +30,10 @@ In GitHub, add `ANTHROPIC_API_KEY` and `CONGRESS_API_KEY` under **Settings → S
 
 Edit [`config/sources.yaml`](config/sources.yaml). Add a feed with `type: rss` and its URL. Pause a source with `enabled: false`. For broad sources, add `keywords:` so only matching items are kept. To add Google Alerts, set each alert's **Deliver to** to **RSS feed** and add its feed URL.
 
+## Design
+
+The email, edit page, and archive follow IoG's brand: see [`docs/STYLE.md`](docs/STYLE.md) for colors, type, and spacing.
+
 ## Changing the LLM
 
 Models are set in `config/sources.yaml` under `llm:`. Provider code lives in [`donorbrief/llm.py`](donorbrief/llm.py). To use another provider, add a class with the same `structured()` method and register it in `PROVIDERS`.
