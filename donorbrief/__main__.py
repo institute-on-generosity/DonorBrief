@@ -12,7 +12,7 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
-from . import llm
+from . import llm, mailchimp
 from .sources import collect
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -69,6 +69,15 @@ def main() -> int:
     rendered_sections = render_sections(brief, sections, items)
     write_outputs(out_dir, brief, rendered_sections, week_of, failed)
     log.info("Draft written to %s", out_dir)
+
+    delivery = mailchimp.deliver(out_dir, config)
+    if delivery["status"] == "draft_created":
+        log.info("Mailchimp draft created: %s", delivery["edit_url"] or delivery["campaign_id"])
+    elif delivery["status"] == "skipped":
+        log.info("Mailchimp skipped: %s", delivery["reason"])
+    else:
+        log.error("Mailchimp draft failed: %s", delivery["error"])
+        return 1  # fail the run so GitHub emails the owner; the draft is still saved
     return 0
 
 

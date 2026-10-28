@@ -48,6 +48,12 @@
   {#- Footer -#}
   <tr><td style="padding:20px 28px;font-family:{{ body }};font-size:12px;line-height:1.5;color:#5E5E5E;">
     AI-drafted from public sources and reviewed by Institute on Generosity staff before sending.
+    {%- if mailchimp %}
+    {#- Mailchimp fills these in; it won't send a campaign without them. #}
+    <br><br>You're receiving this because you subscribed to Institute on Generosity updates.
+    <a href="*|UNSUB|*" style="color:#5E5E5E;">Unsubscribe</a> &middot; <a href="*|UPDATE_PROFILE|*" style="color:#5E5E5E;">Update preferences</a>
+    <br>*|LIST:ADDRESSLINE|*
+    {%- endif %}
   </td></tr>
 </table>
 </td></tr>

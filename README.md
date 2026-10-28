@@ -10,6 +10,7 @@ Every Monday a GitHub Action gathers the past week's items from public sources, 
 2. **Triage.** A fast, low-cost model (Claude Haiku) scores each item 0–10 for relevance, assigns a section, and writes a short factual summary.
 3. **Compose.** A stronger model (Claude Opus) writes the brief from the top-scoring items: a subject line, an intro, and entries grouped by section.
 4. **Render.** The run writes `drafts/<date>/` with `brief.html` (email-ready), `brief.md`, `brief.json`, and `sources.json` (everything fetched, plus each source's health).
+5. **Hand off to Mailchimp.** The draft becomes a Mailchimp draft campaign addressed to IoG's audience, and reviewers get a preview copy by email. Staff edit and send it in Mailchimp. DonorBrief never sends it.
 
 Links in the brief always come from the source data, never from the model: each entry cites an item id, and the code fills in that item's URL.
 
@@ -25,6 +26,18 @@ set -a; source .env; set +a
 ```
 
 In GitHub, add `ANTHROPIC_API_KEY` and `CONGRESS_API_KEY` under **Settings → Secrets and variables → Actions**. The workflow runs every Monday, or on demand from the **Actions** tab (**Weekly brief → Run workflow**). Each run shows the draft and source health on its summary page and attaches the files as a download.
+
+## Mailchimp
+
+Each Monday's draft is created in IoG's Mailchimp account as a draft campaign (**Campaigns → Drafts**). Reviewers listed in `test_emails` get a preview copy. A person checks it and presses **Send** in Mailchimp.
+
+To connect it:
+1. In Mailchimp, create an API key (**Profile → Extras → API keys**) and add it as the `MAILCHIMP_API_KEY` repository secret.
+2. In [`config/sources.yaml`](config/sources.yaml), under `mailchimp:`, fill in `audience_id` (**Audience → Settings → Audience name and defaults**), `reply_to` (an address verified in Mailchimp) and `test_emails`.
+
+Without the secret, this step is skipped and the draft stays on the run page as before. Once Mailchimp holds the draft, the public run page shows only a pointer to it, not the draft itself.
+
+To push an existing draft by hand: `.venv/bin/python -m donorbrief.mailchimp drafts/<date>`.
 
 ## Managing sources
 
@@ -62,6 +75,6 @@ Models are set in `config/sources.yaml` under `llm:`. Provider code lives in [`d
 
 - [x] Source collection, triage, composition, HTML/Markdown draft
 - [x] Weekly GitHub Action with source-health report
-- [ ] Deliver the draft to IoG staff by email
-- [ ] Editing page and one-click send to subscribers
+- [x] Mailchimp draft campaign with a preview copy to reviewers (waiting on IoG's Mailchimp key and audience)
+- [ ] Copy each sent brief into `archive/` for the public archive
 - [x] Public archive pages (hosting to be decided)

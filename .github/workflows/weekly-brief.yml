@@ -32,13 +32,18 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
         run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Show draft in run summary
         if: always()
         run: |
           f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
-          if [ -f "$f/brief.md" ]; then cat "$f/brief.md" >> "$GITHUB_STEP_SUMMARY"; fi
+          # Run pages are public. Once Mailchimp has the draft, show only a pointer to it here.
+          if [ -f "$f/delivery.json" ] && grep -q '"draft_created"' "$f/delivery.json"; then
+            echo "### Draft is in Mailchimp" >> "$GITHUB_STEP_SUMMARY"
+            echo "This week's draft campaign is waiting for review in Mailchimp (Campaigns -> Drafts)." >> "$GITHUB_STEP_SUMMARY"
+          elif [ -f "$f/brief.md" ]; then cat "$f/brief.md" >> "$GITHUB_STEP_SUMMARY"; fi
           if [ -f "$f/sources.json" ]; then
             echo -e "\n### Source health\n" >> "$GITHUB_STEP_SUMMARY"
             python -c "import json,sys; [print(f\"- {'✅' if s['ok'] else '❌'} {s['source_id']}: {s['count'] if s['ok'] else s['error']}\") for s in json.load(open(sys.argv[1]))['sources']]" "$f/sources.json" >> "$GITHUB_STEP_SUMMARY"
@@ -66,9 +71,31 @@ jobs:
             gh issue close "$open" --comment "All sources worked in [this run]($RUN_URL)."
           fi
 
-      - uses: actions/upload-artifact@v7
+      - name: Check where the draft went
+        id: delivery
         if: always()
+        run: |
+          f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
+          if [ -f "$f/delivery.json" ] && grep -q '"draft_created"' "$f/delivery.json"; then
+            echo "in_mailchimp=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "in_mailchimp=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Artifacts on a public repo can be downloaded by anyone signed in to GitHub, so once
+      # Mailchimp holds the draft, keep only source health and the delivery record here.
+      - uses: actions/upload-artifact@v7
+        if: always() && steps.delivery.outputs.in_mailchimp != 'true'
         with:
           name: donorbrief-draft-${{ github.run_number }}
           path: drafts/
+          retention-days: 90
+
+      - uses: actions/upload-artifact@v7
+        if: always() && steps.delivery.outputs.in_mailchimp == 'true'
+        with:
+          name: donorbrief-run-${{ github.run_number }}
+          path: |
+            drafts/*/sources.json
+            drafts/*/delivery.json
           retention-days: 90

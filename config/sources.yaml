@@ -26,6 +26,13 @@ sections:               # brief sections, in order (draft, to confirm with IoG)
     title: Funders & Giving Trends
     description: Major gifts, new funds and initiatives, shifts in how and where people and institutions give.
 
+mailchimp:              # each Monday's draft becomes a Mailchimp draft campaign; staff review and send it there
+  enabled: true         # also needs the MAILCHIMP_API_KEY secret; without it this step is skipped
+  audience_id: ""       # Mailchimp: Audience -> Settings -> "Audience name and defaults" -> Audience ID
+  from_name: Institute on Generosity
+  reply_to: ""          # an address verified in Mailchimp, e.g. a staff or info@ address
+  test_emails: []       # reviewers who get a preview copy each Monday, e.g. [name@instituteongenerosity.org]
+
 llm:
   provider: anthropic
   triage_model: claude-haiku-5-5   # scores and summarizes every item (high volume, cheap)
