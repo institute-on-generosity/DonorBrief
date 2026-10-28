@@ -28,10 +28,10 @@ sections:               # brief sections, in order (draft, to confirm with IoG)
 
 mailchimp:              # each Monday's draft becomes a Mailchimp draft campaign; staff review and send it there
   enabled: true         # also needs the MAILCHIMP_API_KEY secret; without it this step is skipped
-  audience_id: ""       # Mailchimp: Audience -> Settings -> "Audience name and defaults" -> Audience ID
+  audience_id: f0f2f5193b  # "Institute on Generosity" audience. Mailchimp: Audience -> Settings -> "Audience name and defaults" -> Audience ID
   from_name: Institute on Generosity
-  reply_to: ""          # an address verified in Mailchimp, e.g. a staff or info@ address
-  test_emails: []       # reviewers who get a preview copy each Monday, e.g. [name@instituteongenerosity.org]
+  reply_to: connect@instituteongenerosity.org   # must be on a domain verified in Mailchimp
+  test_emails: [muneeb@instituteongenerosity.org]   # reviewers who get a preview copy each Monday, e.g. [name@instituteongenerosity.org]
 
 llm:
   provider: anthropic
