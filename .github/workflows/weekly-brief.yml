@@ -9,10 +9,14 @@ on:
         description: "Fetch sources only (no LLM calls)"
         type: boolean
         default: false
+      backfill:
+        description: "Only score past weeks in history/backfill/ into history/ (no draft)"
+        type: boolean
+        default: false
 
 permissions:
-  contents: read
-  issues: write   # source-health alerts
+  contents: write   # commits history/ (week-to-week memory for trends)
+  issues: write     # source-health alerts
 
 jobs:
   build:
@@ -28,15 +32,34 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Backfill history
+        if: ${{ inputs.backfill }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python -m donorbrief.history backfill history/backfill/*/sources.json
+          git rm -rq history/backfill
+
       - name: Build draft
+        if: ${{ !inputs.backfill }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
         run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      - name: Save history
+        if: success() && !inputs.dry_run
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history/
+          if git diff --cached --quiet; then echo "No history changes"; exit 0; fi
+          git commit -m "Record DonorBrief history ($(date -u +%Y-%m-%d))"
+          git pull --rebase -q && git push -q
+
       - name: Show draft in run summary
-        if: always()
+        if: always() && !inputs.backfill
         run: |
           f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
           # Run pages are public. Once Mailchimp has the draft, show only a pointer to it here.

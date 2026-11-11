@@ -36,7 +36,8 @@ class TriageResult(BaseModel):
 class BriefEntry(BaseModel):
     id: str = Field(description="The id of the source item this entry is based on.")
     headline: str
-    body: str = Field(description="2-4 sentences: what happened and why it matters.")
+    body: str = Field(description="Top stories: 3-4 sentences on what happened and why it matters. Other entries: one sentence.")
+    follow_up: bool = Field(default=False, description="True only if this continues a story from a previous brief and adds real news.")
 
 
 class BriefSection(BaseModel):
@@ -44,10 +45,18 @@ class BriefSection(BaseModel):
     entries: list[BriefEntry]
 
 
+class Trend(BaseModel):
+    title: str = Field(description="A short name for the pattern, under 60 characters.")
+    body: str = Field(description="2-3 sentences: what is building across these stories and why it matters to IoG's readers.")
+    item_ids: list[str] = Field(description="Ids of the stories that show the pattern: at least 3, from at least 2 different weeks.")
+
+
 class Brief(BaseModel):
     subject: str = Field(description="Email subject line, under 70 characters.")
     intro: str = Field(description="2-3 sentence opening naming the week's most important developments.")
-    sections: list[BriefSection]
+    top_stories: list[BriefEntry] = Field(description="The 3 most consequential stories this week.")
+    trends: list[Trend] = Field(description="0-3 patterns building across weeks.")
+    sections: list[BriefSection] = Field(description="Every other story, grouped by section, one sentence each.")
 
 
 # ---------- Providers ----------
@@ -125,20 +134,43 @@ def triage(provider, model: str, items: list[Item], sections: list[dict]) -> lis
     return results
 
 
-def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sections: list[dict], week_of: str) -> Brief:
+def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sections: list[dict], week_of: str,
+            past_weeks: Optional[list[dict]] = None) -> Brief:
+    """Write the brief. past_weeks (newest first, from history.load_recent) feeds trends and follow-ups."""
+    past_weeks = past_weeks or []
     system = (
         f"{AUDIENCE}\n\nYou are the editor writing this week's DonorBrief. Write in a clear, warm, "
-        "plain-language voice for busy readers; no hype, no jargon. Use only facts from the items provided. "
-        "Every entry must cite the id of the item it is based on. Skip a section if no items fit it. "
-        "Merge items that cover the same story into one entry citing the best source.\n\nSections, in order:\n"
-        f"{_sections_text(sections)}"
+        "plain-language voice for busy readers; no hype, no jargon. Use only facts from the items provided, "
+        "and cite the id of the item each entry or trend is based on. Merge items that cover the same story "
+        "into one entry citing the best source.\n\n"
+        "The brief has three parts:\n"
+        "1. Top stories: the 3 most consequential stories of THIS week, 3-4 sentences each.\n"
+        "2. Trends to watch: 0-3 patterns that are building across weeks, a theme that shows up in several "
+        "separate stories over at least two different weeks (this week counts). Cite at least 3 supporting "
+        "item ids from at least 2 weeks, using this week's items and the earlier weeks listed. A single big "
+        "story is not a trend, and neither is a topic that is always in the news. Name what is changing. "
+        "If nothing qualifies, return no trends.\n"
+        "3. Everything else from this week that is worth knowing, grouped by section, one sentence each. "
+        "Don't repeat a top story here. Skip sections with nothing in them.\n\n"
+        "Stories marked as already in a previous brief: include them only if there is genuinely new "
+        "information, and then set follow_up to true.\n\n"
+        f"Sections, in order:\n{_sections_text(sections)}"
     )
     payload = [
         {"id": i.id, "source": i.source_name, "title": i.title, "date": i.published.date().isoformat() if i.published else None,
          "section": a.section, "relevance": a.relevance, "summary": a.summary, "why_it_matters": a.why_it_matters}
         for i, a in picked
     ]
-    prompt = f"Week of {week_of}. Write the brief from these screened items:\n\n{json.dumps(payload, indent=1)}"
+    earlier = [
+        {"week": w["week"], "items": [
+            {"id": i["id"], "source": i["source"], "title": i["title"], "section": i["section"], "summary": i["summary"],
+             **({"already_in_a_previous_brief": True} if i.get("in_brief") else {})}
+            for i in w["items"] if i["relevance"] >= 6 or i.get("in_brief")]}
+        for w in past_weeks
+    ]
+    prompt = f"Week of {week_of}. This week's screened items:\n\n{json.dumps(payload, indent=1)}"
+    if earlier:
+        prompt += f"\n\nEarlier weeks, newest first (for trends and follow-ups only):\n\n{json.dumps(earlier, indent=1)}"
     return provider.structured(model, system, prompt, Brief, effort="medium")
 
 

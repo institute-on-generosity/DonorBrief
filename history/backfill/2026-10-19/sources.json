@@ -1,0 +1,1812 @@
+{
+  "sources": [
+    {
+      "source_id": "npq",
+      "ok": true,
+      "count": 12,
+      "error": ""
+    },
+    {
+      "source_id": "nptimes",
+      "ok": true,
+      "count": 3,
+      "error": ""
+    },
+    {
+      "source_id": "ssir",
+      "ok": true,
+      "count": 4,
+      "error": ""
+    },
+    {
+      "source_id": "givingusa",
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    {
+      "source_id": "chronicle",
+      "ok": true,
+      "count": 10,
+      "error": ""
+    },
+    {
+      "source_id": "independentsector",
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    {
+      "source_id": "roundtable",
+      "ok": true,
+      "count": 2,
+      "error": ""
+    },
+    {
+      "source_id": "cep",
+      "ok": true,
+      "count": 3,
+      "error": ""
+    },
+    {
+      "source_id": "nonprofitpro",
+      "ok": true,
+      "count": 4,
+      "error": ""
+    },
+    {
+      "source_id": "givingtuesday",
+      "ok": true,
+      "count": 1,
+      "error": ""
+    },
+    {
+      "source_id": "givewell",
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    {
+      "source_id": "nonprofitlaw",
+      "ok": true,
+      "count": 2,
+      "error": ""
+    },
+    {
+      "source_id": "gnews_giving",
+      "ok": true,
+      "count": 59,
+      "error": ""
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "ok": true,
+      "count": 100,
+      "error": ""
+    },
+    {
+      "source_id": "federal_register_irs",
+      "ok": true,
+      "count": 0,
+      "error": ""
+    },
+    {
+      "source_id": "congress",
+      "ok": true,
+      "count": 4,
+      "error": ""
+    }
+  ],
+  "items": [
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "What if philanthropy\u2019s role is not to fix, but to help heal?",
+      "url": "https://nonprofitquarterly.org/what-if-philanthropys-role-is-not-to-fix-but-to-help-heal/",
+      "published": "2026-10-16T11:15:55+00:00",
+      "summary": "Rather than aiming to fix what is broken, healing-centered philanthropy cultivates the conditions that make healing possible.",
+      "id": "3a1bd253e9"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Is consciousness the missing ingredient in climate and food work?",
+      "url": "https://nonprofitquarterly.org/is-consciousness-the-missing-ingredient-in-climate-and-food-work/",
+      "published": "2026-10-16T11:10:14+00:00",
+      "summary": "Technology, financing, and policy changes haven\u2019t been enough to solve the global food crisis. Could a mindset transformation help?",
+      "id": "3c141ae989"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "How nonprofits abroad can fill gaps when the US government cuts off foreign aid",
+      "url": "https://nonprofitquarterly.org/how-nonprofits-abroad-can-fill-gaps-when-the-us-government-cuts-off-foreign-aid/",
+      "published": "2026-10-16T11:00:45+00:00",
+      "summary": "The U.S. Agency for International Development distributes a lot of foreign aid through local partners in other countries. J. David Ake/Getty Images Susan Appe, University at Albany, State University of New York The U.S. government gives other nations US$68 billion of foreign assistance annually \u2013 more than any other country. Over half of this sum",
+      "id": "ec95cb9155"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Returning to reciprocity: What I learned working outside the circle my grandmother lived inside",
+      "url": "https://nonprofitquarterly.org/returning-to-reciprocity-what-i-learned-working-outside-the-circle-my-grandmother-lived-inside/",
+      "published": "2026-10-15T16:05:05+00:00",
+      "summary": "Jessyca Dudley, founder of Bold Ventures makes the case as to why we must distinguish between generosity and reciprocity in philanthropy especially for those holding the resources and what to make lasting change.",
+      "id": "cc661fad73"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Make the ask before the holiday chaos",
+      "url": "https://nonprofitquarterly.org/make-the-ask-before-the-holiday-chaos/",
+      "published": "2026-10-15T14:41:58+00:00",
+      "summary": "With Giving Tuesday coming up, the right strategy can make all the difference. In this installment of Ask Rhea, Rhea Wong covers what to do to make the most of it.",
+      "id": "4f03a0fd7a"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "What happens when environmental justice nonprofit workers unionize?",
+      "url": "https://nonprofitquarterly.org/what-happens-when-environmental-justice-nonprofit-workers-unionize/",
+      "published": "2026-10-15T14:32:46+00:00",
+      "summary": "How nonprofits can act when commitments to justice and empowerment are tested inside their own workplace.",
+      "id": "6df77d6d15"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Naming what we carry: A tool for the first step toward transformation",
+      "url": "https://nonprofitquarterly.org/naming-what-we-carry-a-tool-for-the-first-step-toward-transformation/",
+      "published": "2026-10-15T14:21:49+00:00",
+      "summary": "How to name and identify organizational patterns as a path to developing new authentic ways of being, to truly advance organizational mission.",
+      "id": "adcd1b3ccc"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Election accessibility is dismal in some states, potentially impacting a quarter of US adults in the who are disabled",
+      "url": "https://nonprofitquarterly.org/election-accessibility-polls-for-disabled-voters-dismal-in-some-states-nonprofits-are-fighting-back/",
+      "published": "2026-10-14T16:21:17+00:00",
+      "summary": "Access to polls for disabled voters are dismal in some areas. This election, nonprofits from Michigan, New York, Georgia, Pennsylvania, Indiana, and Nebraska gear up to fight back.",
+      "id": "2d813ba19f"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "The false virtue of restraint: what would it take to actually win?",
+      "url": "https://nonprofitquarterly.org/the-false-virtue-of-restraint-what-would-it-take-to-actually-win/",
+      "published": "2026-10-14T15:17:47+00:00",
+      "summary": "We have a particular way of praising nonprofits. We say they do so much with so little. Yet what would it take to build a legacy of success without the organization bearing unnecessary strain?",
+      "id": "ade9784c1b"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Three years after Chicago\u2019s labor peace ordinance, what has changed?",
+      "url": "https://nonprofitquarterly.org/three-years-after-chicagos-labor-peace-ordinance-what-has-changed/",
+      "published": "2026-10-14T12:46:04+00:00",
+      "summary": "Three years after its approval, did the Human Service Workforce Advancement ordinance meaningfully change labor relations inside publicly funded nonprofits in Chicago?",
+      "id": "1552480b00"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "The South Has Always Organized for Our Nation\u2019s Democratic Ideals",
+      "url": "https://nonprofitquarterly.org/the-south-has-always-organized-for-our-nations-democratic-ideals/",
+      "published": "2026-10-14T09:50:25+00:00",
+      "summary": "The South\u2019s long tradition of organizing for justice offers a lesson for America at 250: Invest in the people building what comes next.",
+      "id": "907007b848"
+    },
+    {
+      "source_id": "npq",
+      "source_name": "NonProfit Quarterly",
+      "title": "Building democracy beyond elections: what this US experiment in shared governance can teach us",
+      "url": "https://nonprofitquarterly.org/building-democracy-beyond-elections-what-the-us-experiment-in-shared-governance-can-teach-us/",
+      "published": "2026-10-13T19:43:30+00:00",
+      "summary": "In an era of widespread anger over unaffordability, corruption, inequality, and sclerotic institutions, we need to think much bigger about reforming American democracy. A past failed anti-poverty program could provide ideas for a path forward.",
+      "id": "8561ed9627"
+    },
+    {
+      "source_id": "nptimes",
+      "source_name": "The NonProfit Times",
+      "title": "Transitions: Developing A Strong CEO And Board Partnership",
+      "url": "https://thenonprofittimes.com/npt_articles/transitions-developing-a-strong-ceo-and-board-partnership/",
+      "published": "2026-10-12T20:47:02+00:00",
+      "summary": "(image from pexels.com) By Dennis C. Miller We all know the tough challenges facing today\u2019s nonprofit organizations, especially around federal funding cuts, growing demands for services and workforce retention issues on the organization. The board traditionally played the role of being a strategic advisor to the CEO and leadership team. The realities of today\u2019s environment [\u2026] The post Transitions: Developing A Strong CEO And Board Partnership appeared first on The NonProfit Times .",
+      "id": "04ef27c89e"
+    },
+    {
+      "source_id": "nptimes",
+      "source_name": "The NonProfit Times",
+      "title": "7 Essential Components Of Sustainable Grants Management",
+      "url": "https://thenonprofittimes.com/npt_articles/7-essential-components-of-sustainable-grants-management/",
+      "published": "2026-10-12T20:41:17+00:00",
+      "summary": "(image from pexels.com) By Hannah Wiginton Grants are more than just writing a proposal and hitting submit. Grants programs have seven essential components, and understanding each component ensures a sustainable program. Each component builds on the next, so most challenges such as missed deadlines, lack of internal collaboration, reporting, or funder relationships that go cold [\u2026] The post 7 Essential Components Of Sustainable Grants Management appeared first on The NonProfit Times .",
+      "id": "03b4c86cad"
+    },
+    {
+      "source_id": "nptimes",
+      "source_name": "The NonProfit Times",
+      "title": "Info Integrity: AI Amplifies Bad Data",
+      "url": "https://thenonprofittimes.com/npt_articles/info-integrity-ai-amplifies-bad-data/",
+      "published": "2026-10-12T20:37:35+00:00",
+      "summary": "(image from pexels.com) By Richard Geiger Fundraisers have been told the same thing about their data for 20 years: Keep it clean, keep it current, keep it complete. It was good advice then, offered mostly in the context of avoiding a bounced appeal letter or a red-faced apology to a major donor whose name got [\u2026] The post Info Integrity: AI Amplifies Bad Data appeared first on The NonProfit Times .",
+      "id": "ffffe4ed42"
+    },
+    {
+      "source_id": "ssir",
+      "source_name": "Stanford Social Innovation Review",
+      "title": "Taxes Are an Impact Strategy (Blog)",
+      "url": "https://ssir.org/articles/entry/taxes-impact-strategy",
+      "published": "2026-10-14T12:05:00+00:00",
+      "summary": "More than an obligation, taxation contributes to the only systems ever shown to deliver essential services equitably and at scale. We love a good impact story. The story of the foundation that designed a new innovative environmental program. The entrepreneur that scaled a social innovation. The new catalytic capital fund. But I have spent enough time in this field to recognize that much of this work, for all its good intentions and often very real impact, can also end up preserving the status quo, or at least leaving it unchanged. That status quo is an economy capable of generating extraordinary wealth, yet one that continues to distribute it so unevenly that large parts of society are being left behind, with the most vulnerable furthest behind of all. It is also an economy generating growing frustration and discontent with how it works, and for whom. This means that, sometimes, the most impactful thing many of us can do is simply to pay our taxes. It also means that encouraging, advocating for, and supporting adequate taxation might be the most important thing the social sector as a whole can put its energy into. Saying this can feel almost too simple. Yet much of the impact sector operates on the understanding that governments often face severe resource and operational constraints when addressing complex social and environmental issues. As a result, private capital is naturally expected to bridge the divide, with foundations serving as crucial catalysts and conveners. This framework is widely recognized as the \u201cSustainable Development Goals funding gap.\u201d",
+      "id": "30473d27ab"
+    },
+    {
+      "source_id": "ssir",
+      "source_name": "Stanford Social Innovation Review",
+      "title": "AI and Nonprofit Strategic Independence (Blog)",
+      "url": "https://ssir.org/articles/entry/ai-nonprofits-strategic-independence",
+      "published": "2026-10-14T12:00:00+00:00",
+      "summary": "Why now is the moment for nonprofits to build and customize their own mission-critical technology, and three steps to getting started. Seven years ago, Becky Straw co-founded The Adventure Project, a nonprofit that works to create jobs in Africa. She was not a computer programmer, so she paid a developer $7,000 to create a website using the application Webflow. For years, she wanted to embed a customized map feature on the homepage using Mapbox to show where the organization was making progress, but she didn\u2019t have the funds to afford more development. Earlier this year, funding to hire a developer became irrelevant. Straw didn\u2019t know any more about website developing and coding than she did seven years earlier, but Anthropic\u2019s AI assistant Claude did, and she used it to create the code she needed to embed Mapbox herself. For decades, nonprofits have been beholden to commercial software companies and developers\u2014and more recently, software as a service (SaaS) companies\u2014to manage and support infrastructure essential to core operations. This created expensive trade-offs, including vendor lock-in, price increases, limited customization, dependence on commercial roadmaps, and occasional break down, like when the fundraising company Flipcause went bankrupt and left organizations scrambling to replace it. AI-powered coding tools are challenging the stranglehold that software companies have traditionally had over nonprofits. Some people are calling this moment the SaaS-pocalypse. I call it Strategic Independence Day.",
+      "id": "e15ad4168c"
+    },
+    {
+      "source_id": "ssir",
+      "source_name": "Stanford Social Innovation Review",
+      "title": "The Power of Labels",
+      "url": "https://ssir.org/articles/entry/health-climate-warnings-fossil-fuels",
+      "published": "2026-10-13T12:00:00+00:00",
+      "summary": "Health-climate warning labels at gas pumps are gaining political momentum as research shows they can shift consumer attitudes away from fossil fuels. Since 2020, gas pumps in Cambridge, Massachusetts, have displayed a label that says, Warning: Burning gasoline, diesel and ethanol has major consequences on human health and on the environment including contributing to climate change. Most residents of the town famous for harboring Harvard University and MIT already support stronger action on climate change. In fact, across the political spectrum, majorities nationwide express concern about the health and climate harms of continued fossil-fuel use. Health-climate warning labels, often called \u201cwarming labels,\u201d are notices placed on gas pumps that inform consumers about the health and environmental consequences of burning fossil fuels. In practice, however, they may do less to warn consumers than to remind them, each time drivers fill their tanks, that concern about the harms of fossil-fuel use is widely shared. By making that concern visible, warming labels can help establish a social expectation that people should consider cleaner alternatives to gasoline and diesel whenever possible. Over time, that expectation could help drive a broader cultural shift away from fossil fuels.",
+      "id": "7e8a3c5733"
+    },
+    {
+      "source_id": "ssir",
+      "source_name": "Stanford Social Innovation Review",
+      "title": "Education Needs Impact Engineering",
+      "url": "https://ssir.org/articles/entry/education-impact-engineering",
+      "published": "2026-10-12T12:00:00+00:00",
+      "summary": "The many discoveries from education research aren't making it to the classroom. It should follow the medical model of building infrastructure to translate research into impact. In 2003, the Institute of Medicine (now the National Academy of Medicine) declared that medical research was failing patients. Decades of brilliant basic science sat stranded in academic journals while people suffered from treatable diseases. The problem wasn\u2019t a lack of discovery; it was a lack of translation. The relevant scientific insights existed, but the infrastructure to move them from the lab to bedside did not. The solution was translational medicine, a new discipline supported by an ecosystem of specialized infrastructure\u2014clinical-trial-design firms, regulatory navigators, data-management systems, and manufacturing expertise. Researchers didn\u2019t build this infrastructure themselves, but their access to it transformed medical practice.",
+      "id": "21c0eba239"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Bridge fund for nonprofit radio stations turns from rescue to reinvention",
+      "url": "https://www.philanthropy.com/news/bridge-fund-for-nonprofit-radio-stations-turns-from-rescue-to-reinvention/",
+      "published": "2026-10-16T14:03:52+00:00",
+      "summary": "A $10 million grant from the Knight Foundation will support Public Media Co.\u2019s transformation into a major grant maker.",
+      "id": "58a394a34c"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Podcast: the path to better equity funding",
+      "url": "https://www.philanthropy.com/news/podcast-the-path-to-better-equity-funding/",
+      "published": "2026-10-16T13:45:01+00:00",
+      "summary": "The key is understanding the recurring patterns of giving from Reconstruction to today, says Bryan Stevenson.",
+      "id": "e4869078d0"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "With trial months away critics call on Fidelity Charitable to unblock SPLC donations",
+      "url": "https://www.philanthropy.com/news/with-trial-months-away-critics-call-on-fidelity-to-unblock-splc-donations/",
+      "published": "2026-10-16T13:42:18+00:00",
+      "summary": "Fidelity is one of several giving platforms that has paused gifts to the civil rights group, which faces a federal indictment.",
+      "id": "d0156f91ab"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Giving by the ultra-wealthy is growing",
+      "url": "https://www.philanthropy.com/news/giving-by-the-ultra-wealthy-is-growing/",
+      "published": "2026-10-15T14:54:56+00:00",
+      "summary": "Charities need to ensure they hold their biggest donors close.",
+      "id": "026d9f252a"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "A decades-long fight over donor intent ends with a win for Delaware\u2019s kids",
+      "url": "https://www.philanthropy.com/news/a-decades-long-fight-over-donor-intent-ends-with-a-win-for-delawares-kids/",
+      "published": "2026-10-15T13:45:26+00:00",
+      "summary": "A settlement will send $950 million from the Alfred I. duPont trust to a new foundation for Delaware\u2019s children.",
+      "id": "188bc30e2c"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Stop writing the nonprofit world\u2019s obituary. We have work to do.",
+      "url": "https://www.philanthropy.com/opinion/stop-writing-the-nonprofit-worlds-obituary-we-have-work-to-do/",
+      "published": "2026-10-15T11:00:00+00:00",
+      "summary": "The sector is under pressure, not in hospice. Leaders should tune out the doom narratives, panic cycles, and provocateurs.",
+      "id": "b892c97e0a"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Nonprofits train legions of volunteers to protect voters",
+      "url": "https://www.philanthropy.com/news/nonprofits-train-legions-of-volunteers-to-protect-voters/",
+      "published": "2026-10-14T13:52:08+00:00",
+      "summary": "As fears of election interference rise, pro-democracy groups prepare to bear witness to any disruptions.",
+      "id": "71acd81b84"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Trump Accounts show why philanthropists shouldn\u2019t fill in for government",
+      "url": "https://www.philanthropy.com/opinion/trump-accounts-show-why-philanthropists-shouldnt-fill-in-for-government/",
+      "published": "2026-10-14T13:17:57+00:00",
+      "summary": "Private gifts should make public dollars work better, not compensate for what government fails to deliver.",
+      "id": "6f92518e7c"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "How Wikipedia\u2019s nonprofit raises more by asking for less",
+      "url": "https://www.philanthropy.com/solutions/case-study/how-wikipedias-nonprofit-raises-more-by-asking-for-less/",
+      "published": "2026-10-14T11:00:00+00:00",
+      "summary": "The Wikimedia Foundation, which attracts gifts of $10 on average, steadily increased its revenue to $187 million in 2025.",
+      "id": "bef3420d39"
+    },
+    {
+      "source_id": "chronicle",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "New legislation would strengthen donor standing in gift disputes. Does it go too far?",
+      "url": "https://www.philanthropy.com/news/new-legislation-would-strengthen-donor-standing-in-gift-disputes-does-it-go-too-far/",
+      "published": "2026-10-13T15:15:28+00:00",
+      "summary": "Critics of the legislation say that any strengthening of donor protections would place a burden on charities and invite frivolous lawsuits.",
+      "id": "2d529dbcba"
+    },
+    {
+      "source_id": "roundtable",
+      "source_name": "Philanthropy Roundtable",
+      "title": "Cummings and Florino in the Chronicle of Philanthropy: New Legislation Gives Donors a Voice",
+      "url": "https://www.philanthropyroundtable.org/cummings-and-florino-in-the-chronicle-of-philanthropy-new-legislation-gives-donors-a-voice/",
+      "published": "2026-10-15T19:38:59+00:00",
+      "summary": "In a recent Chronicle of Philanthropy article, \u201cNew legislation would strengthen donor standing in gift disputes. Does it go too far?,\u201d Ben Gose examines Philanthropy Roundtable\u2019s newest research, \u201cThe Safeguarding Endowment Gifts Act: The Tao of Enforcing Donor Intent.\u201d Drawing on commentary from Claudia Cummings, senior vice president of public affairs, and Joanne Florino, Adam Meyerson Distinguished Fellow in Philanthropic Excellence, the piece explores how donors are increasingly seeking greater control, input and transparency over how nonprofits allocate and spend charitable gifts. The post Cummings and Florino in the Chronicle of Philanthropy: New Legislation Gives Donors a Voice appeared first on Philanthropy Roundtable .",
+      "id": "4e69d13693"
+    },
+    {
+      "source_id": "roundtable",
+      "source_name": "Philanthropy Roundtable",
+      "title": "Philanthropy Roundtable Welcomes Three Distinguished Fellows",
+      "url": "https://www.philanthropyroundtable.org/philanthropy-roundtable-welcomes-three-distinguished-fellows/",
+      "published": "2026-10-14T19:11:30+00:00",
+      "summary": "Kim Dennis, Robert P. George and Carrie Coors Tynan bring expertise in liberty philanthropy, American institutions, family philanthropy and donor intent. The post Philanthropy Roundtable Welcomes Three Distinguished Fellows appeared first on Philanthropy Roundtable .",
+      "id": "833cf9cccf"
+    },
+    {
+      "source_id": "cep",
+      "source_name": "Center for Effective Philanthropy",
+      "title": "The Case for Pooled Funds in a Time of DisruptionOtha Cole Co-Director, Nonprofit Sustainability InitiativeCarrie Harlow Co-Director, Nonprofit Sustainability Initiative",
+      "url": "https://cep.org/blog/the-case-for-pooled-funds-in-a-time-of-disruption/",
+      "published": "2026-10-15T14:15:00+00:00",
+      "summary": "The Center for Effective Philanthropy\u2019s recent report, \u201cEvolving Foundation Responses to a Sector in Crisis,\u201d paints a picture of a philanthropic field that is moving, but still not as responsive [\u2026] The post The Case for Pooled Funds in a Time of Disruption<div class=\"print-only-coauthors\"><div>Otha Cole<span> Co-Director, Nonprofit Sustainability Initiative</span></div><div>Carrie Harlow<span> Co-Director, Nonprofit Sustainability Initiative</span></div></div> appeared first on The Center for Effective Philanthropy .",
+      "id": "3fcfa1a99f"
+    },
+    {
+      "source_id": "cep",
+      "source_name": "Center for Effective Philanthropy",
+      "title": "25 Years of Profound Impact on Philanthropy: A Thank You to a Longtime ColleaguePhil Buchanan President, CEP",
+      "url": "https://cep.org/blog/25-years-of-profound-impact-on-philanthropy-a-thank-you-to-a-longtime-colleague/",
+      "published": "2026-10-14T14:15:00+00:00",
+      "summary": "It\u2019s a big statement but I think it\u2019s correct: I really don\u2019t think there is any person in this country who has done more to influence how grantmakers approach their [\u2026] The post 25 Years of Profound Impact on Philanthropy: A Thank You to a Longtime Colleague<div class=\"print-only-coauthors\"><div>Phil Buchanan<span> President, CEP</span></div></div> appeared first on The Center for Effective Philanthropy .",
+      "id": "5f57f72880"
+    },
+    {
+      "source_id": "cep",
+      "source_name": "Center for Effective Philanthropy",
+      "title": "Philanthropy\u2019s Crossroads: Retraction or Solidarity?Saulo Araujo Director of Global Philanthropy, Grassroots International",
+      "url": "https://cep.org/blog/philanthropys-crossroads-retraction-or-solidarity/",
+      "published": "2026-10-13T14:15:00+00:00",
+      "summary": "Philanthropy as we know it is facing one of its deepest crises yet. As the director of global philanthropy for Grassroots International, an organization built on decades of supporting frontline [\u2026] The post Philanthropy\u2019s Crossroads: Retraction or Solidarity?<div class=\"print-only-coauthors\"><div>Saulo Araujo<span> Director of Global Philanthropy, Grassroots International</span></div></div> appeared first on The Center for Effective Philanthropy .",
+      "id": "c7ddd6ca09"
+    },
+    {
+      "source_id": "nonprofitpro",
+      "source_name": "NonProfit PRO",
+      "title": "How to Improve Nonprofit Program Delivery by Fixing Bottlenecks",
+      "url": "https://www.nonprofitpro.com/post/how-to-improve-nonprofit-program-delivery-by-fixing-bottlenecks/",
+      "published": "2026-10-16T16:30:11+00:00",
+      "summary": "More funding can mean more work, not faster help. Delays can build between intake, review and payment as demand grows. Find out where to look before your next program expansion adds pressure. The post How to Improve Nonprofit Program Delivery by Fixing Bottlenecks appeared first on NonProfit PRO - Tactical Leadership Strategy for the Modern NonProfit .",
+      "id": "8b2ace3e59"
+    },
+    {
+      "source_id": "nonprofitpro",
+      "source_name": "NonProfit PRO",
+      "title": "The Hidden Cost of Delaying Nonprofit Data Cleanup",
+      "url": "https://www.nonprofitpro.com/post/the-hidden-cost-of-delaying-nonprofit-data-cleanup/",
+      "published": "2026-10-15T16:47:05+00:00",
+      "summary": "Putting off data cleanup may seem harmless when a campaign is due. But what happens as those records spread across your systems? See where the costs build \u2014 and how to start small. The post The Hidden Cost of Delaying Nonprofit Data Cleanup appeared first on NonProfit PRO - Tactical Leadership Strategy for the Modern NonProfit .",
+      "id": "1320da9cd6"
+    },
+    {
+      "source_id": "nonprofitpro",
+      "source_name": "NonProfit PRO",
+      "title": "How to Build Trust During a Nonprofit Leadership Transition",
+      "url": "https://www.nonprofitpro.com/post/how-to-build-trust-during-a-nonprofit-leadership-transition/",
+      "published": "2026-10-13T17:35:22+00:00",
+      "summary": "New nonprofit CEOs face pressure to act before they know the organization. Three leaders share how they approached their first 100 days. Learn what to prioritize before making your first big move. The post How to Build Trust During a Nonprofit Leadership Transition appeared first on NonProfit PRO - Tactical Leadership Strategy for the Modern NonProfit .",
+      "id": "c134267499"
+    },
+    {
+      "source_id": "nonprofitpro",
+      "source_name": "NonProfit PRO",
+      "title": "3 Conflict Resolution Skills to Help Nonprofit Leaders Reduce Friction",
+      "url": "https://www.nonprofitpro.com/post/3-conflict-resolution-skills-to-help-nonprofit-leaders-reduce-friction/",
+      "published": "2026-10-12T16:31:53+00:00",
+      "summary": "Workplace friction can leave nonprofit leaders stuck between competing demands. These three skills offer a more useful way to approach difficult conversations. The post 3 Conflict Resolution Skills to Help Nonprofit Leaders Reduce Friction appeared first on NonProfit PRO - Tactical Leadership Strategy for the Modern NonProfit .",
+      "id": "5e49f40df8"
+    },
+    {
+      "source_id": "givingtuesday",
+      "source_name": "GivingTuesday",
+      "title": "Building Community Events on Almost No Budget",
+      "url": "https://www.givingtuesday.org/blog/gt-events/",
+      "published": "2026-10-12T20:34:46+00:00",
+      "summary": "Four Ways to Build Community Through Events: An interview with Tim Sarrantonio and a guide to boost your GivingTuesday plans. Ahead of GivingTuesday on December 1, we sat down with Tim Sarrantonio, founder of The Generosity Spectrum and the Capital Region GivingTuesday community leader. Tim chairs the Fundraising Effectiveness Project and created The Generosity Roundtable, [\u2026] The post Building Community Events on Almost No Budget appeared first on GivingTuesday .",
+      "id": "f613847f97"
+    },
+    {
+      "source_id": "nonprofitlaw",
+      "source_name": "Nonprofit Law Blog",
+      "title": "2026 Independent Sector National Summit",
+      "url": "https://nonprofitlawblog.com/2026-independent-sector-national-summit/",
+      "published": "2026-10-18T17:54:16+00:00",
+      "summary": "It\u2019s been a 3 year absence for me at an Independent Sector-led annual conference, and I\u2019m very happy to have returned for Independent Sector\u2019s National Summit of 2026: The Future We Build Together. Below is a recap of some of the highlights. As with all of our posts capturing highlights of events, my interpretations, opinions, [\u2026]",
+      "id": "da25d8ed24"
+    },
+    {
+      "source_id": "nonprofitlaw",
+      "source_name": "Nonprofit Law Blog",
+      "title": "Nonprofit Resources of the Week \u2013 10/17/26",
+      "url": "https://nonprofitlawblog.com/nonprofit-resources-of-the-week-10-17-26/",
+      "published": "2026-10-17T14:54:10+00:00",
+      "summary": "Nonprofit Resources of the Week curates timely articles, tools, and commentary to help nonprofit organizations, their leaders, and their advisors stay informed about legal developments, sector trends, and emerging issues affecting the nonprofit and philanthropic ecosystem, including those related to equity, climate change, and resilience. The series also seeks to share tools, perspectives, and sources [\u2026]",
+      "id": "88ab8837fd"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Columbia Daily Spectator",
+      "title": "Why Columbia\u2019s tax filings show millions in payments to unaffiliated nonprofits",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaTdqanRyRmtxUkx4eWhLREF4TFFVOWlkOVVnc0pmOEs3NUJ3cnB3UFR0bDdWLS12RGFLRU83SzBTYktwZnh4U0Uyd1BVLVdFR2VBQ01QeUJTV3hMaktJYmhWVWdsUVJ4dDhkUWlvR2FXTFdoRUU5TkQ5UEo3UnRDQjhha2stZkc0eWlDUVdxZUIzdDM4cS02Ulp2ekItYXQyNVRKa3FveU1tSHZkLVdJSE5KN1R0Y09jQVVwYnEwNHZ1TGhCOWZNVg?oc=5",
+      "published": "2026-10-18T22:10:20+00:00",
+      "summary": "Why Columbia\u2019s tax filings show millions in payments to unaffiliated nonprofits Columbia Daily Spectator",
+      "id": "03e61afcdf"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "hometownsource.com",
+      "title": "Donor-advised funds: A smart way to give",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNbHFpcV8yZ1ZOVjBRNnduY213alhUbC1XRXFEYkJTTVlMVDVjeG5XNnhHRzkwZE91R21GczhXUF9BS2J2UDRXc2FrSHJhLU1NTFE5Zzc4cE53b2pJWUFOWWFBVm5YX2VMLTJNQ2NDdi1kUEVRN1d4bW1ZdGd0aWhINzBWN3BlcUdnSmJONG9BRVZYNjN1TWFRd0FYZWE5TlVzdWk0cU1jYi00dWk1UjFQc1JoSFFBaUtLdVhqcUZNbWtMeGEydGxGdHRwbUR2WVhMNDYwa25ZMUJqRmc?oc=5",
+      "published": "2026-10-18T13:44:00+00:00",
+      "summary": "Donor-advised funds: A smart way to give hometownsource.com",
+      "id": "696e5fd3a2"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Grand Forks Herald",
+      "title": "Bobcat Company and employees give back through global volunteerism and charitable giving",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNR1FiLVhQMExxV24xdGx3S2RBaUpmSGQ1bTFfTFlXUXJsMm9CblBMTzhLNmN2Q2FwZGhoOHpuOW1JLTNNOXRlZ1hmOENEMXl6TzRPelgyZHlTM1VGakdnd3dOcDMxT0M1WFJITGRUUWM0T3J3RG9hUWZZc2cwVzE4U1JMSndMWlo5U00wbGF0anZVNnp2WWNXcWtFRHJ1NDNURHlhQWFRUG92Q2hSUnFiTFJSUl9jWGl3eV9kbXV6aTBSNnlkQ1JuaEZST3N4NHIzMlBYUQ?oc=5",
+      "published": "2026-10-14T13:04:05+00:00",
+      "summary": "Bobcat Company and employees give back through global volunteerism and charitable giving Grand Forks Herald",
+      "id": "bee9aa49bd"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "FF News",
+      "title": "Altruist Launches AI-Powered Donor-Advised Funds to Simplify Charitable Giving for Advisors",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQUxUXzJsR1dxUjdoSkowTWdlakVoc3VtTURWaC1YbGdyY1VFTDlKYTBVTGVQbHNiSFA0b1YtRmxuQ2hkUGhxV21KUTE5dFBrQll4R3BIcXVWRVlMbElxRmZkNzN4azBHb2NiLXJMVHJueS1WWWNTamxHYy1pa09uSVRHNEZWRnNJWnlOXzgzNlY3RWxuVlNKQklsamo1TzcybTk3bEdtNTlKTS12aE9hZF9xNA?oc=5",
+      "published": "2026-10-12T15:32:43+00:00",
+      "summary": "Altruist Launches AI-Powered Donor-Advised Funds to Simplify Charitable Giving for Advisors FF News",
+      "id": "240564dbcd"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "PR Newswire",
+      "title": "PRIVATE FOUNDATION GIVING TOPS $1 BILLION, RISING 15% AS FOUNDATIONS DISTRIBUTE 7.1% OF ASSETS",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPQzZCZGFMVlowVUxZclRheXJ4T0E3MmlHWHdvTkhiTF9PZVdTVG1LSVF2bzFmXy1LQmgxTnRkS0V0dGFVRTZWVkVHMUtUOS1SVG1DOFBBLVplQlRVSHNfLXBtNUxnaTR6Qm9nTkhUXzNrMnMteWxoRTR3XzlRZHZteEpsUzlSWlZWWjdWd1VEUDd5M0pMUWdfYUZwS1R4UGZKRkZORFBNb1lVV1hndWhuTHhQTHltN3VjWG1oVGtfQUpaUFlMYlJCM0RnRFBtdEJBcFFRTVdfZVdySDJvX3FV?oc=5",
+      "published": "2026-10-14T12:00:00+00:00",
+      "summary": "PRIVATE FOUNDATION GIVING TOPS $1 BILLION, RISING 15% AS FOUNDATIONS DISTRIBUTE 7.1% OF ASSETS PR Newswire",
+      "id": "ece72bf31f"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "DerbyInformer.com",
+      "title": "DCF hosting webinar on charitable giving",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSVpkWTFfcU9sbEdwUkpZcWZCQ3dUVkkyTzFSb3pWY2xHQmxvbFBtUFdOcVdaTUJQNVlYY1AzMklpaTBzRmZENERSZ2dUZXlGOWUtaTFFdl9ESVQyYWxPXzFHYzU0Z2dMREFHZzFkYmhmUm5iNFRETVhrVk9ZS3ZtUEc4ODNGclZEUTEtRmUxYjJYRGZKS01FU0Y1SVF0UlR6Ny1mUHo3bmdqMGdKYTdIQV9CMEdWeDdETHZZbFRra2FVUnlLbXg4ckdQVGVXSnZqT3c?oc=5",
+      "published": "2026-10-13T14:08:00+00:00",
+      "summary": "DCF hosting webinar on charitable giving DerbyInformer.com",
+      "id": "3d7fad4eb4"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Yahoo Finance",
+      "title": "Elan Honors Credit Union Partnerships with $75,000 in Charitable Giving",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOYWxoQXBkRjBrMnVrelM5cGhjZ3NNOW96WnJZcGF3a2t4b1RSLWpaWnNWMnV2aTVIUWxCZVlvTzZ2Ny1mVHVzcFNLaVgtN0tpenROYnRFaDVvSEVVakl1dERUUVlXY0RjdW9hOV9LZW1zMDV1TmZNUC02Rm5RZ21ZdzZWMnBiQ25LM2NfSmlQRzVHN3JqUnBldTN2RXRUek1wNWFDaQ?oc=5",
+      "published": "2026-10-15T14:00:00+00:00",
+      "summary": "Elan Honors Credit Union Partnerships with $75,000 in Charitable Giving Yahoo Finance",
+      "id": "bc1a6e7e7f"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "San Diego Foundation",
+      "title": "Year-End Checklist, IRA Legacy Giving and a Costly Documentation Gap for 2026",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcGdId3RyZ1RyTEFTVkktXzdlejV3TGczOXJTWDlIc29jQUdRVGNRLWxRcm1ZYklTeXViVkxxNmRvYWEwR3RTWFZwWmFNamxTV3BTM1dsNlJIdDIzamh6WWw1ZFY3S0o0VWJwOWY1YzRZODBPaFk5UW9fRlUxRE9PNXNXVEhZdUJ5OUFTYXdqbU9ta3BnN3dMVGFZOWluNUtUeTJHdVJtMU1BUml3YURmMzVfUFE2dEFYVlZUYWtpSkMtNWl5dGc?oc=5",
+      "published": "2026-10-13T02:00:13+00:00",
+      "summary": "Year-End Checklist, IRA Legacy Giving and a Costly Documentation Gap for 2026 San Diego Foundation",
+      "id": "5226c93e7e"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Prescott Times Media",
+      "title": "Sparklight Opens Fall 2026 Charitable Giving Fund for Nonprofits Across 24 States",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOaUJBWEp0WU5MemZVQ19sZlY3MTVyZF9TaHd6TFpzQzFGaGtpaVdNcnAyLVpZOWM3NjR3TVFJa0RUb3JYa0t0QTRkOG90RjV3Wml3VTk3YzBhVGN4Rlk1LW1oMEJRSU11NTZQeXFJZ01xaW5CVFREUEU0UzBQblMwRnJ1bzhXcnhmTlhTenU4R2hKNnRCclNYZTVkREpZQmxzSmo4MUFIOXBXTmhNREUyemJBdnJzbVFGbVlsQTI5RVI3R3hzRFZ5b29rRzZmOU14Q01GYlA5V1htRjVnOGlLR1NKMk94VXhkYWdXNnJGM3ZsRjM5NGROeQ?oc=5",
+      "published": "2026-10-14T21:00:00+00:00",
+      "summary": "Sparklight Opens Fall 2026 Charitable Giving Fund for Nonprofits Across 24 States The Prescott Times Media",
+      "id": "2c5877ee1d"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Business Journals",
+      "title": "Arizona Cardinals, John Schufeldt among honorees at Business Journal's Corporate Philanthropy Awards",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVTZ4WkpUU3RMSjNzSl9JanhHZDZDbHFHX1FaaGF1X0F5TWpPbkhTc2hXbHpRSmdDeDlxWFNwVFJXeEhpZk14UDlqbG5vcElMU2ZGMkRtNlVGUWF0UE05SXlvWk1ZeUd6UFA4WDk0UlBrV2tOLWVCT0tPdjBBNllQVjZwYUlIVUszaDFnMVRFaThDcDl5dFAtTzVtazd4R1U?oc=5",
+      "published": "2026-10-15T20:36:00+00:00",
+      "summary": "Arizona Cardinals, John Schufeldt among honorees at Business Journal's Corporate Philanthropy Awards The Business Journals",
+      "id": "0e1154e1de"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "RiverBender.com",
+      "title": "Helmkamp Cares Foundation Surpasses $1 Million in Charitable Giving, Celebrating Community Impact and Employee-Led Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOSmZHX2luYjdCMl8xcUg0YU9MSFlySWdXdmU1dGVieHoyaHR0MFZGN2hqMHptaVpTYzEteDdaMm12Q3FzZXE0M1ZTZkdudV9uSmQydjl1c2RyMFFuUU8xUEo3UXZPOGhaci1uWjdRWmpWWmhRQk01dDVHWkw0cFQ4N1Fsd2pHV2k0OEZDdXBVUlRYYVQyT3hONzBQaFJPaHVXOEtNSnZqeUI5U3ZxVWFLY3NzTTBObHFkZzZRUDhfQzFlbXRKNVBPZURpT0lXMVdnSGZRYzhjRVdSajE3enR5SXRBWERrY3NkZlZnQU9OLWVEVHdQSUxUUmUyMG9ydGM1aG54TVlR?oc=5",
+      "published": "2026-10-16T16:35:00+00:00",
+      "summary": "Helmkamp Cares Foundation Surpasses $1 Million in Charitable Giving, Celebrating Community Impact and Employee-Led Philanthropy RiverBender.com",
+      "id": "c33794897f"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "WZMQ 19 News",
+      "title": "Range Bank puts $10,000 in charitable giving up to a community vote",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTzBvRU1MWHN5a3RJcE9UaHZNTXdmSFhIRl9iQmZIaEJEc0FSUnVFT2ozSGV3UkprUHFuRTlTVGhjZHpSLUJiZzM4dkxqQ2lhYXllbDMxQ2xZS0FPUEVVMlVwTTBXVnM5cmFzNXJnSEphdlhqX29qZ0pSLUZBRE9ZMVZuT3FSSUZFd2wtTnoxRWxTYzJoQ1hMU3FXNnlWQQ?oc=5",
+      "published": "2026-10-14T01:27:30+00:00",
+      "summary": "Range Bank puts $10,000 in charitable giving up to a community vote WZMQ 19 News",
+      "id": "d081c7be20"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KHON2",
+      "title": "Trial of Fears will feature interactive horror and charitable giving",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMGJTY3huMDBvX3pUTnozODl2c1VtVTd0VHh5WUN5UTFWbHhfVDNwM2RsMDJJYU5QMDV2aEZsTmctRC1xcmMtZmRkMTJoT0NIRTlDMVNfNGpmb1JkaFNYNW1tT3R1ck50MGtMVXB3WndiZ3NBaW52bnY2cWllZ2JSSjNNUndqX0YyN3otMlBodE1ZS0IwMTBFeXdnejdjaVZKZUYxNGZLZlZ1QQ?oc=5",
+      "published": "2026-10-15T04:16:14+00:00",
+      "summary": "Trial of Fears will feature interactive horror and charitable giving KHON2",
+      "id": "5ac526bc1a"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Capital Research Center",
+      "title": "InfluenceWatch Friday",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA3WTUxZEljV3Y5YmRkZncwcjVXVFFSNEo5MVFVUUVKbHZJMzFILU92aDJ0bGxaalEzX2Y5SV9FOE1ETFZfM3AwSmxRR0N3ZGlGY0Ywc2RDbklFV3VoeW9pUnRGQW5YSFNHaDd5cmNwMWxHY0RrSmU4Rg?oc=5",
+      "published": "2026-10-16T10:06:38+00:00",
+      "summary": "InfluenceWatch Friday Capital Research Center",
+      "id": "71fccce458"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Perishable News",
+      "title": "Carrier Unites Charitable Giving and Employee Volunteerism to Help Address Hunger",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQndkQW5fZFFVanNWSDZ0QlBzSFNkNTVsWlVBOWVyMkVRUlFVb0ZMcElfUDRvZUYwNERDaHRtb09jR05Td1dMZ3BxbWd3VEV4eXdHS3BDUzNkeWx0azNIQlVFc2Facm1iUHhwUTA5cUxZTHgyYzlpMkRuMEc1N2h5NUtFcHM1Nm5YZVVLLTMwbkFIWGZsYW9tM3pOdnpILXJaWUlZNGhPZ0dHQ2lDbHE0ekM2bWFGdlVTZk1tbHpBek5adGdTTHc?oc=5",
+      "published": "2026-10-14T12:56:16+00:00",
+      "summary": "Carrier Unites Charitable Giving and Employee Volunteerism to Help Address Hunger Perishable News",
+      "id": "80f6170c32"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Morningstar",
+      "title": "NATIONAL PHILANTHROPIC TRUST AND J.P. MORGAN ENABLE NEW PATHWAY FOR DAF GIVING TO CHILDREN'S INVESTMENT ACCOUNTS",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPRmxxOXJyWWl6N25Bdi1aaHZTWkJEQTFHNXFsdzlWaXBVUkNSejVIRDlMM0NLNmlRdzJvSHluNFZHZ3JSQmhaWU5ZZzdQX1FQUE11dmM1WC16OGtFV2lrMm0yT1JubXJEWDJEaU5mS0FSRmVJREtYbjJGbWNsVGx3OGk5SW9BX29fMF9QRFBOX3JWLVNKYkdtWFZVLWdQUV9ldHcwSUo0VldpZlNkRUhvUmY0RWdZUFdRMThhV2dIWVBvNy0wV1dqejFfUlk5STg4cjNTZV9jUGZGbEZhRk4zcUpPTFJXZkdzUUVWNUFfQ1FEemJ6UGk4dVZIUlhPYjQ?oc=5",
+      "published": "2026-10-12T20:23:00+00:00",
+      "summary": "NATIONAL PHILANTHROPIC TRUST AND J.P. MORGAN ENABLE NEW PATHWAY FOR DAF GIVING TO CHILDREN'S INVESTMENT ACCOUNTS Morningstar",
+      "id": "886de80733"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "We Energies News",
+      "title": "A decade of delivering: We Energies Foundation knocks it out of the park for Kinship Community Food Center",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNb0dnWVE5emhEemxWaG5jWm82X3ZuSVZleW5FY3lERFBsa2lKZ0g4Tjd1MnkyUGRLZDRLVWJxdEZhUWU1dzgyV2h5YjdnYkZtSk0zUXhFdFpqUmJBTHpLY0Fxcy1wNC00bGotNkF6WElLWXlPY2x0MHNBTWVweUhpQTh2WncyOHRLNnlLV0gwN0Q0eFJDeUxQSWxobnF2ZnYwX0ZmeENrckV2VDBud3VxOUstd3dBMHhoUUtMVVBINDJ5Qy1JdU5rcHpYaF9FUC1h?oc=5",
+      "published": "2026-10-12T13:01:29+00:00",
+      "summary": "A decade of delivering: We Energies Foundation knocks it out of the park for Kinship Community Food Center We Energies News",
+      "id": "921ea77438"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "PR Newswire",
+      "title": "MyRegistry.com Elevates Charitable Giving With the Launch of a Nonprofit Giving List Tool",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNYnVnU24xZ2dNZEVxdlRrSVVQTEw1S0p6WHJRcV9sS1VVSUhialFnX1ZMdmQweFByR0tMRDlQekdhSk82UGhBNmcwNlVTa3hvckg2dDhIb3hCblhma3g2blN2MmN6U2twX25CUWh6R0JaZjZqOVVkOHBWRzRnU3g2bUhadGlFWXlVSHhoS2pPYkt4Q0VSTkxZLWcxSEszNEE5X3JFWnZzR2ZxZWhkV3FmckF3TE0zNHNLOUZjTS02LVc4QmIzdTlmcUdpbkhoZXRUbno5dDQ1c2wtTHJn?oc=5",
+      "published": "2026-10-13T14:17:00+00:00",
+      "summary": "MyRegistry.com Elevates Charitable Giving With the Launch of a Nonprofit Giving List Tool PR Newswire",
+      "id": "46a3b11ffc"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Singapore Economic Development Board (EDB)",
+      "title": "Design Your Giving to Maximise Your Impact: A Focus on Donor-Advised Funds",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRHR4empsTWRRaTRWYWNRcENDYVVDQmFIWUdiSVhFdnBjdmpXMmxjTHhoVWZONjlGYWMwSHhvbDdRYnF3eGkzRl9QSmdmV2NjMGNvemI0eldVRWRWb1h5U2FOVHpSOFZWaEh0TGhEeF9KRU1sZXh1dkhyYTRvMkpDZmdXWUh0NG5uOTlyYTE1TE1QYmp1WnBOWXVYUnlEUkVXUjBMYnVEVEx0WHVEWkxIR2MwT25CbVVEMnRvRnhWOGx2UXA1cnc?oc=5",
+      "published": "2026-10-14T07:00:00+00:00",
+      "summary": "Design Your Giving to Maximise Your Impact: A Focus on Donor-Advised Funds Singapore Economic Development Board (EDB)",
+      "id": "9ebc7cb738"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Westchester Magazine",
+      "title": "Be a Local Hero",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPbmJSQnd5MV9qZmJ4aTdQYkhERkZQSktVUlJjZk5rZWJiQlBGd3pXTVhtRmhZaFY4dzQ2U0h5Z3psRGVERHRkckhTTnhvMUM2enltX1ZPTmFyNGZhdFRvSzRZUUwtbFBsUGx4TWFxY3h0MWJydDEweTZWeWFLNldSTVUxU08?oc=5",
+      "published": "2026-10-16T17:38:00+00:00",
+      "summary": "Be a Local Hero Westchester Magazine",
+      "id": "81d310a562"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Africa Private Equity News",
+      "title": "MacArthur Foundation increases impact investment allocation to $750m",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQUlZ0RVVvVUE5N0tobHUwcXhTdmM1ZzJtVjZxZkJTVzJKTUVOY1M1Yjk2NTVTMmN2dU4yOFE2c2dGWmRIaXh1aElTNDF6VW0xZkxWOFZSWlZqTm5wTUNWU1NZY0x6MEd2NUtROUQzMVRjZUlPVVR5VWE3MjR3YnNDRm5ScEtEQQ?oc=5",
+      "published": "2026-10-16T13:11:43+00:00",
+      "summary": "MacArthur Foundation increases impact investment allocation to $750m Africa Private Equity News",
+      "id": "93518e87b8"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KQED",
+      "title": "Staring Down a Historic El Ni\u00f1o, San Jos\u00e9 Says It\u2019s Ready",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWHBJUVBIaEVIdDhQWmpmblNmU1JCdEl4VnpYUUlEdFpxaEN1X3JsamtyVEF5enowTXFmdXdJWTctYm9CTmh3VHgxTVZ4U3BBTUxxOUxZM1A3UEpzNkJuMUFFcTEtaVR1S2JWZ3pVbUI3MkEwQ3RVV0NubTVxN25OcmxLMWNUclNqRVVYOWljUVdjdjVRa2MzYw?oc=5",
+      "published": "2026-10-16T14:00:00+00:00",
+      "summary": "Staring Down a Historic El Ni\u00f1o, San Jos\u00e9 Says It\u2019s Ready KQED",
+      "id": "694428e9e1"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KQED",
+      "title": "As San Jos\u00e9 Tries to Regulate Data Centers, Residents Want to Ban Them",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMWltZ1FOeHBqOXc1ck1BZzRUSy1vWWJxcC1hakxPay1WbVFBUzZCWnZFS3F4TlBhTzd1VGNDU0NEYVhFTkpMRzUyWFNPdnlxWUJOMUdPeDg3dU8wTU5NYjBIajg0UVBYSl9tS0ZyWHlOS3o4YUhnMVZlSUlROGxYLWZUTEtlR1FFUFc4dTVzRlVhbVc5Q2p4a3MzOW1RdE9zbGt6OUJ1b09UeWs?oc=5",
+      "published": "2026-10-16T19:52:02+00:00",
+      "summary": "As San Jos\u00e9 Tries to Regulate Data Centers, Residents Want to Ban Them KQED",
+      "id": "4fdb086a86"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "NewsBlaze News",
+      "title": "How JP Morgan\u2019s Justin Nelson Ties Giving to Estate Plans",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNeEotcTYyb0xTZ1pJMGFLRElObi1OYm9LYV9WR3VPek82eWRVTlkyT2JmWmxCM0xlWk1ieFZKTE5lYlI3LXJZRjhNOGo2bU9GemlKRXFaOGFWWnpLNm42VjNQLWd2blJoR0lTVDR3UmdMM3ozUFVDN0YxRlNFSmtFRk83aXhqQ3c0V2VfQmgwcEtKcDhWaXhGVlVZeGZyX0pVVFAtTno3QldGQUdS?oc=5",
+      "published": "2026-10-15T03:42:40+00:00",
+      "summary": "How JP Morgan\u2019s Justin Nelson Ties Giving to Estate Plans NewsBlaze News",
+      "id": "9c8112e000"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Alaska Business Magazine",
+      "title": "Tax Changes for Individual Contractors, Charitable Donors",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTUNUcU5TM05faXJzQWtZc3pGT2FqWWxpd3V6d1lFWEVBNWlzYzJJNFVocHJDX1NPSklQZ21zUmIzOEs5anEtVmJmeDhjVURUSUhNRHJTWWlndWRFeGR3V0xOUFRyMFRka2dfVTg5WXRVNnVNOUdVTFlDWXRwVXN1dDVYc0FuTnE5d09ZRFdVTFBhUGg4MHc?oc=5",
+      "published": "2026-10-13T19:50:15+00:00",
+      "summary": "Tax Changes for Individual Contractors, Charitable Donors Alaska Business Magazine",
+      "id": "046a7b98f5"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Bloomberg.com",
+      "title": "Goldman Uses SpaceX Haul to Speed $450 Million of Charity Giving",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTlU2ZndqanV0ZXRKTHRpZHRTbGVNUVExeFhoZ2hYYTF5ODVXeExwVWpuNURnYXYwT1FmSEFYZFduTWhFYXA2VUliX016X2VsR3paUkREMmNOVEhmVnRaaWVDa1ZuUnZSV1J3SnRremNrZHFXbkxHTlFsX21PZ1BaQm0wYWRXTFZGWk5kcXlUdTBPVHNQdUdPQnJRUEx3aTlFOWF4M2pZZFMyV1VHWDFNbEVQRG8?oc=5",
+      "published": "2026-10-13T12:46:10+00:00",
+      "summary": "Goldman Uses SpaceX Haul to Speed $450 Million of Charity Giving Bloomberg.com",
+      "id": "14fe568f6a"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Southgate News Herald",
+      "title": "Arts, Beats & Eats festival raises record $403,000 for charity",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQc1NwT19ON09UOHdyd09ldWlzbUp2RV82bVpvOFZDWW9YQlhtZHB1V3k3b2F4MkZaYzZMWlR0ZVpFTnNCbkh4TnQxMXpJNUpXY1pFWmpYRUd4VHlwelpNYmY2a25VOXYzUHFlMEZuSWVzcGJ0R3dldlBYMHp4RjFQa1BaRDViNXNoZUpoSVM5RVcwcDIwYURYQTk4S1BUOVRP?oc=5",
+      "published": "2026-10-14T20:17:00+00:00",
+      "summary": "Arts, Beats & Eats festival raises record $403,000 for charity Southgate News Herald",
+      "id": "110c3fc90f"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "24/7 Wall St.",
+      "title": "North Texas Donors Give $76 Million in a Day. A Retiree's $111,000 IRA Gift Could Still Trigger Taxes on His Social Security",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQQWgtaHdvejV3Y1dyQ0h3T0txbmx6aXlWcTZKeU5pVzdoU0RrU1JmNkpKX1N4R1VOZGN1VDJCWUh3RGlxVkp5ejhNaGRFQVJnOV9fNGVGR0x6dXVPQU9EeTQtTFRUdnA3ZThJWFZ4ZVBpcS1uZDNJXzlFR3NXamZXMi1jQmdheHY1NXY3RU9NYVlxeXQ5ckMzdmJTZHdZSE1zSWJSODR0V3JWbWlrWndPbWlrdXlYUDN3Z0h6MUlqcEVrWjNlRW9rZGdKVFZ2WVRIa2ExaEd6bnhPaUhNbXh0NGZZZHlRX3FvWjA3aVVKNG8zdE56RDViYzlMV3RGUV81M09rVF82c2ZhS0wxb3h5alN6SmI?oc=5",
+      "published": "2026-10-18T09:30:00+00:00",
+      "summary": "North Texas Donors Give $76 Million in a Day. A Retiree's $111,000 IRA Gift Could Still Trigger Taxes on His Social Security 24/7 Wall St.",
+      "id": "33ac79c98b"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Cincinnati Enquirer",
+      "title": "P&G shareholders kill proposal by investor uneasy about LGBTQ giving",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPa25oQklyVS02czJjaVB6OUdEQ3VrMHN0LVNtLVRFWnZUWWdoeElhQ1N5N0hua1FpQllDYjBrWVFVSjlkb3N5YjVyUjNrZXdMVlo0ZUs0eThFamxGdWs2U05QTFdrWTRQcnlxOHNkYjhrVm1aaFdYYzJpcFl6MnRhRkpnbktnSVR3TVJEQ2IwUmtvWDVyMWMyNVhoVlg2dVFGdDEzOHRCSlFUd3M4YjhwbWVqbEQ4b0djb0F2QVVGcndNS2xRc3ZfYg?oc=5",
+      "published": "2026-10-13T15:51:00+00:00",
+      "summary": "P&G shareholders kill proposal by investor uneasy about LGBTQ giving Cincinnati Enquirer",
+      "id": "45daa9aad0"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Stock Titan",
+      "title": "A 555-share gift leaves a REX American Resources (REX) director holding 18,060 shares directly.",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVTdGV00zdl8yWnJXZjREQ24zWGxPcG9selJjZjRhR1lMdXF0NFlJTDNDbXpmSkNrbkRTaEU4UHhhT3BBeVBRYy12R2szWmFzOE8tZjJpdDlWWGtWdjYzZWoteWdfLXBtLTlpaU5zZmItM28zMHp6MkhzNWJHemh6MHc0NFFzVzVMSFhOLTZ5U28xSTFGbkgwWTVtdnUwbnowdVd1UkREcEdVVVp0SmY5Ymp4dlYtSmFJMTBvVg?oc=5",
+      "published": "2026-10-13T14:11:35+00:00",
+      "summary": "A 555-share gift leaves a REX American Resources (REX) director holding 18,060 shares directly. Stock Titan",
+      "id": "d8c52c4c23"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Jerusalem Post",
+      "title": "Israelis and Diaspora Jews are donating more since Oct. 7, says JGive founder",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBzTHc1MFN3TzdyZEJQNVJKYW43U2ZGR3hoQUgteFRjQVkzZllOYXN5LWNBTVpFOUlFcHhZdnZQTmZiRU83VTVQSDQyczRxcko5TDVZdkdMbw?oc=5",
+      "published": "2026-10-15T13:10:34+00:00",
+      "summary": "Israelis and Diaspora Jews are donating more since Oct. 7, says JGive founder The Jerusalem Post",
+      "id": "ba784ea9d3"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KUNC",
+      "title": "A federal judge blocks sweeping changes to the Forest Service \u2014 at least for now",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNd0pqc1NHSzhCSXFkdXhNU2NkSmNjLXdONi1Tc0lXTEJ1QXlUOFhFTlhxRGpVcVdOZWxfOHdIcURKamVJSWppbnpLakk1Vkl3bzR4WVlEVjRZUTltX1BpRk1Id19PTWh3VDBBeDZReGNoa21td1ZuZ1o5NXVsZWtaWGF1NFhUVkttbW1LdW1FMy1KaHZtYXIwLVdxX3lGblIzVmhLUDZFQXg1ZHc5YWRwSlQ5SHJTbHFUY3F0MDdYSlJ0UQ?oc=5",
+      "published": "2026-10-17T12:00:00+00:00",
+      "summary": "A federal judge blocks sweeping changes to the Forest Service \u2014 at least for now KUNC",
+      "id": "fdd4ec84c6"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "citybiz",
+      "title": "Professional Advisors Gather for Jewish Federation\u2019s PAC Kickoff",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWXhRTzQ4UVlJWVR0bDVTRWt3RmtUdzRTLUNJLVpFVFNXM19kRnpWQ1ltQUdwNGR5YW1lbmJNdGxhODJIXzV1TWlqdGZYY01qZDFBMkl0MWZiMVQ4NHFFTDlrX2czLWpGZnBFRFNnejVpelRNMTNIeDB4M0N3UE8wcHI3OGdSUWJiNjdZSVJRWGRRUHR0SXNPV3p0WGdUVlZYTWRkWg?oc=5",
+      "published": "2026-10-16T14:09:57+00:00",
+      "summary": "Professional Advisors Gather for Jewish Federation\u2019s PAC Kickoff citybiz",
+      "id": "0b63a8a177"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KUNC",
+      "title": "Driver charged in fatal crash following Fort Collins\u2019 Tour de Fat",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQckVLYm9VQWtFb2JkWHYzTThfVU1iRTlKNG12WHlGWHduVTlvRlQ0MWNJQmtPTml4OHZZM19mRzdPckFURDdmVC12dk5IdmRkdzdCWkk2UUNUSXRJYklzNF9aUEs3RlBPYmZ5djFKVVJFbVV1WVJpdFJfeTA1UndkaDdDUkVUN0g1WUhfMGUtdDV5WlRRMXE0clFiN29SWGdFaHQw?oc=5",
+      "published": "2026-10-16T19:18:00+00:00",
+      "summary": "Driver charged in fatal crash following Fort Collins\u2019 Tour de Fat KUNC",
+      "id": "c47bc766e0"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KUNC",
+      "title": "How much money has Musk given to Republican groups since July? The quiz knows",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOVRfRkdaZEROc1g5YVFLcng2d1NucVV3RlJGcDFOQWpRYUpyRGhHV3NfLUd1Sjh0S2JtQWRzNGhLS2kwRnUyQ1QxZzkxS2lkY2t1amhYZWp3blFBVEZERGtHMUdIdUY5OHhoOWswdXpZdU1uRTdsYl9CTDZSVlA1eEFyTnkzTmNvWm5scjJRQ1NfWXdHcXZBX1NxY2lnU1pkQzUtUzEyZTdpUEN2YjMzVnNGTUFvOGox?oc=5",
+      "published": "2026-10-16T09:00:00+00:00",
+      "summary": "How much money has Musk given to Republican groups since July? The quiz knows KUNC",
+      "id": "bd27cd2d96"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Retail Customer Experience",
+      "title": "Checkout donation ask can ding customer satisfaction",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOblNwLV9hQkw3NXpLSlg5aHAtSHM4SEJ5VUVYYXkyU2lMSFpLd29ONTVqRFRCeXdwWXRNNU5lVXR5YnduRW9oRGlSeWxhbUt1ZGNmeTVNQTZtNDdnSVFVTzc3NjVWVjZjeG8zdEQ4ZlRnYXpRYTBNbURnZG8wTTBsN012QXNPdTg5RTQ3ZnVCUUFuOGpkRVFWejhsZGJzdzZt?oc=5",
+      "published": "2026-10-15T10:00:00+00:00",
+      "summary": "Checkout donation ask can ding customer satisfaction Retail Customer Experience",
+      "id": "aa16941c93"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "24/7 Wall St.",
+      "title": "In 1918, Milton Hershey Quietly Put About $60 Million In Stock Into A Trust. Over 100 Years Later, That Trust Still Exists And Holds About $23.6 Billion In Assets. Wealthy Donors Still Use A Similar Strategy, And The Legal Work To Set One Up Starts At A Few Th",
+      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxNOXR4NmdjVURoekZZanNZV09LeFgwczFTMFoxd3VwOEdzVGZPaUN5d253UWRDcEVRZDgwNEFVcjFVLXBUSjZnLTFSamMwanliX0RCQjU2a2ZCMEhTaGR0OGJFYXpVclpVMWttNk1CNEFTMGxwdFVzZ19ub1RmaXE2bkFwRlUwS2tlWHJTNF9GSHFsdzdJeEFXd0xQaUhRaFRKVi05c0Z2OTBjZllfOE5CR25JdEt1WlBIS2p4VnVMQ2o3MVpiLV9Ma2FxTXhlTWxGaE13TFlsNjltQnptemtZYzROOGZIUEJ1dmVnaTdzUldRSVI0SFlVSkVJZ0hmNm5CckxXUWhDejZfYnpnRUpNbk8wd2VJdWt4NlpMZ2lZb1JPN1AyLVl3U1JDbmxVdklMZUJKMTYxdHJZZmJUVXNzNmFCWEVrcE55VWNQRFgwbndRbVUxSVJGTTlybmQ1RzYxTXdhdW5aTUNZR2N0TlVETnAwZTlDRmU3M25weHV2VG5UWF84MVpfMw?oc=5",
+      "published": "2026-10-17T12:28:00+00:00",
+      "summary": "In 1918, Milton Hershey Quietly Put About $60 Million In Stock Into A Trust. Over 100 Years Later, That Trust Still Exists And Holds About $23.6 Billion In Assets. Wealthy Donors Still Use A Similar Strategy, And The Legal Work To Set One Up Starts At A Few Th 24/7 Wall St.",
+      "id": "2189d217bd"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Jambands",
+      "title": "Phish Tour Posters Signed by the Band Featured in New Auction Supporting the Mimi Fishman Foundation and WaterWheel",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWjVra0Z0QUJPOUdPcXNlZFhpMzFvN0R0QXowaksyN0l3WXRjYzZ6T0JyMDE5QjI3Um5sX2NZeHBMdGNiMkRWcjBRQU8teGxpVjk5THVBanVGT2luZ1I4bTh5Wk5ENVFBdGt6TjFNdk95X3VXcWdES2pzc0VwZkl2MmJyajd2eDdUT3dmTkN5TzExeXdtdUZURHJiUDMxN29kNVBNd0Zpaml5c2N6eElFWEd0ZUgtc0VxOXA2N3pRVWhIbFJhQlNHX09sRHBHalhmM2hpcFRneTE1aTFFT1FBYnFzZ0I0dlNk?oc=5",
+      "published": "2026-10-16T16:20:37+00:00",
+      "summary": "Phish Tour Posters Signed by the Band Featured in New Auction Supporting the Mimi Fishman Foundation and WaterWheel Jambands",
+      "id": "6ab7c06c91"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Art Newspaper",
+      "title": "Artist Gabrielle Goliath brings cancelled Venice Biennale work to London",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRmVvSGlReG0yOU10M2VtME4xalBfZU04c2owVUEyUmtjUWdLUElkU3FWeUlyTDMtbDRlbFJSTnlIekFhZ2RDTVh2dnpJTlY2R2dCUjh2SnVHYW5NRE1BcFRIWEZYbzRWekIwcFJ6T3QzdEdGT21Cd0lzUGZnX3BPR3ItaUozRk1Rdl9xOWNjRFdFUEJSa194NmZ2NE1Kb2pSbTVncUMzVVpLb1J5aVEw?oc=5",
+      "published": "2026-10-14T06:32:12+00:00",
+      "summary": "Artist Gabrielle Goliath brings cancelled Venice Biennale work to London The Art Newspaper",
+      "id": "bc8f962fba"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "KUNC",
+      "title": "Man injured in officer-involved shooting at Colorado State University",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUVZ4TWxpYzFycHlVSHZXX3RKWFBPXzcwOXRsVkZhWHVLZnVCQ0E5TmswcFhXY29VREp5ZXY4c2JGS1BhNERxeXMtRmwtNXd3OURTYmQ5X0Q3cm1kSHpxQ0dYVjdycEZQblhBM09STk1wLVpHQk80eEVsMEsxZWFoelNBYVZiRWpTeGxFSjNScWRoY1NSQ2pIUlgweWg0NW9aR2VKMUV1djlpQQ?oc=5",
+      "published": "2026-10-13T12:53:00+00:00",
+      "summary": "Man injured in officer-involved shooting at Colorado State University KUNC",
+      "id": "a1590a0714"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "NDTV Profit",
+      "title": "$26B Donated, Yet Missing: Why MacKenzie Scott Missed The Chronicle of Philanthropy Top 50 Donors Ranking",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPWThxa3NjZlNnUURSdmNZYjNIODJVb1I2aGZMdUVMeWQzalNxa2E1aTVieDNpRHdsVG0zcmdDZ2I3RExZWU1ySk05VU9nUXZGaFpsYzZfbTJrT3FNS3FjR05zLTFIdnR3Vkc3OVY4SjcxNGgzMGVMX29lQ3RGbTBYRnVXbjFhajJ2em9Ud1JrUzVoZ01fM3JKMGRIcndPZW9IMzBLQzZxMXEwSDhILVVsb3dOT1VBSjNoTmZlRWoxWW8xaUtRbGNzN1VnYWdWSEpYRmh5bzFYcEtPX25G0gHkAUFVX3lxTE1UY1BkeURTU3pmS1FQN1hjeXd4dnNHU0dvemRkbksyeWZsWEY0cTBqZ1RrY1pQS01OTWRKUDlETjNQSWh1a2l1bXFPeWhDVXdMbTh4RUV6QUpZdnJ1eG9NTG9hdkY1M01JbThxd284cDNyUjJRSlJ2T1d6Q1BSdVhFaVFuOXVFSlJxemEtTWVib0ZWUVZyemstZk83bG04ZHN5M3AwSE1zMi02SWRkdmxUQl9ZSVVBb2lPVzBsaFZ4NnluT0hqZTRYaWZhX0E1bFJSMFlGU2hnV0h4U1R6cklVcDF4Nw?oc=5",
+      "published": "2026-10-12T17:09:06+00:00",
+      "summary": "$26B Donated, Yet Missing: Why MacKenzie Scott Missed The Chronicle of Philanthropy Top 50 Donors Ranking NDTV Profit",
+      "id": "6bd26875bf"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Times of India",
+      "title": "Tom Brady\u2019s charity controversy deepened over $46.5 million in fundraising and $500,000 in yearly grants",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPaG9GYmZ0QTdGdWRDaFZselZTc3lqRFpuX3RmdXRteXhGZUZnVTFlMllOdHN1WlBleHkzck90S25nZW1Rc2xFN28tRDVXV3BCaV90cGlRV1ZpbkpwazJNdlJRUlR2QTluYno1NmhxanUtVG5mU0g1dUpwVEcyNG5ON3c3bjBReV9DR1RsNHZ3TXlrWTZqUXVnckk3dnh2RnRnbExFOEY4d2xNX3h5a29QZkMxSzF0ZnRMQlA3TjYydER3U0FfQXpOdTdzdGtsdXRYay05SFJUa1VBOVgxZUJXQVkxR1NUQWFBTC1pLThNdkloY0NFWFMzQ2tnNmxIR2hWX2tFMkZlYlJjUdIBjwJBVV95cUxOZmJLcW1QRTVkcmVDVS11WC11SmQweGlETTltM1RnU1FfLXdwckgxMTkzajhnX1hqUGh0Wlp4cUZvSzRrNE1QQ0l6bmhHbUNKWkYwQUJaZ2RMbHZHZkUwd2Q5UjlRczJDcjNLSXFxSDM3b2RBSmtfY1BMcUdmMEJMZGpUWVluamRNaUhqTGtxZnpuSDlqR1B2bTdBQ2NtTHZiQnlKQmdHd1gwZEt1Z25sVGdQM3BkWS12dUYzbDVTZnZhWEI2dUl6QmlhQk0tWWNZSWk1THMyeHdMUnd1TEJXem9TT0RJTnNqQnNzM21wVW51MUVsUzZqTDE3WVdwaHRPX1hJM015WVdjVkdtTUI4?oc=5",
+      "published": "2026-10-13T23:12:00+00:00",
+      "summary": "Tom Brady\u2019s charity controversy deepened over $46.5 million in fundraising and $500,000 in yearly grants The Times of India",
+      "id": "f4b98ec17c"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Just Jared",
+      "title": "Richest \u201930 Rock\u2019 Cast Members Revealed, Ranked by Estimated Net Worth",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTllwc0w0MVFQWmtmNU1iaWpMLWJhejNhZ3dzelFyQ0lieVNBamZHdTU1cW5ZVEhwczRYV3AwTUE3ZmtVNmlHN3NSQTh2c01xajltNmdGOVVlYVpraHRXT0hQRzladTd5bnplRmlyZnRaOWdqQ2ZNa2pUbHpraFhxZ2ZCWnF4SlQxbkoxUnlOb2YzdW5Bc2pRZlNVOUxWcEZ6eG5LWEozdHRuRWM?oc=5",
+      "published": "2026-10-13T03:52:50+00:00",
+      "summary": "Richest \u201930 Rock\u2019 Cast Members Revealed, Ranked by Estimated Net Worth Just Jared",
+      "id": "141861d580"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Goldman Sachs",
+      "title": "Year-End Tax Planning Guide",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUS1WdF9OUlU4bWlVa2d1NS16MV9oRnZCY3VyWXdTY1UzTklmREZfS2ItQVJFS0hkNy1zblFPZGQ1Z2VIREE5VWFfb3N5V3lWWEhZRTdsWkEza3AzM29Udjc1RVY3LTRCQjU4bEZqS1dTYk41cU9STUxScXdIU0RHcA?oc=5",
+      "published": "2026-10-16T07:00:00+00:00",
+      "summary": "Year-End Tax Planning Guide Goldman Sachs",
+      "id": "14a49c786f"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Benzinga",
+      "title": "Retiree, 74, Gives His Church $15,000 A Year. One IRA Rule Could Help Him Keep More Of His Money",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQmNjcWpjbmFYRVUtZUJGZmlLX2IyQkdDbWF1YWZBYjdZcE9JQ180Q1gyN3JuQlhlcjBQRGtobmlJWU9SdXVqckxUWm1LTlpFQjQ5bDNiNWZiemUzZFM0M1p2QVdQWTdCOFN2aTQzX00yYzdXWnJ2cDdmUmhmMGpzenN0aWVuTHFFcEprcnBESFRIM3RhRWVfNUpGYW04WGxjX1R1Qkt0SkNYdHlBR2NZaTFhdElxWmU2eGxoSWVxV09PYi1aTFVXR3cyYXpTRFFyXzlGOUJtbkJEUm83dWNvNlZ3Z29GY00?oc=5",
+      "published": "2026-10-12T20:30:07+00:00",
+      "summary": "Retiree, 74, Gives His Church $15,000 A Year. One IRA Rule Could Help Him Keep More Of His Money Benzinga",
+      "id": "bc9b19fab5"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Economic Times",
+      "title": "Jeff Bezos' ex-wife MacKenzie Scott donated $26.2 billion in five years, but why is she missing from the C",
+      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxQUFgwWE5oYTB6ZlJINXRqOUlMU2FOTG0yb3czNmpnSlFfQjhVVGwtSVh4V2QyUEI4a2JhUW03SnVLcE9udDdOVzdnYVo4ZEdmTU9wZHhoZzhISFB0MWJ0cm5MV0pnVWtMX0NubjRKblE2R2M3WUxQYV9kV0p3YkVLNk9vakZVUGs2NTV0MTJJcUpzQXI0aUlNSXJ6TUhvMGpjczh3d0prVlF2UVY2M1pGV1lQREVVNFFfR2l0bE5sM0F1UkRNVlhQcWZBM0xhS1M3TlRsSFBTWWNrSVhpTkdWRHRoRF8tSDZidGpmZHRjRDJyeXg1YXE5VW9HM3c1QUlmeDVDcUJoeDdFcHhVVjlGOTRzelBoVzlESDd2aFNKa2R2NV93c3VNUTNESDYtZTZVSTM1eENyNNIBvAJBVV95cUxONDFUVURGNlNXMlhWTU43Ymthano4aHZydG1lY3R5SUYxN0MwVnZQSHJsRnJWbUhMOG03WDNoZUVpUndfRElFSUN1aGpSbm1tOG0zY3hISkh1dm9PY1k5aEhqeWdxQnBPd3E5WEZNaExZeHY0VnhKRmlHc3RQS1VlMUZ4ekV1RktiV0tndjA5ZVFrYUkzSlJZX1AtbmZ6dDdrajA2Tzc5S2dNWFdqTllfT3FtSExOaTNnbEdZR3JiSEZyam1rOVA1aFZ6bHAxRklIRTRpNzZyUGhwblZuX205UlhJZEExeHhNa3Bkcmh4YTBzblhpOE04ZkI2QUFQTFRPYXo0M3FJekY3SjJKWjhvX2lLeHN0ajI2eTlwbnRSZHNQV0h1R0xDX1lrTnltZUtNYmVvd1FEcVhkQnI2?oc=5",
+      "published": "2026-10-15T07:00:00+00:00",
+      "summary": "Jeff Bezos' ex-wife MacKenzie Scott donated $26.2 billion in five years, but why is she missing from the C The Economic Times",
+      "id": "3f9ed049b5"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Philstar.com",
+      "title": "Private foundation commits P200 million for South Cotabato hospitals",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOeDdWWGx1dWlld1BJT3Z4dXdjV043Qk9HWWIyWGs4T2hQYkFVSFhuSnFEYWNDT0NBeFV6UGFrX0VudHg0TmtDSnZ5aXNiU1hnNnRqSnVqZ1N4Wi1pUURfY0ZZM3FOa1JLSjNqc1ZDUUFwNkJTNWo5LXhobEJMT180djNkMU1OSDY5dWYwajNaOElXM3lvVmxoNjRaYnc0SHpEa0hfdW11QzI1Q2FTb0NiZHZFMlhQQdIBvAFBVV95cUxNcjNQbm9KU0VmOXVNSHktbWtUYzNFOUR3WHhYNDV4dDZxTmVLUEZ2ZGZ6V0s2Tzk1VENmRmJfZEZfUjZJVFUyNTQtZDNfOWU2TW9aN0ZwdVpXSG9IZGJmdGV2YXk3a3BwSllkSmNjVUhYUTljU3lsRU81VFp5WkNwOEdQWlBFZ0szejc5bU9lZTdMdDVwY2dQZkZIaDR6YUdkNDJMU1pheXM0bEo4TFpvSGRJQ3hBbS1pR1FyRA?oc=5",
+      "published": "2026-10-17T08:16:00+00:00",
+      "summary": "Private foundation commits P200 million for South Cotabato hospitals Philstar.com",
+      "id": "77dc7267a4"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The Montrealer",
+      "title": "Montreal has a giving challenge \u2014 just as needs are growing",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObEdhYllNdzhvMHNYLU9yOHdOSURTbDZvR09SWTFQYTNwMjVtNDZCTkpjQW1Fb0xTM05BY3BnUTR1dEgwSS1oUnBaVjVRTy1ha3NGaENxVnJVWmt5M3Y2b05CX3JVSENJd0Z2YmhWX24wNTk1MUlIWFhYbEp6a1lCTFFfQnIwNzJBZ2Y0c01PODdWWVFjOGdsNlR1Sk9waU0?oc=5",
+      "published": "2026-10-17T09:07:00+00:00",
+      "summary": "Montreal has a giving challenge \u2014 just as needs are growing The Montrealer",
+      "id": "6367932426"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "AOL.com",
+      "title": "Who Is Chick-fil-A CEO Andrew Cathy? Everything to Know About Fast-Food Heir as He Addresses Company's Position on LGBTQ+ Rights in First Broadcast Interview",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5hejlpN3lQeHA0UnhESHlUeUlOWnQxV2RuU0lMN3BMZmpVLTR5ejFiWmd0Z3JfOXBkbHJ0T21DMFlUTmtqeTRZZ1VEVzZRYTdfcE5DbE9VSkU4RHBpcmU2WnhZNURBSl9FVzNuM0JHX3pVaFl2dFphbHRB?oc=5",
+      "published": "2026-10-16T19:57:15+00:00",
+      "summary": "Who Is Chick-fil-A CEO Andrew Cathy? Everything to Know About Fast-Food Heir as He Addresses Company's Position on LGBTQ+ Rights in First Broadcast Interview AOL.com",
+      "id": "f5b5250a39"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "ThePrint",
+      "title": "Economist went looking into Musk\u2019s charitable avatar. And this is what it found",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMUo3cWljRFVPLTFwMHJ6U1Jybm1EY0NfYXZKVDA2UEh0T01VYzFGSG90Qmgwa2lMeWNKUHJuS0puS0RaVjNJaFAtekVJbHVyTFk0NlVJcklyS0FQRzN0a0V3bWItRkRwT3IxSUxXSXN0d3pRU2VCUFViRmJ5U2V6N19Bdk5JaG1mYk16OUNVcVlhSWfSAZgBQVVfeXFMTlkzZXJZNGxOczg4RkVMb1lqYXNqQWpfZGpVMThjYW9zRHl2QVA2cnFiQ0JCMHVweUlUQzhlUEJDX1NxQ3hVbVhKUkN2endCRVZVRFA1TkxGek4zUVNrNG9GSk5SdUhDVVBaNG5lWXhNb25QRDM1SXMwakE0aFZ1VXByZlRSaUM5YzB4b2I0YWM2VEdqUzRUbUM?oc=5",
+      "published": "2026-10-15T12:14:57+00:00",
+      "summary": "Economist went looking into Musk\u2019s charitable avatar. And this is what it found ThePrint",
+      "id": "085fad1ec6"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "YouTube",
+      "title": "The Planning Desk: The Year-End Playbook",
+      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5sZkRBeUJIclVUbm5kTzY2c2dDdEExQmdnMzl6WWhrOXp6a0FiV3pjdDJfZERvaEF2VVNMSlhPZFdldw?oc=5",
+      "published": "2026-10-12T17:30:32+00:00",
+      "summary": "The Planning Desk: The Year-End Playbook YouTube",
+      "id": "e104671a54"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Kalkine Media",
+      "title": "Daniel S. Jaffee Converts 10,000 Oil-Dri Class B Shares and Donates Common Stock to Charity in October 2026",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPRkVxalJVTWFGdmE3YVFZWTZ2LXVrWTNaN2YtdVY4M0hYQS1zMklZZGN6eXFGVTlqT1dRbDJuT25jVTRCWmgtenJZbnR4ZWRtdFYtZHhUVTZPRGV5TzRwcVBDQ1UtTWhoYTF2NkZYR1o2eFdRSnZCUTJSZk1taWNXUmN2QlNCMmtrUm5tRU9JMngzUGRVempEaVFFWkxNaW56MUJoRU11WTkyNEE5bzF6MGN5U21udmhSTWpPZ1FpVjVPQk9vX0N2cno3SG1VdFBsRTJkdV9fMElOY0dBbXpFa0FoOVdvUUU?oc=5",
+      "published": "2026-10-15T20:56:12+00:00",
+      "summary": "Daniel S. Jaffee Converts 10,000 Oil-Dri Class B Shares and Donates Common Stock to Charity in October 2026 Kalkine Media",
+      "id": "b6bdf9ef82"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Gulf Times",
+      "title": "Qatar Charity and Wolf Store sign cooperation agreement | Gulf Times",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdVhOdVphN2VRdmF4NlJnM3k4cVQ4OE9WdFFNTW5nSFl4RWwwbmV5aTM0OU1IZElnaE1IVkRSQ0lHbG96anYybllLN0FPaTBydVFYZmRBckpHSHRDNUJlaGJyOHhkcXFsQi1sTXUyaU9PS3VNdXB3dGNGZkhqaHQ3VTdhMmk0c185REUzY3Boam81bndsZE9jVk9WUDdIRmhwVHpiaVJB0gGrAUFVX3lxTE5pMU5kcG41engwZ3pESk82VGJ0MEdoRTZJN2p2T20zNzM1WlFRcFd3NHBNOS01clF6V1hmaDFOdmQtcndDZTRjYlhnakU1LXJHWWpjcWJVMk80bm81M3MwcWsyRkNWMnhnMkpMX0lPVVEtZ3c0dWZ3M3NuUXNjQkw0RTA3dzVGU0Q2TXl2ZFNYWU94aDFJSkpGRXZzSHYzbTRJbXR2N3Z6b2Z2dw?oc=5",
+      "published": "2026-10-12T18:10:00+00:00",
+      "summary": "Qatar Charity and Wolf Store sign cooperation agreement | Gulf Times Gulf Times",
+      "id": "41c5e50c3d"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "The West Australian",
+      "title": "What To Watch TV Reviews: Phony, Yaga, Telethon, Nobody Wants This and Aussie Shore",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNT0N6MEZQbXFUTnhrOE5NejBiclpiQlpHTGtfZ1Foc09RSGJHOVN2d3dNMHhfbHN5LVdZLWVKbjdkQzFuZmdOblNpcDhRVFM2eHRFREltLWtzREUxbWpVSGhheFA3SHV0Wkt0cHB4OW5RazZUbm53R3FBLVRacTIwY1dnMl9uckxndXFQU21fQU10VVZCRDNsa3ZKZ3RYRUEwbEp5aFdiVEhtbkZEUmphMUxHWjBOU2xqODdMUVo4WUZlb0owQ3ltNWFR0gHPAUFVX3lxTE1pTndyUFNoV3A2X1RLRW1tMUZON3JISjdwZEZHSlAwcXpadHViNkdLZlcyTk0ycVhYd09MU1ZzZzRweERjNWlZc3lUSG56cHpqWHF2dGFlZHdJQkdtOHVQRXM5blctNVRtM0ktMHp3eWVCLW5wSWpEejYzb19LQXQ0cDY3YjYtd2prNHI4bU1wM3MzN2ZlXzQ5dS1fbTZwOEZVWUFUcEk4YjhuNmpjdlJUVzhDUHRDcEV4MHNYbXhfZGdvQXcxQjQ0bF9ZV2x3SQ?oc=5",
+      "published": "2026-10-16T18:00:00+00:00",
+      "summary": "What To Watch TV Reviews: Phony, Yaga, Telethon, Nobody Wants This and Aussie Shore The West Australian",
+      "id": "6103f4b508"
+    },
+    {
+      "source_id": "gnews_giving",
+      "source_name": "Sri Lanka Guardian",
+      "title": "Belling The Bellingcat",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFByOGE3TENwQnhGYmtTR2labk1Icndxc2hvVWoxVUtCQUlISk5UcVBpcmxibzhXT3c0RVB6RzNRZ1JaTzZ0S3JSNkJWQ0I0czh5QTlHXzJ3QXdhUQ?oc=5",
+      "published": "2026-10-15T21:30:00+00:00",
+      "summary": "Belling The Bellingcat Sri Lanka Guardian",
+      "id": "700d529a73"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fortune",
+      "title": "In nearly 2 decades of leading philanthropy at the Milken Institute, I've never seen a tidal wave like the one that's coming",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRm9xY1k2Y2g5QXJyd2ZOS2J2TWZRR0VWdGcyeVhQVEJITGpWbHRKY25GaEhiUm9fOTVLLU5tcm1zSTlfdVhYU2l1alJtYzI5Si1mdXZrcnpnNV9CbUg3TWJzMVhzZ01ZQ0xyWXFjakxHZDJhcTJKeXVLSmlkb2QtZUlpbmdqNG5PeFFlYXZrVU1VRUVmam13NnFnTUw?oc=5",
+      "published": "2026-10-17T10:03:03+00:00",
+      "summary": "In nearly 2 decades of leading philanthropy at the Milken Institute, I've never seen a tidal wave like the one that's coming Fortune",
+      "id": "393192ca40"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "University of Denver Athletics",
+      "title": "Denver Athletics Mourns the Loss of Impactful Supporter and Philanthropist Jane Hamilton",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUVNrcUd6aGRzQl9DNWFOQXllaW5uWTJ6eEhGR3RnM2xQejktdVpXYnlWdXNQc2hIRGtlYVRxWXNtSjloLXVtdDJnTHgzUTNMSHkxRW9SeHNwRkgtOWVDTE5IdHBkcFZ0bEFHNTY3ZXhMWURFSXlQYllvYkpVaEJWMWR1MldRS0ZXZXBJdlZOUGRXS0dsLWE4WjJMb0Y5LVg5TVR4WFBXYlQ4b0pzYWJYX2hfc2Zza3lHenFaM3ZZeTV6aW1kSlptZ05qTQ?oc=5",
+      "published": "2026-10-13T18:48:07+00:00",
+      "summary": "Denver Athletics Mourns the Loss of Impactful Supporter and Philanthropist Jane Hamilton University of Denver Athletics",
+      "id": "523f684484"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "University of Washington, College of Arts and Sciences",
+      "title": "Where Philanthropy Meets Racial Justice",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQaV9KUDZkS2ctVlJOM0dWb0VEd2NIYmpBYW5MdUd5VElWcHctTzFJdXR1Y2tFdHMwZVJxQUhrU25oYlpkMGxpRng1SWJJRl9kSkh5d2ZlQ1NYa0lPT0o5dzZVREoxeFlfMTl4eFRVZEpac0N3ZXAtRkx0RHJLbzNSMTJnZ0pDUEN3c0E?oc=5",
+      "published": "2026-10-17T02:48:22+00:00",
+      "summary": "Where Philanthropy Meets Racial Justice University of Washington, College of Arts and Sciences",
+      "id": "4e25960e5c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Robert Wood Johnson Foundation | RWJF",
+      "title": "Three Ways Philanthropy Can Show Up for Black Women Social Justice Leaders",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOYUpwX2VaaFVtLV9qRlJOb081bWNwb0JPS1lHODNHWncwSEc4bUFpSWxNbFMyTjZBQ25Mdm1ITGVIMDdLTEhLVzQ2UWFDcFJrZVBON3ZyejBTUGxWZnZES0t2TVI2V25NdXRGaUtaUTB3cVN1S01FakI2ZzdNRU5iR2lDRjNQTWJxZTBlVG1STzEwTmNCVXFEdkQ4ZE9OSWVlOUFmUmdIbFVERzNtdUtTNjZnYmJUUQ?oc=5",
+      "published": "2026-10-15T13:00:00+00:00",
+      "summary": "Three Ways Philanthropy Can Show Up for Black Women Social Justice Leaders Robert Wood Johnson Foundation | RWJF",
+      "id": "540eba975e"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Milken Institute School of Public Health",
+      "title": "Michael and Lori Milken Honored for Transformative Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMVZhWU53S0lRWXVpZldveXUzRG14d0NSd1hlOVNQVzdPRDNjSjdmbHVRLW8wcFdxTHkxdjh4RFZ3NUs3TkZLajUtNm96MWUtelJJNGpONkdNMFllZU9rbDJQNHpYVDhXZ3RyYTNpUjc1S09HbmlSUjZ4Z2FCQldsR3N5TWdFal9rTUxLUmtlRk9DUQ?oc=5",
+      "published": "2026-10-18T14:39:18+00:00",
+      "summary": "Michael and Lori Milken Honored for Transformative Philanthropy Milken Institute School of Public Health",
+      "id": "6f30b6df91"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "University of Richmond Athletics",
+      "title": "Web Threads: How Philanthropy Powers Football Advantages",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTnkzcXB3UW9VLU1YQWoyTW5aV2RPVXJ1UzFDOUZlNl9kcXl0N1hWZWNPWDdBVFdUaHhlczlmclB3U1JKWHNYLVZXYy14VU94R3ZCbDlJd3BPY0FrY0VxbzZhaWs2RkZmUjhSTWt0RWVlZEtNU0ozZXN0ODhYVE52dEl2RWVJczRuM1dNSjlrTkE2bEUyYkcydlNiYmI4dVlU?oc=5",
+      "published": "2026-10-15T14:09:56+00:00",
+      "summary": "Web Threads: How Philanthropy Powers Football Advantages University of Richmond Athletics",
+      "id": "3b1835c2df"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Nonprofit Quarterly",
+      "title": "When Women Change the Rules: Rethinking Power in Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMjdQbzI2WlR4dTg5aGtYcXBpM1d6Mno2VnluYzhJdV83TkpLaWpMeTNRVWVMaVVVZHJXNWZCNWpROWJ5QnFqV3U1c2x5dlNydjViekRUR1VkelFtbWZTcGlvUmZGUHBZQUlYWS1objdPemcwYzRoSzBVNXRPaUtRZWdDSkU5WFpLZFpNWWVoeEJpY25qeFh3?oc=5",
+      "published": "2026-10-12T16:28:03+00:00",
+      "summary": "When Women Change the Rules: Rethinking Power in Philanthropy Nonprofit Quarterly",
+      "id": "4c6d660859"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Harvard Magazine",
+      "title": "Harvard Stabilizes Finances With Strong Endowment Returns, Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdEcyYlFQTndoNUFlZThSNmZfY1lOTmtFcFRSdlVub3RqVkl6ZktXSVdmTEdwQUZPWUZxRWRWTVptWmdzZ3l1N04yZk1pakw3WDNIb0lXZ1pVVUUyQzVINDFoVUQ0N3BKandJLTdhUm44Nng5cGhmdWwteFhvakhWRndlc2ZseHN4Y21oUGdZWEt0M3A1bzFacV92Y3c5MktGVXVNYWJn?oc=5",
+      "published": "2026-10-15T10:48:55+00:00",
+      "summary": "Harvard Stabilizes Finances With Strong Endowment Returns, Philanthropy Harvard Magazine",
+      "id": "9fe657b55f"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "USC Price School",
+      "title": "How L.A. philanthropy evolved \u2013 and responded to crises \u2013 over the past 25 years",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcElEMU5mRjBmYzBJZGppLVA1QlN6YWdsYVpMVEhyWUJSNnFRTTFScG9idDQwVWZHNGZreGFmRFdWQl91djZfejhPQXM5YjlLbG1RWlBqZVpySzlnNGVwNlBMRVpZRWttRlBFMEZzZUhiT1hEX01sSnQ1YUxidzZYMnlseVAxTW12S1E?oc=5",
+      "published": "2026-10-15T21:10:04+00:00",
+      "summary": "How L.A. philanthropy evolved \u2013 and responded to crises \u2013 over the past 25 years USC Price School",
+      "id": "790d67ccf7"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "J.P. Morgan Private Bank",
+      "title": "A unique opportunity to make an impact: Philanthropy after an IPO",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTWZnRDQ1VVFkY09FTER3SE9wV1FKRTRxZ1VMWU1XNjBLY1d3RG1vZi1kQmpBamtOejdiLUpCVEhKdG9QZ3lTbHg0YUdiRU41TFpOSVVnNlNtajg3cTVoNTlwVGNBcEdiTlo5SzdTS2Z3YjdETmRMWEJhdlJwRlFPaGJvelMxT1Y2RGxsWmlYLXFqNktpMUtyZ3RIWjJIeElQcmlXQzJVbDdPUV9hUldFVmxrNXo2UHZEUGZpN3VBZWxjTktIdzFldFRpRQ?oc=5",
+      "published": "2026-10-14T20:01:00+00:00",
+      "summary": "A unique opportunity to make an impact: Philanthropy after an IPO J.P. Morgan Private Bank",
+      "id": "58f4447a4b"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "World Bank Group",
+      "title": "Private Philanthropy Can Unlock Public Funds to Scale What Works",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZXhhZlhMRzRYVE9IdnB0azc2cktkS05ScVM4SzlncS1yekJ2RUZXNHpqS1VHWmQ3R25kLWpMUXYzWFVRVUZDY3RMN21tU1JfUlhYY0ppTmNVektQeDBaZUdIRGtFclNhUC03ejBaQ281VC1JSi03a1prc3VqamtnRXE5Y1lGQ3FnajZSQ3dYME5mUnNsbDZJMF9QaHJRUFZaYUF3NEp2UFVyQU95Zmx1cFUtdF9iLWU1Q1FQa3JUV01zMldrbDYtS0lQTURzUQ?oc=5",
+      "published": "2026-10-16T01:24:01+00:00",
+      "summary": "Private Philanthropy Can Unlock Public Funds to Scale What Works World Bank Group",
+      "id": "55779bd693"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Thomas B. Fordham Institute",
+      "title": "How philanthropy could reinvent math instruction",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaF90YzhNclplMEZkZmNFUzM2ZUFoQXdCVXhNX0h1TmZyZU53LVlUZ09fcmdsWF9RemFoaGVqLVpCX2RLMHM4enpyMXhFZjlqTjlNTDZlbmhsOEtFa2MwamJqN3RzZk5sQU9XWGdaNVprYlRvdWc4bEZ1V0VWczhDdkV0X0U5eUtvMjg1eHR2VlNVTnJWUU5ldGZ4ekVIUQ?oc=5",
+      "published": "2026-10-16T14:22:34+00:00",
+      "summary": "How philanthropy could reinvent math instruction The Thomas B. Fordham Institute",
+      "id": "76a80f4668"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "PR Newswire",
+      "title": "American Water Charitable Foundation Joins Important Philanthropy Discussions at The Women Who Lead Forum",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxORGJsSGF5cWQ0ZWJxN0NCLWhFMEQ3bUZYNGMyc19la2l1Y0gzdFloSFZ6djVOS212Yjg5MzcySjNQQURBNC10SGEwUmh0VVFLZTNIYzdvNXd1SjdweHdmVHNwdDl1MVY3c2ViUlNqNmt3OFE4YnY3WVh5eFhpTTd2MjBvaHN4R2ktZmVDaXYtRXQ2emxkTnJwLV8zdFJyVkJtRHA3cWlkMjI2MFlLSS1SZ2pqX2F5THRpcVJmOUE5cDc2a1JaNkkxbTlLNVQ5N256S1VQbzBHUGNlQVk0aXFZbG5ENlg4N1BVdjd2N0hCVHNyTDQ?oc=5",
+      "published": "2026-10-13T16:56:00+00:00",
+      "summary": "American Water Charitable Foundation Joins Important Philanthropy Discussions at The Women Who Lead Forum PR Newswire",
+      "id": "74fd56632e"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Devex",
+      "title": "How Asian philanthropy is helping to grow investment",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc1RVdHhOckF5UFNXckpaYzJ0T3RULVhGdHUyS0xLWFB0Mzdna3RMeVV1cG1ES29HSS1CVERxNUVtM2lRTnZBT2tTb0k3aDlnRTNJTjEyUThCUDFjVVJFNW9hSzVvYVI4dE91ODF6aEphZmFKTVVrdGd1ZGJsTHM0VHozc2N6RkdETXR6YkJFMA?oc=5",
+      "published": "2026-10-14T23:31:47+00:00",
+      "summary": "How Asian philanthropy is helping to grow investment Devex",
+      "id": "1d05faf3b4"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Economist",
+      "title": "Elon Musk's foundation is opaque, miserly and self-serving",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPS3hodmlDWUFhUHJ2YVpIaV9RdjFGbU5iOVVoMV9MRVJsckRJVkdOd1hVXzVGNDVRd2tMa05JTFZ0ZnZySUN4dFB5VzBMWjB0VW1uUV9iOHJwQ1pjNFVXbGg3QjV2YVIwallIY3oxT3ZSVThUcWZaN1c1TXJtSV9qSkJOc1cxeWFKVzBPQ0J2c0tsMTJrQnJDXzhxQ2s4TUJ6MWVBMg?oc=5",
+      "published": "2026-10-13T20:38:10+00:00",
+      "summary": "Elon Musk's foundation is opaque, miserly and self-serving The Economist",
+      "id": "4fa35cdfd9"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Axios",
+      "title": "How AI giants will reshape global philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTmdSeUgxVmdueGhTYmJCblRkOWpwNnVaSWlQS1kzLWZxMkI4QzkycDRDSnI0YW9ESjc4dGVDb2RtV0hnTVJMVGpkX3NHUWN0cnNKN0tYUnprY3ZzX2hkOVpZSnU3QW9IMEZ1ODF6R2RnbGh1R2tNd0V6YVQyRzF0dEhNTkk?oc=5",
+      "published": "2026-10-19T09:44:40+00:00",
+      "summary": "How AI giants will reshape global philanthropy Axios",
+      "id": "ff4236bb44"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "WLRN",
+      "title": "Louis J. Appignani, Army veteran, Barbizon founder, and South Florida philanthropist, dies at 93",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWTFVWnhoZFZqdWlhZVpHbzlaOElpUFU4OWRackNQQjVzMERFa2FMRDI0anZPVTFQbWFuWjcxTy1SeWo1bkFTa3ZRTmZfdjZVME5ORDlWc2hnUHdqTlFvQnhBZXJmQ3cyZU1PS0lvM2U4bnpQdlk2dnFRZEdnUG9jTmlFbjNnSGR3QkhkenRvU2xpNXJWZkpFM0pzQ0RxM0wtblFQVlRFbndtWDB3b1VVSEoyUmJiZS02YmhfRFFSZmZZb3RQTTBGaXhESXFHX0NJV0dr?oc=5",
+      "published": "2026-10-15T22:38:00+00:00",
+      "summary": "Louis J. Appignani, Army veteran, Barbizon founder, and South Florida philanthropist, dies at 93 WLRN",
+      "id": "28fe37cf5a"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Idaho State Journal",
+      "title": "Two East Idaho couples named to Idaho Philanthropy Hall of Fame",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPMzhsbXliNlBvQ3lSZGdZQV8xeE1ydERteHRhRDE1Sk1ocGNZZEY5VVFURzJEYUxULTBYNFhSaU9ycnBtQXJBREhJYUJna0FMS3BqSVNiTk5QamR1RXJHMW1HR3ZadTJLZUs2T2g1a0RHSEJwejdOUkZkVkFTemdGTldYVjZUUG0wZTFPV05jamlOdlVrT2REQzd1ZW5SMV9UYTk3RzFvWF9nY3N4aXJNTkdFR2RCdTBuTlVhVktVMmRuOE9UaEpDS3h3Q0tmSjdicUk5T2dubnBfXzY5Uk80bXVJZVhOQQ?oc=5",
+      "published": "2026-10-13T20:07:00+00:00",
+      "summary": "Two East Idaho couples named to Idaho Philanthropy Hall of Fame Idaho State Journal",
+      "id": "3884a3c7ec"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Capital Research Center",
+      "title": "The Giving Review : Philanthropy in Divine Disruption",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQbW11NG1Yc09OcUt2MFdHYnhSckJSMGZhQ291UzNCRzZub3dRcUVRcXEyY1dkZ2V4a3dsdGNWcDJYMjVnd3JlWUVjbWI5ZVpVMW42NkV3V05ycEEtY1BteFA1Rm9OZmRfMnp3WUVycVlCOFliaXJkeFo1RlRBWGxIbVRSRFJaZ2tfQklaZWFqbnNUUQ?oc=5",
+      "published": "2026-10-14T17:27:41+00:00",
+      "summary": "The Giving Review : Philanthropy in Divine Disruption Capital Research Center",
+      "id": "cd694aeb1e"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "WCJB",
+      "title": "Leaders at AdventHealth Ocala honor philanthropist couple with new plaza",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPU3VLdGxNUVJKR2ZIWC1JUmwxOTkyRVNwV0ZDTkdsYmJuVmpReGU3YjFKdWtENFFSams3TkJrT2dyOUpmUEtqWldMSHJKekt2Nk5FUUxxUGRMaEVTZWNFTUxzRkVFTkYwRmp3X1pDOVJ1Y0prbDBWRk9xMHhUS1Z0clV1UGlhcHRKVmV5NHBKMjI0dWtETDZYbWIzZmtKdTNtS09WZtIBuAFBVV95cUxNN0VycHRENVhMRWw2YUppVXNrNFVicXc2WHJKTDVuVlUwZWhxY29ScFhhNkNMazV6VlMwUWlNUGlaYkpTcmg5RHhsdUhxbWQ4dW5NcmR1U2hJa3Fidm5xdnVLdUMtbGVGMzIwaVY0SkV3TUZDeUU1NDRmQUtkNkE1YUs0Ynhra1h1MHB2eTZ6dmRQRUJsMnVVWGdzRFJtV0NpSmI2TXBaZTROSXBzMmtMbjRHV1M3bHk5?oc=5",
+      "published": "2026-10-17T14:34:00+00:00",
+      "summary": "Leaders at AdventHealth Ocala honor philanthropist couple with new plaza WCJB",
+      "id": "3e5f85227d"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Cross Timbers Gazette",
+      "title": "Giving The Robson Way: Community groups champion philanthropy across Denton",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSGhJc193UFhYbHZNd1VzLWtmOG1pelVhZ2xyVFRiNWZzcHBZcnhzbFRmbFJqSFhpRXJXdFpVakdUbC1oUElfOGhQXy1ZTVZmSzExYWJBSGdGRVNsYnBWbDVDd1hLcWRvUDRBTkNkdE1zeDBnTDFySjZsdVY5dWZsTXZpci1tRHVTQjlUTkw2UURqZU4ySXE0eVdjM3pNdXFKS2ktaE15UmJqaW5xMi1XOHJhY2U2NmRSSmY5bEJiZw?oc=5",
+      "published": "2026-10-15T17:01:40+00:00",
+      "summary": "Giving The Robson Way: Community groups champion philanthropy across Denton Cross Timbers Gazette",
+      "id": "e85a13cdee"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "KSHB 41 Kansas City",
+      "title": "Kansas City remembers legacy of drag icon, philanthropist Melinda Ryder",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdkhwU2lIOWllVDJGZWxWSmVoZkZYWlhHdWlSVkZDUUs0enZDVDZSS1d3cVNRbDN5eGRmMDUyZUxTRlMyTnNzZjR4T1JhVmxtX0theGtsbkY0NGdhT1RVQlY4dDVsSk5sSGVkLTlaSkxkalRBTVNVWkRUX3pIbmVwOUozZVFEdzZFZkFMZHQtNkc2QjFwQ2JQNmJqWng1VTBvd29MRmg1cWFlWXhlM3hjQzB0TGlGUQ?oc=5",
+      "published": "2026-10-14T09:50:00+00:00",
+      "summary": "Kansas City remembers legacy of drag icon, philanthropist Melinda Ryder KSHB 41 Kansas City",
+      "id": "fb69851f7c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "FOX10 News",
+      "title": "Abraham \u201cAbe\u201d Mitchell remembered for his generosity and philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNmFyakhWZ2RmeDdsRG5qOGwwSFZtbDVKd05XUS05MW5YdlNXdl9MQlg0ZFphNzFtQW1JczVpV0hNS3V4c1lTNXplVEJQWWtvUmp6OTdSeHkwVnhGQUx6am5xR1FZVDNXVXZLaTlaS2JkNW9RRlNjb29yTHNUQ2g3X0VhUFpTYUhMX1EyY21tYzl1andXMklVVGcyZw?oc=5",
+      "published": "2026-10-18T16:06:00+00:00",
+      "summary": "Abraham \u201cAbe\u201d Mitchell remembered for his generosity and philanthropy FOX10 News",
+      "id": "15a54bcf19"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "eJewishPhilanthropy",
+      "title": "A tale of two Haredi communities",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE82cENGNFo0cjBCLWNzbmFabkhud1JUd0lwd1BDNXU4V0szSUpsb1JDNkVndFY5ODFvYmtEWndBYVR6RHYzakZ2U2pMUVU1b014YUhocFdjU21ubWRHVTl0TFE5bDg3MU1pN3hWLW1qT3ZOWGc?oc=5",
+      "published": "2026-10-14T09:06:00+00:00",
+      "summary": "A tale of two Haredi communities eJewishPhilanthropy",
+      "id": "341ccf746d"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Alliance magazine",
+      "title": "Philanthropy has an infrastructure problem",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcWdJS2JISVZxWVota1pobHMxa0wxRmdVS2ZHRUUzNkM1WjlqYWZPb0hTcGxYRDhPTkFwbWVvcHFmWF9BenZCWEs0LWZINC02TXdaQVRlU0ZBZ3Y5aDBRd1VZcUM1Ym1HUHJUVGhvZ1gtcXg2dHRrMnhGZWhFRV9YbEo5LVNWNjBG?oc=5",
+      "published": "2026-10-19T08:08:25+00:00",
+      "summary": "Philanthropy has an infrastructure problem Alliance magazine",
+      "id": "32dd301116"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Cleveland Jewish News",
+      "title": "Guiding meaningful, engaged family philanthropy rooted in values and legacy",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPQ21DTktSWTFYTkI5V3MydjJCLWFCODkxSWxUUGRmOVVhcVpuS0ZqTjlnLUNwVFJ0MkpkNDc2OWQ5SDRtWkJwODdYYi1qRV9KcVBsWGNORjRSa0h5YWFxc2JiWGgyaXB4RmhmTGNvTXJZbFc2QU4waTA5UjNCZG9WMzAzVVhPdUJwOE80MU43MUt3R05ra2V6Ym00UFhjSTNFeXpRZTlhZG1RMHpYRk5FTjBydHJNT3pNNEZwNUhTY3h1WjRjb0FnQ01fU1hFTlE0MjNkRjJUTVp6Zko1SEo4S1M3VFlNbHRxaURMci1CTFVSNUdWVDFHUi0wNl9jSk1UWjZ6R0hKMjJVZkVXNkUw0gGUAkFVX3lxTFBxT1BxbDRFenpqNkFOTXQxSy1JZm50aXVDX3hkMmVaZ1d6WHBqeGJBamF3dVRyYjNGSkVxRkZwTENVQW0zTmhRQTJLaG9kYTdOd0tPOFFQcWF4SElEaDBRbThBM3E3NURxcjEwRnBWbmxBMktLSS14MElETWc0c1E1aEx5alUtelZLTHJ1OEM3R3VBZTNzNjhPejNTRDBZN3NUdmVFUjJFT3VKNkhDa3BsNUFpTlNPLTNfeVBBQjh5V3Y5Q1BLbHNLVE1mUkJpU3FFMmI2c2xMamxKenZhUDNzcjBlWjc2ckx6U0Z0NE1XUXpWVVBVRmNITE9hcnFUamtYV1lJb1B6NzU2ZUtDT0RuclNxYg?oc=5",
+      "published": "2026-10-15T14:00:00+00:00",
+      "summary": "Guiding meaningful, engaged family philanthropy rooted in values and legacy Cleveland Jewish News",
+      "id": "4df95bbacf"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "eJewishPhilanthropy",
+      "title": "Artist, philanthropist Barbara Hines, who discovered Jewish roots late in life, opens first Israeli show",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWXl5NklTYjNqbWZaOExQRWxZcDQtMW5PcmhUTVBaa25mdlduNFpvYXZuNk5xMmJ2dUNiYm03REMwMldiRG5MSV9jb2V2ZklEZTJJbW5mS2VzeTNxbzFVM3FWbnZuWlZsU2VEakdxLUpvaGh5ekpJYVZ4T2Z1bTR1d2lKV1FxQ014bGU2N0ZuNThZb3V2ZzdfTXhXRWtsQXVNUU81MjlhaGJJdkJsOXdDRlczNWk0NTA5Z24wcThfZHNEbmd0UnI3RjBvenhFTVU?oc=5",
+      "published": "2026-10-15T12:10:07+00:00",
+      "summary": "Artist, philanthropist Barbara Hines, who discovered Jewish roots late in life, opens first Israeli show eJewishPhilanthropy",
+      "id": "96b705705a"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "South China Morning Post",
+      "title": "Hong Kong emerges as third best philanthropy hub, behind New York, Seoul: study",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOEprYlhxY25YckxSenV5a0dfcGI3S0xvWW1yTmp2QkRJMERSclNsSXN3eGxLZUpLR2hjY0JRNklnR2d1UWhzMEkwZnNQVE1WSldTYUlCUVlVQTNSc2hNbUF5aFAxbG81bkZfajZ6eTJXZ1c5STVXOGJ1ek50NjdLRU9RYXg2TmtOX1UwMjJNdDVyZUdCU090bVEydW5lSEpkREprd2dfRmNnRjJtZGVLdkNTVmhQRzRVVTVjN2VsaFQyYnZ0WGcwV3J0c9IBywFBVV95cUxQZDJuZTFyMmk4M3ctNDgyT1hwRUh5ajVhLXdBUnU2UXZDU05oTlZueXBmbVotRFJMcDBEcE9VU0taY1pFbGNCTjhfRVpaZFBCQU5ac3VmOUlpN3JvNVk3ajRrb1d6X2pHTjlLUXh2LVVmQ3V2R0NBSzl3R1pHcWc4WDhWWTFxSHg2MFdVY1RlYTZvenBrbWR2cjJicW5fQ2o2cTRWU2pBZTNUVklwTlphMS16eXBrY1hYZV9URXltSWUtckV4TmJub3B0OA?oc=5",
+      "published": "2026-10-15T09:00:30+00:00",
+      "summary": "Hong Kong emerges as third best philanthropy hub, behind New York, Seoul: study South China Morning Post",
+      "id": "e237051c05"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "GreatNews.Life",
+      "title": "Horizon Bank Receives Corporate Philanthropist of the Year Award",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNENEdmQ3dzY3ZTdCSVZqaVlzTng1bzlJRkhIWWRFMDBaMGRfM0o0d3JaamVOY0tpOXZlZDBDbDRURDNvblFmRDFTV3BPUzZhcnNNb3ZaM1p2QkpZOUNtcW9XeW1rdkZaeEZDZmZObEVFM3BlTWNDX0NBRXZiejJLbW1PYWFKeTZpM2w5bTJ4aXJYS0dRNlRKa1F4MUU?oc=5",
+      "published": "2026-10-16T17:27:19+00:00",
+      "summary": "Horizon Bank Receives Corporate Philanthropist of the Year Award GreatNews.Life",
+      "id": "313bfde054"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fortune",
+      "title": "Philanthropist Olivia Walton is investing $100M to halve U.S. maternal mortality rate in 5 years",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNck9TWnNueElGd2l1S0lMUzhKTEhTSFUtcWU4WXZhUXgtZUZXejQ1d2xRRHNndDF1dE1wLW9DN0p6NzlMbm1oVnljNWtvbE5RRHpCZGxPbVExMFNjMmdpVmxCTUttaHVDd09wU0F2aHh6VExfVE1IWXl2bmNVRXJzRlQ0aHJEc1ZmQ0lEX2NkeF9EOTBac2JOc0k4dlMzRmNSQXNmTVNmbG1CTnN1SURkNnZYZm03R19wRklfRERRS2k1NWw2QkI4S2Fkbw?oc=5",
+      "published": "2026-10-13T17:37:00+00:00",
+      "summary": "Philanthropist Olivia Walton is investing $100M to halve U.S. maternal mortality rate in 5 years Fortune",
+      "id": "0bbd81f1c3"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "InMenlo",
+      "title": "Arts patron and philanthropist Dorothy Saxe dies at age 100",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOWc1d0x3RkhmWnJ4WWZ6NDFhQmVfQXBxdjd2dW8tQUhhaHl5MkpSclFIM1dUZ2xkUjh4RjRPQmotSTllOHFKZmdvRV84eWF2cTlwU0RhanNlaU1kSE4xbUpYWExnVXVaRXBHS0JoWDhsVVVjU18wcWtGZnZoM05ia29yNGFwbU1ENDA1QjZsQVM1a2hkSkE?oc=5",
+      "published": "2026-10-17T17:00:41+00:00",
+      "summary": "Arts patron and philanthropist Dorothy Saxe dies at age 100 InMenlo",
+      "id": "b0cc8f5434"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Deseret News",
+      "title": "The new rules of giving",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdFoxd19MMExqdEQ5SXo5QU9IX2I0czVuVHp3MUxDeVJ3VFZibEhLd0lCWFVNdzhCakd4UjlmWlpaaC11c3VyczlIRFhEMmpIQzhYaGJ3c3VaTEExMWh6WE5iZ01aTU9FQjV1UTBrWENtczJkbGVWOElreVY1eWdmbkJfMjVTZw?oc=5",
+      "published": "2026-10-14T17:27:46+00:00",
+      "summary": "The new rules of giving Deseret News",
+      "id": "aca077ea47"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Jewish News of Northern California",
+      "title": "Is S.F. philanthropist and tech investor Michael Moritz an Oct. 8 Jew?",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUGVHQXE0NjhBazRtUHNZZlpSUkNiZHZjbnN4ejh5UkE2Szg2SlZOTHYzOG56ODg2bk9QUVU2ekhON3lES2ZKUUdiZmVmMUJ1b3dpelEweGE0cFRnY1hubUd5bnhZUlZGaDdIS2o1Q3BYcGh6MVFjdVNjRXlYQk1CcS1CYXAtVU9NVVJHclRCdU9qa0ItRFR4OHA5SEMtNVN1?oc=5",
+      "published": "2026-10-14T20:51:38+00:00",
+      "summary": "Is S.F. philanthropist and tech investor Michael Moritz an Oct. 8 Jew? The Jewish News of Northern California",
+      "id": "cfa83e7886"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Devex",
+      "title": "Can philanthropy, both old and new money, work together as a system?",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMDZOTUl5Q1RlVUN3MFZua2t0ZnBQUUpKTnU5OEFaMEN3UVBlTHhTSXhxdGlVR3M4RUd4OGNEeGM1eEVRMEp4VWVpLURuWFk5YTk1MHZVQlVlQzVwUlo3UExjMnZRb0dBUXAzUFJoNE9rbFQ1c3N2cnpVQ1ZwZVdnaUFIOFg2d2RNMGJXQnpDVkFUMUNyQXpVRERJZnp6bXJT?oc=5",
+      "published": "2026-10-15T17:01:11+00:00",
+      "summary": "Can philanthropy, both old and new money, work together as a system? Devex",
+      "id": "2c55ffb90e"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "WKRG",
+      "title": "Philanthropist and University of South Alabama donor, Abe Mitchell, has died",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdTh5b000MUt2MkV3ODgyWlJSUVo5OWVCZUppZVduckV4QVgxYmdLbTlpb3FtbzZUdHpVelRUWFpGbElkRDNhUUNyTUg5bVVoUFVaSXRrTDI5Y1hTcHJNOUdIVmM5cGt3Q3ZlVGFydmZBdkNydTNTNDFDejloWFAtR1NOdWNjdExTemRTbUhwTkpyeWRfUTNMX0dOM0RNbzNSUXhXUE1IdG5WeUhleTZJ0gG0AUFVX3lxTFBBbTBFektLRW5RemxMNWs2S0NkR2lTNm13NHZPOURlaTFmZlQ0ak9jOW5mWjUzRUVZU0hxWTQ2WkN1OXJobHRFSEptZWotQXB4aWtoRkx2Mzdtc3lzSXo0UmxzS2Jxd2xOZ01Va2pzUkc4OHRHckduMUhrUTVTSnJCUi04bG9WOGx5T3pGQXJaWVdaTm04OTNPWkNUanRvLS1MWGhZT3dTa3VJdzRnb240Ry1NbQ?oc=5",
+      "published": "2026-10-17T03:27:31+00:00",
+      "summary": "Philanthropist and University of South Alabama donor, Abe Mitchell, has died WKRG",
+      "id": "da0edff71a"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "eJewishPhilanthropy",
+      "title": "John Paulson makes record $250M gift to Hebrew University in show of \u2018solidarity with Israel\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNY3VvZFdlaEhCaTdWSjAyc1lFaVk0aEpXV3l6dzZEMTA2WUhlSGRhblNJbktkZFhzdUdLR2RJRDZVQTl0R3hJdjRlaU5RN2FuSm9KWXNMRWV5TzljbkpTNlMxSnFxUDJqZFIzMTRHZmZxRWQ2MzJsQ093bzdwdE10QURvWklPVkl0a3g1ZWlfVmVpNHRON1ZDTzlWVWhzRXJNenA2Y3lTdElvRkNEOTZHVzR5WlVDUEVFYmNBTXN1TUM?oc=5",
+      "published": "2026-10-17T18:11:27+00:00",
+      "summary": "John Paulson makes record $250M gift to Hebrew University in show of \u2018solidarity with Israel\u2019 eJewishPhilanthropy",
+      "id": "8eb342e131"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Post and Courier",
+      "title": "Ponies & Pearls brings together polo, fashion and philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOcG1zUVBYZldmYzM3TXBWc1BFdmlFQ01XeHhWc1A3Y0JxQnU2VFlGWEFmejRNbkk1RTVVc2dRbjE1VTNSdFctNWZLYVhid1kxVm9WSFhWd3FEVmVhUEZ2TlRjc2VTVHFhYVBKVmdYSWgwZllxMXZQNDBBV0N0dG8xcFV4NG43MUw1cldUbWFFS2FqN1dDR1NETGpMX0FRdW9LMmZ5VEtzRlh1TU93Tmpza2NPVy1kVGNGSnJ2aVNvUXMydFVEQzZEUllXR0pNQmhPS1lFbVo2OFVXb0J0UEhPaHpNc1Fwa1lUMlpmZ1h2MDlfbThndm96Yg?oc=5",
+      "published": "2026-10-16T10:30:00+00:00",
+      "summary": "Ponies & Pearls brings together polo, fashion and philanthropy Post and Courier",
+      "id": "c259d2fe91"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Lifestyles Magazine",
+      "title": "$15 million latest gift from global philanthropist Len Blavatnik opens the door wider for next foreign policy leaders",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPSGpFak9EXzhKeUpQamg5cWY3QkhYbEZ2UG9MY1hMLXR1blhUTXMxUV9BM3FMbTljdjMwX2NvNTEtWnFDOVRDRWdxQmU3MXJRYjVENy1VZy16UFp3QTRSRXpTMnlKOGdwUjZWNVIzZTFDUjF6N2lOMm12am1GaFh1V3dMRFV0YWxIcWpGb18zYzJua2dUNkxMVldkc0ZKR3ZRQnpNTkh4aURJRGhRWW4tWkxES0ptRFRJWUZteE1oZnpkeTI4ZklRZXIwRUkyZDZQLTVwRzZqSTdXajN1aUhDQ2NLTTA3elZMUlNNSWF6MlNldw?oc=5",
+      "published": "2026-10-12T16:53:47+00:00",
+      "summary": "$15 million latest gift from global philanthropist Len Blavatnik opens the door wider for next foreign policy leaders Lifestyles Magazine",
+      "id": "1d65a4bf9d"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fortune",
+      "title": "Foundation in Wesley LePatner's honor wants 1K leaders to master work, civic life, and philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVFRiV3MwRXA0VWx2SFpKNmtjODJGSUVoOHRKQnBScG9ja28tQWZORTlSaWNrMWdESm1RNWcxVmlCS210ZnNqTnhXWkFxbGtROFI4dTE3TzFtanhWQ0RyUE9hdk1kZWxlZnZZZDdvbE5DcUNBVjZ0aUtrTUhmSmdtSWxjVzkwUGFYSkgzRDlRTlc5ajFybDRCVXdZem9pN0xxWi1oXzV1c1JYUHZJSTBRSnh6LUlqdmMyVG1URUM2ZHhPX3M?oc=5",
+      "published": "2026-10-15T15:59:00+00:00",
+      "summary": "Foundation in Wesley LePatner's honor wants 1K leaders to master work, civic life, and philanthropy Fortune",
+      "id": "508e954656"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "GreatNews.Life",
+      "title": "Legacy Foundation Women in Philanthropy Event 2026",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNVRwanVGSjhOazZIUWpLZmJEOTNPTm00dmZMVmFkaVBPMl8yVkFqc0ZmejhoVWxtOXNGb2stR05SMm51bXY4c2M0TFNycVVwTnZrWGZhWTBBUGM2emc1QTloTFFZbDBpUU5UOHBjcjIzZXE2ajVJbDhiaWtNWFQ3TUxUQzlSanM?oc=5",
+      "published": "2026-10-14T05:11:46+00:00",
+      "summary": "Legacy Foundation Women in Philanthropy Event 2026 GreatNews.Life",
+      "id": "e08f9b2df1"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "WFAA",
+      "title": "Dallas Cowboys Superfan and philanthropist 'Tattoo Mark' Shenefiled dies",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxORXJINmF3VEJmMTdwUnI5SDNBVFdyak41SkxQeEV3ci1Jci1hbzk5b0dqQUdqQ3pwNDFFNzBkVk9hLVo0cmE1aUVqUHUzc056WS1Ma0NrTG9PdmVabzBkVG9DeFotVVZEVFRZdWhUR3hxOU9zb0RCVG1mZmF2QXdUT05EYkFldW1meDFaYWV6ZUZEQXI0SzRkSFBnN21qU3c4dXZfR2JHWmJYUkdpckVLVFFVLTJGeWZhYkEzZ0RMMEVFWmZxQjRva21MVEZMc09EVEc2QVNhTEUtbUc5YWlYcWRWY1ZGWVBIOVZaMkVtUlQ?oc=5",
+      "published": "2026-10-14T02:23:00+00:00",
+      "summary": "Dallas Cowboys Superfan and philanthropist 'Tattoo Mark' Shenefiled dies WFAA",
+      "id": "1c04a62369"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Philadelphia Jewish Exponent",
+      "title": "Fred Lokoff, Founder of Bryn Mawr Stereo and Education Philanthropist, Dies at 92",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPb1BFQTdTZVhKNWl4c1RxU0ljaktKQjdPOTR4R2I0RVl0QWExN01rckJwYm80bGVZWkZmZ2RiSFZTMkxWeHAtTGdzZTZJdm9yWWhVeVdleWxXanlBby1NTjRjcE5VaHZZTElpTDJiRXJha0NlZTM1UmYyakxfZUZzd05wUFdGWWZDOG5JUHhyNkFRYUJTdjg4Ml9pNlJka0FxZ2lyY2hnVTVHalRFLUFaaA?oc=5",
+      "published": "2026-10-14T19:40:40+00:00",
+      "summary": "Fred Lokoff, Founder of Bryn Mawr Stereo and Education Philanthropist, Dies at 92 Philadelphia Jewish Exponent",
+      "id": "e024e720ea"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Devex",
+      "title": "Best of both worlds: World Bank and philanthropy join forces",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ09hNVhrYVR5cWJOMDZVT09VWGFmVEZydVlxR2dNZnVPazY2RnBfb3BhX1ZRSGxWTUtrbVZsWFlJV2JBbVU3VE1zcXUwZjg4cUdUbzNoR2ViVkhHZ0JCRXdaTlBEblVwcG9OWHVMU1FGelhIRnFyVlhqVHlJS3NVcVJ4ZVhjR2Y4cjhqdVVqVHFLOUJGdUFFNA?oc=5",
+      "published": "2026-10-16T14:54:54+00:00",
+      "summary": "Best of both worlds: World Bank and philanthropy join forces Devex",
+      "id": "7206767a47"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "BORGEN Magazine",
+      "title": "Wyclef Jean\u2019s Philanthropy and Initiatives to End Poverty in Haiti",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE84VTczdk1QOFRRaE9waUNxYUhvMXVMaF9pRWxxSFdXV3pLdzI4WjlfUW10cmtaR1VRM0tkemF1VFR1Uy04UTQzOUcwMDR2N2lYcC1LQTNGU0xHam9TSzBqRl9KWDdQMEc4?oc=5",
+      "published": "2026-10-13T10:00:28+00:00",
+      "summary": "Wyclef Jean\u2019s Philanthropy and Initiatives to End Poverty in Haiti BORGEN Magazine",
+      "id": "699cb1de35"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Religion News Service",
+      "title": "Louis Appignani, atheist philanthropist, dies at 93",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNY3FxME9RYi1LU1hkQzlzX3FzeV9pQmpxQVFFa3drU2kxVHY5VDA0MzR3YnQ5cHY0R1JsR0ZIY2tnYmdjeTFQbTVLRHBtUjdhem5sVUhnVWV2dFZVQ3lCUW1NV1RCMVBjYTY4NGxRZW1rd3FUREw3S0NqX2xaMHpIaHlHSHNjTGpwU3BNZ3VCSQ?oc=5",
+      "published": "2026-10-16T17:44:33+00:00",
+      "summary": "Louis Appignani, atheist philanthropist, dies at 93 Religion News Service",
+      "id": "52d1405abf"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Real News Network",
+      "title": "Trump\u2019s war on philanthropy is a war on civil society. This donor network is fighting back.",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPWTljWHlRUFI2OVdDLVhtN0kydkhtbHlQclIyNlktYUVhSHpldXJLSEtTTl9Dd2JSUzJ3eWxVN1h2X1p5S1pCbkZ4QURxRVFZaTY2UlZKTE9LWWxzTTlabVN0ZXVjaWVJSXJFNGJrbzFFd0gxRk56bHZnSDNQUkx6SmZpTHRRMFlPZERIZUhRRG1leThQckE2VGtmMzhZZGRFYWNaT2VEVkZyS0tJUm8wRkdB?oc=5",
+      "published": "2026-10-16T00:07:23+00:00",
+      "summary": "Trump\u2019s war on philanthropy is a war on civil society. This donor network is fighting back. The Real News Network",
+      "id": "2860eaa538"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "KCCI",
+      "title": "Iowans honor Walter Lauridsen II for his philanthropy and community service",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSDBUamNSSlE3dnBBTkZRT0twV0c0MkZ6THN6TjdaR2hLb0lOc2M2OUFfV3A4RXJtb2ttbE9mU2l1WmxmWlJsT2hwMzRLMnlTblRxVjhDVHRTbmVzcUNWeFpCUFhVc21Eb3k1R0E4QV8zckFxRE9xTVpHXy1WQkRJUkx6bWNMWEt1Vl9ZYzZZVm55ZEFsSGNtWEFKS3JtNWVyZmNrZE9mdXR1YUphNldR?oc=5",
+      "published": "2026-10-17T17:27:00+00:00",
+      "summary": "Iowans honor Walter Lauridsen II for his philanthropy and community service KCCI",
+      "id": "dce1c4a4fb"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fondation Prince Albert II de Monaco",
+      "title": "Monaco hosts inaugural Summit bringing together the world's leading philanthropists",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOMnZ4WnVwTGFOaHRMalh2YnFTdFdIcUI4YXNtNVp5cVRNak5QcVE0LXVlSEs1UUMzdFRySzhvN2hVRk5IUHZ5dE1wLWtueFc2d05DbEhnUjZxWWJFU3pyT3Y1Nmh5OFI4dE5URlE5OXZYZy1qbE9LZ0VXMGZobXM?oc=5",
+      "published": "2026-10-13T16:37:54+00:00",
+      "summary": "Monaco hosts inaugural Summit bringing together the world's leading philanthropists Fondation Prince Albert II de Monaco",
+      "id": "6fd8364813"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Corporate Philanthropy 2026: Nonprofit Board Member of the Year, Jay Spector",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNY2xoWk1rSTk1U25NcGNsTzV2RjJfdEU0OG94ZVM0bVRDb3hsWHgwLXFjbnJtNmxqaDJxS2xmRkNFUWUyUVFGOWZTZmw2SmN1bzJuRFplTXVmT1VhVnlXSzRhRGxiQVBJWHJ5REluTENRbTZ6M0xFYlpzNmRYTHRhZ2ljZVNXdU5qOXJtdzFRbVFVX0ExZVU2NGZXT1dIMjJLMkpMMFln?oc=5",
+      "published": "2026-10-15T20:31:00+00:00",
+      "summary": "Corporate Philanthropy 2026: Nonprofit Board Member of the Year, Jay Spector The Business Journals",
+      "id": "4234b6f382"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "KTNA",
+      "title": "Bean-A-Fit Dishes Out Almost Four Decades of Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE0wMDZZRlF4LUhUa2ppZWh6T1BNdEg1TzFsSkd5VVV4bloyOFlKNWdKY25JTUpWcTRCVGVPNTF6c2djUQ?oc=5",
+      "published": "2026-10-15T22:16:34+00:00",
+      "summary": "Bean-A-Fit Dishes Out Almost Four Decades of Philanthropy KTNA",
+      "id": "03ce352a4f"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Jewish News of Northern California",
+      "title": "Dorothy Saxe, dedicated art collector and local philanthropist, dies at 100",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdmlOYkRwMzdkM1R6LUswMHhJQnhqRWExcWdlRmVoa1BBSWxHY215SE42RElkSkw0eUlaT1JILTZMV2xwQkNaOUhZeksyVWktT2M4UHpaN2pucG9jSHZmN2k0VGdaUTNoRWZTWlYxSGlOblFhU1pHZFJJUjBPVlNCakRBV29DT3huX2NyQlFXb2NpRVp6VU9fSUhVejk4aXg1a05NRGZ4Z0k?oc=5",
+      "published": "2026-10-17T00:34:13+00:00",
+      "summary": "Dorothy Saxe, dedicated art collector and local philanthropist, dies at 100 The Jewish News of Northern California",
+      "id": "ddc037c05c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Corporate Philanthropy 2026: Nonprofit Executive of the Year, Shannon Clancy",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWENPQUllbl9YQ25YQ0twaThZQUh3cDlrM1lDbTB6RUpDVHZpbHM1MkhyY3dRS3p0TTZLLUFuTnRYdXVxdWVwSEpXeWtuMldxcEloSjVvdW5HbDlyNnVHaHFaZVV0b3BwZ05VNzIzZW9DZk50NmhhMmlWMktkeUhuaS1veC02ODhVZjhabmYwRzQtdEYxY0dnak03cWV1RG1HZjFCT2FsSFpIZw?oc=5",
+      "published": "2026-10-15T20:33:00+00:00",
+      "summary": "Corporate Philanthropy 2026: Nonprofit Executive of the Year, Shannon Clancy The Business Journals",
+      "id": "07ed5cee3f"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "LakeExpo.com",
+      "title": "Free Philanthropy Workshop Open To Lake Area Professionals & Community Members",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQQjJKb0xEZXNldFBlc0hQMDJSNnBfQkV3OWtJQjJIem9MbTdEdzl5R25ZbEpISm5EZGs0X3pOSkpqdXByNDh3dlJrWV9aSFZ4alZOTHlNRElibnBfcFZMZzQ5Vl9ZWDZZZUQ1MTVVUnllUEpLWXNPSjJrZ0c2SEdkZGk0TG0xRnNzVm1SQWNwS2dvTjItZGlaUzVKU25jbVhpak8yejBoXzVybnl5MU9wQVJzX2ktT3ZablZoQkhoZGdoUEFRV0NfNHV3YWFSbTRldnJnck5peUEyOUVkZHNscEJsMDRVSTJVQWZmUzljT1dna0lLRzNjOGxwVWdwSDZxYXNvN2ticmxSYjA2NFQ5Sw?oc=5",
+      "published": "2026-10-15T14:00:00+00:00",
+      "summary": "Free Philanthropy Workshop Open To Lake Area Professionals & Community Members LakeExpo.com",
+      "id": "61b748d21d"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Center Square",
+      "title": "Taxpayer Philanthropy: Wealth building nonprofit is building founder's family wealth",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPejMtaHZUNmxLZTlQRUhGc1MxdDdWeTRaWTB3aWQ0dUFEVkZoRjVWZnJQcXFKOUd1QVUtNk9EMXB4TjJMMzJrWFpISmtUMjRkLVBITm44V01KZXpwME5paWJ4XzJOX0plc1hGRWVOeGZlaEF6R3Vsb1lPemxjWUEteDNRNUVlanhtT0FDUnpFd3djeUY4cnfSAZsBQVVfeXFMTTdTQzB6NUNPd211Qml5NzVVLWNjajl6MWlIdEQwSnBRRFUzcEdSOVdjVTFOUjBoRVBHN082UzNiUDI1QzVIN1Q1NkY2RXFNOVUtdUlhczNickVtYjV1dGRKN1lNS2JVRzFzMWNqdm1PT1VncXZzY1RYel93cjNIdVpaLWk1UmdBN0pDLXNPZjZ0MkRZYi1yN1c0eFk?oc=5",
+      "published": "2026-10-15T13:30:00+00:00",
+      "summary": "Taxpayer Philanthropy: Wealth building nonprofit is building founder's family wealth The Center Square",
+      "id": "553df8d01f"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Paula Froelich: Uncensored",
+      "title": "Meghan Markle\u2019s Peculiar Brand of Performative Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUlV3cTIyb19vbEZEbi1MSWVGdHhPMi16TDRNQy04bVQxdVpqeDczWHY1b3JxNkEyUDg5VnpGaXBXZkxZaDNoaDRLYXoxdHR0b3MtUVZqT2RWOU53YUh2YlhGc29DNEJDUFE0RjNxcktqZ1ZWNkkxWmk4Z1NCdlNOVGM5SENZVUJE?oc=5",
+      "published": "2026-10-14T13:27:48+00:00",
+      "summary": "Meghan Markle\u2019s Peculiar Brand of Performative Philanthropy Paula Froelich: Uncensored",
+      "id": "79b2f0e849"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Devex",
+      "title": "Special edition: Live from Bangkok \u2014 World Bank\u2019s new philanthropy and MSMEs plan",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeTFTdGlaYTNzUUlrYnZtSWhmaHpkWU01SFY1ei1nSmo5bEVfYldsMUV2cmJLQ0NYTmVUQWxkYWV5cmVhLWctZFVWWHdmVUhhQ3RfZk9qcldXcDRMQzZfcDJVcG9JU1dwWGlaRWI5VXdndWJwOTAxdTloZnVyZFdhZEJPcHB3cWFoZ0lzenJtTWl6M1Rjc2VOeXBITzhJMG1wTWFWclgtU3Y2Ry1qb1ZYM0xB?oc=5",
+      "published": "2026-10-14T23:31:47+00:00",
+      "summary": "Special edition: Live from Bangkok \u2014 World Bank\u2019s new philanthropy and MSMEs plan Devex",
+      "id": "3967fe486a"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Pittsburgh Post-Gazette",
+      "title": "Letter to the editor: Public education needs philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSi1tdi0yLVZrUGdVeU93M0tVc0x6OTQ3UDhpNGFEN2lEamFYVFhYM2F5Qi1NdnNVZDV5cWdGZWtwdUVHTFdCczZwVXRqRVlUdS00aW42LV9QVkZIQjZmZzZSek1zR2d4RXNEaW40QXZsOWRiLVd1TURWTlpRQ09VaWlNMnpKRkt5YmlmSUlpaUptRlJXOHdQWUZ4d2xYZ1hTNUhwazhNQng3bzQzdGZNYndEVzdraFk?oc=5",
+      "published": "2026-10-15T10:00:00+00:00",
+      "summary": "Letter to the editor: Public education needs philanthropy Pittsburgh Post-Gazette",
+      "id": "d52226a9ac"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Corporate Philanthropy 2026: Innovative Philanthropic Company Award, Arizona Cardinals Football Club",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0R0NkpnOVJ0ZjR5YllZZEpIaWhsV1pOaTZ5X0xWWW9oYXJ1MmJpTUJpOXkzcGFEdnpUeC1feHROVjlMYlYtZHZlMEVaMXRRZi1GYlpWSkJNaHdVZWRXWHktaFRzcWJVUGdrcERwLVRYeFFQV0NkMThPUElpbFU2eWtnVGtVbERzUjRBZ19KTnBCeXZBMlFnMWFxZnJmYzNNMThVZA?oc=5",
+      "published": "2026-10-15T20:34:00+00:00",
+      "summary": "Corporate Philanthropy 2026: Innovative Philanthropic Company Award, Arizona Cardinals Football Club The Business Journals",
+      "id": "93edb85f13"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Daily Mississippian",
+      "title": "\u2018Put the focus on philanthropy\u2019: Behind Jack Turrentine\u2019s Mr. Ole Miss campaign",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeWlCMGUyaFZYbmpUSEJFNEVzY3ZPdnBQY0xXWlVFMzZLNGdQQTRNeVM1Tk1nNEZMTXAydmpHa3Bjb3lxaGVRRXlCclNTQmFPb0VENDAtdE5NRkFtYTQ1bUNkMGNWUmE5SEZ3OGRqcHdQX0pRc2FjZW43UGFlNl9FTkNBSzBVSlZZaC10bjFVTFVRUU01ZjFNTUkxc0twZmEz?oc=5",
+      "published": "2026-10-17T17:14:12+00:00",
+      "summary": "\u2018Put the focus on philanthropy\u2019: Behind Jack Turrentine\u2019s Mr. Ole Miss campaign The Daily Mississippian",
+      "id": "b266861268"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Kate Sawa on building BayCare's philanthropy machine",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSTNydDlZOFdYbGs5QXRuRm1fT1BMdmtwa2NZZG1SRG04YXJsNjdEZlJvekxOZ2ZWZVAtT3RPazAzNG9ydV94VWVBVVBuWk5DMjRjMmVnVjNhdW1zekZHVl9fY0ZyZ25faTVfMWllX2dvMDl4NUZoQ3FVeFFqRTEtZnR4YVo0c1F0aTZONFk3UHF2aDRL?oc=5",
+      "published": "2026-10-16T11:08:00+00:00",
+      "summary": "Kate Sawa on building BayCare's philanthropy machine The Business Journals",
+      "id": "ff7d0d0650"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Corporate Philanthropy 2026 Volunteer of the Year - Annette Bouwer",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEVDUjRHTTcxcUZYOUlmdFRhZ3V4Z3NWV2lXMWRxNU9ia2RjWEc4YXlTd1VXRUhxUDEyd01jZVhYTG13VEwtNzdLM2RJaFRRMThNLUZoSzV4eDMtOVZhQkNQcHR4QVhBSHBhOVB4YnRHWEU3c3RGR3JfcC1JSlNKYXB6U0dpTlA4LUtVQWhHOTl3LWxVRUg2d0E1MDNoTDdYUEtBM2RSd3I?oc=5",
+      "published": "2026-10-15T20:30:00+00:00",
+      "summary": "Corporate Philanthropy 2026 Volunteer of the Year - Annette Bouwer The Business Journals",
+      "id": "ccda50a142"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Audacy",
+      "title": "Minnesota Keystone Program honors Sheletta\u2019s philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNckpab0hPLURfYzdsaGgycmdSaUhsbVRVMFFkV2NHQWhlRzZKbVFVX0dSVkp5TVNCNjIwQ2d1STlrZTFjZFAxbk1MTEVOR0pVV2VEVjZnZ1lYTEZYWTVLbTBjN3lhWVgzajRQelB4cjNnZzdNTENZVFBDZExON3JscjJMbW1hdEpaS1BYbXdTbkZzeVYzNnc?oc=5",
+      "published": "2026-10-16T17:05:00+00:00",
+      "summary": "Minnesota Keystone Program honors Sheletta\u2019s philanthropy Audacy",
+      "id": "eb3b0bf77d"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Lifestyles Magazine",
+      "title": "$250 million gift from philanthropist John Paulson puts his and Alina\u2019s names on university\u2019s historic campus",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNQnZ0RmprdUVyOGM1S25qbTNqcTZQU1AwQXdDaUR5SDh2M2toVjlTZWNIZk85YkNrcjFOUFBLU1F2OHpMV2JTWmlzdUx6UnpiLWsxVEZVcUZMQjY0R214WFV6ZlR6Q082d1AtWUxEVjlVZmxWXzBoZTJsMTNNNzJDYVgzc3VtYnEycjhLNDBFamM2bFlNX0JlbzN5S2hOaUlzYlFhZmtKVnpCaXVEVUpBRzh1VmlUMkZoUFJESS03azhEallMSEE5bGtPempsdHFDT2daOEZhanBiM2xoejBleVBibUY?oc=5",
+      "published": "2026-10-17T21:51:53+00:00",
+      "summary": "$250 million gift from philanthropist John Paulson puts his and Alina\u2019s names on university\u2019s historic campus Lifestyles Magazine",
+      "id": "f8dec707a7"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Business Journals",
+      "title": "Corporate Philanthropy 2026: The Philanthropic CEO of the Year - John Shufeldt",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeDVRbGRGU1ZEMUNZNmZJenQzZWNncmZ1MThLaXlRVkhtdkRuLThEVTVpbUV5anFFcjltcklPYTdwZldNOUl2N3BxNkVzeDZFOFNQSUtDdGFLaXhvVjVlb0pOZW10ZFpOTzVYM0JFOWhOMEIzNUg1NjhsVm1Na1F1akNXVmVaODRZYlVZMVo2ZzRCZHJtWS1qOW8ySmZmMjVQV3RaX3RJNA?oc=5",
+      "published": "2026-10-15T20:35:00+00:00",
+      "summary": "Corporate Philanthropy 2026: The Philanthropic CEO of the Year - John Shufeldt The Business Journals",
+      "id": "9171714e66"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fortune",
+      "title": "Melinda French Gates has a 48-hour rule for criticizing employees",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZEY5Y1NVZjZTc2tUQUIyZ0p3bTJ5TjMzZEY1azVKZEVhSnFOWHU5OGREVHhXV2JQeklPVzVodDVoYkZUOU1ZNzFPeHJSeFo2YllWb09Nc1pDaHpEUjUxX3RBV25ad0w1aEpLVzB1bnAwNWdTZHFCZDJja2dkTV9scXU2MzRxMG1sMDlBVHA5clIyc29pOUQxb2Q1T1pvSWhGc2FMb0tLLW5IbDdBR2xtR1p5NExTOWdDVTcxRUZoTFdILWM3MjdUSEY4bTZqcDVY?oc=5",
+      "published": "2026-10-18T13:23:00+00:00",
+      "summary": "Melinda French Gates has a 48-hour rule for criticizing employees Fortune",
+      "id": "b80a56b14f"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Midland Daily News",
+      "title": "Midland foundation to honor two couples for philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdUJ1Wkd4TkR3T3cwMVFNMUFxRWVlRWtnUEtwdTVYTmdQMWIwd1BRSWQ3b0taTFJTSDJweldjX3BwUGJfemYxbzBIcW1teXNIWk9NYjRDZE1WeUlLdWloRE15a1RiWnhjWFAyMVRDcDR6SzZGRTNhd0k4MkF1RW51dG9STnpoSkFrTktjMFBXWFg4UTNCQm9ULUYtaS1SNDk3dXQyaQ?oc=5",
+      "published": "2026-10-16T14:36:46+00:00",
+      "summary": "Midland foundation to honor two couples for philanthropy Midland Daily News",
+      "id": "c2e0c7e0ce"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Andrew Carnegie Foundation",
+      "title": "Carnegie Libraries Crossword Puzzle",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WTXFDVXZtQzFtaXhrc1VJQ1RUbDZUTzVzVTFJWXpCb1paZ29HY1h1QUlvUUJWOXc3OWlFTnFYbEhsa2EyZjc2X1JRLXRzNm05N1gxQ2NiZEhWTUFDX1FsV2F1V1NmYzdVOWtxa0N2WF93MlE?oc=5",
+      "published": "2026-10-14T19:25:57+00:00",
+      "summary": "Carnegie Libraries Crossword Puzzle Andrew Carnegie Foundation",
+      "id": "1c371d76da"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Northwest Iowa Now",
+      "title": "Okoboji Foundation Announces 2026-27 Youth in Philanthropy Class",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmdTaFlCSXo5ZUVpUkV2WTc0TUwxaXVIOXMxQnhCY2lkeDc1RXpidUt1SlZMcVRRS2pqcWdHelNxZHg3OFRfckc3YWtoQUZmUUJCbk1SOEdUOWI1QVFHOXEwSjNUb0RkczVvc1lUUkhhUmo2WEphdHZhd2lUWDhuU1JQN21tVU41QlU0Q2JlNjNCejI4Ujk3SmdVQlR6T204VHdOendFdkd5Zw?oc=5",
+      "published": "2026-10-16T12:17:52+00:00",
+      "summary": "Okoboji Foundation Announces 2026-27 Youth in Philanthropy Class Northwest Iowa Now",
+      "id": "855995a95c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "FLAUNT",
+      "title": "Why Magnolia Pearl\u2019s Philanthropy Starts With Robin Brown\u2019s Story of Hunger and Repair",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTHRKV3ljYnhvYkNJc1o5U1FueGNYM251TmozNDlUcVdqZl9xRUxENEtKMHZubTJVNnZ1SGtaR1pKVkZYMG9nZ1BGd2NUUUZDQWhweU5NMDVLWkZNUU1wMjlSTVFEQXhzQm4wdWpWZlA5SnB4MFZnMzBjS0NGU0Z2ODV5NVI1UTVHTXlYMGpoVEpPbm55ZlQ4b05iSVNUYjZFZWNFVTgtRy1WWVFNSE9lZU5R?oc=5",
+      "published": "2026-10-14T22:52:29+00:00",
+      "summary": "Why Magnolia Pearl\u2019s Philanthropy Starts With Robin Brown\u2019s Story of Hunger and Repair FLAUNT",
+      "id": "9f4820c503"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Fortune",
+      "title": "Susan Dell is the one running the Dells\u2019 $10 billion giving operation",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa0x6RVlvUlkxV0dEV3hxUGJJTTRZYUJ5T1FOUzFFMi14cE1HMkF6SHBQTTNjRk9jRUlFTEQ0RjJmWk1oNUw3NVp6RF84a19ka3lJU3k5akIzYUVZcDNYRjFWaV95TnFUTFhCZHRYODlVSkp1WDRMTzEyVFBpaENuNUt2OFliQktpNHJyYklaVGItMm4wS2dhOThyMlp4ejJBN1picVdReGcyMXNfLWQ4?oc=5",
+      "published": "2026-10-17T10:48:00+00:00",
+      "summary": "Susan Dell is the one running the Dells\u2019 $10 billion giving operation Fortune",
+      "id": "5754530776"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "News4JAX",
+      "title": "Chris Sorensen, Firehouse Subs co-founder, firefighter philanthropist, dies at 65",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ1FOUkpJTlFTVElpeTZPSTdyaFhKVDhyYVZSZHBWa0M3YmFIVmNxa2NpME1TMzlvSE5teWRQVjFjZEM3YTl3NFNYNHY1MVVaLWVaMlV3czBUN0hCMzBiTkMtS3dPcWJ0akZzSmo3QllWUjkxeTdwcFRvTERPaXlVVXBMVjk4QlhJdlhpeHRDRFpaYTlkQlRaeGlSb1gwZkJTa3M4cXQtcnFJZ3RWOExDODVpNVM5MWNaRXRuWXNfZXNRZl9F?oc=5",
+      "published": "2026-10-17T23:30:17+00:00",
+      "summary": "Chris Sorensen, Firehouse Subs co-founder, firefighter philanthropist, dies at 65 News4JAX",
+      "id": "d2b82f484b"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "RINewsToday",
+      "title": "Business Beat: Navigant CU promotes Lori Jordan to Sr. VP, Chief People and Philanthropy Officer",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQN3FGMzF4OTljaGJQMnc3QVRNMTUyTThkaEJPaFNJLTd1cHBYbWtMaXRvRkxiVGRFYTZCS1J2UVhFcFdUN2RENWE0dE1rQVlxbEJ4SEhqSVFpcF9fMVVTS0NkN1kwY29QRWlDRlVMd0p3dnVBTDhyTjZ1dl9hcjY3RzhRbXJudTRkWVVMd00tY1pFdEo1LVBtcEpxTVFvNnlTS3ZoMG5iSmlwTHdHQmNxNFlKOXdsUEZYNlE?oc=5",
+      "published": "2026-10-19T06:07:48+00:00",
+      "summary": "Business Beat: Navigant CU promotes Lori Jordan to Sr. VP, Chief People and Philanthropy Officer RINewsToday",
+      "id": "72fa034a62"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Center Square",
+      "title": "Taxpayer Philanthropy: Feds gave nonprofit $23M despite accounting woes",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSHdTQklONm93Nno2dlBrbjhja0F3M3haeUIzVGdrYmtvZC14WkhTczNVTGpEV3JwVks1X0hLVDRndnNPeGREY3IxQXBCM2Vhcy1lSHdBLXNMU1lhQWdHazNvaWVoM1N5LUdkOGVJd3p4ZU1HY2M3YldDZzFBaHBfY2FyWmNDRUdEX2lJemwwc0FyU3Yx?oc=5",
+      "published": "2026-10-14T13:30:00+00:00",
+      "summary": "Taxpayer Philanthropy: Feds gave nonprofit $23M despite accounting woes The Center Square",
+      "id": "55e8c8c370"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "ArtReview",
+      "title": "Portraits in Philanthropy: Grace Cheung",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4zZ0tlT3FxWGFEOVphNlY3eWtJeDZZSFNuS2VYSWJ4Vk9zLVBBU1hxWGNsX2VUXzUyWmg5Y1NEblJab25uSDFScGhneFFWb05KUWdWTm5selFFeDJEQmR0YkpYaU04ZVJMNXZKUlFB?oc=5",
+      "published": "2026-10-15T09:19:06+00:00",
+      "summary": "Portraits in Philanthropy: Grace Cheung ArtReview",
+      "id": "5cb784f805"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Inside Philanthropy",
+      "title": "Five early childhood funding collaboratives",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSHIyaFQ3N0tjRDZ5NzhOT3JMeURtd1J1bEl5NVROeUF2ZU4tblU2RW9jM2ZLdS1SOGM2MGx5RzZ5LUJUa1NIUmhscXVKRnBQbnFhcXVaRThPX1g1WVl0bWxkc2lJLXE2R2VWcDhDUjVWLXJSZ3dlSXJpR2lOaUYyakcwQQ?oc=5",
+      "published": "2026-10-14T15:00:00+00:00",
+      "summary": "Five early childhood funding collaboratives Inside Philanthropy",
+      "id": "613eba2d04"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Chronicle of Philanthropy",
+      "title": "Reach major donors through the advisers in their orbit",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWlcwQ0xaOHZTSUQzdzVxNm5QMWRKTjYxSk1JdWdockJnTUx6T3E5Z3Q2aE5GXzd5dmItNTJvZmtkbTl1VkJZeUlveUxGeGlWRV95b1ROY1h1dGlJZXZOa3k2dXhpNWp0Q1l6eGJUV1FYOExKR0VobW9hSHRhVEp4WHg0bUlzUEV0YVBjaFRmWm1jWEpZS2pZbHF3?oc=5",
+      "published": "2026-10-13T15:01:11+00:00",
+      "summary": "Reach major donors through the advisers in their orbit Chronicle of Philanthropy",
+      "id": "62d7cf7777"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Spear's Magazine",
+      "title": "UHNW philanthropy hits $250 billion, as ultra-wealthy fill public funding gaps",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRWRveGRVLVQtQXpPRzN6c3JJdGhvOE16SWllamtPZGt6M1hVaHBtWG11SlJfWGpDNkh5UUR1U3phMmdyMlpLMmc2czhYdFNSOFR3R1htLVp0TDhiZkQ3bDJYMU43OGlwV1h4LVpUckNQQzdmLWdENTdiYVY1OWRWamdmZUlMMGlFajJrZDdncEdGUnhKV2NfVlNWNG9uQ1c1aEthbTIxRC1TV08tM1FRUVlnVURBcmxIRkxF?oc=5",
+      "published": "2026-10-15T15:33:04+00:00",
+      "summary": "UHNW philanthropy hits $250 billion, as ultra-wealthy fill public funding gaps Spear's Magazine",
+      "id": "4d4e4eacb0"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "eJewishPhilanthropy",
+      "title": "Visiting Israel, Steven H. Lavin donates $30M to Hebrew University to boost physician training",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdC0tSlJ1VnMwOTlTVGZRRW5DcDJtVVVuMDFCZmVtZjFjOTh1VFJlYlZFVzJvTlRmekZ0UmhmdE9EaG1ZODNRWVpyS0JXVENJZnpGOVdxQlNhZ1JqMHlOSzJzMEJXRVZFTnEzVjgzWThrVC1QUGVnTW5RYi1vcWEzeXN1WkZxWW9qYl91OEctR0pneFcxMzh1M0YxdEpGNmt5dEdjLW9wR2o2MFRyaU1kVzBYZWJmZ2hBUDYyVFYtRlRuQQ?oc=5",
+      "published": "2026-10-15T11:51:44+00:00",
+      "summary": "Visiting Israel, Steven H. Lavin donates $30M to Hebrew University to boost physician training eJewishPhilanthropy",
+      "id": "436e423a89"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "edhat",
+      "title": "Association of Fundraising Professionals, Santa Barbara/Ventura Counties Chapter Celebrates National Philanthropy Day, November 12",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUEJzNGFxNjF6ZVdnSmRqZGRVN1Y5NFJQTlp5dzFrZHU1SFZwdGViR3QwT095c0NsSUc0a0ptX0ZJYm12cHVaejJuN05ZX0xTeUVsRUlUdVRuSlVLelpsYUpFRjNyNEVVaTdXNm9hZW9Mek1GN3dMdy1YQUVqT1pkZkNKQmJVeS1Zd0ZjVGlQc1dmOHZsMTN2OHpGeWhCV0hySWl2T3otVHgtRmxPWUd4TmlRa0lRMVVYVDZia1B4MTN6ZkZzUUxpUDRrT0RaT2g3Q1RmQ0Y3UEZaNVR0VngwOVo0czVQdFJocmh4N3BB?oc=5",
+      "published": "2026-10-14T07:00:00+00:00",
+      "summary": "Association of Fundraising Professionals, Santa Barbara/Ventura Counties Chapter Celebrates National Philanthropy Day, November 12 edhat",
+      "id": "dc253e8d79"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Lagniappe Daily",
+      "title": "Real estate titan, philanthropist Abe Mitchell dies at 91",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQLTFQQl9OcTFwOUJfUTV1OEZDOVY3Rk5oQ2tUQVNNVWVYcC1xeXFHSVpwZmlUUTc3ckdob0tOWVlCSHJKcnlKVFJ1bEIzdHJpSTVwdmk4R1ZreHYxdGlvY3Vzazd6THU5ZDNWU0syRmhzNUs1cmMxdUloOVR4eERHZTVXQ25VelpXVUI3V05mbC1ZUVA5NXJXZVZ0RnRwTXRIMUhrMnpudmVhVkRRVk9yaWt1VmVQcWhPMUxjcUNoVExnR2RVM2FVaHZmZjQtUTNlazhTT1VUTlhidU1odFBzbEpDTnBlX1U?oc=5",
+      "published": "2026-10-16T19:52:00+00:00",
+      "summary": "Real estate titan, philanthropist Abe Mitchell dies at 91 Lagniappe Daily",
+      "id": "d8a530037c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Boulder Jewish News",
+      "title": "JEWISHcolorado to Honor Debra Weinstein at Women\u2019s Philanthropy Lion/POM Luncheon",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUU1TMHZXS09JUG9lOVpMQzVHZ3JPUEVwUzVKY0hHRHA0YkNJRWpGazRGcWdvXzdVUXRsYzlwRlZYSEVLaWFFVDQ3dHpFYUZHWE92MUVLZ0pYUm9obEhLZ3V0XzBJSlNrb2NzZXpYNTRINDlsSzdPNzB0aTYyUzNhQ3dIRjZuMEhoOWNEZlZVUUp0TnRaQXF6TjhfREl4RE5OUW5ZRnNRU1daX2l0TGtvV0I0YmRKcGs?oc=5",
+      "published": "2026-10-14T10:40:45+00:00",
+      "summary": "JEWISHcolorado to Honor Debra Weinstein at Women\u2019s Philanthropy Lion/POM Luncheon Boulder Jewish News",
+      "id": "145d935c22"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Better Magazine",
+      "title": "How to Make Your Charitable Donations Go Further: 4 Principles of High-Impact Philanthropy",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOLWswZXhnZzFhTDNSN25MeVFrUFp1M2NQdy1GbjY1RjFwNVRFLWx4SHFuTmxBWHZIeHd4ajdqX0ZFQVJJQnozNEtpN2FzWVN4dXoweDNkcTIyZ3NhSHlTYkk5LUIwaUc5Q1ZTQUpFR3hzYlFlZzhzZGhiLXdZTk40czhvUDZkUVVWekhn?oc=5",
+      "published": "2026-10-14T19:53:07+00:00",
+      "summary": "How to Make Your Charitable Donations Go Further: 4 Principles of High-Impact Philanthropy Better Magazine",
+      "id": "eb948c4f25"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Texas Border Business",
+      "title": "Actor, Philanthropist, and Disability Rights Advocate RJ Mitte Dies at 34",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdXlCaXNtWGRBVkt0Qm1YbTdLcjJ1MTdQZWlvUWNnYXZjMlVjbW1iaEU3d1dKaVFZWXFBVk5IaTM2SjJaYW9zS1FGYm9QeFRUNDF4SjV5RDRLaUo3TzBRanFEdmZ4OEtGVWFRZWVmR1B4ZFJWcFBhVDdETjF4eVNZQTNtRjRuQ2U4UVVpSmRXbXFGcW1hdFROYlJ3c2h5ZFNQQndnWUtNaw?oc=5",
+      "published": "2026-10-13T12:24:55+00:00",
+      "summary": "Actor, Philanthropist, and Disability Rights Advocate RJ Mitte Dies at 34 Texas Border Business",
+      "id": "fc404b6710"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "The Jerusalem Post",
+      "title": "After Oct. 7, Israel\u2019s border communities need long-term philanthropy - opinion",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ZU2p5YVZ3UXlNbzl4ZDZIdjVYNTgteHppb2VVZTJvV1NPREpXaTFCVVhxNlZCM3JIR19kR1hMUjJCdXpSSEFXTjhLRTVpa0FzRUp0cHZSWQ?oc=5",
+      "published": "2026-10-15T15:00:00+00:00",
+      "summary": "After Oct. 7, Israel\u2019s border communities need long-term philanthropy - opinion The Jerusalem Post",
+      "id": "60fd5ffab4"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Marin Independent Journal",
+      "title": "Marin nonprofit outlines plan for $42M donation from MacKenzie Scott",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQUl6ZEpnQjNtbmMybzdwTVZyYU1SaFh2RlVsemJ5ZFJVY0k3aE56VjlZbVN6RVBibmM2bWw0dkNNRVI3QzJOSGdwLUtrTGtqQko1X1N0ZWhObXBVMEQwMkJfQlhaZTdZcU5MY0U4Y1FBR1p3UmpDckI1VU5pWjkwSGhKcjdfdlBD?oc=5",
+      "published": "2026-10-14T23:20:09+00:00",
+      "summary": "Marin nonprofit outlines plan for $42M donation from MacKenzie Scott Marin Independent Journal",
+      "id": "39c693e4ca"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "meat+poultry",
+      "title": "Cargill philanthropy expands grantmaking beyond Twin Cities",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQdTNwcVJDYl84dmdMVTVfR2RhYm83dy16QVQwNm9Qak44LVJ3REdFaEN2anlYaC1yLUZNY1JfaEZwZGlwaGlzU0sydm1xR0hHMVpwVDBfQXI5bDNJdjEyWXU4cEpDX3NfaFo0VkxqZWdJYk1pVXRNZVNGdUk4WEpPdnR6WS12MzE0bWszZlR6R3dUSGE0eFEzN0tHYXJ2NVFENmgtcQ?oc=5",
+      "published": "2026-10-16T15:29:59+00:00",
+      "summary": "Cargill philanthropy expands grantmaking beyond Twin Cities meat+poultry",
+      "id": "f6a6b60420"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "SCVNews.com",
+      "title": "Richard Sandnes, 92, SCV Philanthropist, Successful Entrepreneur",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMkdzRHpwdGdfem53aWNRVFF1MWNPdFlRRFFvWXZzQ0NqWjVCSEw4eHZqVDBLTkphTkNicXQwVFloeGpZMU9KRXBrQU9Na3cwcW0tQlJWdTV2ODdZWU1QZ1JOVUtDVnhERnpuV3JGSXJTSTFFcjdpUEZ0ZlNVcFZ5SGYzRlhtX21lUmc?oc=5",
+      "published": "2026-10-12T23:50:07+00:00",
+      "summary": "Richard Sandnes, 92, SCV Philanthropist, Successful Entrepreneur SCVNews.com",
+      "id": "06ed7025c7"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "AL.com",
+      "title": "Abe Mitchell, Mobile business leader and philanthropist, dead at 91",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTWE1enVkZ2dZcXhseWlXMlZ2cWNOTWxqSVpXYkV4TVhZOUZoQlExUlgzYkg1YXNqMWNEWGNzclNPczFaR0Z3LXpMd05xRy1tbE5lbEpUMDUyc0hPT0lmRi1XSk42OENQZTc5XzMyNFVxR1BIcVc2cWhORlZlWGtnMFZldDE5ZWd4Nk5mdEpMdUQyTzhJSUR0Z25nNldQTkRWNHdZMXdhNDhtN0NwUWc?oc=5",
+      "published": "2026-10-16T22:16:00+00:00",
+      "summary": "Abe Mitchell, Mobile business leader and philanthropist, dead at 91 AL.com",
+      "id": "63056c253c"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "90.5 WESA",
+      "title": "Pioneering educator and philanthropist Nancy Washington dies at 87",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTVFid2NCemJPd1UxWUhiLWRGMEdlN1pmdk5zMVlsYzVaNWlSUWJIRWV4NjN4YW5rV1A0S1NlMWVQQU1nV3h2MERIeFl3SXpER0tObjBMSE90VXJSdU43Zzg1UjIyZzJKM2NnOXZNQ0plbjFQcVp1OFlWSy1aWFZpcENHNERSQXRzMlpPY0E5ZzM?oc=5",
+      "published": "2026-10-15T19:13:00+00:00",
+      "summary": "Pioneering educator and philanthropist Nancy Washington dies at 87 90.5 WESA",
+      "id": "862fd3fa88"
+    },
+    {
+      "source_id": "gnews_philanthropy",
+      "source_name": "Yahoo Sports",
+      "title": "John Wall Discusses His Busy Post-NBA Playing Career Including Broadcasting, Philanthropy & Howard U President of Basketball Operations",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNU1A5YVpOODBVVmVDVEF2Y0VRMjY1cHZqOGxTOTZCdkZMTjlKS0lUc2N2MFgxU2RKOFNNTlkyRDVwWC1QV2FBZEZaS3NmbnJ4aWRIQ1Q2blh3amQtdS00WGtRdzNEendPc2syVllaUUQ5eEgyTXRwV2JBWm9IcDdJaTJnU2g?oc=5",
+      "published": "2026-10-16T20:51:00+00:00",
+      "summary": "John Wall Discusses His Busy Post-NBA Playing Career Including Broadcasting, Philanthropy & Howard U President of Basketball Operations Yahoo Sports",
+      "id": "82e4335936"
+    },
+    {
+      "source_id": "congress",
+      "source_name": "Congress.gov",
+      "title": "HCONRES 119: Celebrating the 65th anniversary of the establishment of the Peace Corps, and commending its volunteers and contributions to global peace, friendship, and development.",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/119",
+      "published": "2026-10-16T00:00:00+00:00",
+      "summary": "Latest action (2026-09-21): Referred to the House Committee on Foreign Affairs.",
+      "id": "8c3a802bca"
+    },
+    {
+      "source_id": "congress",
+      "source_name": "Congress.gov",
+      "title": "HR 10330: Higher Education Oversight for Nonprofits Ensuring Standards and Transparency Act",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/10330",
+      "published": "2026-10-16T00:00:00+00:00",
+      "summary": "Latest action (2026-09-10): Referred to the House Committee on Ways and Means.",
+      "id": "671ee076f9"
+    },
+    {
+      "source_id": "congress",
+      "source_name": "Congress.gov",
+      "title": "S 3743: A bill to amend the Internal Revenue Code of 1986 to treat transfers of appreciated property to certain tax-exempt organizations the same as transfers of appreciated property to political organizations.",
+      "url": "https://www.congress.gov/bill/118th-congress/senate-bill/3743",
+      "published": "2026-10-14T00:00:00+00:00",
+      "summary": "Latest action (2024-02-06): Read twice and referred to the Committee on Finance.",
+      "id": "8b955c844b"
+    },
+    {
+      "source_id": "congress",
+      "source_name": "Congress.gov",
+      "title": "HCONRES 4: Expressing the sense of Congress that tax-exempt fraternal benefit societies have historically provided and continue to provide critical benefits to the people and communities of the United States.",
+      "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/4",
+      "published": "2026-10-14T00:00:00+00:00",
+      "summary": "Latest action (2025-01-28): Referred to the House Committee on Ways and Means.",
+      "id": "cc67a6d01f"
+    }
+  ]
+}

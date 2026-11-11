@@ -18,16 +18,34 @@
 .cat h2 { font-size: 26px; line-height: 1.2; margin: 4px 0 0; }
 .cat p { margin: 4px 0 0; font-size: 14px; color: var(--quiet); }
 .entry { padding: 22px 0 0; scroll-margin-top: 16px; }
-@media (max-width: 600px) { .toc ol { grid-template-columns: 1fr; } }
-.entry h3 { font-size: 21px; line-height: 1.28; margin: 0 0 6px; }
+.entry .kicker { color: var(--meta); }
+.entry h3 { font-size: 21px; line-height: 1.28; margin: 4px 0 6px; }
 .entry h3 a { color: var(--black); }
 .entry p { margin: 0 0 6px; font-size: 15.5px; }
-.entry .src { font-size: 12.5px; font-weight: 700; }
+.src { font-size: 12.5px; font-weight: 700; }
+.update { display: inline-block; background: var(--lime); color: var(--black); font-family: var(--font-body); font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; vertical-align: middle; margin-right: 4px; }
+.trend { background: var(--white); border-left: 3px solid var(--lime); padding: 18px 20px; margin: 22px 0 0; scroll-margin-top: 16px; }
+.trend .eyebrow { color: var(--green); }
+.trend h3 { font-size: 21px; line-height: 1.28; margin: 4px 0 6px; }
+.trend p { margin: 0 0 10px; font-size: 15.5px; }
+.trend ul { list-style: none; margin: 0; padding: 0; }
+.trend li { font-size: 13.5px; line-height: 1.45; padding: 3px 0; }
+.trend li a { color: var(--black); text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 2px; }
+.trend li span { color: var(--meta); }
+.group { margin: 26px 0 0; }
+.group .eyebrow { color: var(--green); }
+.brief-item { font-size: 15px; line-height: 1.5; padding: 10px 0 0; scroll-margin-top: 16px; }
+.brief-item > a:first-of-type { color: var(--black); font-weight: 700; }
 .pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 14px; }
 .pager a { max-width: 48%; }
 .pager .next { text-align: right; margin-left: auto; }
+@media (max-width: 600px) { .toc ol { grid-template-columns: 1fr; } }
 {% endblock %}
 {% block content %}
+{%- set top = brief.top or [] -%}
+{%- set trends = brief.trends or [] -%}
+{%- set legacy = not top and not trends -%}
+{%- macro update(e) %}{% if e.follow_up %}<span class="update">Update</span>{% endif %}{% endmacro -%}
 <section class="hero">
   <div class="wrap">
     <span class="tag">Week of {{ brief.week_of }}</span>
@@ -36,26 +54,75 @@
 </section>
 <main class="wrap">
   <p class="intro">{{ brief.intro }}</p>
-  {% if brief.sections|length > 1 %}
+
   <nav class="toc" aria-label="In this issue">
     <div class="eyebrow">In this issue</div>
     <ol>
-      {% for section in brief.sections %}
-      {% set sec = loop.index %}
+      {% if top %}
       <li>
-        <div class="eyebrow"><a href="#s{{ sec }}">{{ '%02d'|format(sec) }} &middot; {{ section.title }}</a> <span class="n">({{ section.entries|length }})</span></div>
-        <ul>
-          {% for e in section.entries %}<li><a href="#s{{ sec }}-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}
-        </ul>
+        <div class="eyebrow"><a href="#top">Top stories</a> <span class="n">({{ top|length }})</span></div>
+        <ul>{% for e in top %}<li><a href="#top-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}</ul>
+      </li>
+      {% endif %}
+      {% if trends %}
+      <li>
+        <div class="eyebrow"><a href="#trends">Trends to watch</a> <span class="n">({{ trends|length }})</span></div>
+        <ul>{% for t in trends %}<li><a href="#trend-{{ loop.index }}">{{ t.title }}</a></li>{% endfor %}</ul>
+      </li>
+      {% endif %}
+      {% for section in brief.sections %}
+      <li>
+        <div class="eyebrow"><a href="#s{{ loop.index }}">{{ section.title }}</a> <span class="n">({{ section.entries|length }})</span></div>
+        {% if legacy %}<ul>{% set sec = loop.index %}{% for e in section.entries %}<li><a href="#s{{ sec }}-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}</ul>{% endif %}
       </li>
       {% endfor %}
     </ol>
   </nav>
+
+  {% if top %}
+  <header class="cat" id="top">
+    <div class="eyebrow">{{ top|length }} {{ "story" if top|length == 1 else "stories" }}</div>
+    <h2>Top stories</h2>
+    <p>The week's most consequential news.</p>
+  </header>
+  {% for e in top %}
+  <article class="entry" id="top-{{ loop.index }}">
+    {% if e.section %}<div class="eyebrow kicker">{{ e.section }}</div>{% endif %}
+    <h3>{{ update(e) }}<a href="{{ e.url }}">{{ e.headline }}</a></h3>
+    <p>{{ e.body }}</p>
+    <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>
+  </article>
+  {% endfor %}
+  {% endif %}
+
+  {% if trends %}
+  <header class="cat" id="trends">
+    <div class="eyebrow">{{ trends|length }} {{ "trend" if trends|length == 1 else "trends" }}</div>
+    <h2>Trends to watch</h2>
+    <p>Patterns building across several weeks of coverage.</p>
+  </header>
+  {% for t in trends %}
+  <section class="trend" id="trend-{{ loop.index }}">
+    <div class="eyebrow">{{ t.stories }} stories over {{ t.weeks }} weeks</div>
+    <h3>{{ t.title }}</h3>
+    <p>{{ t.body }}</p>
+    <ul>{% for s in t.evidence %}<li><a href="{{ s.url }}">{{ s.title }}</a> <span>&middot; {{ s.source }}</span></li>{% endfor %}</ul>
+  </section>
+  {% endfor %}
+  {% endif %}
+
+  {% if brief.sections %}
+  {% if not legacy %}
+  <header class="cat">
+    <div class="eyebrow">The rest of the week</div>
+    <h2>The week in brief</h2>
+  </header>
   {% endif %}
   {% for section in brief.sections %}
   {% set sec = loop.index %}
+  {% if legacy %}
   <header class="cat" id="s{{ sec }}">
-    <div class="eyebrow">{{ '%02d'|format(sec) }} &middot; {{ section.entries|length }} {{ "story" if section.entries|length == 1 else "stories" }}</div>
+    <div class="eyebrow">{{ section.entries|length }} {{ "story" if section.entries|length == 1 else "stories" }}</div>
     <h2>{{ section.title }}</h2>
     {% if section.description %}<p>{{ section.description }}</p>{% endif %}
   </header>
@@ -66,7 +133,17 @@
     <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>
   </article>
   {% endfor %}
+  {% else %}
+  <div class="group" id="s{{ sec }}">
+    <div class="eyebrow">{{ section.title }}</div>
+    {% for e in section.entries %}
+    <div class="brief-item">{{ update(e) }}<a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
+    {% endfor %}
+  </div>
+  {% endif %}
   {% endfor %}
+  {% endif %}
+
   <nav class="pager" aria-label="More briefs">
     {% if older %}<a href="../{{ older.slug }}/">&larr; {{ older.subject }}</a>{% endif %}
     {% if newer %}<a class="next" href="../{{ newer.slug }}/">{{ newer.subject }} &rarr;</a>{% endif %}

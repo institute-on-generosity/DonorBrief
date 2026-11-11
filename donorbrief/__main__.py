@@ -8,11 +8,12 @@ import sys
 from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Optional
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
-from . import llm, mailchimp
+from . import history, llm, mailchimp
 from .sources import collect
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,6 +24,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Build this week's DonorBrief draft.")
     parser.add_argument("--config", default=ROOT / "config" / "sources.yaml", type=Path)
     parser.add_argument("--out", default=ROOT / "drafts", type=Path)
+    parser.add_argument("--history", default=history.HISTORY, type=Path, help="Week-to-week memory (history/).")
     parser.add_argument("--dry-run", action="store_true", help="Fetch sources only; no LLM calls.")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -63,12 +65,16 @@ def main() -> int:
         log.error("No items passed triage.")
         return 1
 
-    log.info("Writing brief with %s...", cfg["editor_model"])
-    brief = llm.compose(provider, cfg["editor_model"], picked, sections, week_of)
+    week = history.week_label(now.date())
+    past_weeks = history.load_recent(args.history, before=week, weeks=cfg.get("trend_weeks", 8))
+    log.info("Writing brief with %s (%d earlier weeks for trends)...", cfg["editor_model"], len(past_weeks))
+    brief = llm.compose(provider, cfg["editor_model"], picked, sections, week_of, past_weeks)
 
-    rendered_sections = render_sections(brief, sections, items)
-    write_outputs(out_dir, brief, rendered_sections, week_of, failed)
-    log.info("Draft written to %s", out_dir)
+    rendered = render(brief, sections, items, past_weeks, week, week_of)
+    write_outputs(out_dir, brief, rendered, failed)
+    in_brief = {e["id"] for e in rendered["top"] + [e for s in rendered["sections"] for e in s["entries"]]}
+    history.record(args.history, week, items, assessments, in_brief)
+    log.info("Draft written to %s (%d top stories, %d trends)", out_dir, len(rendered["top"]), len(rendered["trends"]))
 
     delivery = mailchimp.deliver(out_dir, config)
     if delivery["status"] == "draft_created":
@@ -81,43 +87,95 @@ def main() -> int:
     return 0
 
 
-def render_sections(brief: llm.Brief, sections: list[dict], items) -> list[dict]:
-    """Attach real URLs and source names by item id, so links never come from the model."""
-    by_id = {s["id"]: s for s in sections}
+MIN_TREND_STORIES = 3
+MIN_TREND_WEEKS = 2
+
+
+def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict], week: str, week_of: str) -> dict:
+    """Everything a reader sees, with links filled in from source data, never from the model.
+
+    Entries citing unknown ids are dropped. Trends must be backed by enough real stories across
+    enough weeks, and their counts are computed here rather than taken from the model.
+    """
+    titles = {s["id"]: s for s in sections}
     order = [s["id"] for s in sections]
-    out = []
-    for sec in sorted(brief.sections, key=lambda s: order.index(s.section_id) if s.section_id in order else 99):
-        entries = []
+    current = {i.id: i for i in items}
+    section_of = {}
+    for sec in brief.sections:
         for e in sec.entries:
-            item = llm.find_item(items, e.id)
-            if item is None:
-                log.warning("Dropping entry %r: unknown item id %s", e.headline, e.id)
-                continue
-            entries.append({"headline": e.headline, "body": e.body, "url": item.url, "source": item.source_name})
+            section_of[e.id] = sec.section_id
+
+    def entry(e: llm.BriefEntry, section_id: str = "") -> Optional[dict]:
+        item = current.get(e.id)
+        if item is None:
+            log.warning("Dropping entry %r: unknown item id %s", e.headline, e.id)
+            return None
+        return {"id": e.id, "headline": e.headline, "body": e.body, "url": item.url, "source": item.source_name,
+                "follow_up": e.follow_up, "section": titles.get(section_id, {}).get("title", "")}
+
+    top_ids = {e.id for e in brief.top_stories}
+    top = [x for x in (entry(e, section_of.get(e.id, "")) for e in brief.top_stories) if x]
+
+    rendered_sections = []
+    for sec in sorted(brief.sections, key=lambda s: order.index(s.section_id) if s.section_id in order else 99):
+        entries = [x for x in (entry(e, sec.section_id) for e in sec.entries if e.id not in top_ids) if x]
         if entries:
-            meta = by_id.get(sec.section_id, {})
-            out.append({"id": sec.section_id, "title": meta.get("title", sec.section_id),
-                        "description": meta.get("description", ""), "entries": entries})
-    return out
+            meta = titles.get(sec.section_id, {})
+            rendered_sections.append({"id": sec.section_id, "title": meta.get("title", sec.section_id),
+                                      "description": meta.get("description", ""), "entries": entries})
+
+    # Every story the editor could cite for a trend: this week plus earlier weeks.
+    known = {i.id: {"title": i.title, "url": i.url, "source": i.source_name, "week": week} for i in items}
+    for w in past_weeks:
+        for i in w["items"]:
+            known.setdefault(i["id"], {"title": i["title"], "url": i["url"], "source": i["source"], "week": w["week"]})
+    trends = []
+    for t in brief.trends:
+        stories = [known[i] for i in dict.fromkeys(t.item_ids) if i in known]
+        weeks = {s["week"] for s in stories}
+        if len(stories) < MIN_TREND_STORIES or len(weeks) < MIN_TREND_WEEKS:
+            log.warning("Dropping trend %r: %d stories over %d weeks", t.title, len(stories), len(weeks))
+            continue
+        stories.sort(key=lambda s: s["week"], reverse=True)
+        trends.append({"title": t.title, "body": t.body, "stories": len(stories), "weeks": len(weeks),
+                       "since": min(weeks), "evidence": stories[:4]})
+
+    return {"subject": brief.subject, "intro": brief.intro, "week_of": week_of,
+            "top": top, "trends": trends, "sections": rendered_sections}
 
 
-def write_outputs(out_dir: Path, brief: llm.Brief, sections: list[dict], week_of: str, failed) -> None:
+def write_outputs(out_dir: Path, brief: llm.Brief, rendered: dict, failed) -> None:
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"), autoescape=True)
-    (out_dir / "brief.html").write_text(env.get_template("brief.html.j2").render(brief=brief, sections=sections, week_of=week_of))
+    (out_dir / "brief.html").write_text(env.get_template("brief.html.j2").render(
+        brief=rendered, sections=rendered["sections"], week_of=rendered["week_of"]))
+    (out_dir / "brief.md").write_text(to_markdown(rendered, failed))
+    (out_dir / "brief.json").write_text(brief.model_dump_json(indent=2))
+    # The input for Mailchimp, the archive, and the edit page.
+    (out_dir / "rendered.json").write_text(json.dumps(rendered, indent=2))
 
-    md = [f"# {brief.subject}", f"_Week of {week_of}_", "", brief.intro, ""]
-    for sec in sections:
+
+def to_markdown(r: dict, failed=()) -> str:
+    md = [f"# {r['subject']}", f"_Week of {r['week_of']}_", "", r["intro"], ""]
+    if r["top"]:
+        md += ["## Top stories", ""]
+        for e in r["top"]:
+            tag = "Update: " if e["follow_up"] else ""
+            md += [f"**{tag}[{e['headline']}]({e['url']})**  ", f"{e['body']} _({e['source']})_", ""]
+    if r["trends"]:
+        md += ["## Trends to watch", ""]
+        for t in r["trends"]:
+            md += [f"**{t['title']}** _({t['stories']} stories over {t['weeks']} weeks)_  ", t["body"], ""]
+            md += [f"- [{s['title']}]({s['url']}) _({s['source']}, week of {s['week']})_" for s in t["evidence"]] + [""]
+    for sec in r["sections"]:
         md += [f"## {sec['title']}", ""]
         for e in sec["entries"]:
-            md += [f"**[{e['headline']}]({e['url']})**  ", f"{e['body']} _({e['source']})_", ""]
+            tag = "Update: " if e["follow_up"] else ""
+            md += [f"- **{tag}[{e['headline']}]({e['url']})** {e['body']} _({e['source']})_"]
+        md += [""]
     if failed:
         md += ["---", "**Sources that failed this week (not shown to readers):**"]
-        md += [f"- {r.source_id}: {r.error}" for r in failed]
-    (out_dir / "brief.md").write_text("\n".join(md) + "\n")
-    (out_dir / "brief.json").write_text(brief.model_dump_json(indent=2))
-    # Everything a reader sees, links resolved: the input for the archive and the edit page.
-    (out_dir / "rendered.json").write_text(json.dumps(
-        {"subject": brief.subject, "intro": brief.intro, "week_of": week_of, "sections": sections}, indent=2))
+        md += [f"- {f.source_id}: {f.error}" for f in failed]
+    return "\n".join(md) + "\n"
 
 
 if __name__ == "__main__":
