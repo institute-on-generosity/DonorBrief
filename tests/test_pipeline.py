@@ -159,3 +159,20 @@ def test_archive_builds_index_and_pages_newest_first(tmp_path):
     assert "&lt;b&gt;" in index  # escaped
     newer = (tmp_path / "site" / "2026-10-12" / "index.html").read_text()
     assert 'href="../2026-10-05/"' in newer and "https://e.org" in newer
+
+
+def test_brief_lists_categories_in_contents_and_headers(tmp_path):
+    items = [item("A", "https://e.org/a"), item("B", "https://e.org/b")]
+    sections = [{"id": "policy", "title": "Policy & Regulation", "description": "Laws and rules."},
+                {"id": "sector", "title": "Sector News", "description": ""}]
+    brief = llm.Brief(subject="S", intro="I", sections=[
+        llm.BriefSection(section_id="sector", entries=[llm.BriefEntry(id=items[1].id, headline="Second", body="B")]),
+        llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=items[0].id, headline="First", body="B")]),
+    ])
+    rendered = main.render_sections(brief, sections, items)
+    assert [(s["id"], s["description"]) for s in rendered] == [("policy", "Laws and rules."), ("sector", "")]
+    main.write_outputs(tmp_path, brief, rendered, "October 12, 2026", [])
+    html = (tmp_path / "brief.html").read_text()
+    contents = html.index("In this issue")
+    assert contents < html.index("01 &middot; Policy &amp; Regulation") < html.index("02 &middot; Sector News")
+    assert "Laws and rules." in html and "1 story" in html

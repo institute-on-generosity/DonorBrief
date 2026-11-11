@@ -4,7 +4,21 @@
 {% block nav %}<a href="../">All briefs</a>{% endblock %}
 {% block style %}
 .intro { font-size: 17px; margin: 32px 0 0; }
-.entry { padding: 20px 0 0; }
+.toc { background: var(--white); border: 1px solid var(--rule); border-radius: 3px; padding: 20px 24px; margin: 28px 0 0; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+.toc li > .eyebrow { margin-top: 14px; }
+.toc .eyebrow a { color: var(--green); }
+.toc .n { color: var(--meta); font-weight: 400; }
+.toc ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.toc ul li { font-size: 14px; line-height: 1.45; padding: 3px 0 3px 12px; text-indent: -12px; }
+.toc ul a { color: var(--black); }
+.toc ul li::before { content: "– "; }
+.cat { border-top: 3px solid var(--black); margin: 48px 0 0; padding: 12px 0 12px; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
+.cat .eyebrow { color: var(--green); }
+.cat h2 { font-size: 26px; line-height: 1.2; margin: 4px 0 0; }
+.cat p { margin: 4px 0 0; font-size: 14px; color: var(--quiet); }
+.entry { padding: 22px 0 0; scroll-margin-top: 16px; }
+@media (max-width: 600px) { .toc ol { grid-template-columns: 1fr; } }
 .entry h3 { font-size: 21px; line-height: 1.28; margin: 0 0 6px; }
 .entry h3 a { color: var(--black); }
 .entry p { margin: 0 0 6px; font-size: 15.5px; }
@@ -22,10 +36,31 @@
 </section>
 <main class="wrap">
   <p class="intro">{{ brief.intro }}</p>
+  {% if brief.sections|length > 1 %}
+  <nav class="toc" aria-label="In this issue">
+    <div class="eyebrow">In this issue</div>
+    <ol>
+      {% for section in brief.sections %}
+      {% set sec = loop.index %}
+      <li>
+        <div class="eyebrow"><a href="#s{{ sec }}">{{ '%02d'|format(sec) }} &middot; {{ section.title }}</a> <span class="n">({{ section.entries|length }})</span></div>
+        <ul>
+          {% for e in section.entries %}<li><a href="#s{{ sec }}-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
   {% for section in brief.sections %}
-  <h2 class="eyebrow label">{{ section.title }}</h2>
+  {% set sec = loop.index %}
+  <header class="cat" id="s{{ sec }}">
+    <div class="eyebrow">{{ '%02d'|format(sec) }} &middot; {{ section.entries|length }} {{ "story" if section.entries|length == 1 else "stories" }}</div>
+    <h2>{{ section.title }}</h2>
+    {% if section.description %}<p>{{ section.description }}</p>{% endif %}
+  </header>
   {% for e in section.entries %}
-  <article class="entry">
+  <article class="entry" id="s{{ sec }}-{{ loop.index }}">
     <h3><a href="{{ e.url }}">{{ e.headline }}</a></h3>
     <p>{{ e.body }}</p>
     <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>

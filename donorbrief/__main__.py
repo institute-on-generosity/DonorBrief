@@ -83,7 +83,7 @@ def main() -> int:
 
 def render_sections(brief: llm.Brief, sections: list[dict], items) -> list[dict]:
     """Attach real URLs and source names by item id, so links never come from the model."""
-    titles = {s["id"]: s["title"] for s in sections}
+    by_id = {s["id"]: s for s in sections}
     order = [s["id"] for s in sections]
     out = []
     for sec in sorted(brief.sections, key=lambda s: order.index(s.section_id) if s.section_id in order else 99):
@@ -95,7 +95,9 @@ def render_sections(brief: llm.Brief, sections: list[dict], items) -> list[dict]
                 continue
             entries.append({"headline": e.headline, "body": e.body, "url": item.url, "source": item.source_name})
         if entries:
-            out.append({"title": titles.get(sec.section_id, sec.section_id), "entries": entries})
+            meta = by_id.get(sec.section_id, {})
+            out.append({"id": sec.section_id, "title": meta.get("title", sec.section_id),
+                        "description": meta.get("description", ""), "entries": entries})
     return out
 
 
