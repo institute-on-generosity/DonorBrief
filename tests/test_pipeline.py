@@ -99,8 +99,8 @@ def test_render_uses_real_urls_drops_unknown_ids_and_escapes_html(tmp_path):
     items = [item("Real", "https://e.org/real")]
     sections = [{"id": "sector", "title": "Sector News", "description": ""}]
     b = brief(subject="Subject <script>x</script>", sections=[llm.BriefSection(section_id="sector", entries=[
-        llm.BriefEntry(id=items[0].id, headline="Real & true", body="B"),
-        llm.BriefEntry(id="madeup1234", headline="Invented", body="B"),
+        llm.BriefEntry(id=items[0].id, headline="Real & true", body="B", why_it_matters=""),
+        llm.BriefEntry(id="madeup1234", headline="Invented", body="B", why_it_matters=""),
     ])])
     rendered = main.render(b, sections, items, [], "2026-10-12", "October 12, 2026")
     assert [e["url"] for e in rendered["sections"][0]["entries"]] == ["https://e.org/real"]
@@ -191,10 +191,10 @@ def test_brief_layout_takeaways_then_trends_then_news(tmp_path):
         ],
         trends=[llm.Trend(title="DAFs under scrutiny", body="Building.", item_ids=[b_, c, "old1"])],
         sections=[
-            llm.BriefSection(section_id="sector", entries=[llm.BriefEntry(id=c, headline="Third", body="One line.")]),
-            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="Longer."),
-                                                           llm.BriefEntry(id=b_, headline="Second?", body="One line."),
-                                                           llm.BriefEntry(id=a, headline="Big one again", body="dup")]),
+            llm.BriefSection(section_id="sector", entries=[llm.BriefEntry(id=c, headline="Third", body="One line.", why_it_matters="")]),
+            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="Longer.", why_it_matters=""),
+                                                           llm.BriefEntry(id=b_, headline="Second?", body="One line.", why_it_matters=""),
+                                                           llm.BriefEntry(id=a, headline="Big one again", body="dup", why_it_matters="")]),
         ])
     r = main.render(b, sections, items, past, "2026-10-12", "October 12, 2026")
     assert [(t["n"], t["lead"]) for t in r["takeaways"]] == [(1, "Ford is narrowing its focus"), (2, "Two stories, one point")]
@@ -237,8 +237,8 @@ def test_stories_from_earlier_briefs_only_return_inside_trends(tmp_path, monkeyp
                            llm.Takeaway(lead="New news", detail="y", item_ids=[new1.id])],
                 trends=[llm.Trend(title="Pattern", body="z", item_ids=[old.id, new1.id, new2.id])],
                 sections=[llm.BriefSection(section_id="sector", entries=[
-                    llm.BriefEntry(id=old.id, headline="Ran last week", body="again"),
-                    llm.BriefEntry(id=new1.id, headline="New A", body="fresh")])])
+                    llm.BriefEntry(id=old.id, headline="Ran last week", body="again", why_it_matters=""),
+                    llm.BriefEntry(id=new1.id, headline="New A", body="fresh", why_it_matters="")])])
 
     monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
     monkeypatch.setattr(main, "collect", lambda config, now: ([old, new1], []))
@@ -256,6 +256,28 @@ def test_stories_from_earlier_briefs_only_return_inside_trends(tmp_path, monkeyp
     assert [e["headline"] for s in r["sections"] for e in s["entries"]] == ["New A"]
     assert [t["lead"] for t in r["takeaways"]] == ["New news"]
     assert r["trends"][0]["stories"] == 3
+
+
+def test_source_link_sits_inside_the_text_npr_style(tmp_path):
+    items = [item("A", "https://e.org/a", source="Chronicle of Philanthropy"), item("B", "https://e.org/b", source="Fortune")]
+    sections = [{"id": "sector", "title": "Sector", "description": ""}]
+    b = brief(
+        takeaways=[llm.Takeaway(lead="Lead", detail="d", item_ids=[items[0].id])],
+        sections=[llm.BriefSection(section_id="sector", entries=[
+            llm.BriefEntry(id=items[0].id, headline="Veteran charities get under 1% of giving.",
+                           body="About $4 billion went to veteran charities, the Chronicle of Philanthropy reports.",
+                           why_it_matters="Visibility doesn't translate into dollars."),
+            llm.BriefEntry(id=items[1].id, headline="No source named", body="Something happened.", why_it_matters="")])])
+    r = main.render(b, sections, items, [], "2026-10-12", "October 12, 2026")
+    lead, plain = r["sections"][0]["entries"]
+    assert lead["body_parts"] == ["About $4 billion went to veteran charities, the ", "Chronicle of Philanthropy", " reports."]
+    assert plain["body_parts"] is None
+    main.write_outputs(tmp_path, b, r, [])
+    html = (tmp_path / "brief.html").read_text()
+    assert 'the <a href="https://e.org/a"' in html and "Why it matters:</span> Visibility" in html
+    assert "Fortune&nbsp;&rarr;" in html          # fallback when the text never names the source
+    md = (tmp_path / "brief.md").read_text()
+    assert "the [Chronicle of Philanthropy](https://e.org/a) reports." in md
 
 
 def test_trends_need_three_stories_over_two_weeks():
@@ -315,6 +337,7 @@ def test_compose_shows_earlier_weeks_to_the_editor():
     assert "Ran before" in seen["prompt"] and "already_in_a_previous_brief" in seen["prompt"] and "Low score" not in seen["prompt"]
     assert "Key takeaways" in seen["system"] and "Trends to watch" in seen["system"]
     assert "nonpartisan" in seen["system"] and "don't take sides" in seen["system"]
+    assert "One idea per sentence" in seen["system"] and "At most two numbers" in seen["system"]
 
 
 def test_triage_keeps_only_known_topics_and_history_saves_them(tmp_path):

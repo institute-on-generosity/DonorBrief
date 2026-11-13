@@ -40,7 +40,8 @@ class TriageResult(BaseModel):
 class BriefEntry(BaseModel):
     id: str = Field(description="The id of the source item this entry is based on.")
     headline: str
-    body: str = Field(description="Stories behind a takeaway: 2-3 sentences. All others: one sentence.")
+    body: str = Field(description="Stories behind a takeaway: about 60-80 words of plain context. All others: one sentence. Name the source in the text.")
+    why_it_matters: str = Field(description="Stories behind a takeaway only: one sentence on what it means for funders and nonprofits, ONLY if there is a real implication. Otherwise empty.")
 
 
 class BriefSection(BaseModel):
@@ -190,8 +191,21 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
         "item ids from at least 2 weeks, using this week's items and the earlier weeks listed. A single big "
         "story is not a trend, and neither is a topic that is always in the news. Name what is changing. "
         "If nothing qualifies, return no trends. Don't repeat a takeaway as a trend.\n"
-        "3. The news: every story from this week worth knowing, grouped by section, each story once. Stories "
-        "behind a takeaway get 2-3 sentences; all others get one sentence. Skip sections with nothing in them.\n\n"
+        "3. The news: every story from this week worth knowing, grouped by section, each story once. Skip "
+        "sections with nothing in them. Stories behind a takeaway are lead stories: a headline that is one "
+        "clear sentence saying what happened, then about 60-80 words of plain context (who, what, and the "
+        "background a reader needs), then why_it_matters, one sentence on what it means for funders and "
+        "nonprofits, only when there is a real implication; leave it empty rather than state the obvious. "
+        "All other stories: a short headline and one sentence.\n\n"
+        "Writing rules (adapted from NPR's guidance):\n"
+        "- One idea per sentence. Keep the subject close to its verb; avoid long dependent clauses.\n"
+        "- Write the way you would say it out loud: plain, everyday words. Repeating a word beats an awkward synonym.\n"
+        "- At most two numbers per story. Round them (\"about $4 billion\") and give a comparison or context "
+        "(\"about four times last year's\"). Don't make readers do math.\n"
+        "- Attribute every figure, finding, and claim to its source, with a neutral \"said\" or \"reports\". "
+        "Name the source in the text using its name exactly as given in the item's source field (for example, "
+        "\"the Chronicle of Philanthropy reports\"); the link will be placed on that name.\n"
+        "- No hype words (\"game-changing\", \"seismic\"), no jargon, no rhetorical questions.\n\n"
         "Never repeat a story from an earlier brief. Stories marked already_in_a_previous_brief, and any "
         "other coverage of those same stories, must not appear in the takeaways or the news, even with "
         "new developments. They may appear only as supporting evidence inside a trend.\n\n"

@@ -46,6 +46,8 @@
 .lead-story h3 { font-size: 21px; line-height: 1.28; margin: 4px 0 4px; }
 .lead-story h3 a { color: var(--black); }
 .lead-story p { margin: 0; font-size: 15.5px; }
+.lead-story .why { border-left: 3px solid var(--lime); padding: 2px 0 2px 12px; margin: 10px 0 0; font-size: 15px; }
+.inline-src { font-weight: 700; text-decoration: underline; }
 .news-index { font-size: 13px; color: var(--quiet); margin: 10px 0 0; }
 .group { margin: 26px 0 0; }
 .group > .eyebrow { border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
@@ -61,6 +63,7 @@
 {%- set takeaways = brief.takeaways or [] -%}
 {%- set trends = brief.trends or [] -%}
 {%- set legacy = not takeaways -%}
+{%- macro text(e) %}{% if e.body_parts %}{{ e.body_parts[0] }}<a class="inline-src" href="{{ e.url }}">{{ e.body_parts[1] }}</a>{{ e.body_parts[2] }}{% else %}{{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a>{% endif %}{% endmacro -%}
 {%- macro chips(e) %}{% for n in e.takeaways or [] %}<span class="chip">Takeaway {{ n }}</span>{% endfor %}{% endmacro -%}
 <section class="hero">
   <div class="wrap">
@@ -137,10 +140,11 @@
     <article class="lead-story" id="{{ e.anchor }}">
       {{ chips(e) }}
       <h3><a href="{{ e.url }}">{{ e.headline }}</a></h3>
-      <p>{{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></p>
+      <p>{{ text(e) }}</p>
+      {% if e.why_it_matters %}<p class="why"><strong>Why it matters:</strong> {{ e.why_it_matters }}</p>{% endif %}
     </article>
     {% else %}
-    <div class="brief-item" id="{{ e.anchor }}"><a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
+    <div class="brief-item" id="{{ e.anchor }}"><a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ text(e) }}</div>
     {% endif %}
     {% endfor %}
   </div>

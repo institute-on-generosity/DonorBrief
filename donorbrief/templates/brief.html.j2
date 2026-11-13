@@ -49,6 +49,11 @@
   {%- macro tags(e) -%}
   {%- for n in e.takeaways %}{{ chip("Takeaway " ~ n) }}{% endfor -%}
   {%- endmacro -%}
+  {%- macro text(e) -%}
+  {#- NPR style: the link sits on the source's name in the sentence; a small source link only if the text never names it -#}
+  {%- if e.body_parts -%}{{ e.body_parts[0] }}<a href="{{ e.url }}" style="color:#42820F;text-decoration:underline;font-weight:700;">{{ e.body_parts[1] }}</a>{{ e.body_parts[2] }}
+  {%- else -%}{{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a>{%- endif -%}
+  {%- endmacro -%}
   {%- set takeaways = brief.takeaways or [] -%}
   {%- set trends = brief.trends or [] -%}
 
@@ -109,10 +114,13 @@
     <div style="padding:14px 0 2px;">
       <div style="margin:0 0 4px;">{{ tags(e) }}</div>
       <div style="font-family:{{ display }};font-weight:400;font-size:19px;line-height:1.3;margin:0 0 4px;"><a href="{{ e.url }}" style="color:#000000;text-decoration:none;">{{ e.headline }}</a></div>
-      <div style="font-family:{{ body }};font-size:14.5px;line-height:1.55;color:#000000;">{{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+      <div style="font-family:{{ body }};font-size:14.5px;line-height:1.55;color:#000000;">{{ text(e) }}</div>
+      {%- if e.why_it_matters %}
+      <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;border-left:3px solid #C7E263;padding:2px 0 2px 10px;margin:8px 0 0;"><span style="font-weight:700;">Why it matters:</span> {{ e.why_it_matters }}</div>
+      {%- endif %}
     </div>
     {%- else %}
-    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:12px 0 0;"><a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:12px 0 0;"><a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ text(e) }}</div>
     {%- endif %}
     {%- endfor %}
   </td></tr>

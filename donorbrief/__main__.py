@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 import sys
 from dataclasses import asdict
 from datetime import datetime, timezone
@@ -125,6 +126,7 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
                 continue
             placed.add(e.id)
             entries.append({"id": e.id, "anchor": f"story-{len(placed)}", "headline": e.headline, "body": e.body,
+                            "body_parts": link_source(e.body, item.source_name), "why_it_matters": e.why_it_matters.strip(),
                             "url": item.url, "source": item.source_name, "takeaways": []})
         if entries:
             meta = titles.get(sec.section_id, {})
@@ -168,6 +170,18 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
             "takeaways": takeaways, "trends": trends, "sections": rendered_sections}
 
 
+def link_source(text: str, source: str) -> Optional[list[str]]:
+    """Split text around the first mention of the source's name, so the link can sit on that phrase
+    (NPR style) instead of a separate "Source" link. None if the text never names the source."""
+    for name in dict.fromkeys([source, re.sub(r"^(the|www\.)\s*", "", source, flags=re.I)]):
+        if len(name) < 3:
+            continue
+        m = re.search(re.escape(name), text, flags=re.I)
+        if m:
+            return [text[:m.start()], text[m.start():m.end()], text[m.end():]]
+    return None
+
+
 def write_outputs(out_dir: Path, brief: llm.Brief, rendered: dict, failed) -> None:
     env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"), autoescape=True)
     (out_dir / "brief.html").write_text(env.get_template("brief.html.j2").render(
@@ -197,7 +211,13 @@ def to_markdown(r: dict, failed=()) -> str:
         md += [f"## {sec['title']}", ""]
         for e in sec["entries"]:
             tags = "".join(f"[Takeaway {n}] " for n in e["takeaways"])
-            md += [f"- {tags}**[{e['headline']}]({e['url']})** {e['body']} _({e['source']})_"]
+            if e.get("body_parts"):
+                pre, name, post = e["body_parts"]
+                text = f"{pre}[{name}]({e['url']}){post}"
+            else:
+                text = f"{e['body']} _([{e['source']}]({e['url']}))_"
+            why = f" _Why it matters:_ {e['why_it_matters']}" if e.get("why_it_matters") else ""
+            md += [f"- {tags}**{e['headline']}** {text}{why}"]
         md += [""]
     if failed:
         md += ["---", "**Sources that failed this week (not shown to readers):**"]
