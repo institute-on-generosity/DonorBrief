@@ -60,14 +60,19 @@ def main() -> int:
     log.info("Triage with %s...", cfg["triage_model"])
     topics = llm.load_topics(args.config.parent / "topics.yaml")
     assessments = llm.triage(provider, cfg["triage_model"], items, sections, topics)
-    picked = llm.pick_top(items, assessments, cfg["min_relevance"], cfg["max_items_in_brief"], topics)
+    week = history.week_label(now.date())
+    past_weeks = history.load_recent(args.history, before=week, weeks=cfg.get("trend_weeks", 8))
+    # A story that already ran never comes back in the news; it may only reappear as trend evidence.
+    covered = history.covered_ids(past_weeks)
+    fresh = [a for a in assessments if a.id not in covered]
+    if len(fresh) < len(assessments):
+        log.info("Skipping %d stories already in an earlier brief", len(assessments) - len(fresh))
+    picked = llm.pick_top(items, fresh, cfg["min_relevance"], cfg["max_items_in_brief"], topics)
     log.info("%d of %d items kept", len(picked), len(items))
     if not picked:
         log.error("No items passed triage.")
         return 1
 
-    week = history.week_label(now.date())
-    past_weeks = history.load_recent(args.history, before=week, weeks=cfg.get("trend_weeks", 8))
     log.info("Writing brief with %s (%d earlier weeks for trends)...", cfg["editor_model"], len(past_weeks))
     brief = llm.compose(provider, cfg["editor_model"], picked, sections, week_of, past_weeks)
 
@@ -102,6 +107,7 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
     titles = {s["id"]: s for s in sections}
     order = [s["id"] for s in sections]
     current = {i.id: i for i in items}
+    covered = history.covered_ids(past_weeks)
 
     # The news: each story once, in section order, with links from source data.
     rendered_sections, placed = [], set()
@@ -114,9 +120,12 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
                 continue
             if e.id in placed:
                 continue
+            if e.id in covered:
+                log.warning("Dropping entry %r: already in an earlier brief", e.headline)
+                continue
             placed.add(e.id)
             entries.append({"id": e.id, "anchor": f"story-{len(placed)}", "headline": e.headline, "body": e.body,
-                            "url": item.url, "source": item.source_name, "follow_up": e.follow_up, "takeaways": []})
+                            "url": item.url, "source": item.source_name, "takeaways": []})
         if entries:
             meta = titles.get(sec.section_id, {})
             rendered_sections.append({"id": sec.section_id, "title": meta.get("title", sec.section_id),
@@ -187,7 +196,7 @@ def to_markdown(r: dict, failed=()) -> str:
     for sec in r["sections"]:
         md += [f"## {sec['title']}", ""]
         for e in sec["entries"]:
-            tags = ("Update: " if e["follow_up"] else "") + "".join(f"[Takeaway {n}] " for n in e["takeaways"])
+            tags = "".join(f"[Takeaway {n}] " for n in e["takeaways"])
             md += [f"- {tags}**[{e['headline']}]({e['url']})** {e['body']} _({e['source']})_"]
         md += [""]
     if failed:

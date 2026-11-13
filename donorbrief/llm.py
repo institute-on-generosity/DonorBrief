@@ -41,7 +41,6 @@ class BriefEntry(BaseModel):
     id: str = Field(description="The id of the source item this entry is based on.")
     headline: str
     body: str = Field(description="Stories behind a takeaway: 2-3 sentences. All others: one sentence.")
-    follow_up: bool = Field(default=False, description="True only if this continues a story from a previous brief and adds real news.")
 
 
 class BriefSection(BaseModel):
@@ -193,8 +192,9 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
         "If nothing qualifies, return no trends. Don't repeat a takeaway as a trend.\n"
         "3. The news: every story from this week worth knowing, grouped by section, each story once. Stories "
         "behind a takeaway get 2-3 sentences; all others get one sentence. Skip sections with nothing in them.\n\n"
-        "Stories marked as already in a previous brief: include them only if there is genuinely new "
-        "information, and then set follow_up to true.\n\n"
+        "Never repeat a story from an earlier brief. Stories marked already_in_a_previous_brief, and any "
+        "other coverage of those same stories, must not appear in the takeaways or the news, even with "
+        "new developments. They may appear only as supporting evidence inside a trend.\n\n"
         f"Sections, in order:\n{_sections_text(sections)}"
     )
     payload = [

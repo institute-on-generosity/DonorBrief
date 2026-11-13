@@ -47,7 +47,7 @@
   <span style="display:inline-block;background:#C7E263;color:#000000;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;vertical-align:middle;">{{ text }}</span>&nbsp;
   {%- endmacro -%}
   {%- macro tags(e) -%}
-  {%- for n in e.takeaways %}{{ chip("Takeaway " ~ n) }}{% endfor %}{% if e.follow_up %}{{ chip("Update") }}{% endif -%}
+  {%- for n in e.takeaways %}{{ chip("Takeaway " ~ n) }}{% endfor -%}
   {%- endmacro -%}
   {%- set takeaways = brief.takeaways or [] -%}
   {%- set trends = brief.trends or [] -%}
@@ -112,7 +112,7 @@
       <div style="font-family:{{ body }};font-size:14.5px;line-height:1.55;color:#000000;">{{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
     </div>
     {%- else %}
-    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:12px 0 0;">{% if e.follow_up %}{{ chip("Update") }}{% endif %}<a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:12px 0 0;"><a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
     {%- endif %}
     {%- endfor %}
   </td></tr>

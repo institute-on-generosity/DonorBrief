@@ -192,7 +192,7 @@ def test_brief_layout_takeaways_then_trends_then_news(tmp_path):
         trends=[llm.Trend(title="DAFs under scrutiny", body="Building.", item_ids=[b_, c, "old1"])],
         sections=[
             llm.BriefSection(section_id="sector", entries=[llm.BriefEntry(id=c, headline="Third", body="One line.")]),
-            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="Longer.", follow_up=True),
+            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="Longer."),
                                                            llm.BriefEntry(id=b_, headline="Second?", body="One line."),
                                                            llm.BriefEntry(id=a, headline="Big one again", body="dup")]),
         ])
@@ -208,9 +208,54 @@ def test_brief_layout_takeaways_then_trends_then_news(tmp_path):
     main.write_outputs(tmp_path, b, r, [])
     html = (tmp_path / "brief.html").read_text()
     assert html.index("Key takeaways") < html.index("s building") < html.index("The news")
-    assert "Takeaway 2" in html and "Update" in html and "Second?." not in html and "Invented" not in html
+    assert "Takeaway 2" in html and "Second?." not in html and "Invented" not in html
     md = (tmp_path / "brief.md").read_text()
     assert md.index("## Key takeaways") < md.index("## What's building") < md.index("# The news")
+
+
+def test_stories_from_earlier_briefs_only_return_inside_trends(tmp_path, monkeypatch):
+    import yaml
+    from donorbrief import history
+    old, new1, new2 = item("Ran last week", "https://e.org/old"), item("New A", "https://e.org/a"), item("New B", "https://e.org/b")
+    asmt = lambda i, rel: llm.ItemAssessment(id=i.id, relevance=rel, section="sector", summary="s", why_it_matters="w",
+                                             topics=[], emerging_topic="")
+    hist = tmp_path / "history"
+    history.record(hist, "2026-11-02", [old], [asmt(old, 9)], {old.id})
+    history.record(hist, "2026-10-26", [new2], [asmt(new2, 7)])
+
+    # The editor never sees the old story...
+    seen = {}
+
+    class Fake:
+        def structured(self, model, system, prompt, schema, effort):
+            if schema is llm.TriageResult:
+                return llm.TriageResult(items=[asmt(i, 9) for i in (old, new1, new2)])
+            seen["prompt"] = prompt
+            # ...and if it cites it anyway, the news drops it while a trend may still use it.
+            return brief(
+                takeaways=[llm.Takeaway(lead="Old news", detail="x", item_ids=[old.id]),
+                           llm.Takeaway(lead="New news", detail="y", item_ids=[new1.id])],
+                trends=[llm.Trend(title="Pattern", body="z", item_ids=[old.id, new1.id, new2.id])],
+                sections=[llm.BriefSection(section_id="sector", entries=[
+                    llm.BriefEntry(id=old.id, headline="Ran last week", body="again"),
+                    llm.BriefEntry(id=new1.id, headline="New A", body="fresh")])])
+
+    monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
+    monkeypatch.setattr(main, "collect", lambda config, now: ([old, new1], []))
+    monkeypatch.setattr(main.mailchimp, "deliver", lambda out, cfg: {"status": "skipped", "reason": "test"})
+    cfg = tmp_path / "config"; cfg.mkdir()
+    (cfg / "sources.yaml").write_text(yaml.safe_dump({"sections": [{"id": "sector", "title": "Sector", "description": ""}],
+        "llm": {"provider": "x", "triage_model": "m", "editor_model": "m", "max_items_in_brief": 12, "min_relevance": 6}}))
+    monkeypatch.setattr("sys.argv", ["donorbrief", "--config", str(cfg / "sources.yaml"), "--out", str(tmp_path / "drafts"),
+                                     "--history", str(hist)])
+    assert main.main() == 0
+    this_week = seen["prompt"].split("Earlier weeks")[0]
+    assert '"title": "New A"' in this_week and "Ran last week" not in this_week
+    import json, glob
+    r = json.loads(open(glob.glob(str(tmp_path / "drafts" / "*" / "rendered.json"))[0]).read())
+    assert [e["headline"] for s in r["sections"] for e in s["entries"]] == ["New A"]
+    assert [t["lead"] for t in r["takeaways"]] == ["New news"]
+    assert r["trends"][0]["stories"] == 3
 
 
 def test_trends_need_three_stories_over_two_weeks():

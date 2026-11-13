@@ -10,7 +10,7 @@ Every Monday a GitHub Action gathers the past week's items from public sources, 
 2. **Triage.** A fast, low-cost model (Claude Haiku) scores each item 0–10 for relevance, assigns a section, and writes a short factual summary.
 3. **Compose.** A stronger model (Claude Opus) writes the brief from the 12 top-scoring items (`max_items_in_brief`), with the last 8 weeks of history in view. The brief has two halves:
    - **Top: the point in 30 seconds.** *Key takeaways*: 3–5 numbered claims, each with one sentence on why it matters and links to the stories behind it (takeaways that don't point to a real story in the brief are dropped). Then *What's building*: up to 3 patterns across weeks, each resting on at least 3 real stories from at least 2 different weeks; the code checks this, computes the counts ("9 stories over 4 weeks"), and links the evidence.
-   - **Bottom: the news**, by section, each story once. Stories behind a takeaway get 2–3 sentences and a "Takeaway N" tag; the rest get one line. Stories already covered in an earlier brief come back only with real news, marked "Update".
+   - **Bottom: the news**, by section, each story once. Stories behind a takeaway get 2–3 sentences and a "Takeaway N" tag; the rest get one line. A story never runs twice: anything already in an earlier brief is skipped before the editor sees it and dropped if it slips in. It can come back only as supporting evidence inside a trend.
 4. **Render.** The run writes `drafts/<date>/` with `brief.html` (email-ready), `brief.md`, `brief.json`, and `sources.json` (everything fetched, plus each source's health).
 5. **Hand off to Mailchimp.** The draft becomes a Mailchimp draft campaign addressed to IoG's audience, and reviewers get a preview copy by email. Staff edit and send it in Mailchimp. DonorBrief never sends it.
 
@@ -43,7 +43,7 @@ To push an existing draft by hand: `.venv/bin/python -m donorbrief.mailchimp dra
 
 ## Week-to-week memory
 
-Each run saves the week's screened items to `history/<Monday>.json` (source titles, links and scores, plus whether each made the brief; never the drafted wording, since the repo is public). The workflow commits it. The editor reads the last 8 weeks to find trends and avoid repeating stories.
+Each run saves the week's screened items to `history/<Monday>.json` (source titles, links and scores, plus whether each made the brief; never the drafted wording, since the repo is public). The workflow commits it. The editor reads the last 8 weeks to find trends, and stories marked as already in a brief are kept out of the news.
 
 Each saved story also carries 1–3 **topic tags** from [`config/topics.yaml`](config/topics.yaml) (a fixed list, so themes can be counted the same way month after month), plus an "emerging topic" name when nothing on the list fits. Impact investing and volunteering are tracked as secondary interests. The list includes themes IoG champions (generosity as common ground, strategic giving, democratizing giving, women in philanthropy, philanthropy education). After editing the list, run the workflow with **retag** checked to re-tag all history with it (scores are kept).
 

@@ -72,6 +72,11 @@ def load_recent(history_dir: Path, before: str, weeks: int = 8) -> list[dict]:
     return loaded
 
 
+def covered_ids(past_weeks: list[dict]) -> set[str]:
+    """Ids of stories that already ran in an earlier brief."""
+    return {i["id"] for w in past_weeks for i in w["items"] if i.get("in_brief")}
+
+
 def backfill(files: list[Path], config: dict, history_dir: Path, topics: list[dict]) -> None:
     cfg = config["llm"]
     provider = llm.get_provider(cfg["provider"])

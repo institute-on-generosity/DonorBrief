@@ -61,7 +61,7 @@
 {%- set takeaways = brief.takeaways or [] -%}
 {%- set trends = brief.trends or [] -%}
 {%- set legacy = not takeaways -%}
-{%- macro chips(e) %}{% for n in e.takeaways or [] %}<span class="chip">Takeaway {{ n }}</span>{% endfor %}{% if e.follow_up %}<span class="chip">Update</span>{% endif %}{% endmacro -%}
+{%- macro chips(e) %}{% for n in e.takeaways or [] %}<span class="chip">Takeaway {{ n }}</span>{% endfor %}{% endmacro -%}
 <section class="hero">
   <div class="wrap">
     <span class="tag">Week of {{ brief.week_of }}</span>
@@ -140,7 +140,7 @@
       <p>{{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></p>
     </article>
     {% else %}
-    <div class="brief-item" id="{{ e.anchor }}">{% if e.follow_up %}<span class="chip">Update</span>{% endif %}<a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
+    <div class="brief-item" id="{{ e.anchor }}"><a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
     {% endif %}
     {% endfor %}
   </div>
