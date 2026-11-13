@@ -37,7 +37,7 @@ llm:
   provider: anthropic
   triage_model: claude-haiku-5-5   # scores and summarizes every item (high volume, cheap)
   editor_model: claude-opus-5-5    # writes the final brief from the top items
-  max_items_in_brief: 20
+  max_items_in_brief: 12            # the highest-scoring stories go to the editor; the brief never has more
   min_relevance: 6                 # 0-10; items below this are dropped
 
 sources:

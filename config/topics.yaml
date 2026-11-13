@@ -3,6 +3,9 @@
 # way month after month (a fixed list keeps "DAF scrutiny" and "donor-advised fund reform" from
 # being counted as two different things).
 #
+# priority: core marks themes IoG champions; secondary marks side interests. When stories tie on
+# relevance score for the last spots in the brief, core-tagged stories go first and secondary last.
+#
 # IoG can add tags. Avoid renaming or removing existing ones: past weeks keep their old tags.
 # Stories that fit no tag well get an "emerging topic" suggestion instead, which is saved too;
 # review those now and then for tags worth adding.
@@ -40,12 +43,15 @@ topics:
   - id: effective-giving
     description: Effective altruism, evidence-based and cost-effectiveness-driven giving.
   - id: strategic-giving
+    priority: core
     description: Giving with a plan, theory of change, measuring impact, moving from reactive to strategic giving (Giving 2.0).
 
   # Secondary interests: tracked, but not core to the brief
   - id: volunteering-civic
+    priority: secondary
     description: Volunteering, civic participation, mutual aid, everyday generosity.
   - id: impact-investing
+    priority: secondary
     description: Impact investing, mission and program-related investments, blended finance, CDFIs, social enterprise.
 
   # Policy, law and government
@@ -68,16 +74,21 @@ topics:
 
   # Themes IoG champions
   - id: generosity-common-ground
+    priority: core
     description: Generosity as a unifying, nonpartisan force; giving that bridges political, religious or social divides.
   - id: democratizing-giving
+    priority: core
     description: Making philanthropy accessible to everyone, not just the wealthy; everyday and first-time givers.
   - id: women-in-philanthropy
+    priority: core
     description: Women as donors, philanthropic leaders, and funders; women's funds and giving networks.
   - id: philanthropy-education
+    priority: core
     description: Teaching giving, philanthropy courses and curricula, youth and student giving programs.
 
   # Research and data
   - id: generosity-research
+    priority: core
     description: Studies of why and how people give, prosocial behavior, the psychology of generosity.
   - id: giving-data
     description: Reports and data on giving totals, trends, and specific causes (e.g. Giving USA, Lilly School).

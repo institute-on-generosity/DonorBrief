@@ -110,6 +110,18 @@ def test_render_uses_real_urls_drops_unknown_ids_and_escapes_html(tmp_path):
     assert "Invented" not in html
 
 
+def test_pick_top_breaks_ties_by_iog_priority():
+    topics = [{"id": "women-in-philanthropy", "priority": "core"}, {"id": "impact-investing", "priority": "secondary"},
+              {"id": "major-gifts"}]
+    its = [item(n, f"https://e.org/{n}") for n in ("impact", "plain", "core", "top")]
+    its[1].summary = "x" * 300
+    mk = lambda i, rel, tags: llm.ItemAssessment(id=i.id, relevance=rel, section="sector", summary="", why_it_matters="",
+                                                 topics=tags, emerging_topic="")
+    a = [mk(its[0], 7, ["impact-investing"]), mk(its[1], 7, ["major-gifts"]), mk(its[2], 7, ["women-in-philanthropy"]),
+         mk(its[3], 9, ["impact-investing"])]
+    assert [i.title for i, _ in llm.pick_top(its, a, 6, 3, topics)] == ["top", "core", "plain"]
+
+
 def test_eval_scoring_counts_misses_sections_and_leaks():
     from donorbrief.evaluate import score
     items = [item("Keep", "https://e.org/k"), item("Unsure", "https://e.org/u"), item("Noise", "https://e.org/n")]

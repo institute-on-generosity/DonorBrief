@@ -60,7 +60,7 @@ def main() -> int:
     log.info("Triage with %s...", cfg["triage_model"])
     topics = llm.load_topics(args.config.parent / "topics.yaml")
     assessments = llm.triage(provider, cfg["triage_model"], items, sections, topics)
-    picked = llm.pick_top(items, assessments, cfg["min_relevance"], cfg["max_items_in_brief"])
+    picked = llm.pick_top(items, assessments, cfg["min_relevance"], cfg["max_items_in_brief"], topics)
     log.info("%d of %d items kept", len(picked), len(items))
     if not picked:
         log.error("No items passed triage.")

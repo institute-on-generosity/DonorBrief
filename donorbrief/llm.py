@@ -215,10 +215,15 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
     return provider.structured(model, system, prompt, Brief, effort="medium")
 
 
-def pick_top(items: list[Item], assessments: list[ItemAssessment], min_relevance: int, limit: int) -> list[tuple[Item, ItemAssessment]]:
+def pick_top(items: list[Item], assessments: list[ItemAssessment], min_relevance: int, limit: int,
+             topics: Optional[list[dict]] = None) -> list[tuple[Item, ItemAssessment]]:
+    """The highest-priority stories: by relevance score, then (for ties) IoG's core themes first and
+    secondary interests last, then stories with more text for the editor to work from."""
+    weight = {t["id"]: {"core": 1, "secondary": -1}.get(t.get("priority"), 0) for t in (topics or [])}
     by_id = {i.id: i for i in items}
     keep = [(by_id[a.id], a) for a in assessments if a.section != "none" and a.relevance >= min_relevance and a.id in by_id]
-    keep.sort(key=lambda p: p[1].relevance, reverse=True)
+    keep.sort(key=lambda p: (p[1].relevance, max((weight.get(t, 0) for t in p[1].topics), default=0),
+                             min(len(p[0].summary), 600)), reverse=True)
     return keep[:limit]
 
 

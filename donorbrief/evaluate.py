@@ -12,6 +12,7 @@ import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Optional
 
 import yaml
 
@@ -44,7 +45,7 @@ def load_labels(path: Path, items: list[Item]) -> tuple[dict[str, list[str]], se
 
 
 def score(items: list[Item], assessments: list[llm.ItemAssessment], include: dict[str, list[str]],
-          maybe: set[str], min_relevance: int, limit: int) -> dict:
+          maybe: set[str], min_relevance: int, limit: int, topics: Optional[list[dict]] = None) -> dict:
     by_id = {a.id: a for a in assessments}
     title = {i.id: i.title for i in items}
     kept = {a.id for a in assessments if a.section != "none" and a.relevance >= min_relevance}
@@ -55,7 +56,7 @@ def score(items: list[Item], assessments: list[llm.ItemAssessment], include: dic
     leaked = sorted((i for i in exclude if i in kept), key=lambda i: -by_id[i].relevance)
     unscored = [i.id for i in items if i.id not in by_id]
 
-    top = llm.pick_top(items, assessments, min_relevance, limit)
+    top = llm.pick_top(items, assessments, min_relevance, limit, topics)
     top_ids = [i.id for i, _ in top]
     return {
         "items": len(items),
@@ -121,7 +122,8 @@ def main() -> int:
                                    "assessments": [a.model_dump() for a in assessments]}, indent=1))
         print(f"Saved run to {out.relative_to(ROOT)}\n")
 
-    result = score(items, assessments, include, maybe, cfg["min_relevance"], cfg["max_items_in_brief"])
+    result = score(items, assessments, include, maybe, cfg["min_relevance"], cfg["max_items_in_brief"],
+                   llm.load_topics(args.config.parent / "topics.yaml"))
     print(report(result))
     return 0
 
