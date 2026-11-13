@@ -136,7 +136,11 @@ def triage(provider, model: str, items: list[Item], sections: list[dict],
         "'foundation' uses), event listings, ads, and job posts. Impact investing and volunteering are "
         "secondary interests: score them in the middle (4-6) unless the story is directly about "
         "philanthropy, foundations, or generosity or is unusually significant. Routine corporate ESG "
-        "news is not relevant.\n\nSections:\n"
+        "news is not relevant. Practical how-to advice (fundraising tactics, donor tax-planning tips, "
+        "year-end giving checklists) is low interest: score it 2-4 unless it reports new data or a "
+        "significant change. IoG especially follows generosity as a unifying, nonpartisan force; "
+        "strategic giving; democratizing philanthropy; women in philanthropy; philanthropy education; "
+        "and research on why people give.\n\nSections:\n"
         f"{_sections_text(sections)}\n- none: not relevant"
     )
     if topics:
@@ -171,7 +175,10 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
     past_weeks = past_weeks or []
     system = (
         f"{AUDIENCE}\n\nYou are the editor writing this week's DonorBrief. Write in a clear, warm, "
-        "plain-language voice for busy readers; no hype, no jargon. Use only facts from the items provided, "
+        "plain-language voice for busy readers; no hype, no jargon. IoG is nonpartisan and does not tell people "
+        "what, where, or how much to give: report political, policy, and cause-related stories neutrally, "
+        "describe what happened and who is affected, and don't take sides or endorse causes. "
+        "Use only facts from the items provided, "
         "and cite the id of the item each entry or trend is based on. Merge items that cover the same story "
         "into one entry citing the best source.\n\n"
         "The brief has two halves. The top half gives busy readers the point in 30 seconds; the bottom "

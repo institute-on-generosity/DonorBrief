@@ -39,6 +39,8 @@ topics:
     description: Community foundations and place-based philanthropy.
   - id: effective-giving
     description: Effective altruism, evidence-based and cost-effectiveness-driven giving.
+  - id: strategic-giving
+    description: Giving with a plan, theory of change, measuring impact, moving from reactive to strategic giving (Giving 2.0).
 
   # Secondary interests: tracked, but not core to the brief
   - id: volunteering-civic
@@ -63,6 +65,16 @@ topics:
     description: Nonprofit budgets, closures, mergers, fiscal sponsors, sector infrastructure.
   - id: public-trust
     description: Public trust in and perceptions of nonprofits and philanthropy, criticism of philanthropy.
+
+  # Themes IoG champions
+  - id: generosity-common-ground
+    description: Generosity as a unifying, nonpartisan force; giving that bridges political, religious or social divides.
+  - id: democratizing-giving
+    description: Making philanthropy accessible to everyone, not just the wealthy; everyday and first-time givers.
+  - id: women-in-philanthropy
+    description: Women as donors, philanthropic leaders, and funders; women's funds and giving networks.
+  - id: philanthropy-education
+    description: Teaching giving, philanthropy courses and curricula, youth and student giving programs.
 
   # Research and data
   - id: generosity-research

@@ -14,7 +14,7 @@ on:
         type: boolean
         default: false
       retag:
-        description: "Only add topic tags to history weeks that lack them (no draft)"
+        description: "Only re-tag all history with the current topic list (no draft)"
         type: boolean
         default: false
 
@@ -48,7 +48,7 @@ jobs:
         if: ${{ inputs.retag }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m donorbrief.history retag
+        run: python -m donorbrief.history retag --all
 
       - name: Build draft
         if: ${{ !inputs.backfill && !inputs.retag }}

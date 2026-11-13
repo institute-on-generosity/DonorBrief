@@ -45,7 +45,7 @@ To push an existing draft by hand: `.venv/bin/python -m donorbrief.mailchimp dra
 
 Each run saves the week's screened items to `history/<Monday>.json` (source titles, links and scores, plus whether each made the brief; never the drafted wording, since the repo is public). The workflow commits it. The editor reads the last 8 weeks to find trends and avoid repeating stories.
 
-Each saved story also carries 1–3 **topic tags** from [`config/topics.yaml`](config/topics.yaml) (a fixed list, so themes can be counted the same way month after month), plus an "emerging topic" name when nothing on the list fits. Impact investing and volunteering are tracked as secondary interests. To tag weeks saved before tags existed, run the workflow with **retag** checked.
+Each saved story also carries 1–3 **topic tags** from [`config/topics.yaml`](config/topics.yaml) (a fixed list, so themes can be counted the same way month after month), plus an "emerging topic" name when nothing on the list fits. Impact investing and volunteering are tracked as secondary interests. The list includes themes IoG champions (generosity as common ground, strategic giving, democratizing giving, women in philanthropy, philanthropy education). After editing the list, run the workflow with **retag** checked to re-tag all history with it (scores are kept).
 
 To score older weeks into history, put their `sources.json` files in `history/backfill/<YYYY-MM-DD>/` and run the **Weekly brief** workflow with **backfill** checked.
 

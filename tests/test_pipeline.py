@@ -257,6 +257,7 @@ def test_compose_shows_earlier_weeks_to_the_editor():
     llm.compose(Fake(), "m", [(i, a)], [], "October 12, 2026", past)
     assert "Ran before" in seen["prompt"] and "already_in_a_previous_brief" in seen["prompt"] and "Low score" not in seen["prompt"]
     assert "Key takeaways" in seen["system"] and "Trends to watch" in seen["system"]
+    assert "nonpartisan" in seen["system"] and "don't take sides" in seen["system"]
 
 
 def test_triage_keeps_only_known_topics_and_history_saves_them(tmp_path):
@@ -276,6 +277,7 @@ def test_triage_keeps_only_known_topics_and_history_saves_them(tmp_path):
     (a,) = llm.triage(Fake(), "m", [i], [], topics)
     assert a.topics == ["donor-advised-funds", "charitable-tax-policy"] and a.emerging_topic == "DAF payout rules"
     assert "donor-advised-funds: DAFs" in seen["system"] and "secondary interests" in seen["system"]
+    assert "how-to advice" in seen["system"] and "women in philanthropy" in seen["system"]
     history.record(tmp_path, "2026-10-12", [i], [a])
     saved = history.load_recent(tmp_path, before="2026-10-19")[0]["items"][0]
     assert saved["topics"] == ["donor-advised-funds", "charitable-tax-policy"] and saved["emerging_topic"] == "DAF payout rules"
@@ -295,9 +297,15 @@ def test_retag_adds_topics_to_old_history_without_changing_scores(tmp_path, monk
                                                               topics=["giving-data"], emerging_topic="") for x in ids])
 
     monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
-    history.retag(tmp_path, {"llm": {"provider": "x", "triage_model": "m"}, "sections": []}, [{"id": "giving-data", "description": "d"}])
+    cfg = {"llm": {"provider": "x", "triage_model": "m"}, "sections": []}
+    history.retag(tmp_path, cfg, [{"id": "giving-data", "description": "d"}])
     saved = json.loads((tmp_path / "2026-10-05.json").read_text())["items"][0]
     assert saved["topics"] == ["giving-data"] and saved["relevance"] == 7 and saved["summary"] == "s"
+    # After the topic list changes, --all re-tags items that already have tags.
+    history.retag(tmp_path, cfg, [{"id": "giving-levels", "description": "d"}])
+    assert json.loads((tmp_path / "2026-10-05.json").read_text())["items"][0]["topics"] == ["giving-data"]
+    history.retag(tmp_path, cfg, [{"id": "giving-data", "description": "d"}, {"id": "giving-levels", "description": "d"}], everything=True)
+    assert json.loads((tmp_path / "2026-10-05.json").read_text())["items"][0]["relevance"] == 7
 
 
 def test_topics_config_is_valid():

@@ -91,13 +91,16 @@ def backfill(files: list[Path], config: dict, history_dir: Path, topics: list[di
         log.info("%s: %d items -> %s", week, len(items), path.relative_to(ROOT) if path.is_relative_to(ROOT) else path)
 
 
-def retag(history_dir: Path, config: dict, topics: list[dict]) -> None:
-    """Add topic tags to history weeks saved before tagging existed. Keeps each item's original score."""
+def retag(history_dir: Path, config: dict, topics: list[dict], everything: bool = False) -> None:
+    """Add topic tags to history items that lack them, or to every item (after the topic list changes).
+
+    Keeps each item's original score and summary; only the tags change.
+    """
     cfg = config["llm"]
     provider = llm.get_provider(cfg["provider"])
     for path in sorted(history_dir.glob("*.json")):
         week = json.loads(path.read_text())
-        todo = [i for i in week["items"] if "topics" not in i]
+        todo = week["items"] if everything else [i for i in week["items"] if "topics" not in i]
         if not todo:
             continue
         items = [Item("history", i["source"], i["title"], i["url"], None, i["summary"]) for i in todo]
@@ -117,6 +120,7 @@ def main() -> int:
     b.add_argument("files", nargs="+", type=Path)
     b.add_argument("--config", type=Path, default=ROOT / "config" / "sources.yaml")
     r = sub.add_parser("retag", help="Add topic tags to history weeks that don't have them")
+    r.add_argument("--all", action="store_true", help="Re-tag every item, e.g. after editing config/topics.yaml")
     r.add_argument("--config", type=Path, default=ROOT / "config" / "sources.yaml")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -126,7 +130,7 @@ def main() -> int:
     if args.cmd == "backfill":
         backfill(args.files, config, HISTORY, topics)
     else:
-        retag(HISTORY, config, topics)
+        retag(HISTORY, config, topics, everything=args.all)
     return 0
 
 

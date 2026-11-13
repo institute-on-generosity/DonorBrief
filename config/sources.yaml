@@ -120,6 +120,25 @@ sources:
     type: rss
     url: https://news.google.com/rss/search?q=philanthropy+OR+philanthropist+when:7d&hl=en-US&gl=US&ceid=US:en
 
+  - id: iog_youtube
+    name: Institute on Generosity
+    type: rss
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UC_gRmnmDjYGHGufZOpffcHg
+    note: IoG's own YouTube channel, so the brief notices anything IoG publishes.
+
+  - id: apnorc
+    name: AP-NORC
+    type: rss
+    url: https://apnorc.org/projects/feed/
+    keywords: [giving, charit, donat, donor, philanthrop, nonprofit, volunteer, generosity]
+    note: Mostly political polls; kept only when a poll is about giving or the sector.
+
+  - id: gnews_generosity_commission
+    name: Google News
+    type: rss
+    url: https://news.google.com/rss/search?q=%22Generosity+Commission%22+when:7d&hl=en-US&gl=US&ceid=US:en
+    note: The Generosity Commission has no feed; this follows coverage of it.
+
   - id: impactalpha
     name: ImpactAlpha
     type: rss
