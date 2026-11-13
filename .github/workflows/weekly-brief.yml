@@ -13,6 +13,10 @@ on:
         description: "Only score past weeks in history/backfill/ into history/ (no draft)"
         type: boolean
         default: false
+      sample:
+        description: "Sample run: full draft to Mailchimp, but don't save history (so Monday doesn't treat these stories as covered)"
+        type: boolean
+        default: false
       retag:
         description: "Only re-tag all history with the current topic list (no draft)"
         type: boolean
@@ -59,7 +63,7 @@ jobs:
         run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Save history
-        if: success() && !inputs.dry_run
+        if: success() && !inputs.dry_run && !inputs.sample
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
