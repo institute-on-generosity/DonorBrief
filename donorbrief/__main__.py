@@ -201,7 +201,8 @@ def to_markdown(r: dict, failed=()) -> str:
         md += ["## Key takeaways", ""]
         for t in r["takeaways"]:
             refs = ", ".join(f"[{s['source']}]({s['url']})" for s in t["stories"])
-            md += [f"{t['n']}. **{t['lead']}** {t['detail']} ({refs})"]
+            lead = t["lead"] if t["lead"][-1:] in ".?!" else t["lead"] + "."
+            md += [f"{t['n']}. **{lead}** {t['detail']} ({refs})"]
         md += [""]
     if r["trends"]:
         md += ["## What's building", ""]
