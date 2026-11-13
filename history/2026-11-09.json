@@ -10,7 +10,11 @@
    "relevance": 8,
    "section": "policy",
    "summary": "Nonprofit leaders hope that Democrats taking control of both chambers of Congress will restore federal grant funding cut under the Trump administration. Independent Sector's Akilah Watkins wants restored federal funding for research, human services, education, and safety net programs.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "government-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "126c1e1372",
@@ -21,7 +25,12 @@
    "relevance": 8,
    "section": "research",
    "summary": "Candid reports that U.S. foundations' global giving was steady, with surprises from donor-advised funds. The item text is only the headline.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "global-development",
+    "donor-advised-funds"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "180cf3ffa9",
@@ -32,7 +41,12 @@
    "relevance": 8,
    "section": "sector",
    "summary": "The San Francisco Foundation reports that Anthropic commits $50 million to Bay Area philanthropy as it seeks a $1.4 trillion valuation. The item text contains only the headline.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "ai-and-philanthropy",
+    "community-foundations"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "1aaa38f163",
@@ -43,7 +57,12 @@
    "relevance": 8,
    "section": "policy",
    "summary": "WilmerHale published an analysis of the 2026 US midterm elections and their impact on philanthropy and nonprofits. The item text contains only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "democracy-civic-funding",
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f8dec707a7",
@@ -54,7 +73,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "Philanthropist John Paulson and his wife Alina have given $250 million to a university, with their names going on its historic campus. The gift is reported as a major donation.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "7f84c5756b",
@@ -65,7 +89,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "Press Forward has completed nearly $600 million in journalism investments about two years ahead of schedule.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "pooled-funds",
+    "public-trust"
+   ],
+   "emerging_topic": "local journalism funding"
   },
   {
    "id": "40e9abff70",
@@ -76,7 +105,11 @@
    "relevance": 8,
    "section": "trends",
    "summary": "MacKenzie Scott reportedly made a $26 billion move that set giving records. The item text gives only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "64babd1b15",
@@ -87,7 +120,11 @@
    "relevance": 8,
    "section": "sector",
    "summary": "Inside Philanthropy takes a closer look at how the Ford Foundation is changing its grantmaking. The item text does not describe the specific changes.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "387fce4488",
@@ -98,7 +135,12 @@
    "relevance": 8,
    "section": "policy",
    "summary": "H.R. 1013, the Retirement Fairness for Charities and Educational Institutions Act of 2025, was reported to the House via Rules Committee Resolution H. Res. 1650, which provides for one hour of general debate and closes the bill to amendments. The bill's content is not described in the item text.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "nonprofit-workforce",
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "8b5fc4f69e",
@@ -109,7 +151,11 @@
    "relevance": 7,
    "section": "research",
    "summary": "A nonprofit executive describes burnout and isolation among leaders. The article cites a Center for Effective Philanthropy report showing that 46 percent of nonprofit leaders say burnout is very much a concern, up from 29 percent the year before.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "nonprofit-workforce"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f489038b98",
@@ -120,7 +166,11 @@
    "relevance": 7,
    "section": "trends",
    "summary": "Airbnb plans to dedicate $500 million over five years to Airbnb.org to expand free temporary housing for medical travelers and disaster survivors. The company will fund it partly with 10 cents from every booking, and the nonprofit aims to provide 1 million free nights a year.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "corporate-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4728586a56",
@@ -131,7 +181,11 @@
    "relevance": 7,
    "section": "trends",
    "summary": "Two Las Vegas-area couples made large gifts for pediatric care: Ben and Felicia Horowitz gave $150 million to Intermountain Health for a standalone children's hospital, and Larry and Heidi Canarelli committed $50 million to the same planned hospital, which is scheduled to open in 2030. The article also notes other gifts of $100 million to the University of Illinois and $55 million to Marietta College.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "831e47b759",
@@ -142,7 +196,12 @@
    "relevance": 7,
    "section": "research",
    "summary": "The Food Bank of Central & Eastern North Carolina tailored its fundraising appeals to donors' political affiliations after federal funding losses. Staff adjusted language and imagery for different audiences and tracked reactions in real time. The article describes this as a growing practice among nonprofits.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "fundraising-practice",
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "dbc35ed3f5",
@@ -153,7 +212,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "HR Brew reports that Anthropic and OpenAI are letting employees donate their equity to charity. The item text contains only the headline.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "corporate-giving",
+    "ai-and-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "e3893effeb",
@@ -164,7 +228,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "Crypto Briefing reports that Reed Hastings' donor-advised fund plans to buy up to $300 million in Anthropic IPO shares. The item text contains only the headline.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "donor-advised-funds",
+    "ai-and-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "33de3711ff",
@@ -175,7 +244,12 @@
    "relevance": 7,
    "section": "research",
    "summary": "The Center for Disaster Philanthropy has released new insights on giving, preparedness, and collaboration in disaster philanthropy. The item text contains only the title and source.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "giving-data",
+    "fundraising-practice"
+   ],
+   "emerging_topic": "disaster philanthropy"
   },
   {
    "id": "405cdb90a4",
@@ -186,7 +260,12 @@
    "relevance": 7,
    "section": "research",
    "summary": "An exploratory analysis examines public reach per founding dollar across 59 named philanthropic institutions. The text provides only the title and source.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "foundation-strategy",
+    "giving-data"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "e684e4a1de",
@@ -197,7 +276,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "An article asks what a changing philanthropy landscape with fewer donors and bigger gifts means for public media. The text gives only the title and source.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "giving-levels",
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "c33bb08342",
@@ -208,7 +292,11 @@
    "relevance": 7,
    "section": "policy",
    "summary": "Canada's finance minister says philanthropy will play a role in the federal plan to end homelessness in Winnipeg.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "government-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "d2fb1ea2e4",
@@ -219,7 +307,11 @@
    "relevance": 7,
    "section": "policy",
    "summary": "Berezhna expects Ukraine's philanthropy bill to be adopted by the end of 2026.",
-   "in_brief": true
+   "in_brief": true,
+   "topics": [
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "8e7ca3ca3d",
@@ -230,7 +322,12 @@
    "relevance": 7,
    "section": "sector",
    "summary": "Bill Gates urged higher taxes on billionaires, saying philanthropy alone cannot be expected to address wealth inequality as AI widens the wealth gap. The item text includes no further specifics.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy",
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f0a7a274f5",
@@ -241,7 +338,12 @@
    "relevance": 6,
    "section": "sector",
    "summary": "An essay describes how the Vancouver Foundation found Indigenous organizations underrepresented in its systems change grants. A research and design process with InWithForward, including 11 workshops and more than 60 conversations, examined the grant method.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "equity-justice",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "2d4e63e288",
@@ -252,7 +354,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The article argues that effective altruist donors could do more good by funding policy change. It cites estimates that bed nets save a life for about $5,500 while some trans fat advocacy paid less than $5 per life saved, and it projects that new tech donors may give tens of billions a year.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "effective-giving",
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "52a2191c8b",
@@ -263,7 +370,12 @@
    "relevance": 6,
    "section": "sector",
    "summary": "Foundations face a surge in grant applications driven partly by AI. A Research on Research Institute analysis found applications to research funders rose about 57 percent since ChatGPT launched. The article recommends that funders ask for less and keep people in charge of decisions.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "ai-and-philanthropy",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "e27014f3ea",
@@ -274,7 +386,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "A commentary argues that democracy funders should sustain their work after the midterms. It cites a poll of 80,000 voters in which 32 percent named the state of democracy as the most important issue, and it warns against the funding pause seen after 2024.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "democracy-civic-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "d00f3ce0e1",
@@ -285,7 +401,12 @@
    "relevance": 6,
    "section": "policy",
    "summary": "A Nonprofit Law Blog post comments on a proposed IRS rule titled Racial Nondiscrimination in Private Schools, published September 4. The comment period closed November 3, and additional comments were still being uploaded to Regulations.gov.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "15cda178de",
@@ -296,7 +417,12 @@
    "relevance": 6,
    "section": "policy",
    "summary": "The Business Journals article discusses how new tax rules are shifting charitable giving. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy",
+    "giving-levels"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f6385cdecb",
@@ -307,7 +433,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The Business Journals reports that an $8.8 million private foundation is joining the region's largest community foundation. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "community-foundations",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ef4fa88b8a",
@@ -318,7 +449,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Devex argues that philanthropy should fund the preparatory work needed for cities' climate finance. The item text contains only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "climate-philanthropy",
+    "global-development"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "52652252d3",
@@ -329,7 +465,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Philanthropist and former Celtics co-owner Steve Pagliuca is backing a $15 million long COVID research effort. The item is a brief headline with no further detail in the text.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a25c87a1aa",
@@ -340,7 +480,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Israeli stock donations rose 30-fold as investors turned portfolios into philanthropy. The item reports a sharp change in how donors give.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels",
+    "giving-tech"
+   ],
+   "emerging_topic": "stock-donations"
   },
   {
    "id": "625f41e53d",
@@ -351,7 +496,11 @@
    "relevance": 6,
    "section": "research",
    "summary": "The Telegraph argues that philanthropy has a trillion-dollar blind spot. The text gives only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "3472f30835",
@@ -362,7 +511,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The Hurun China Philanthropy List 2026 was published, ranking philanthropists in China. The item text provides no details on rankings or amounts.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "31035fb916",
@@ -373,7 +526,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "The Circle Foundation, a corporate giving initiative founded a little over a year ago with 1 percent of shares from Circle Internet Group, plans to use AI agents for most foundation work with no more than two human employees. It will give through a donor-advised fund and plans quarterly in-person reporting calls with grantees.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "ai-and-philanthropy",
+    "donor-advised-funds"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "070607f2ba",
@@ -384,7 +542,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "A Community Foundation of Boulder County leader writes about a four-step approach for foundation responses to compounding crises, referencing a recent CEP report. The excerpt is truncated.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "foundation-strategy",
+    "community-foundations"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a02095858a",
@@ -395,7 +558,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "GivingTuesday describes Gen Z giving and advises nonprofits to learn about younger audiences before its campaign, which is less than a month away. The excerpt is truncated.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4c60109873",
@@ -406,7 +574,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "GiveWell reports funding 11 new vaccine outreach programs, six of them in the DRC, to bring routine vaccines closer to children. It estimates that about one in 13 unvaccinated children in its supported provinces dies from vaccine-preventable diseases before age five, and that only about half of children there get the vaccines they need.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "effective-giving",
+    "global-development"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "137ddf5c62",
@@ -417,7 +590,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "Cache Valley Daily reports that Utah leads the nation in volunteerism and charitable giving. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-data",
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a066dd9c49",
@@ -428,7 +606,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "Mid-Utah Radio reports that Utah tops states in charitable giving. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-data",
+    "giving-levels"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "77e703cd02",
@@ -439,7 +622,11 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Tashia Morgridge, a UW-Madison donor and philanthropist, has died at age 93. The item is an obituary notice.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a2245dbbd9",
@@ -450,7 +637,11 @@
    "relevance": 5,
    "section": "sector",
    "summary": "An Alliance magazine piece examines how the Super El Ni\u00f1o is revealing lessons for philanthropy amid compound shocks. The text gives only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "climate-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ee07764654",
@@ -461,7 +652,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "An opinion piece argues that Jewish philanthropy should measure impact rather than dollars spent. The text gives only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "effective-giving",
+    "religious-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6f012963aa",
@@ -472,7 +668,11 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Tashia Morgridge, a major philanthropist tied to UW-Madison, has died at age 93. The item is a brief obituary headline with no further detail in the text.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "8d4a59962b",
@@ -483,7 +683,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "A university foundation reported a record fundraising year despite tough conditions in higher education.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "education-philanthropy",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a3649db302",
@@ -494,7 +699,11 @@
    "relevance": 5,
    "section": "research",
    "summary": "ThePrint reports that Indian American philanthropy is growing and argues it is about more than wealth. The text gives no further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels"
+   ],
+   "emerging_topic": "diaspora-philanthropy"
   },
   {
    "id": "c7557c4b60",
@@ -505,7 +714,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "The Paso del Norte Community Foundation launched a Latina giving circle in El Paso. The item text gives no further details on membership or funding.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "pooled-funds",
+    "community-foundations"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "c35187bd7c",
@@ -516,7 +730,12 @@
    "relevance": 5,
    "section": "policy",
    "summary": "S. 1177, the Volunteer Driver Tax Appreciation Act of 2025, was read twice and referred to the Senate Finance Committee. The latest action is dated March 2025.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy",
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "c71b83b6a7",
@@ -527,7 +746,12 @@
    "relevance": 5,
    "section": "policy",
    "summary": "H.R. 1582, the Volunteer Driver Tax Appreciation Act of 2025, was referred to the House Ways and Means Committee. The latest action is dated February 2025.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy",
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "d693dc1e71",
@@ -538,7 +762,12 @@
    "relevance": 4,
    "section": "policy",
    "summary": "Friends of the Ruidosa Church, a nonprofit, is working to preserve an 1915 adobe church near the Rio Grande in Ruidosa, Texas. The organization is a plaintiff in a lawsuit filed in April in federal district court challenging the government's use of legal waivers to speed border wall construction.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "equity-justice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "430a89c801",
@@ -549,7 +778,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "The Southern Black Girls and Women's Consortium argues that philanthropy underinvests in Black women-led organizations. The piece says Black women and girls in the South receive less than one percent of the $4.8 billion in regional philanthropic investment.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "equity-justice",
+    "democracy-civic-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "1aca08fa7e",
@@ -560,7 +794,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "The article explains multisolving, which addresses several interconnected issues with one program, as a way for nonprofits to do more with less. It gives the example of Iskashitaa Refugee Network in Tucson, which harvests about 3,000 pounds of produce weekly and sells preserved goods to fund the program.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-finances"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "b2bad23a2d",
@@ -571,7 +809,9 @@
    "relevance": 4,
    "section": "policy",
    "summary": "A blog post says the federal data system is collapsing and describes the 2026 reintroduction of 14 maternal health bills by Rep. Lauren Underwood, renamed the Momnibus Act. The post argues for a more inclusive civic data system.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "862549ebae",
@@ -582,7 +822,9 @@
    "relevance": 4,
    "section": "none",
    "summary": "A Common Future co-CEO argues that economic power is part of democracy's infrastructure, following a midterm election. The excerpt is truncated.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "b70234de75",
@@ -593,7 +835,12 @@
    "relevance": 4,
    "section": "policy",
    "summary": "NonProfit PRO discusses how AI laws may affect nonprofits' responsibilities for AI tools they did not build, including tools that influence hiring and service decisions.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "ai-and-philanthropy",
+    "nonprofit-law-oversight"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "bf5a390c35",
@@ -604,7 +851,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "GivingTuesday profiles its new Belgium affiliate, launched after Isabel Penne learned of the network at a European Fundraising Association event. The article covers the first year.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "0247235a66",
@@ -615,7 +866,9 @@
    "relevance": 4,
    "section": "policy",
    "summary": "The Daily Upside has an item on how charitable giving is treated differently for tax purposes. The item contains only the title.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "6a798dfffa",
@@ -626,7 +879,9 @@
    "relevance": 4,
    "section": "none",
    "summary": "Tulsa World published a piece titled 'Five charitable giving ideas for year-end planning.' The item text contains only the headline and outlet name.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "3ac004e832",
@@ -637,7 +892,11 @@
    "relevance": 4,
    "section": "none",
    "summary": "Finance Monthly publishes an interview with JP Morgan's Justin Nelson on charitable giving in 2026. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "75f9e43bf3",
@@ -648,7 +907,9 @@
    "relevance": 4,
    "section": "none",
    "summary": "ABC News profiles Dolly Parton's decades of philanthropy. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "2fbfad769f",
@@ -659,7 +920,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "UT San Antonio reports raising $148 million in philanthropic support. The item text contains only the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "40643ce7b1",
@@ -670,7 +936,9 @@
    "relevance": 4,
    "section": "none",
    "summary": "A webinar titled 'How Philanthropy and States Can Expand Paid National Service' is listed from the Andrew Carnegie Foundation. The item text contains only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "da22805b66",
@@ -681,7 +949,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Alliance magazine asks whether COP31 can turn pledges into action, with input from Turkish philanthropy leaders and policymakers. The item text contains only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "climate-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "38ad6abe9f",
@@ -692,7 +964,11 @@
    "relevance": 4,
    "section": "none",
    "summary": "The UN Secretary-General issued a memorial message honoring Ted Turner and urging others to follow his example of big bets on humanity. The item text contains only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "502e9134d7",
@@ -703,7 +979,11 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Ford Philanthropy has announced new partnerships to benefit military families. The item is a corporate giving announcement.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "corporate-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "a9db1e7d3d",
@@ -714,7 +994,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Inside Philanthropy reports on a fund advocating for youth amid a social media reckoning. The text gives no further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "b538e37da1",
@@ -725,7 +1007,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Inside Philanthropy profiles how Aliko Dangote and his family give. The text gives no further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "global-development"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "54fbce3b31",
@@ -736,7 +1023,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Good People Fund aims to invest early in Jewish charitable causes, described as venture capitalists of the tzedakah world. The text gives no further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "religious-giving",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "861033dd8f",
@@ -747,7 +1039,12 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Beth Stipe, leader of the Community Foundation of NCW, will retire in December 2027.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "community-foundations",
+    "nonprofit-workforce"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "bce8965601",
@@ -758,7 +1055,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Bon Secours Mercy Health named Shon Baker as foundation president and chief philanthropy officer.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-workforce"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "932c5df801",
@@ -769,7 +1070,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "A judge dismissed a case from Dolly Parton's manager alleging her nephew threatened her estate.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "0a029b1211",
@@ -780,7 +1083,12 @@
    "relevance": 4,
    "section": "sector",
    "summary": "The Community Foundation for Greater Atlanta named a new CEO.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "community-foundations",
+    "nonprofit-workforce"
+   ],
+   "emerging_topic": ""
   }
  ]
 }

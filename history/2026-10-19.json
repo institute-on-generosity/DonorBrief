@@ -10,7 +10,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "The Knight Foundation is giving $10 million to support Public Media Co.'s transformation into a major grant maker, moving a bridge fund from rescue toward reinvention.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "foundation-strategy",
+    "nonprofit-finances"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "d0156f91ab",
@@ -21,7 +26,12 @@
    "relevance": 8,
    "section": "sector",
    "summary": "Fidelity Charitable and other giving platforms have paused gifts to the SPLC, which faces a federal indictment, and critics are urging Fidelity to resume donations before trial.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "donor-advised-funds",
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "188bc30e2c",
@@ -32,7 +42,12 @@
    "relevance": 8,
    "section": "policy",
    "summary": "A settlement will send $950 million from the Alfred I. duPont trust to a new foundation for Delaware's children, ending a decades-long donor intent dispute.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "2d529dbcba",
@@ -43,7 +58,12 @@
    "relevance": 8,
    "section": "policy",
    "summary": "New legislation would strengthen donor standing in gift disputes. Critics argue it would burden charities and invite frivolous lawsuits.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "886de80733",
@@ -54,7 +74,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "National Philanthropic Trust and J.P. Morgan have created a new pathway for donor-advised fund giving to children's investment accounts.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "donor-advised-funds",
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "8eb342e131",
@@ -65,7 +90,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "John Paulson made a record $250 million gift to Hebrew University, described as a show of solidarity with Israel.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f8dec707a7",
@@ -76,7 +106,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "Philanthropist John Paulson and his wife Alina have given $250 million to a university, and the campus will carry their names. The gift is described as historic for the campus.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "39c693e4ca",
@@ -87,7 +122,12 @@
    "relevance": 8,
    "section": "trends",
    "summary": "A Marin nonprofit has outlined a plan for a $42 million donation from MacKenzie Scott. The item text provides no further detail on the plan.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ece72bf31f",
@@ -98,7 +138,12 @@
    "relevance": 7,
    "section": "research",
    "summary": "Private foundation giving topped $1 billion, rising 15%, as foundations distributed 7.1% of assets.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "payout-endowments",
+    "giving-data"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "14fe568f6a",
@@ -109,7 +154,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "Goldman Sachs is using a SpaceX share sale to speed $450 million in charitable giving, according to the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "corporate-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6bd26875bf",
@@ -120,7 +170,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "MacKenzie Scott has donated $26 billion, but she did not appear on the Chronicle of Philanthropy's Top 50 Donors ranking. The item explores why she was left off.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "giving-data"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f4b98ec17c",
@@ -131,7 +186,12 @@
    "relevance": 7,
    "section": "sector",
    "summary": "Tom Brady's charity is facing controversy over $46.5 million in fundraising and $500,000 in yearly grants. The item says the controversy has deepened.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "3f9ed049b5",
@@ -142,7 +202,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "MacKenzie Scott donated $26.2 billion in five years, and the item asks why she is missing from the Chronicle of Philanthropy ranking.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "giving-data"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "0bbd81f1c3",
@@ -153,7 +218,12 @@
    "relevance": 7,
    "section": "trends",
    "summary": "Philanthropist Olivia Walton is investing $100 million with the goal of halving the U.S. maternal mortality rate within five years. The item is a short headline-style listing from Fortune.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "global-development"
+   ],
+   "emerging_topic": "maternal health philanthropy"
   },
   {
    "id": "2860eaa538",
@@ -164,7 +234,12 @@
    "relevance": 7,
    "section": "sector",
    "summary": "The Real News Network reports on what it calls Trump's war on philanthropy and describes a donor network fighting back. The text provides no further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust",
+    "democracy-civic-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4d4e4eacb0",
@@ -175,7 +250,12 @@
    "relevance": 7,
    "section": "research",
    "summary": "Spear's Magazine reports that ultra-high-net-worth philanthropy has reached $250 billion and that wealthy donors are filling public funding gaps. The item text gives no further details or source for the figure.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-data",
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "671ee076f9",
@@ -186,7 +266,12 @@
    "relevance": 7,
    "section": "policy",
    "summary": "HR 10330, the Higher Education Oversight for Nonprofits Ensuring Standards and Transparency Act, was referred to the House Committee on Ways and Means on 2026-09-10. The item text includes no further details on its provisions.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ec95cb9155",
@@ -197,7 +282,12 @@
    "relevance": 6,
    "section": "sector",
    "summary": "The U.S. government gives other nations about US$68 billion in foreign assistance annually, and USAID distributes much of it through local partners. The piece discusses how nonprofits abroad can fill gaps as the U.S. cuts off foreign aid.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development",
+    "government-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "1552480b00",
@@ -208,7 +298,12 @@
    "relevance": 6,
    "section": "policy",
    "summary": "Three years after Chicago's Human Service Workforce Advancement ordinance was approved, NPQ asks whether it meaningfully changed labor relations inside publicly funded nonprofits.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-workforce",
+    "government-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "026d9f252a",
@@ -219,7 +314,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The Chronicle reports that giving by the ultra-wealthy is growing and advises charities to keep their biggest donors close.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4e69d13693",
@@ -230,7 +330,12 @@
    "relevance": 6,
    "section": "policy",
    "summary": "Philanthropy Roundtable published research on the Safeguarding Endowment Gifts Act, and commentary from two of its staff appeared in a Chronicle of Philanthropy article on donor standing in gift disputes.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight",
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "3fcfa1a99f",
@@ -241,7 +346,12 @@
    "relevance": 6,
    "section": "research",
    "summary": "A CEP report, Evolving Foundation Responses to a Sector in Crisis, finds that philanthropy is moving but still not responsive enough. The piece argues for pooled funds during disruption.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "pooled-funds",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "93518e87b8",
@@ -252,7 +362,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The MacArthur Foundation increased its impact investment allocation to $750 million, according to the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "impact-investing",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "046a7b98f5",
@@ -263,7 +378,9 @@
    "relevance": 6,
    "section": "policy",
    "summary": "An article covers tax changes affecting individual contractors and charitable donors. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "aa16941c93",
@@ -274,7 +391,9 @@
    "relevance": 6,
    "section": "research",
    "summary": "An item from Retail Customer Experience reports that asking for donations at checkout can lower customer satisfaction. The text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "2189d217bd",
@@ -285,7 +404,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "The item describes Milton Hershey's 1918 transfer of about $60 million in stock into a trust, which now holds about $23.6 billion in assets. It says wealthy donors still use similar strategies, with legal setup costs starting at a few thousand dollars.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "393192ca40",
@@ -296,7 +419,9 @@
    "relevance": 6,
    "section": "sector",
    "summary": "A Milken Institute philanthropy leader writes that a major shift is coming to philanthropy that is larger than anything seen in nearly two decades. The item does not describe the shift.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "4fa35cdfd9",
@@ -307,7 +432,12 @@
    "relevance": 6,
    "section": "sector",
    "summary": "The Economist describes Elon Musk's foundation as opaque, miserly and self-serving. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust",
+    "foundation-strategy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "1d65a4bf9d",
@@ -318,7 +448,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Global philanthropist Len Blavatnik has made a $15 million gift intended to expand opportunities for the next generation of foreign policy leaders.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "7206767a47",
@@ -329,7 +463,12 @@
    "relevance": 6,
    "section": "sector",
    "summary": "The World Bank and philanthropy are joining forces, according to Devex. The item is a headline without further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development",
+    "pooled-funds"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "5754530776",
@@ -340,7 +479,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Fortune reports that Susan Dell runs the operations of the Dell family's $10 billion giving. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "436e423a89",
@@ -351,7 +495,12 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Steven H. Lavin donated $30 million to Hebrew University to boost physician training while visiting Israel. The item is a gift announcement.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "f6a6b60420",
@@ -362,7 +511,11 @@
    "relevance": 6,
    "section": "trends",
    "summary": "Cargill's philanthropy is expanding its grantmaking beyond the Twin Cities. The item text provides no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "corporate-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "30473d27ab",
@@ -373,7 +526,11 @@
    "relevance": 5,
    "section": "none",
    "summary": "A Stanford Social Innovation Review blog argues that taxation is an impact strategy and that supporting adequate taxation may be the most important thing the social sector can do.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "71acd81b84",
@@ -384,7 +541,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Pro-democracy nonprofits are preparing to train volunteers to monitor and document any disruptions tied to rising fears of election interference. The article focuses on these preparations.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "democracy-civic-funding",
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6f92518e7c",
@@ -395,7 +557,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "An opinion piece argues that private gifts should make public dollars work better rather than compensate for gaps in government services, using Trump Accounts as the example.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "government-funding",
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "bef3420d39",
@@ -406,7 +573,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "The Wikimedia Foundation attracts gifts averaging $10 and grew its revenue steadily to $187 million in 2025.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels",
+    "fundraising-practice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "c7ddd6ca09",
@@ -417,7 +589,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Saulo Araujo of Grassroots International writes that philanthropy faces one of its deepest crises and asks whether it will retract or show solidarity.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "equity-justice",
+    "global-development"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "240564dbcd",
@@ -428,7 +605,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "Altruist has launched AI-powered donor-advised funds aimed at financial advisors.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "donor-advised-funds",
+    "ai-and-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "9ebc7cb738",
@@ -439,7 +621,9 @@
    "relevance": 5,
    "section": "trends",
    "summary": "A Singapore Economic Development Board item focuses on designing giving to maximize impact, with a focus on donor-advised funds. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "9c8112e000",
@@ -450,7 +634,11 @@
    "relevance": 5,
    "section": "trends",
    "summary": "An article describes how JP Morgan's Justin Nelson ties giving to estate plans. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "33ac79c98b",
@@ -461,7 +649,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "North Texas donors gave $76 million in a day. A retiree's $111,000 IRA gift could trigger taxes on his Social Security, according to the headline.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "fundraising-practice",
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "45daa9aad0",
@@ -472,7 +665,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Procter & Gamble shareholders rejected a proposal from an investor who was uneasy about LGBTQ giving. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "corporate-giving",
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ba784ea9d3",
@@ -483,7 +681,11 @@
    "relevance": 5,
    "section": "research",
    "summary": "According to the JGive founder, Israelis and Diaspora Jews are donating more since Oct. 7. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-levels"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "bc9b19fab5",
@@ -494,7 +696,12 @@
    "relevance": 5,
    "section": "none",
    "summary": "A 74-year-old retiree gives his church $15,000 a year and could use an IRA rule to keep more of his money. The item text does not name the rule.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "religious-giving",
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "77dc7267a4",
@@ -505,7 +712,11 @@
    "relevance": 5,
    "section": "trends",
    "summary": "A private foundation committed P200 million to South Cotabato hospitals in the Philippines.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6367932426",
@@ -516,7 +727,9 @@
    "relevance": 5,
    "section": "sector",
    "summary": "An article says Montreal faces a giving challenge just as needs are growing. The item text gives no specifics.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "085fad1ec6",
@@ -527,7 +740,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "An Economist writer investigated Elon Musk's charitable avatar and reported findings. The item text does not state them.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust",
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "55779bd693",
@@ -538,7 +756,12 @@
    "relevance": 5,
    "section": "research",
    "summary": "World Bank Group argues that private philanthropy can unlock public funds to scale what works. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development",
+    "impact-investing"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "ff4236bb44",
@@ -549,7 +772,11 @@
    "relevance": 5,
    "section": "trends",
    "summary": "Axios article on how AI giants will reshape global philanthropy. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "ai-and-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "32dd301116",
@@ -560,7 +787,11 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Alliance magazine published 'Philanthropy has an infrastructure problem.' The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-finances"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "e237051c05",
@@ -571,7 +802,11 @@
    "relevance": 5,
    "section": "research",
    "summary": "A study ranks Hong Kong as the third best philanthropy hub, behind New York and Seoul. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-data"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "2c55ffb90e",
@@ -582,7 +817,12 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Devex asks whether philanthropy, including both old and new money, can work together as a system. The item is a headline without further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "foundation-strategy",
+    "pooled-funds"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6fd8364813",
@@ -593,7 +833,11 @@
    "relevance": 5,
    "section": "sector",
    "summary": "Monaco hosted an inaugural summit bringing together leading philanthropists, according to the Fondation Prince Albert II de Monaco.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "major-gifts"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "3967fe486a",
@@ -604,7 +848,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "Devex is running a special live broadcast from Bangkok about the World Bank's new philanthropy and MSMEs plan. The item text does not give details of the plan.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development",
+    "impact-investing"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "613eba2d04",
@@ -615,7 +864,12 @@
    "relevance": 5,
    "section": "trends",
    "summary": "Inside Philanthropy describes five early childhood funding collaboratives. The item text is only the headline and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "pooled-funds",
+    "education-philanthropy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "8b955c844b",
@@ -626,7 +880,11 @@
    "relevance": 5,
    "section": "policy",
    "summary": "S 3743 would treat transfers of appreciated property to certain tax-exempt organizations the same as transfers to political organizations. The latest recorded action was referral to the Senate Finance Committee on 2024-02-06.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "charitable-tax-policy"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "cc661fad73",
@@ -637,7 +895,11 @@
    "relevance": 4,
    "section": "none",
    "summary": "Jessyca Dudley, founder of Bold Ventures, argues that generosity and reciprocity should be distinguished in philanthropy, especially for those holding resources.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "generosity-research"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "6df77d6d15",
@@ -648,7 +910,12 @@
    "relevance": 4,
    "section": "sector",
    "summary": "An NPQ piece discusses how nonprofits can respond when environmental justice nonprofit workers unionize and their commitments are tested internally.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-workforce",
+    "equity-justice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "2d813ba19f",
@@ -659,7 +926,11 @@
    "relevance": 4,
    "section": "policy",
    "summary": "NPQ reports that election accessibility for disabled voters is poor in some states and that nonprofits in six states are preparing to respond this election.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "democracy-civic-funding"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "e15ad4168c",
@@ -670,7 +941,12 @@
    "relevance": 4,
    "section": "none",
    "summary": "An SSIR blog describes how nonprofits can build their own mission-critical technology with AI tools, citing an example of a nonprofit that embedded a map feature without a developer.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "ai-and-philanthropy",
+    "nonprofit-finances"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "b892c97e0a",
@@ -681,7 +957,12 @@
    "relevance": 4,
    "section": "sector",
    "summary": "A Chronicle of Philanthropy opinion piece argues the nonprofit sector is under pressure but not in hospice and urges leaders to ignore doom narratives.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust",
+    "nonprofit-finances"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "da25d8ed24",
@@ -692,7 +973,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "A recap of highlights from the 2026 Independent Sector National Summit, titled The Future We Build Together, the blogger's first attendance at the event in three years.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-workforce"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "5226c93e7e",
@@ -703,7 +988,11 @@
    "relevance": 4,
    "section": "policy",
    "summary": "A San Diego Foundation year-end checklist covering IRA legacy giving and a documentation gap for 2026.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "wealth-transfer"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "c33794897f",
@@ -714,7 +1003,11 @@
    "relevance": 4,
    "section": "trends",
    "summary": "The Helmkamp Cares Foundation surpassed $1 million in charitable giving, according to the headline. The item highlights community impact and employee-led philanthropy.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "corporate-giving"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "d081c7be20",
@@ -725,7 +1018,11 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Range Bank is putting $10,000 in charitable giving up to a community vote. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "pooled-funds"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "80f6170c32",
@@ -736,7 +1033,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Carrier is uniting charitable giving and employee volunteerism to help address hunger. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "corporate-giving",
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "46a3b11ffc",
@@ -747,7 +1049,11 @@
    "relevance": 4,
    "section": "trends",
    "summary": "MyRegistry.com launched a nonprofit giving list tool. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "giving-tech"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4e25960e5c",
@@ -758,7 +1064,11 @@
    "relevance": 4,
    "section": "research",
    "summary": "A University of Washington piece titled Where Philanthropy Meets Racial Justice is listed. The item text gives no content.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "equity-justice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "540eba975e",
@@ -769,7 +1079,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "A Robert Wood Johnson Foundation piece offers three ways philanthropy can support Black women social justice leaders. The item text does not list them.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "equity-justice"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "4c6d660859",
@@ -780,7 +1094,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Nonprofit Quarterly published an article titled 'When Women Change the Rules: Rethinking Power in Philanthropy.' The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "public-trust"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "790d67ccf7",
@@ -791,7 +1109,11 @@
    "relevance": 4,
    "section": "research",
    "summary": "USC Price School examines how Los Angeles philanthropy evolved and responded to crises over the past 25 years. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "community-foundations"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "1d05faf3b4",
@@ -802,7 +1124,12 @@
    "relevance": 4,
    "section": "trends",
    "summary": "Devex reports on how Asian philanthropy is helping to grow investment. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "global-development",
+    "impact-investing"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "508e954656",
@@ -813,7 +1140,11 @@
    "relevance": 4,
    "section": "trends",
    "summary": "A foundation named for Wesley LePatner aims to develop 1,000 leaders in work, civic life, and philanthropy, according to Fortune.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "volunteering-civic"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "553df8d01f",
@@ -824,7 +1155,11 @@
    "relevance": 4,
    "section": "sector",
    "summary": "The Center Square reports on a wealth-building nonprofit that is building the founder's family wealth. The item is a headline without further detail.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [
+    "nonprofit-law-oversight"
+   ],
+   "emerging_topic": ""
   },
   {
    "id": "b80a56b14f",
@@ -835,7 +1170,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Fortune reports that Melinda French Gates follows a 48-hour rule before criticizing employees. The item text provides no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "55e8c8c370",
@@ -846,7 +1183,9 @@
    "relevance": 4,
    "section": "policy",
    "summary": "The Center Square reports that federal government gave a nonprofit $23 million despite accounting problems. The item's headline refers to Taxpayer Philanthropy. The item text gives no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "62d7cf7777",
@@ -857,7 +1196,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "The Chronicle of Philanthropy advises fundraisers to reach major donors through their advisers. The item is practical guidance.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "d8a530037c",
@@ -868,7 +1209,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Real estate executive and philanthropist Abe Mitchell has died at age 91, according to the Lagniappe Daily item. The item text provides no further details about his giving.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "60fd5ffab4",
@@ -879,7 +1222,9 @@
    "relevance": 4,
    "section": "trends",
    "summary": "An opinion piece argues that Israel's border communities need long-term philanthropy after October 7. The item text is only the title and source.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   },
   {
    "id": "63056c253c",
@@ -890,7 +1235,9 @@
    "relevance": 4,
    "section": "sector",
    "summary": "Abe Mitchell, a Mobile business leader and philanthropist, has died at age 91, according to AL.com. The item text provides no further details.",
-   "in_brief": false
+   "in_brief": false,
+   "topics": [],
+   "emerging_topic": ""
   }
  ]
 }
