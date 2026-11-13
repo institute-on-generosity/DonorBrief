@@ -72,9 +72,10 @@ def main() -> int:
 
     rendered = render(brief, sections, items, past_weeks, week, week_of)
     write_outputs(out_dir, brief, rendered, failed)
-    in_brief = {e["id"] for e in rendered["top"] + [e for s in rendered["sections"] for e in s["entries"]]}
+    in_brief = {e["id"] for s in rendered["sections"] for e in s["entries"]}
     history.record(args.history, week, items, assessments, in_brief)
-    log.info("Draft written to %s (%d top stories, %d trends)", out_dir, len(rendered["top"]), len(rendered["trends"]))
+    log.info("Draft written to %s (%d takeaways, %d trends, %d stories)", out_dir, len(rendered["takeaways"]),
+             len(rendered["trends"]), len(in_brief))
 
     delivery = mailchimp.deliver(out_dir, config)
     if delivery["status"] == "draft_created":
@@ -100,29 +101,40 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
     titles = {s["id"]: s for s in sections}
     order = [s["id"] for s in sections]
     current = {i.id: i for i in items}
-    section_of = {}
-    for sec in brief.sections:
-        for e in sec.entries:
-            section_of[e.id] = sec.section_id
 
-    def entry(e: llm.BriefEntry, section_id: str = "") -> Optional[dict]:
-        item = current.get(e.id)
-        if item is None:
-            log.warning("Dropping entry %r: unknown item id %s", e.headline, e.id)
-            return None
-        return {"id": e.id, "headline": e.headline, "body": e.body, "url": item.url, "source": item.source_name,
-                "follow_up": e.follow_up, "section": titles.get(section_id, {}).get("title", "")}
-
-    top_ids = {e.id for e in brief.top_stories}
-    top = [x for x in (entry(e, section_of.get(e.id, "")) for e in brief.top_stories) if x]
-
-    rendered_sections = []
+    # The news: each story once, in section order, with links from source data.
+    rendered_sections, placed = [], set()
     for sec in sorted(brief.sections, key=lambda s: order.index(s.section_id) if s.section_id in order else 99):
-        entries = [x for x in (entry(e, sec.section_id) for e in sec.entries if e.id not in top_ids) if x]
+        entries = []
+        for e in sec.entries:
+            item = current.get(e.id)
+            if item is None:
+                log.warning("Dropping entry %r: unknown item id %s", e.headline, e.id)
+                continue
+            if e.id in placed:
+                continue
+            placed.add(e.id)
+            entries.append({"id": e.id, "anchor": f"story-{len(placed)}", "headline": e.headline, "body": e.body,
+                            "url": item.url, "source": item.source_name, "follow_up": e.follow_up, "takeaways": []})
         if entries:
             meta = titles.get(sec.section_id, {})
             rendered_sections.append({"id": sec.section_id, "title": meta.get("title", sec.section_id),
                                       "description": meta.get("description", ""), "entries": entries})
+    news = {e["id"]: e for sec in rendered_sections for e in sec["entries"]}
+
+    # Takeaways must point at stories that are actually in the news below.
+    takeaways = []
+    for t in brief.takeaways:
+        stories = [news[i] for i in dict.fromkeys(t.item_ids) if i in news]
+        if not stories:
+            log.warning("Dropping takeaway %r: none of its stories are in the brief", t.lead)
+            continue
+        n = len(takeaways) + 1
+        for st in stories:
+            st["takeaways"].append(n)
+        takeaways.append({"n": n, "lead": t.lead, "detail": t.detail,
+                          "stories": [{"anchor": st["anchor"], "headline": st["headline"], "url": st["url"],
+                                       "source": st["source"]} for st in stories]})
 
     # Every story the editor could cite for a trend: this week plus earlier weeks.
     known = {i.id: {"title": i.title, "url": i.url, "source": i.source_name, "week": week} for i in items}
@@ -140,8 +152,10 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
         trends.append({"title": t.title, "body": t.body, "stories": len(stories), "weeks": len(weeks),
                        "since": min(weeks), "evidence": stories[:4]})
 
-    return {"subject": brief.subject, "intro": brief.intro, "week_of": week_of,
-            "top": top, "trends": trends, "sections": rendered_sections}
+    # `intro` (the takeaways as plain sentences) feeds the email preview text and the archive index.
+    intro = " ".join(f"{t['lead'].rstrip('.')}." for t in takeaways)
+    return {"subject": brief.subject, "intro": intro, "week_of": week_of,
+            "takeaways": takeaways, "trends": trends, "sections": rendered_sections}
 
 
 def write_outputs(out_dir: Path, brief: llm.Brief, rendered: dict, failed) -> None:
@@ -155,22 +169,25 @@ def write_outputs(out_dir: Path, brief: llm.Brief, rendered: dict, failed) -> No
 
 
 def to_markdown(r: dict, failed=()) -> str:
-    md = [f"# {r['subject']}", f"_Week of {r['week_of']}_", "", r["intro"], ""]
-    if r["top"]:
-        md += ["## Top stories", ""]
-        for e in r["top"]:
-            tag = "Update: " if e["follow_up"] else ""
-            md += [f"**{tag}[{e['headline']}]({e['url']})**  ", f"{e['body']} _({e['source']})_", ""]
+    md = [f"# {r['subject']}", f"_Week of {r['week_of']}_", ""]
+    if r["takeaways"]:
+        md += ["## Key takeaways", ""]
+        for t in r["takeaways"]:
+            refs = ", ".join(f"[{s['source']}]({s['url']})" for s in t["stories"])
+            md += [f"{t['n']}. **{t['lead']}** {t['detail']} ({refs})"]
+        md += [""]
     if r["trends"]:
-        md += ["## Trends to watch", ""]
+        md += ["## What's building", ""]
         for t in r["trends"]:
             md += [f"**{t['title']}** _({t['stories']} stories over {t['weeks']} weeks)_  ", t["body"], ""]
             md += [f"- [{s['title']}]({s['url']}) _({s['source']}, week of {s['week']})_" for s in t["evidence"]] + [""]
+    if r["sections"]:
+        md += ["---", "", "# The news", ""]
     for sec in r["sections"]:
         md += [f"## {sec['title']}", ""]
         for e in sec["entries"]:
-            tag = "Update: " if e["follow_up"] else ""
-            md += [f"- **{tag}[{e['headline']}]({e['url']})** {e['body']} _({e['source']})_"]
+            tags = ("Update: " if e["follow_up"] else "") + "".join(f"[Takeaway {n}] " for n in e["takeaways"])
+            md += [f"- {tags}**[{e['headline']}]({e['url']})** {e['body']} _({e['source']})_"]
         md += [""]
     if failed:
         md += ["---", "**Sources that failed this week (not shown to readers):**"]

@@ -32,7 +32,23 @@
 .trend li { font-size: 13.5px; line-height: 1.45; padding: 3px 0; }
 .trend li a { color: var(--black); text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 2px; }
 .trend li span { color: var(--meta); }
+.takeaways { margin: 32px 0 0; }
+.takeaways > .eyebrow { color: var(--black); }
+.takeaways .sub { font-size: 13px; color: var(--meta); margin: 2px 0 8px; }
+.takeaways ol { list-style: none; margin: 0; padding: 0; }
+.takeaways li { display: grid; grid-template-columns: 34px 1fr; border-top: 1px solid var(--rule); padding: 14px 0 12px; }
+.takeaways .num { width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--lime); border-radius: 3px; font-weight: 700; font-size: 13px; }
+.takeaways .lead { font-size: 17px; line-height: 1.35; font-weight: 700; }
+.takeaways .detail { margin: 4px 0 0; font-size: 15.5px; }
+.takeaways .refs { margin: 4px 0 0; font-size: 12.5px; font-weight: 700; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.chip { display: inline-block; background: var(--lime); color: var(--black); font-family: var(--font-body); font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; vertical-align: middle; margin-right: 4px; }
+.lead-story { padding: 16px 0 2px; scroll-margin-top: 16px; }
+.lead-story h3 { font-size: 21px; line-height: 1.28; margin: 4px 0 4px; }
+.lead-story h3 a { color: var(--black); }
+.lead-story p { margin: 0; font-size: 15.5px; }
+.news-index { font-size: 13px; color: var(--quiet); margin: 10px 0 0; }
 .group { margin: 26px 0 0; }
+.group > .eyebrow { border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
 .group .eyebrow { color: var(--green); }
 .brief-item { font-size: 15px; line-height: 1.5; padding: 10px 0 0; scroll-margin-top: 16px; }
 .brief-item > a:first-of-type { color: var(--black); font-weight: 700; }
@@ -42,10 +58,10 @@
 @media (max-width: 600px) { .toc ol { grid-template-columns: 1fr; } }
 {% endblock %}
 {% block content %}
-{%- set top = brief.top or [] -%}
+{%- set takeaways = brief.takeaways or [] -%}
 {%- set trends = brief.trends or [] -%}
-{%- set legacy = not top and not trends -%}
-{%- macro update(e) %}{% if e.follow_up %}<span class="update">Update</span>{% endif %}{% endmacro -%}
+{%- set legacy = not takeaways -%}
+{%- macro chips(e) %}{% for n in e.takeaways or [] %}<span class="chip">Takeaway {{ n }}</span>{% endfor %}{% if e.follow_up %}<span class="chip">Update</span>{% endif %}{% endmacro -%}
 <section class="hero">
   <div class="wrap">
     <span class="tag">Week of {{ brief.week_of }}</span>
@@ -53,53 +69,32 @@
   </div>
 </section>
 <main class="wrap">
-  <p class="intro">{{ brief.intro }}</p>
+  {% if legacy %}<p class="intro">{{ brief.intro }}</p>{% endif %}
 
-  <nav class="toc" aria-label="In this issue">
-    <div class="eyebrow">In this issue</div>
+  {% if takeaways %}
+  <section class="takeaways" aria-label="Key takeaways">
+    <div class="eyebrow">Key takeaways</div>
+    <div class="sub">The week in 30 seconds. The stories behind each point are below.</div>
     <ol>
-      {% if top %}
+      {% for t in takeaways %}
       <li>
-        <div class="eyebrow"><a href="#top">Top stories</a> <span class="n">({{ top|length }})</span></div>
-        <ul>{% for e in top %}<li><a href="#top-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}</ul>
-      </li>
-      {% endif %}
-      {% if trends %}
-      <li>
-        <div class="eyebrow"><a href="#trends">Trends to watch</a> <span class="n">({{ trends|length }})</span></div>
-        <ul>{% for t in trends %}<li><a href="#trend-{{ loop.index }}">{{ t.title }}</a></li>{% endfor %}</ul>
-      </li>
-      {% endif %}
-      {% for section in brief.sections %}
-      <li>
-        <div class="eyebrow"><a href="#s{{ loop.index }}">{{ section.title }}</a> <span class="n">({{ section.entries|length }})</span></div>
-        {% if legacy %}<ul>{% set sec = loop.index %}{% for e in section.entries %}<li><a href="#s{{ sec }}-{{ loop.index }}">{{ e.headline }}</a></li>{% endfor %}</ul>{% endif %}
+        <span class="num">{{ t.n }}</span>
+        <div>
+          <div class="lead">{{ t.lead }}</div>
+          <p class="detail">{{ t.detail }}</p>
+          <div class="refs">{% for st in t.stories %}<a href="#{{ st.anchor }}">{{ st.source }} &darr;</a>{% endfor %}</div>
+        </div>
       </li>
       {% endfor %}
     </ol>
-  </nav>
-
-  {% if top %}
-  <header class="cat" id="top">
-    <div class="eyebrow">{{ top|length }} {{ "story" if top|length == 1 else "stories" }}</div>
-    <h2>Top stories</h2>
-    <p>The week's most consequential news.</p>
-  </header>
-  {% for e in top %}
-  <article class="entry" id="top-{{ loop.index }}">
-    {% if e.section %}<div class="eyebrow kicker">{{ e.section }}</div>{% endif %}
-    <h3>{{ update(e) }}<a href="{{ e.url }}">{{ e.headline }}</a></h3>
-    <p>{{ e.body }}</p>
-    <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>
-  </article>
-  {% endfor %}
+  </section>
   {% endif %}
 
   {% if trends %}
   <header class="cat" id="trends">
-    <div class="eyebrow">{{ trends|length }} {{ "trend" if trends|length == 1 else "trends" }}</div>
-    <h2>Trends to watch</h2>
-    <p>Patterns building across several weeks of coverage.</p>
+    <div class="eyebrow">{{ trends|length }} {{ "trend" if trends|length == 1 else "trends" }} across recent weeks</div>
+    <h2>What's building</h2>
+    <p>Patterns that keep showing up, week after week.</p>
   </header>
   {% for t in trends %}
   <section class="trend" id="trend-{{ loop.index }}">
@@ -112,36 +107,45 @@
   {% endif %}
 
   {% if brief.sections %}
-  {% if not legacy %}
-  <header class="cat">
-    <div class="eyebrow">The rest of the week</div>
-    <h2>The week in brief</h2>
-  </header>
-  {% endif %}
+  {% if legacy %}
   {% for section in brief.sections %}
   {% set sec = loop.index %}
-  {% if legacy %}
   <header class="cat" id="s{{ sec }}">
     <div class="eyebrow">{{ section.entries|length }} {{ "story" if section.entries|length == 1 else "stories" }}</div>
     <h2>{{ section.title }}</h2>
     {% if section.description %}<p>{{ section.description }}</p>{% endif %}
   </header>
   {% for e in section.entries %}
-  <article class="entry" id="s{{ sec }}-{{ loop.index }}">
+  <article class="entry">
     <h3><a href="{{ e.url }}">{{ e.headline }}</a></h3>
     <p>{{ e.body }}</p>
     <a class="src" href="{{ e.url }}">{{ e.source }} &rarr;</a>
   </article>
   {% endfor %}
+  {% endfor %}
   {% else %}
-  <div class="group" id="s{{ sec }}">
+  <header class="cat" id="news">
+    <div class="eyebrow">{{ brief.sections|sum(attribute="entries", start=[])|length }} stories</div>
+    <h2>The news</h2>
+  </header>
+  <p class="news-index">{% for s in brief.sections %}<a href="#s{{ loop.index }}">{{ s.title }}</a> ({{ s.entries|length }}){% if not loop.last %} &middot; {% endif %}{% endfor %}</p>
+  {% for section in brief.sections %}
+  <div class="group" id="s{{ loop.index }}">
     <div class="eyebrow">{{ section.title }}</div>
     {% for e in section.entries %}
-    <div class="brief-item">{{ update(e) }}<a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
+    {% if e.takeaways %}
+    <article class="lead-story" id="{{ e.anchor }}">
+      {{ chips(e) }}
+      <h3><a href="{{ e.url }}">{{ e.headline }}</a></h3>
+      <p>{{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></p>
+    </article>
+    {% else %}
+    <div class="brief-item" id="{{ e.anchor }}">{% if e.follow_up %}<span class="chip">Update</span>{% endif %}<a href="{{ e.url }}">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a class="src" href="{{ e.url }}">{{ e.source }}&nbsp;&rarr;</a></div>
+    {% endif %}
     {% endfor %}
   </div>
-  {% endif %}
   {% endfor %}
+  {% endif %}
   {% endif %}
 
   <nav class="pager" aria-label="More briefs">

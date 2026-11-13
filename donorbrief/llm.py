@@ -36,13 +36,19 @@ class TriageResult(BaseModel):
 class BriefEntry(BaseModel):
     id: str = Field(description="The id of the source item this entry is based on.")
     headline: str
-    body: str = Field(description="Top stories: 3-4 sentences on what happened and why it matters. Other entries: one sentence.")
+    body: str = Field(description="Stories behind a takeaway: 2-3 sentences. All others: one sentence.")
     follow_up: bool = Field(default=False, description="True only if this continues a story from a previous brief and adds real news.")
 
 
 class BriefSection(BaseModel):
     section_id: str
     entries: list[BriefEntry]
+
+
+class Takeaway(BaseModel):
+    lead: str = Field(description="The point in one short, bold-able line, under 90 characters. A claim, not a topic.")
+    detail: str = Field(description="One sentence on why it matters to IoG's readers.")
+    item_ids: list[str] = Field(description="Ids of this week's news entries that back this takeaway (1-3).")
 
 
 class Trend(BaseModel):
@@ -53,10 +59,9 @@ class Trend(BaseModel):
 
 class Brief(BaseModel):
     subject: str = Field(description="Email subject line, under 70 characters.")
-    intro: str = Field(description="2-3 sentence opening naming the week's most important developments.")
-    top_stories: list[BriefEntry] = Field(description="The 3 most consequential stories this week.")
+    takeaways: list[Takeaway] = Field(description="3-5 key takeaways from this week, most important first.")
     trends: list[Trend] = Field(description="0-3 patterns building across weeks.")
-    sections: list[BriefSection] = Field(description="Every other story, grouped by section, one sentence each.")
+    sections: list[BriefSection] = Field(description="All of this week's news worth knowing, grouped by section.")
 
 
 # ---------- Providers ----------
@@ -143,15 +148,18 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
         "plain-language voice for busy readers; no hype, no jargon. Use only facts from the items provided, "
         "and cite the id of the item each entry or trend is based on. Merge items that cover the same story "
         "into one entry citing the best source.\n\n"
-        "The brief has three parts:\n"
-        "1. Top stories: the 3 most consequential stories of THIS week, 3-4 sentences each.\n"
+        "The brief has two halves. The top half gives busy readers the point in 30 seconds; the bottom "
+        "half is the news, for anyone who wants detail.\n"
+        "1. Key takeaways: 3-5 numbered takeaways, most important first. Each is a short bold claim (what "
+        "changed or what it means, not a topic label) plus one sentence on why it matters to IoG's readers, "
+        "backed by 1-3 ids of this week's news entries. A takeaway can connect several stories.\n"
         "2. Trends to watch: 0-3 patterns that are building across weeks, a theme that shows up in several "
         "separate stories over at least two different weeks (this week counts). Cite at least 3 supporting "
         "item ids from at least 2 weeks, using this week's items and the earlier weeks listed. A single big "
         "story is not a trend, and neither is a topic that is always in the news. Name what is changing. "
-        "If nothing qualifies, return no trends.\n"
-        "3. Everything else from this week that is worth knowing, grouped by section, one sentence each. "
-        "Don't repeat a top story here. Skip sections with nothing in them.\n\n"
+        "If nothing qualifies, return no trends. Don't repeat a takeaway as a trend.\n"
+        "3. The news: every story from this week worth knowing, grouped by section, each story once. Stories "
+        "behind a takeaway get 2-3 sentences; all others get one sentence. Skip sections with nothing in them.\n\n"
         "Stories marked as already in a previous brief: include them only if there is genuinely new "
         "information, and then set follow_up to true.\n\n"
         f"Sections, in order:\n{_sections_text(sections)}"

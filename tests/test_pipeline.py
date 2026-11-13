@@ -92,13 +92,13 @@ def test_pick_top_filters_and_sorts():
 
 
 def brief(**kw):
-    return llm.Brief(**{"subject": "S", "intro": "I", "top_stories": [], "trends": [], "sections": [], **kw})
+    return llm.Brief(**{"subject": "S", "takeaways": [], "trends": [], "sections": [], **kw})
 
 
 def test_render_uses_real_urls_drops_unknown_ids_and_escapes_html(tmp_path):
     items = [item("Real", "https://e.org/real")]
     sections = [{"id": "sector", "title": "Sector News", "description": ""}]
-    b = brief(intro="Intro <script>x</script>", sections=[llm.BriefSection(section_id="sector", entries=[
+    b = brief(subject="Subject <script>x</script>", sections=[llm.BriefSection(section_id="sector", entries=[
         llm.BriefEntry(id=items[0].id, headline="Real & true", body="B"),
         llm.BriefEntry(id="madeup1234", headline="Invented", body="B"),
     ])])
@@ -165,32 +165,40 @@ def test_archive_builds_index_and_pages_newest_first(tmp_path):
     assert 'href="../2026-10-05/"' in newer and "https://e.org" in newer
 
 
-def test_brief_layout_top_stories_then_trends_then_week_in_brief(tmp_path):
+def test_brief_layout_takeaways_then_trends_then_news(tmp_path):
     items = [item("A", "https://e.org/a"), item("B", "https://e.org/b"), item("C", "https://e.org/c")]
     sections = [{"id": "policy", "title": "Policy & Regulation", "description": "Laws and rules."},
                 {"id": "sector", "title": "Sector News", "description": ""}]
     past = [{"week": "2026-10-05", "items": [{"id": "old1", "title": "Earlier DAF story", "url": "https://e.org/old1", "source": "Old"}]}]
     a, b_, c = (i.id for i in items)
     b = brief(
-        top_stories=[llm.BriefEntry(id=a, headline="Big one", body="Long body.", follow_up=True)],
+        takeaways=[
+            llm.Takeaway(lead="Ford is narrowing its focus", detail="Grantees will feel it.", item_ids=[a, "madeup"]),
+            llm.Takeaway(lead="Invented", detail="x", item_ids=["madeup"]),            # no real story: dropped
+            llm.Takeaway(lead="Two stories, one point", detail="y", item_ids=[a, c]),
+        ],
         trends=[llm.Trend(title="DAFs under scrutiny", body="Building.", item_ids=[b_, c, "old1"])],
         sections=[
             llm.BriefSection(section_id="sector", entries=[llm.BriefEntry(id=c, headline="Third", body="One line.")]),
-            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="dup"),
-                                                           llm.BriefEntry(id=b_, headline="Second?", body="One line.")]),
+            llm.BriefSection(section_id="policy", entries=[llm.BriefEntry(id=a, headline="Big one", body="Longer.", follow_up=True),
+                                                           llm.BriefEntry(id=b_, headline="Second?", body="One line."),
+                                                           llm.BriefEntry(id=a, headline="Big one again", body="dup")]),
         ])
     r = main.render(b, sections, items, past, "2026-10-12", "October 12, 2026")
-    assert [e["headline"] for e in r["top"]] == ["Big one"] and r["top"][0]["section"] == "Policy & Regulation"
+    assert [(t["n"], t["lead"]) for t in r["takeaways"]] == [(1, "Ford is narrowing its focus"), (2, "Two stories, one point")]
+    assert [s["source"] for s in r["takeaways"][1]["stories"]] == ["src", "src"]
     assert [s["id"] for s in r["sections"]] == ["policy", "sector"]
-    assert [e["headline"] for e in r["sections"][0]["entries"]] == ["Second?"]  # top story not repeated
-    t = r["trends"][0]
-    assert (t["stories"], t["weeks"], t["since"]) == (3, 2, "2026-10-05")
+    policy = r["sections"][0]["entries"]
+    assert [e["headline"] for e in policy] == ["Big one", "Second?"]           # each story once
+    assert policy[0]["takeaways"] == [1, 2] and policy[1]["takeaways"] == []
+    assert r["intro"] == "Ford is narrowing its focus. Two stories, one point."
+    assert (r["trends"][0]["stories"], r["trends"][0]["weeks"]) == (3, 2)
     main.write_outputs(tmp_path, b, r, [])
     html = (tmp_path / "brief.html").read_text()
-    assert html.index("Top stories") < html.index("Trends to watch") < html.index("The week in brief")
-    assert "3 stories over 2 weeks" in html and "Update" in html and "Second?." not in html
+    assert html.index("Key takeaways") < html.index("s building") < html.index("The news")
+    assert "Takeaway 2" in html and "Update" in html and "Second?." not in html and "Invented" not in html
     md = (tmp_path / "brief.md").read_text()
-    assert "## Trends to watch" in md and "Earlier DAF story" in md
+    assert md.index("## Key takeaways") < md.index("## What's building") < md.index("# The news")
 
 
 def test_trends_need_three_stories_over_two_weeks():
@@ -248,4 +256,4 @@ def test_compose_shows_earlier_weeks_to_the_editor():
         {"id": "old2", "title": "Low score", "url": "u", "source": "S", "section": "sector", "summary": "x", "relevance": 4, "in_brief": False}]}]
     llm.compose(Fake(), "m", [(i, a)], [], "October 12, 2026", past)
     assert "Ran before" in seen["prompt"] and "already_in_a_previous_brief" in seen["prompt"] and "Low score" not in seen["prompt"]
-    assert "Trends to watch" in seen["system"]
+    assert "Key takeaways" in seen["system"] and "Trends to watch" in seen["system"]

@@ -27,76 +27,57 @@
     <h1 style="font-family:{{ display }};font-weight:400;font-size:32px;line-height:1.15;margin:14px 0 0;color:#000000;">{{ brief.subject }}</h1>
   </td></tr>
 
-  {#- Intro -#}
-  <tr><td style="background:#FFFFFF;padding:24px 28px 4px;font-family:{{ body }};font-size:16px;line-height:1.55;color:#000000;">{{ brief.intro }}</td></tr>
 
   {#- Reusable bits -#}
   {%- macro label(text, color="#42820F") -%}
   <div style="font-family:{{ body }};font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:{{ color }};line-height:1.4;">{{ text }}</div>
   {%- endmacro -%}
-  {%- macro part(number, title, note) -%}
+  {%- macro part(eyebrow, title, note) -%}
   <tr><td style="background:#FFFFFF;padding:36px 28px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="border-top:3px solid #000000;padding:12px 0 10px;border-bottom:1px solid #EBE7DF;">
-        {{ label(number) }}
+        {{ label(eyebrow) }}
         <div style="font-family:{{ display }};font-weight:400;font-size:24px;line-height:1.25;color:#000000;margin:4px 0 0;">{{ title }}</div>
         {%- if note %}<div style="font-family:{{ body }};font-size:13px;line-height:1.5;color:#5E5E5E;margin:4px 0 0;">{{ note }}</div>{% endif %}
       </td></tr>
     </table>
   </td></tr>
   {%- endmacro -%}
-  {%- macro update_tag(e) -%}
-  {%- if e.follow_up %}<span style="display:inline-block;background:#C7E263;color:#000000;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;vertical-align:middle;">Update</span> {% endif -%}
+  {%- macro chip(text) -%}
+  <span style="display:inline-block;background:#C7E263;color:#000000;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;vertical-align:middle;">{{ text }}</span>&nbsp;
   {%- endmacro -%}
-  {%- set top = brief.top or [] -%}
+  {%- macro tags(e) -%}
+  {%- for n in e.takeaways %}{{ chip("Takeaway " ~ n) }}{% endfor %}{% if e.follow_up %}{{ chip("Update") }}{% endif -%}
+  {%- endmacro -%}
+  {%- set takeaways = brief.takeaways or [] -%}
   {%- set trends = brief.trends or [] -%}
-  {%- set n = namespace(part=0) -%}
 
-  {#- In this issue -#}
-  <tr><td style="background:#FFFFFF;padding:20px 28px 4px;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FBF8F2;border:1px solid #EBE7DF;border-radius:3px;">
-      <tr><td style="padding:18px 20px 4px;">{{ label("In this issue", "#000000") }}</td></tr>
-      {%- if top %}
-      <tr><td style="padding:10px 20px 4px;">
-        {{ label("Top stories") }}
-        {%- for e in top %}<div style="font-family:{{ body }};font-size:13.5px;line-height:1.45;color:#000000;padding:4px 0 0 14px;text-indent:-10px;">&ndash;&nbsp;{{ e.headline }}</div>{% endfor %}
-      </td></tr>
-      {%- endif %}
-      {%- if trends %}
-      <tr><td style="padding:10px 20px 4px;">
-        {{ label("Trends to watch") }}
-        {%- for t in trends %}<div style="font-family:{{ body }};font-size:13.5px;line-height:1.45;color:#000000;padding:4px 0 0 14px;text-indent:-10px;">&ndash;&nbsp;{{ t.title }}</div>{% endfor %}
-      </td></tr>
-      {%- endif %}
-      {%- if sections %}
-      <tr><td style="padding:10px 20px 18px;">
-        {{ label("The week in brief") }}
-        <div style="font-family:{{ body }};font-size:13.5px;line-height:1.6;color:#000000;padding:4px 0 0;">
-          {%- for s in sections %}{{ s.title }} ({{ s.entries|length }}){% if not loop.last %} &middot; {% endif %}{% endfor %}
-        </div>
-      </td></tr>
-      {%- endif %}
+  {#- TOP HALF: the point in 30 seconds -#}
+  {%- if takeaways %}
+  <tr><td style="background:#FFFFFF;padding:28px 28px 4px;">
+    {{ label("Key takeaways", "#000000") }}
+    <div style="font-family:{{ body }};font-size:12.5px;color:#8C8C8C;margin:2px 0 6px;">The week in 30 seconds. The stories behind each point are below.</div>
+    {%- for t in takeaways %}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #EBE7DF;">
+      <tr>
+        <td width="34" valign="top" style="padding:14px 0 12px;">
+          <div style="width:24px;height:24px;line-height:24px;text-align:center;background:#C7E263;border-radius:3px;font-family:{{ body }};font-size:13px;font-weight:700;color:#000000;">{{ t.n }}</div>
+        </td>
+        <td valign="top" style="padding:14px 0 12px;font-family:{{ body }};color:#000000;">
+          <div style="font-size:16px;line-height:1.35;font-weight:700;">{{ t.lead }}</div>
+          <div style="font-size:14.5px;line-height:1.5;margin:4px 0 0;">{{ t.detail }}</div>
+          <div style="font-size:12px;line-height:1.5;margin:4px 0 0;">
+            {%- for st in t.stories %}<a href="{{ st.url }}" style="color:#42820F;text-decoration:none;font-weight:700;">{{ st.source }}&nbsp;&rarr;</a>{% if not loop.last %}&nbsp;&nbsp; {% endif %}{% endfor %}
+          </div>
+        </td>
+      </tr>
     </table>
+    {%- endfor %}
   </td></tr>
-
-  {#- 1. Top stories: the week's most consequential news, in full -#}
-  {%- if top %}
-  {%- set n.part = n.part + 1 %}
-  {{ part('%02d'|format(n.part) ~ " · " ~ top|length ~ (" story" if top|length == 1 else " stories"), "Top stories", "The week's most consequential news.") }}
-  {%- for e in top %}
-  <tr><td style="background:#FFFFFF;padding:20px 28px 0;">
-    {%- if e.section %}{{ label(e.section, "#8C8C8C") }}{% endif %}
-    <h2 style="font-family:{{ display }};font-weight:400;font-size:21px;line-height:1.28;margin:4px 0 6px;">{{ update_tag(e) }}<a href="{{ e.url }}" style="color:#000000;text-decoration:none;">{{ e.headline }}</a></h2>
-    <p style="font-family:{{ body }};font-size:15px;line-height:1.55;margin:0 0 6px;color:#000000;">{{ e.body }}</p>
-    <div style="font-family:{{ body }};font-size:12px;"><a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;">{{ e.source }} &rarr;</a></div>
-  </td></tr>
-  {%- endfor %}
   {%- endif %}
 
-  {#- 2. Trends to watch: patterns building across weeks, with the stories behind them -#}
   {%- if trends %}
-  {%- set n.part = n.part + 1 %}
-  {{ part('%02d'|format(n.part) ~ " · " ~ trends|length ~ (" trend" if trends|length == 1 else " trends"), "Trends to watch", "Patterns building across several weeks of coverage.") }}
+  {{ part(trends|length ~ (" trend" if trends|length == 1 else " trends") ~ " across recent weeks", "What's building", "Patterns that keep showing up, week after week.") }}
   {%- for t in trends %}
   <tr><td style="background:#FFFFFF;padding:20px 28px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FBF8F2;border-left:3px solid #C7E263;">
@@ -113,15 +94,26 @@
   {%- endfor %}
   {%- endif %}
 
-  {#- 3. The week in brief: everything else, one line each, by category -#}
+  {#- BOTTOM HALF: the news, by category -#}
   {%- if sections %}
-  {%- set n.part = n.part + 1 %}
-  {{ part('%02d'|format(n.part) ~ " · the rest of the week", "The week in brief", "") }}
+  {%- set ns = namespace(count=0) %}{% for s in sections %}{% set ns.count = ns.count + s.entries|length %}{% endfor %}
+  {{ part(ns.count ~ " stories", "The news", "") }}
+  <tr><td style="background:#FFFFFF;padding:10px 28px 0;font-family:{{ body }};font-size:12.5px;line-height:1.6;color:#5E5E5E;">
+    {%- for s in sections %}{{ s.title }} ({{ s.entries|length }}){% if not loop.last %} &middot; {% endif %}{% endfor %}
+  </td></tr>
   {%- for section in sections %}
-  <tr><td style="background:#FFFFFF;padding:20px 28px 0;">
-    {{ label(section.title) }}
+  <tr><td style="background:#FFFFFF;padding:24px 28px 0;">
+    <div style="border-bottom:1px solid #EBE7DF;padding-bottom:6px;">{{ label(section.title) }}</div>
     {%- for e in section.entries %}
-    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:8px 0 0;">{{ update_tag(e) }}<a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+    {%- if e.takeaways %}
+    <div style="padding:14px 0 2px;">
+      <div style="margin:0 0 4px;">{{ tags(e) }}</div>
+      <div style="font-family:{{ display }};font-weight:400;font-size:19px;line-height:1.3;margin:0 0 4px;"><a href="{{ e.url }}" style="color:#000000;text-decoration:none;">{{ e.headline }}</a></div>
+      <div style="font-family:{{ body }};font-size:14.5px;line-height:1.55;color:#000000;">{{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+    </div>
+    {%- else %}
+    <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;padding:12px 0 0;">{% if e.follow_up %}{{ chip("Update") }}{% endif %}<a href="{{ e.url }}" style="color:#000000;font-weight:700;text-decoration:none;">{{ e.headline }}{% if e.headline[-1:] not in '.?!' %}.{% endif %}</a> {{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a></div>
+    {%- endif %}
     {%- endfor %}
   </td></tr>
   {%- endfor %}
