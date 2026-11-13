@@ -13,6 +13,10 @@ on:
         description: "Only score past weeks in history/backfill/ into history/ (no draft)"
         type: boolean
         default: false
+      demo:
+        description: "Demo run: build a brief for a demo page only (no Mailchimp, no history, nothing on the public run page)"
+        type: boolean
+        default: false
       sample:
         description: "Sample run: full draft to Mailchimp, but don't save history (so Monday doesn't treat these stories as covered)"
         type: boolean
@@ -59,11 +63,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          MAILCHIMP_API_KEY: ${{ !inputs.demo && secrets.MAILCHIMP_API_KEY || '' }}
         run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Save history and archive
-        if: success() && !inputs.dry_run && !inputs.sample
+        if: success() && !inputs.dry_run && !inputs.sample && !inputs.demo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -73,7 +77,7 @@ jobs:
           git pull --rebase -q && git push -q
 
       - name: Show draft in run summary
-        if: always() && !inputs.backfill && !inputs.retag
+        if: always() && !inputs.backfill && !inputs.retag && !inputs.demo
         run: |
           f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
           # Run pages are public. Once Mailchimp has the draft, show only a pointer to it here.
@@ -121,8 +125,16 @@ jobs:
 
       # Artifacts on a public repo can be downloaded by anyone signed in to GitHub, so once
       # Mailchimp holds the draft, keep only source health and the delivery record here.
+      # Demo drafts are fetched and deleted right after the run; one day is a backstop.
       - uses: actions/upload-artifact@v7
-        if: always() && steps.delivery.outputs.in_mailchimp != 'true'
+        if: always() && inputs.demo
+        with:
+          name: donorbrief-demo-${{ github.run_number }}
+          path: drafts/
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v7
+        if: always() && !inputs.demo && steps.delivery.outputs.in_mailchimp != 'true'
         with:
           name: donorbrief-draft-${{ github.run_number }}
           path: drafts/
