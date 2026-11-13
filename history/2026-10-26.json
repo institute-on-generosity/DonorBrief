@@ -44,8 +44,8 @@
    "summary": "On September 23, 2026, a federal court in Texas v. Kennedy removed six HHS regulatory provisions on community-integration rights for people with disabilities, applying nationally. Advocates say nonprofits are mobilizing, and more than 8.4 million Medicaid beneficiaries received home- and community-based services in 2023.",
    "in_brief": false,
    "topics": [
-    "nonprofit-law-oversight",
-    "government-funding"
+    "government-funding",
+    "nonprofit-law-oversight"
    ],
    "emerging_topic": ""
   },
@@ -183,8 +183,8 @@
    "summary": "Several major foundations have recently and quietly wound down funding for social justice areas including immigration, LGBTQ+ rights, reproductive justice, and racial justice. The piece calls on the sector to organize a new path forward for sustaining social justice work.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy",
-    "equity-justice"
+    "equity-justice",
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -200,7 +200,7 @@
    "in_brief": false,
    "topics": [
     "payout-endowments",
-    "public-trust"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -231,8 +231,8 @@
    "summary": "A Chronicle of Philanthropy podcast features Daniel Stid of the American Enterprise Institute and Phil Buchanan of the Center for Effective Philanthropy debating whether philanthropic funding of national policy advocacy has deepened polarization. They also discuss the nonprofit sector's dependence on federal funding and the breakdown of the bipartisan consensus supporting it.",
    "in_brief": false,
    "topics": [
-    "democracy-civic-funding",
-    "public-trust"
+    "public-trust",
+    "generosity-common-ground"
    ],
    "emerging_topic": ""
   },
@@ -247,8 +247,7 @@
    "summary": "The Japan Times article discusses how AI-generated wealth could reshape philanthropy, referencing Carnegie and Claude. The item text contains no further detail.",
    "in_brief": false,
    "topics": [
-    "ai-and-philanthropy",
-    "major-gifts"
+    "ai-and-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -263,8 +262,7 @@
    "summary": "Inside Philanthropy reports on changes to Ford Foundation funding for nonprofits. The item text contains only the headline and source name, so the specific changes are not described.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy",
-    "trust-based-funding"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -296,7 +294,7 @@
    "in_brief": false,
    "topics": [
     "pooled-funds",
-    "equity-justice"
+    "women-in-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -312,7 +310,7 @@
    "in_brief": false,
    "topics": [
     "nonprofit-finances",
-    "impact-investing"
+    "fundraising-practice"
    ],
    "emerging_topic": ""
   },
@@ -327,8 +325,7 @@
    "summary": "Reports that direct mail revenue at the National Park Foundation grew from $17.4 million in 2024 to $28.25 million in the fiscal year ending September 30, accounting for more than half of its $48.7 million annual giving. Other fundraisers describe what is working in direct mail this year.",
    "in_brief": false,
    "topics": [
-    "fundraising-practice",
-    "giving-levels"
+    "fundraising-practice"
    ],
    "emerging_topic": ""
   },
@@ -386,7 +383,9 @@
    "section": "trends",
    "summary": "Sparklight has opened a Fall 2026 Charitable Giving Fund for nonprofits in 24 states. The item text gives no further details.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "corporate-giving"
+   ],
    "emerging_topic": ""
   },
   {
@@ -431,7 +430,7 @@
    "in_brief": false,
    "topics": [
     "giving-tech",
-    "charitable-tax-policy"
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -478,7 +477,7 @@
    "in_brief": false,
    "topics": [
     "major-gifts",
-    "foundation-strategy"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -493,8 +492,7 @@
    "summary": "Alliance magazine reports a shift in Australian philanthropy, with international giving becoming easier to sell. The item text contains no further detail.",
    "in_brief": false,
    "topics": [
-    "global-development",
-    "giving-levels"
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -510,7 +508,7 @@
    "in_brief": false,
    "topics": [
     "impact-investing",
-    "foundation-strategy"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -604,7 +602,7 @@
    "in_brief": false,
    "topics": [
     "democracy-civic-funding",
-    "trust-based-funding"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -619,10 +617,9 @@
    "summary": "An essay argues the nonprofit sector's data systems and language assume people belong to exactly one racial group. It cites 34 million Multiracial people in the US, a 276 percent increase between 2010 and 2020.",
    "in_brief": false,
    "topics": [
-    "equity-justice",
-    "giving-data"
+    "equity-justice"
    ],
-   "emerging_topic": ""
+   "emerging_topic": "Multiracial data inclusion"
   },
   {
    "id": "eebe1cfc39",
@@ -635,7 +632,7 @@
    "summary": "Cites a GoFundMe examination of platform donors and says a high share of people who find a charity through social media are likely to donate, often for the first time. The item is a short excerpt that is truncated.",
    "in_brief": false,
    "topics": [
-    "fundraising-practice",
+    "democratizing-giving",
     "giving-tech"
    ],
    "emerging_topic": ""
@@ -650,7 +647,10 @@
    "section": "research",
    "summary": "Describes how Portland's Coalition of Communities of Color gathered resident input after the 2021 heat dome, which killed nearly 100 Oregonians. Residents' values became the HEART Standards, a community-developed framework for building policy.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "climate-philanthropy",
+    "pooled-funds"
+   ],
    "emerging_topic": ""
   },
   {
@@ -664,8 +664,8 @@
    "summary": "An opinion piece argues that funders should describe concrete impacts instead of calling gifts transformational. It notes that declining trust in philanthropy and government retreat increase reliance on private wealth.",
    "in_brief": false,
    "topics": [
-    "public-trust",
-    "fundraising-practice"
+    "strategic-giving",
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -712,8 +712,7 @@
    "summary": "SEI wants charitable giving to return inside the wealth relationship, according to the item title. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "donor-advised-funds",
-    "wealth-transfer"
+    "donor-advised-funds"
    ],
    "emerging_topic": ""
   },
@@ -743,7 +742,9 @@
    "section": "sector",
    "summary": "Alliance magazine published an article titled Global philanthropy: Finding courage and resilience. The item text contains only the headline and source.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "global-development"
+   ],
    "emerging_topic": ""
   },
   {
@@ -802,7 +803,8 @@
    "summary": "Alliance magazine argues that Gaza's humanitarian crisis exposes fault lines in the global philanthropy and aid system. The item text contains only the headline and source.",
    "in_brief": false,
    "topics": [
-    "global-development"
+    "global-development",
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -816,7 +818,9 @@
    "section": "trends",
    "summary": "Russell Wilson and Ciara discuss the childhood experiences behind their philanthropy, and their foundation has invested over $10 million to help children. The item text contains only the headline and source name.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "giving-levels"
+   ],
    "emerging_topic": ""
   },
   {
@@ -829,10 +833,7 @@
    "section": "policy",
    "summary": "HR 1582, the Volunteer Driver Tax Appreciation Act of 2025, was referred to the House Ways and Means Committee in February 2025. The item text gives no further details.",
    "in_brief": false,
-   "topics": [
-    "volunteering-civic",
-    "charitable-tax-policy"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -846,8 +847,7 @@
    "summary": "Offers fundraising tips on donor retention and monthly giving programs. It cites Fundraising Effectiveness Project data showing 18 percent donor retention as of 2026.",
    "in_brief": false,
    "topics": [
-    "fundraising-practice",
-    "giving-levels"
+    "fundraising-practice"
    ],
    "emerging_topic": ""
   },
@@ -875,8 +875,8 @@
    "summary": "A CEP blog post by Mia Reilly of Tara Health Foundation describes grantee calls for peer funders to organize and change how philanthropy operates. The excerpt is truncated.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy",
-    "pooled-funds"
+    "pooled-funds",
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -1054,7 +1054,9 @@
    "section": "trends",
    "summary": "La Jolla Institute celebrated philanthropy leaders and announced a $55 million fundraising campaign. The item text contains only the headline and source.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "fundraising-practice"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1082,7 +1084,9 @@
    "section": "trends",
    "summary": "Duke Health reports on the impact of record-breaking philanthropy. The item text provides no specific figures or details.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "fundraising-practice"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1096,8 +1100,8 @@
    "summary": "Alliance magazine discusses difficult choices for philanthropy around acting and collaborating to transcend neutrality. The item text contains no further detail.",
    "in_brief": false,
    "topics": [
-    "public-trust",
-    "foundation-strategy"
+    "foundation-strategy",
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -1126,9 +1130,7 @@
    "section": "sector",
    "summary": "eJewishPhilanthropy reports that philanthropists are monitoring the Israeli election and waiting to see the next coalition and its priorities. The item text contains no further detail.",
    "in_brief": false,
-   "topics": [
-    "global-development"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -1142,6 +1144,7 @@
    "summary": "Alliance magazine argues that philanthropy's value goes beyond funding in an era of transition. The item text contains no further detail.",
    "in_brief": false,
    "topics": [
+    "strategic-giving",
     "foundation-strategy"
    ],
    "emerging_topic": ""
@@ -1156,7 +1159,10 @@
    "section": "sector",
    "summary": "Alliance magazine asks whether Australia's philanthropy challenge is primarily about philanthropy or about belonging. The item text contains only the headline and source.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "democratizing-giving",
+    "public-trust"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1183,7 +1189,7 @@
    "summary": "Alliance magazine reports on a global gathering that calls on philanthropy to take action. The item text gives no further details about the gathering.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy"
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -1200,7 +1206,7 @@
    "topics": [
     "major-gifts"
    ],
-   "emerging_topic": "patriotic philanthropy"
+   "emerging_topic": ""
   },
   {
    "id": "cc67a6d01f",
@@ -1212,7 +1218,9 @@
    "section": "policy",
    "summary": "HCONRES 4 expresses the sense of Congress that tax-exempt fraternal benefit societies provide critical benefits. The latest action was referral to the House Committee on Ways and Means in January 2025.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "charitable-tax-policy"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1225,7 +1233,9 @@
    "section": "policy",
    "summary": "SRES 845 designates September 2026 as National Child Awareness Month and was agreed to by unanimous consent. The latest action is dated August 2026.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "giving-levels"
+   ],
    "emerging_topic": ""
   }
  ]

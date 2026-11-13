@@ -28,8 +28,8 @@
    "summary": "Fidelity Charitable and other giving platforms have paused gifts to the SPLC, which faces a federal indictment, and critics are urging Fidelity to resume donations before trial.",
    "in_brief": false,
    "topics": [
-    "donor-advised-funds",
-    "public-trust"
+    "giving-tech",
+    "nonprofit-law-oversight"
    ],
    "emerging_topic": ""
   },
@@ -44,8 +44,8 @@
    "summary": "A settlement will send $950 million from the Alfred I. duPont trust to a new foundation for Delaware's children, ending a decades-long donor intent dispute.",
    "in_brief": false,
    "topics": [
-    "nonprofit-law-oversight",
-    "foundation-strategy"
+    "foundation-strategy",
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -92,8 +92,7 @@
    "summary": "John Paulson made a record $250 million gift to Hebrew University, described as a show of solidarity with Israel.",
    "in_brief": false,
    "topics": [
-    "major-gifts",
-    "education-philanthropy"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -108,8 +107,7 @@
    "summary": "Philanthropist John Paulson and his wife Alina have given $250 million to a university, and the campus will carry their names. The gift is described as historic for the campus.",
    "in_brief": false,
    "topics": [
-    "major-gifts",
-    "education-philanthropy"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -125,7 +123,7 @@
    "in_brief": false,
    "topics": [
     "major-gifts",
-    "fundraising-practice"
+    "community-foundations"
    ],
    "emerging_topic": ""
   },
@@ -173,7 +171,7 @@
    "in_brief": false,
    "topics": [
     "major-gifts",
-    "giving-data"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -189,7 +187,7 @@
    "in_brief": false,
    "topics": [
     "public-trust",
-    "fundraising-practice"
+    "nonprofit-law-oversight"
    ],
    "emerging_topic": ""
   },
@@ -205,7 +203,7 @@
    "in_brief": false,
    "topics": [
     "major-gifts",
-    "giving-data"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -220,10 +218,10 @@
    "summary": "Philanthropist Olivia Walton is investing $100 million with the goal of halving the U.S. maternal mortality rate within five years. The item is a short headline-style listing from Fortune.",
    "in_brief": false,
    "topics": [
-    "major-gifts",
+    "strategic-giving",
     "global-development"
    ],
-   "emerging_topic": "maternal health philanthropy"
+   "emerging_topic": ""
   },
   {
    "id": "2860eaa538",
@@ -236,8 +234,8 @@
    "summary": "The Real News Network reports on what it calls Trump's war on philanthropy and describes a donor network fighting back. The text provides no further detail.",
    "in_brief": false,
    "topics": [
-    "public-trust",
-    "democracy-civic-funding"
+    "democracy-civic-funding",
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -284,8 +282,8 @@
    "summary": "The U.S. government gives other nations about US$68 billion in foreign assistance annually, and USAID distributes much of it through local partners. The piece discusses how nonprofits abroad can fill gaps as the U.S. cuts off foreign aid.",
    "in_brief": false,
    "topics": [
-    "global-development",
-    "government-funding"
+    "government-funding",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -434,8 +432,7 @@
    "summary": "The Economist describes Elon Musk's foundation as opaque, miserly and self-serving. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "public-trust",
-    "foundation-strategy"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -450,7 +447,8 @@
    "summary": "Global philanthropist Len Blavatnik has made a $15 million gift intended to expand opportunities for the next generation of foreign policy leaders.",
    "in_brief": false,
    "topics": [
-    "major-gifts"
+    "major-gifts",
+    "philanthropy-education"
    ],
    "emerging_topic": ""
   },
@@ -465,8 +463,7 @@
    "summary": "The World Bank and philanthropy are joining forces, according to Devex. The item is a headline without further detail.",
    "in_brief": false,
    "topics": [
-    "global-development",
-    "pooled-funds"
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -481,8 +478,7 @@
    "summary": "Fortune reports that Susan Dell runs the operations of the Dell family's $10 billion giving. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "major-gifts",
-    "wealth-transfer"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -513,7 +509,8 @@
    "summary": "Cargill's philanthropy is expanding its grantmaking beyond the Twin Cities. The item text provides no further details.",
    "in_brief": false,
    "topics": [
-    "corporate-giving"
+    "corporate-giving",
+    "community-foundations"
    ],
    "emerging_topic": ""
   },
@@ -591,8 +588,8 @@
    "summary": "Saulo Araujo of Grassroots International writes that philanthropy faces one of its deepest crises and asks whether it will retract or show solidarity.",
    "in_brief": false,
    "topics": [
-    "equity-justice",
-    "global-development"
+    "global-development",
+    "equity-justice"
    ],
    "emerging_topic": ""
   },
@@ -622,7 +619,9 @@
    "section": "trends",
    "summary": "A Singapore Economic Development Board item focuses on designing giving to maximize impact, with a focus on donor-advised funds. The item text gives no further details.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "donor-advised-funds"
+   ],
    "emerging_topic": ""
   },
   {
@@ -652,7 +651,7 @@
    "in_brief": false,
    "topics": [
     "fundraising-practice",
-    "wealth-transfer"
+    "charitable-tax-policy"
    ],
    "emerging_topic": ""
   },
@@ -668,7 +667,7 @@
    "in_brief": false,
    "topics": [
     "corporate-giving",
-    "public-trust"
+    "generosity-common-ground"
    ],
    "emerging_topic": ""
   },
@@ -683,7 +682,8 @@
    "summary": "According to the JGive founder, Israelis and Diaspora Jews are donating more since Oct. 7. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "giving-levels"
+    "giving-levels",
+    "giving-tech"
    ],
    "emerging_topic": ""
   },
@@ -698,8 +698,7 @@
    "summary": "A 74-year-old retiree gives his church $15,000 a year and could use an IRA rule to keep more of his money. The item text does not name the rule.",
    "in_brief": false,
    "topics": [
-    "religious-giving",
-    "wealth-transfer"
+    "religious-giving"
    ],
    "emerging_topic": ""
   },
@@ -728,7 +727,9 @@
    "section": "sector",
    "summary": "An article says Montreal faces a giving challenge just as needs are growing. The item text gives no specifics.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "giving-levels"
+   ],
    "emerging_topic": ""
   },
   {
@@ -742,8 +743,7 @@
    "summary": "An Economist writer investigated Elon Musk's charitable avatar and reported findings. The item text does not state them.",
    "in_brief": false,
    "topics": [
-    "public-trust",
-    "major-gifts"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -758,8 +758,8 @@
    "summary": "World Bank Group argues that private philanthropy can unlock public funds to scale what works. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "global-development",
-    "impact-investing"
+    "strategic-giving",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -820,7 +820,7 @@
    "in_brief": false,
    "topics": [
     "foundation-strategy",
-    "pooled-funds"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -897,7 +897,8 @@
    "summary": "Jessyca Dudley, founder of Bold Ventures, argues that generosity and reciprocity should be distinguished in philanthropy, especially for those holding resources.",
    "in_brief": false,
    "topics": [
-    "generosity-research"
+    "generosity-research",
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -1020,7 +1021,8 @@
    "summary": "Range Bank is putting $10,000 in charitable giving up to a community vote. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "pooled-funds"
+    "pooled-funds",
+    "corporate-giving"
    ],
    "emerging_topic": ""
   },
@@ -1035,8 +1037,7 @@
    "summary": "Carrier is uniting charitable giving and employee volunteerism to help address hunger. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "corporate-giving",
-    "volunteering-civic"
+    "corporate-giving"
    ],
    "emerging_topic": ""
   },
@@ -1081,7 +1082,8 @@
    "summary": "A Robert Wood Johnson Foundation piece offers three ways philanthropy can support Black women social justice leaders. The item text does not list them.",
    "in_brief": false,
    "topics": [
-    "equity-justice"
+    "equity-justice",
+    "women-in-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -1096,7 +1098,8 @@
    "summary": "Nonprofit Quarterly published an article titled 'When Women Change the Rules: Rethinking Power in Philanthropy.' The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "public-trust"
+    "women-in-philanthropy",
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -1111,7 +1114,8 @@
    "summary": "USC Price School examines how Los Angeles philanthropy evolved and responded to crises over the past 25 years. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "community-foundations"
+    "community-foundations",
+    "giving-data"
    ],
    "emerging_topic": ""
   },
@@ -1126,8 +1130,8 @@
    "summary": "Devex reports on how Asian philanthropy is helping to grow investment. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "global-development",
-    "impact-investing"
+    "impact-investing",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -1142,7 +1146,7 @@
    "summary": "A foundation named for Wesley LePatner aims to develop 1,000 leaders in work, civic life, and philanthropy, according to Fortune.",
    "in_brief": false,
    "topics": [
-    "volunteering-civic"
+    "philanthropy-education"
    ],
    "emerging_topic": ""
   },
@@ -1157,7 +1161,7 @@
    "summary": "The Center Square reports on a wealth-building nonprofit that is building the founder's family wealth. The item is a headline without further detail.",
    "in_brief": false,
    "topics": [
-    "nonprofit-law-oversight"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -1210,7 +1214,9 @@
    "section": "sector",
    "summary": "Real estate executive and philanthropist Abe Mitchell has died at age 91, according to the Lagniappe Daily item. The item text provides no further details about his giving.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "major-gifts"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1223,7 +1229,9 @@
    "section": "trends",
    "summary": "An opinion piece argues that Israel's border communities need long-term philanthropy after October 7. The item text is only the title and source.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "global-development"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1236,7 +1244,9 @@
    "section": "sector",
    "summary": "Abe Mitchell, a Mobile business leader and philanthropist, has died at age 91, according to AL.com. The item text provides no further details.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "major-gifts"
+   ],
    "emerging_topic": ""
   }
  ]

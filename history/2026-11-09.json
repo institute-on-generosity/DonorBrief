@@ -27,8 +27,9 @@
    "summary": "Candid reports that U.S. foundations' global giving was steady, with surprises from donor-advised funds. The item text is only the headline.",
    "in_brief": true,
    "topics": [
-    "global-development",
-    "donor-advised-funds"
+    "giving-data",
+    "donor-advised-funds",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -43,8 +44,8 @@
    "summary": "The San Francisco Foundation reports that Anthropic commits $50 million to Bay Area philanthropy as it seeks a $1.4 trillion valuation. The item text contains only the headline.",
    "in_brief": true,
    "topics": [
-    "ai-and-philanthropy",
-    "community-foundations"
+    "major-gifts",
+    "ai-and-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -91,8 +92,7 @@
    "summary": "Press Forward has completed nearly $600 million in journalism investments about two years ahead of schedule.",
    "in_brief": true,
    "topics": [
-    "pooled-funds",
-    "public-trust"
+    "pooled-funds"
    ],
    "emerging_topic": "local journalism funding"
   },
@@ -137,8 +137,8 @@
    "summary": "H.R. 1013, the Retirement Fairness for Charities and Educational Institutions Act of 2025, was reported to the House via Rules Committee Resolution H. Res. 1650, which provides for one hour of general debate and closes the bill to amendments. The bill's content is not described in the item text.",
    "in_brief": true,
    "topics": [
-    "nonprofit-workforce",
-    "charitable-tax-policy"
+    "nonprofit-finances",
+    "nonprofit-workforce"
    ],
    "emerging_topic": ""
   },
@@ -199,7 +199,7 @@
    "in_brief": true,
    "topics": [
     "fundraising-practice",
-    "public-trust"
+    "generosity-common-ground"
    ],
    "emerging_topic": ""
   },
@@ -249,7 +249,7 @@
     "giving-data",
     "fundraising-practice"
    ],
-   "emerging_topic": "disaster philanthropy"
+   "emerging_topic": ""
   },
   {
    "id": "405cdb90a4",
@@ -262,7 +262,7 @@
    "summary": "An exploratory analysis examines public reach per founding dollar across 59 named philanthropic institutions. The text provides only the title and source.",
    "in_brief": true,
    "topics": [
-    "foundation-strategy",
+    "strategic-giving",
     "giving-data"
    ],
    "emerging_topic": ""
@@ -324,8 +324,8 @@
    "summary": "Bill Gates urged higher taxes on billionaires, saying philanthropy alone cannot be expected to address wealth inequality as AI widens the wealth gap. The item text includes no further specifics.",
    "in_brief": false,
    "topics": [
-    "charitable-tax-policy",
-    "public-trust"
+    "public-trust",
+    "charitable-tax-policy"
    ],
    "emerging_topic": ""
   },
@@ -357,7 +357,7 @@
    "in_brief": false,
    "topics": [
     "effective-giving",
-    "major-gifts"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -373,7 +373,7 @@
    "in_brief": false,
    "topics": [
     "ai-and-philanthropy",
-    "fundraising-practice"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -451,8 +451,7 @@
    "summary": "Devex argues that philanthropy should fund the preparatory work needed for cities' climate finance. The item text contains only the title and source.",
    "in_brief": false,
    "topics": [
-    "climate-philanthropy",
-    "global-development"
+    "climate-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -483,9 +482,9 @@
    "in_brief": false,
    "topics": [
     "giving-levels",
-    "giving-tech"
+    "fundraising-practice"
    ],
-   "emerging_topic": "stock-donations"
+   "emerging_topic": ""
   },
   {
    "id": "625f41e53d",
@@ -529,7 +528,7 @@
    "in_brief": false,
    "topics": [
     "ai-and-philanthropy",
-    "donor-advised-funds"
+    "corporate-giving"
    ],
    "emerging_topic": ""
   },
@@ -545,7 +544,7 @@
    "in_brief": false,
    "topics": [
     "foundation-strategy",
-    "community-foundations"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -560,8 +559,8 @@
    "summary": "GivingTuesday describes Gen Z giving and advises nonprofits to learn about younger audiences before its campaign, which is less than a month away. The excerpt is truncated.",
    "in_brief": false,
    "topics": [
-    "giving-levels",
-    "fundraising-practice"
+    "fundraising-practice",
+    "giving-levels"
    ],
    "emerging_topic": ""
   },
@@ -624,7 +623,7 @@
    "summary": "Tashia Morgridge, a UW-Madison donor and philanthropist, has died at age 93. The item is an obituary notice.",
    "in_brief": false,
    "topics": [
-    "wealth-transfer"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -639,7 +638,7 @@
    "summary": "An Alliance magazine piece examines how the Super El Ni\u00f1o is revealing lessons for philanthropy amid compound shocks. The text gives only the title and source.",
    "in_brief": false,
    "topics": [
-    "climate-philanthropy"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -654,7 +653,7 @@
    "summary": "An opinion piece argues that Jewish philanthropy should measure impact rather than dollars spent. The text gives only the title and source.",
    "in_brief": false,
    "topics": [
-    "effective-giving",
+    "strategic-giving",
     "religious-giving"
    ],
    "emerging_topic": ""
@@ -670,7 +669,7 @@
    "summary": "Tashia Morgridge, a major philanthropist tied to UW-Madison, has died at age 93. The item is a brief obituary headline with no further detail in the text.",
    "in_brief": false,
    "topics": [
-    "wealth-transfer"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -701,9 +700,10 @@
    "summary": "ThePrint reports that Indian American philanthropy is growing and argues it is about more than wealth. The text gives no further detail.",
    "in_brief": false,
    "topics": [
+    "generosity-research",
     "giving-levels"
    ],
-   "emerging_topic": "diaspora-philanthropy"
+   "emerging_topic": ""
   },
   {
    "id": "c7557c4b60",
@@ -717,7 +717,7 @@
    "in_brief": false,
    "topics": [
     "pooled-funds",
-    "community-foundations"
+    "women-in-philanthropy"
    ],
    "emerging_topic": ""
   },
@@ -764,8 +764,7 @@
    "summary": "Friends of the Ruidosa Church, a nonprofit, is working to preserve an 1915 adobe church near the Rio Grande in Ruidosa, Texas. The organization is a plaintiff in a lawsuit filed in April in federal district court challenging the government's use of legal waivers to speed border wall construction.",
    "in_brief": false,
    "topics": [
-    "nonprofit-law-oversight",
-    "equity-justice"
+    "nonprofit-law-oversight"
    ],
    "emerging_topic": ""
   },
@@ -780,8 +779,8 @@
    "summary": "The Southern Black Girls and Women's Consortium argues that philanthropy underinvests in Black women-led organizations. The piece says Black women and girls in the South receive less than one percent of the $4.8 billion in regional philanthropic investment.",
    "in_brief": false,
    "topics": [
-    "equity-justice",
-    "democracy-civic-funding"
+    "women-in-philanthropy",
+    "equity-justice"
    ],
    "emerging_topic": ""
   },
@@ -796,7 +795,8 @@
    "summary": "The article explains multisolving, which addresses several interconnected issues with one program, as a way for nonprofits to do more with less. It gives the example of Iskashitaa Refugee Network in Tucson, which harvests about 3,000 pounds of produce weekly and sells preserved goods to fund the program.",
    "in_brief": false,
    "topics": [
-    "nonprofit-finances"
+    "nonprofit-finances",
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -823,7 +823,9 @@
    "section": "none",
    "summary": "A Common Future co-CEO argues that economic power is part of democracy's infrastructure, following a midterm election. The excerpt is truncated.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "democracy-civic-funding"
+   ],
    "emerging_topic": ""
   },
   {
@@ -836,10 +838,7 @@
    "section": "policy",
    "summary": "NonProfit PRO discusses how AI laws may affect nonprofits' responsibilities for AI tools they did not build, including tools that influence hiring and service decisions.",
    "in_brief": false,
-   "topics": [
-    "ai-and-philanthropy",
-    "nonprofit-law-oversight"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -853,7 +852,8 @@
    "summary": "GivingTuesday profiles its new Belgium affiliate, launched after Isabel Penne learned of the network at a European Fundraising Association event. The article covers the first year.",
    "in_brief": false,
    "topics": [
-    "fundraising-practice"
+    "fundraising-practice",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -908,7 +908,9 @@
    "section": "none",
    "summary": "ABC News profiles Dolly Parton's decades of philanthropy. The item text contains only the headline.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "major-gifts"
+   ],
    "emerging_topic": ""
   },
   {
@@ -966,7 +968,8 @@
    "summary": "The UN Secretary-General issued a memorial message honoring Ted Turner and urging others to follow his example of big bets on humanity. The item text contains only the title and source.",
    "in_brief": false,
    "topics": [
-    "major-gifts"
+    "major-gifts",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -995,7 +998,9 @@
    "section": "sector",
    "summary": "Inside Philanthropy reports on a fund advocating for youth amid a social media reckoning. The text gives no further detail.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "foundation-strategy"
+   ],
    "emerging_topic": ""
   },
   {
@@ -1026,7 +1031,7 @@
    "in_brief": false,
    "topics": [
     "religious-giving",
-    "foundation-strategy"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -1071,7 +1076,9 @@
    "section": "sector",
    "summary": "A judge dismissed a case from Dolly Parton's manager alleging her nephew threatened her estate.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "wealth-transfer"
+   ],
    "emerging_topic": ""
   },
   {

@@ -124,8 +124,8 @@
    "summary": "National Philanthropic Trust has launched a \"Building the Next Era of Philanthropy\" initiative, framed around new donors reshaping charitable giving.",
    "in_brief": false,
    "topics": [
-    "donor-advised-funds",
-    "wealth-transfer"
+    "wealth-transfer",
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -141,7 +141,7 @@
    "in_brief": false,
    "topics": [
     "impact-investing",
-    "foundation-strategy"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -157,7 +157,7 @@
    "in_brief": false,
    "topics": [
     "pooled-funds",
-    "foundation-strategy"
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -172,8 +172,8 @@
    "summary": "A Chronicle tally shows that $266.5 million of $369.2 million in $1 million-plus gifts to democracy programs since 2006 was given from 2021 through 2025. Universities received most of these gifts, and the largest was $59 million to USC.",
    "in_brief": false,
    "topics": [
-    "democracy-civic-funding",
-    "major-gifts"
+    "major-gifts",
+    "democracy-civic-funding"
    ],
    "emerging_topic": ""
   },
@@ -235,7 +235,8 @@
    "summary": "Orlando Sentinel guest commentary argues that philanthropy cannot fill every gap that Amendment 3 would leave. The item text does not describe the amendment's contents.",
    "in_brief": false,
    "topics": [
-    "government-funding"
+    "government-funding",
+    "charitable-tax-policy"
    ],
    "emerging_topic": ""
   },
@@ -250,7 +251,8 @@
    "summary": "Wealth Management reports that Trump Accounts are becoming a new tool for wealthy giving. The item text gives no further detail on mechanics or amounts.",
    "in_brief": false,
    "topics": [
-    "wealth-transfer"
+    "wealth-transfer",
+    "donor-advised-funds"
    ],
    "emerging_topic": ""
   },
@@ -279,7 +281,9 @@
    "section": "policy",
    "summary": "The Whitman County Gazette reports that a donation cap could curtail philanthropy. The item text contains only the headline and source name, so the cap's details are unknown.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "charitable-tax-policy"
+   ],
    "emerging_topic": ""
   },
   {
@@ -310,7 +314,7 @@
    "in_brief": false,
    "topics": [
     "giving-tech",
-    "fundraising-practice"
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -326,7 +330,7 @@
    "in_brief": false,
    "topics": [
     "ai-and-philanthropy",
-    "equity-justice"
+    "effective-giving"
    ],
    "emerging_topic": ""
   },
@@ -342,7 +346,7 @@
    "in_brief": false,
    "topics": [
     "democracy-civic-funding",
-    "nonprofit-finances"
+    "fundraising-practice"
    ],
    "emerging_topic": ""
   },
@@ -373,7 +377,7 @@
    "in_brief": false,
    "topics": [
     "nonprofit-law-oversight",
-    "foundation-strategy"
+    "public-trust"
    ],
    "emerging_topic": ""
   },
@@ -388,6 +392,7 @@
    "summary": "The Southern Poverty Law Center published a piece titled 'Donors Should Decide. Financial Institutions Shouldn't.' The item text gives no further details.",
    "in_brief": false,
    "topics": [
+    "giving-tech",
     "public-trust"
    ],
    "emerging_topic": ""
@@ -402,9 +407,7 @@
    "section": "policy",
    "summary": "Franklin Templeton commentary discusses understanding the new tax rules for year-end charitable giving. The item text does not specify the rules.",
    "in_brief": false,
-   "topics": [
-    "charitable-tax-policy"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -417,7 +420,9 @@
    "section": "sector",
    "summary": "The Waqf Fund has published its first annual report, according to Press Release Hub.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "impact-investing"
+   ],
    "emerging_topic": ""
   },
   {
@@ -444,9 +449,10 @@
    "summary": "The Conference Board published work on a more deliberate approach to disaster philanthropy.",
    "in_brief": false,
    "topics": [
-    "fundraising-practice"
+    "strategic-giving",
+    "global-development"
    ],
-   "emerging_topic": "disaster philanthropy"
+   "emerging_topic": ""
   },
   {
    "id": "c6fcab4848",
@@ -476,7 +482,7 @@
    "in_brief": false,
    "topics": [
     "equity-justice",
-    "public-trust"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -507,7 +513,8 @@
    "summary": "Rest of World, a publication backed by philanthropy, will stop publishing, according to Alliance magazine. The item text gives no further reasons or details.",
    "in_brief": false,
    "topics": [
-    "nonprofit-finances"
+    "nonprofit-finances",
+    "global-development"
    ],
    "emerging_topic": ""
   },
@@ -522,8 +529,8 @@
    "summary": "The Circle News reports on a new report highlighting Native youth leadership in philanthropy. The item text gives no further findings.",
    "in_brief": false,
    "topics": [
-    "equity-justice",
-    "wealth-transfer"
+    "philanthropy-education",
+    "equity-justice"
    ],
    "emerging_topic": ""
   },
@@ -539,7 +546,7 @@
    "in_brief": false,
    "topics": [
     "charitable-tax-policy",
-    "giving-tech"
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -570,7 +577,8 @@
    "summary": "The Rockefeller Foundation's All In for Jobs initiative aims to mobilize $1 billion and connect 500,000 Americans to good jobs. The item text contains only the headline and source name.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy"
+    "foundation-strategy",
+    "nonprofit-workforce"
    ],
    "emerging_topic": ""
   },
@@ -585,7 +593,8 @@
    "summary": "Inside Philanthropy discusses changes to Ford Foundation funding for nonprofits. The item text contains only the headline and source name.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy"
+    "foundation-strategy",
+    "trust-based-funding"
    ],
    "emerging_topic": ""
   },
@@ -599,7 +608,9 @@
    "section": "sector",
    "summary": "An essay argues nonprofits often fail to recognize volunteers who offer wisdom beyond assigned tasks, distinguishing laborers from wisdom workers. It uses a personal example of a retired volunteer who identified misuse of restricted funds.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "volunteering-civic"
+   ],
    "emerging_topic": ""
   },
   {
@@ -626,9 +637,9 @@
    "summary": "A blog post argues that listening-based methods such as customer satisfaction scores and Net Promoter Score should be taken seriously alongside outcome measurement. It says a hierarchy wrongly ranks listening below randomized trials.",
    "in_brief": false,
    "topics": [
-    "effective-giving"
+    "strategic-giving"
    ],
-   "emerging_topic": "evidence hierarchies in nonprofit evaluation"
+   "emerging_topic": ""
   },
   {
    "id": "cd110beade",
@@ -657,7 +668,7 @@
    "in_brief": false,
    "topics": [
     "impact-investing",
-    "foundation-strategy"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -689,7 +700,7 @@
    "in_brief": false,
    "topics": [
     "nonprofit-law-oversight",
-    "government-funding"
+    "charitable-tax-policy"
    ],
    "emerging_topic": ""
   },
@@ -704,8 +715,7 @@
    "summary": "Sparklight opened a Fall 2026 Charitable Giving Fund for nonprofits across 24 states. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "giving-tech",
-    "community-foundations"
+    "giving-tech"
    ],
    "emerging_topic": ""
   },
@@ -762,7 +772,9 @@
    "section": "trends",
    "summary": "The Levi Community Foundation has announced a new Garland County Giving Guide to support area nonprofits.",
    "in_brief": false,
-   "topics": [],
+   "topics": [
+    "community-foundations"
+   ],
    "emerging_topic": ""
   },
   {
@@ -805,8 +817,7 @@
    "summary": "Alliance magazine published an article on difficult choices for philanthropy and collaboration to transcend neutrality.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy",
-    "pooled-funds"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   },
@@ -850,7 +861,7 @@
    "in_brief": false,
    "topics": [
     "public-trust",
-    "nonprofit-workforce"
+    "nonprofit-law-oversight"
    ],
    "emerging_topic": ""
   },
@@ -865,8 +876,7 @@
    "summary": "Ballmer's philanthropy has committed to fund 10,000 affordable housing units in Washington state, according to News From The States. The item text gives no further detail on funding amounts or timing.",
    "in_brief": false,
    "topics": [
-    "major-gifts",
-    "community-foundations"
+    "major-gifts"
    ],
    "emerging_topic": ""
   },
@@ -896,9 +906,7 @@
    "section": "none",
    "summary": "An interview-based piece with author Maryam Abdul-Kareem discusses Black Muslim history and what Black Muslim traditions can offer to liberatory movements and philanthropy. It covers 1521 and 1526 historical events involving enslaved Muslims.",
    "in_brief": false,
-   "topics": [
-    "equity-justice"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -927,9 +935,7 @@
    "section": "none",
    "summary": "A blog post describes how Portland residents' input after a 2021 heat wave shaped the community-developed HEART Standards used in building and climate policy. It highlights community data in policy design.",
    "in_brief": false,
-   "topics": [
-    "climate-philanthropy"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -955,9 +961,7 @@
    "section": "none",
    "summary": "The San Diego Foundation article covers bunching charitable donations to maximize tax deductions. The item text gives no further details.",
    "in_brief": false,
-   "topics": [
-    "charitable-tax-policy"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -970,10 +974,7 @@
    "section": "none",
    "summary": "A Community Foundation shares tips to optimize year-end charitable giving and tax deductions. The item text gives no further details.",
    "in_brief": false,
-   "topics": [
-    "charitable-tax-policy",
-    "community-foundations"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -987,8 +988,7 @@
    "summary": "The Jewish Link article discusses charitable vehicles beyond the donor-advised fund. The item text gives no further details.",
    "in_brief": false,
    "topics": [
-    "donor-advised-funds",
-    "wealth-transfer"
+    "donor-advised-funds"
    ],
    "emerging_topic": ""
   },
@@ -1015,9 +1015,7 @@
    "section": "trends",
    "summary": "A donor-advised fund received 91,400 shares from the trust of CBIZ CEO Grisko, per Stock Titan.",
    "in_brief": false,
-   "topics": [
-    "donor-advised-funds"
-   ],
+   "topics": [],
    "emerging_topic": ""
   },
   {
@@ -1044,7 +1042,7 @@
    "summary": "Candid published commentary on intentional, meaningful philanthropy that bridges strategy and humility.",
    "in_brief": false,
    "topics": [
-    "foundation-strategy"
+    "strategic-giving"
    ],
    "emerging_topic": ""
   },
@@ -1075,8 +1073,8 @@
    "summary": "Forbes article on what separates generous families from effective ones in philanthropy.",
    "in_brief": false,
    "topics": [
-    "wealth-transfer",
-    "generosity-research"
+    "strategic-giving",
+    "wealth-transfer"
    ],
    "emerging_topic": ""
   },
@@ -1120,7 +1118,7 @@
    "in_brief": false,
    "topics": [
     "major-gifts",
-    "giving-levels"
+    "democratizing-giving"
    ],
    "emerging_topic": ""
   },
@@ -1135,8 +1133,7 @@
    "summary": "A former Inforum CEO will lead the Council of Michigan Foundations. The item text contains only the headline and source name.",
    "in_brief": false,
    "topics": [
-    "nonprofit-workforce",
-    "community-foundations"
+    "foundation-strategy"
    ],
    "emerging_topic": ""
   }
