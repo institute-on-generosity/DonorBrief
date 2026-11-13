@@ -84,9 +84,9 @@ def test_redact_hides_api_keys(monkeypatch):
 
 def test_pick_top_filters_and_sorts():
     items = [item("A", "https://e.org/a"), item("B", "https://e.org/b"), item("C", "https://e.org/c")]
-    a = [llm.ItemAssessment(id=items[0].id, relevance=7, section="sector", summary="", why_it_matters=""),
-         llm.ItemAssessment(id=items[1].id, relevance=9, section="policy", summary="", why_it_matters=""),
-         llm.ItemAssessment(id=items[2].id, relevance=9, section="none", summary="", why_it_matters="")]
+    a = [llm.ItemAssessment(id=items[0].id, relevance=7, section="sector", summary="", why_it_matters="", topics=[], emerging_topic=""),
+         llm.ItemAssessment(id=items[1].id, relevance=9, section="policy", summary="", why_it_matters="", topics=[], emerging_topic=""),
+         llm.ItemAssessment(id=items[2].id, relevance=9, section="none", summary="", why_it_matters="", topics=[], emerging_topic="")]
     picked = llm.pick_top(items, a, min_relevance=6, limit=5)
     assert [i.title for i, _ in picked] == ["B", "A"]
 
@@ -114,7 +114,7 @@ def test_eval_scoring_counts_misses_sections_and_leaks():
     from donorbrief.evaluate import score
     items = [item("Keep", "https://e.org/k"), item("Unsure", "https://e.org/u"), item("Noise", "https://e.org/n")]
     keep, unsure, noise = (i.id for i in items)
-    a = lambda i, rel, sec: llm.ItemAssessment(id=i, relevance=rel, section=sec, summary="", why_it_matters="")
+    a = lambda i, rel, sec: llm.ItemAssessment(id=i, relevance=rel, section=sec, summary="", why_it_matters="", topics=[], emerging_topic="")
     result = score(items, [a(keep, 8, "research"), a(unsure, 7, "sector"), a(noise, 9, "sector")],
                    include={keep: ["policy"]}, maybe={unsure}, min_relevance=6, limit=20)
     assert result["include_recall"] == 1.0
@@ -218,7 +218,7 @@ def test_trends_need_three_stories_over_two_weeks():
 def test_history_records_and_dedupes_across_weeks(tmp_path):
     from donorbrief import history
     a, b = item("Story A", "https://e.org/a"), item("Story B", "https://e.org/b")
-    asmt = lambda i, rel: llm.ItemAssessment(id=i.id, relevance=rel, section="sector", summary="s", why_it_matters="w")
+    asmt = lambda i, rel: llm.ItemAssessment(id=i.id, relevance=rel, section="sector", summary="s", why_it_matters="w", topics=[], emerging_topic="")
     history.record(tmp_path, "2026-10-05", [a, b], [asmt(a, 8), asmt(b, 2)], {a.id})
     history.record(tmp_path, "2026-10-12", [a, b], [asmt(a, 8), asmt(b, 7)])
     history.record(tmp_path, "2026-10-19", [b], [asmt(b, 9)])
@@ -234,7 +234,7 @@ def test_history_weeks_are_labeled_by_monday_and_keep_brief_marks(tmp_path):
     from donorbrief import history
     assert history.week_label(date(2026, 11, 10)) == "2026-11-09" == history.week_label(date(2026, 11, 9))
     a = item("Story A", "https://e.org/a")
-    asmt = llm.ItemAssessment(id=a.id, relevance=8, section="sector", summary="s", why_it_matters="w")
+    asmt = llm.ItemAssessment(id=a.id, relevance=8, section="sector", summary="s", why_it_matters="w", topics=[], emerging_topic="")
     history.record(tmp_path, "2026-10-05", [a], [asmt])
     history.record(tmp_path, "2026-10-12", [a], [asmt], {a.id})   # ran in the brief the second week
     weeks = history.load_recent(tmp_path, before="2026-10-19")
@@ -250,10 +250,58 @@ def test_compose_shows_earlier_weeks_to_the_editor():
             return brief()
 
     i = item("Now", "https://e.org/now")
-    a = llm.ItemAssessment(id=i.id, relevance=8, section="sector", summary="s", why_it_matters="w")
+    a = llm.ItemAssessment(id=i.id, relevance=8, section="sector", summary="s", why_it_matters="w", topics=[], emerging_topic="")
     past = [{"week": "2026-10-05", "items": [
         {"id": "old1", "title": "Ran before", "url": "u", "source": "S", "section": "sector", "summary": "x", "relevance": 8, "in_brief": True},
         {"id": "old2", "title": "Low score", "url": "u", "source": "S", "section": "sector", "summary": "x", "relevance": 4, "in_brief": False}]}]
     llm.compose(Fake(), "m", [(i, a)], [], "October 12, 2026", past)
     assert "Ran before" in seen["prompt"] and "already_in_a_previous_brief" in seen["prompt"] and "Low score" not in seen["prompt"]
     assert "Key takeaways" in seen["system"] and "Trends to watch" in seen["system"]
+
+
+def test_triage_keeps_only_known_topics_and_history_saves_them(tmp_path):
+    from donorbrief import history
+    i = item("DAF rules", "https://e.org/daf")
+    topics = [{"id": "donor-advised-funds", "description": "DAFs"}, {"id": "charitable-tax-policy", "description": "tax"}]
+    seen = {}
+
+    class Fake:
+        def structured(self, model, system, prompt, schema, effort):
+            seen["system"] = system
+            return llm.TriageResult(items=[llm.ItemAssessment(
+                id=i.id, relevance=8, section="policy", summary="s", why_it_matters="w",
+                topics=["donor-advised-funds", "made-up", "donor-advised-funds", "charitable-tax-policy"],
+                emerging_topic="  DAF payout rules  ")])
+
+    (a,) = llm.triage(Fake(), "m", [i], [], topics)
+    assert a.topics == ["donor-advised-funds", "charitable-tax-policy"] and a.emerging_topic == "DAF payout rules"
+    assert "donor-advised-funds: DAFs" in seen["system"] and "secondary interests" in seen["system"]
+    history.record(tmp_path, "2026-10-12", [i], [a])
+    saved = history.load_recent(tmp_path, before="2026-10-19")[0]["items"][0]
+    assert saved["topics"] == ["donor-advised-funds", "charitable-tax-policy"] and saved["emerging_topic"] == "DAF payout rules"
+
+
+def test_retag_adds_topics_to_old_history_without_changing_scores(tmp_path, monkeypatch):
+    import json
+    from donorbrief import history
+    old = {"week": "2026-10-05", "items": [{"id": item("A", "https://e.org/a").id, "title": "A", "url": "https://e.org/a",
+                                           "source": "S", "relevance": 7, "section": "sector", "summary": "s", "in_brief": False}]}
+    (tmp_path / "2026-10-05.json").write_text(json.dumps(old))
+
+    class Fake:
+        def structured(self, model, system, prompt, schema, effort):
+            ids = [d["id"] for d in json.loads(prompt.split("\n\n", 1)[1])]
+            return llm.TriageResult(items=[llm.ItemAssessment(id=x, relevance=2, section="none", summary="new", why_it_matters="",
+                                                              topics=["giving-data"], emerging_topic="") for x in ids])
+
+    monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
+    history.retag(tmp_path, {"llm": {"provider": "x", "triage_model": "m"}, "sections": []}, [{"id": "giving-data", "description": "d"}])
+    saved = json.loads((tmp_path / "2026-10-05.json").read_text())["items"][0]
+    assert saved["topics"] == ["giving-data"] and saved["relevance"] == 7 and saved["summary"] == "s"
+
+
+def test_topics_config_is_valid():
+    from pathlib import Path
+    topics = llm.load_topics(Path(__file__).resolve().parent.parent / "config" / "topics.yaml")
+    ids = [t["id"] for t in topics]
+    assert len(ids) == len(set(ids)) >= 20 and all(t["description"] for t in topics)

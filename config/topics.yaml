@@ -1,0 +1,83 @@
+# Topic tags for DonorBrief.
+# Every screened story gets 1-3 of these, saved in history/, so themes can be counted the same
+# way month after month (a fixed list keeps "DAF scrutiny" and "donor-advised fund reform" from
+# being counted as two different things).
+#
+# IoG can add tags. Avoid renaming or removing existing ones: past weeks keep their old tags.
+# Stories that fit no tag well get an "emerging topic" suggestion instead, which is saved too;
+# review those now and then for tags worth adding.
+
+topics:
+  # Giving and donors
+  - id: major-gifts
+    description: Very large gifts and pledges, megadonors, billionaire giving, Giving Pledge.
+  - id: giving-levels
+    description: How much people give overall, donor counts, participation, small and recurring donors.
+  - id: donor-advised-funds
+    description: DAFs, their sponsors, growth, and debates about them.
+  - id: wealth-transfer
+    description: Intergenerational wealth transfer, planned and legacy giving, next-generation donors.
+  - id: fundraising-practice
+    description: How nonprofits raise money, campaigns, giving days, donor retention.
+  - id: religious-giving
+    description: Giving by and to faith communities and congregations.
+  - id: corporate-giving
+    description: Corporate philanthropy, employee giving and volunteering, company foundations.
+  - id: giving-tech
+    description: Giving platforms, crowdfunding, crypto and fintech giving, payment tools.
+
+  # Foundations and institutional funders
+  - id: foundation-strategy
+    description: Foundations changing priorities, program areas, leadership, or how they grant.
+  - id: payout-endowments
+    description: Foundation payout rates, spend-down, endowment size and management.
+  - id: trust-based-funding
+    description: Unrestricted and multiyear funding, trust-based philanthropy, reducing burdens on grantees.
+  - id: pooled-funds
+    description: Funder collaboratives, pooled funds, giving circles, participatory and community-led grantmaking.
+  - id: community-foundations
+    description: Community foundations and place-based philanthropy.
+  - id: effective-giving
+    description: Effective altruism, evidence-based and cost-effectiveness-driven giving.
+
+  # Secondary interests: tracked, but not core to the brief
+  - id: volunteering-civic
+    description: Volunteering, civic participation, mutual aid, everyday generosity.
+  - id: impact-investing
+    description: Impact investing, mission and program-related investments, blended finance, CDFIs, social enterprise.
+
+  # Policy, law and government
+  - id: charitable-tax-policy
+    description: Tax rules for giving and charities, deductions, taxes on wealth, DAF and foundation rules.
+  - id: government-funding
+    description: Government grants and contracts to nonprofits, cuts, delays, cancellations.
+  - id: nonprofit-law-oversight
+    description: IRS, courts, lawsuits, investigations, advocacy and political-activity rules for nonprofits.
+  - id: democracy-civic-funding
+    description: Philanthropy for democracy, elections, civic infrastructure, polarization.
+
+  # The nonprofit sector
+  - id: nonprofit-workforce
+    description: Nonprofit jobs, pay, burnout, unions, leadership transitions.
+  - id: nonprofit-finances
+    description: Nonprofit budgets, closures, mergers, fiscal sponsors, sector infrastructure.
+  - id: public-trust
+    description: Public trust in and perceptions of nonprofits and philanthropy, criticism of philanthropy.
+
+  # Research and data
+  - id: generosity-research
+    description: Studies of why and how people give, prosocial behavior, the psychology of generosity.
+  - id: giving-data
+    description: Reports and data on giving totals, trends, and specific causes (e.g. Giving USA, Lilly School).
+
+  # Cross-cutting themes
+  - id: ai-and-philanthropy
+    description: AI used by or funded by philanthropy and nonprofits; AI companies' giving.
+  - id: global-development
+    description: Global health, international aid, development funding.
+  - id: climate-philanthropy
+    description: Philanthropic and investment funding for climate and the environment.
+  - id: equity-justice
+    description: Racial equity, social justice, and funding for marginalized communities.
+  - id: education-philanthropy
+    description: Funding for schools, higher education, scholarships, school choice.

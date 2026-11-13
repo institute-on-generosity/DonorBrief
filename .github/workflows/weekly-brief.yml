@@ -13,6 +13,10 @@ on:
         description: "Only score past weeks in history/backfill/ into history/ (no draft)"
         type: boolean
         default: false
+      retag:
+        description: "Only add topic tags to history weeks that lack them (no draft)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # commits history/ (week-to-week memory for trends)
@@ -40,8 +44,14 @@ jobs:
           python -m donorbrief.history backfill history/backfill/*/sources.json
           git rm -rq history/backfill
 
+      - name: Retag history
+        if: ${{ inputs.retag }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m donorbrief.history retag
+
       - name: Build draft
-        if: ${{ !inputs.backfill }}
+        if: ${{ !inputs.backfill && !inputs.retag }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
@@ -59,7 +69,7 @@ jobs:
           git pull --rebase -q && git push -q
 
       - name: Show draft in run summary
-        if: always() && !inputs.backfill
+        if: always() && !inputs.backfill && !inputs.retag
         run: |
           f=$(ls -d drafts/*/ 2>/dev/null | tail -1)
           # Run pages are public. Once Mailchimp has the draft, show only a pointer to it here.

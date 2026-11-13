@@ -58,7 +58,8 @@ def main() -> int:
     provider = llm.get_provider(cfg["provider"])
 
     log.info("Triage with %s...", cfg["triage_model"])
-    assessments = llm.triage(provider, cfg["triage_model"], items, sections)
+    topics = llm.load_topics(args.config.parent / "topics.yaml")
+    assessments = llm.triage(provider, cfg["triage_model"], items, sections, topics)
     picked = llm.pick_top(items, assessments, cfg["min_relevance"], cfg["max_items_in_brief"])
     log.info("%d of %d items kept", len(picked), len(items))
     if not picked:

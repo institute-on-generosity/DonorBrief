@@ -6,9 +6,11 @@ implement `structured()` with the same signature and register it in PROVIDERS.
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import logging
 from typing import Literal, Optional, Type, TypeVar
 
+import yaml
 from pydantic import BaseModel, Field
 
 from .sources import Item
@@ -27,6 +29,8 @@ class ItemAssessment(BaseModel):
     section: str = Field(description="One of the section ids, or 'none' if it fits nowhere.")
     summary: str = Field(description="2-3 plain-language sentences on what happened. Facts only, from the item text.")
     why_it_matters: str = Field(description="One sentence on why it matters for donors, nonprofits, or generosity research.")
+    topics: list[str] = Field(description="1-3 topic ids from the topic list that fit this item best. Empty only if section is 'none'.")
+    emerging_topic: str = Field(description="If no listed topic fits a relevant item well, a short name for the theme it represents; otherwise empty.")
 
 
 class TriageResult(BaseModel):
@@ -117,14 +121,31 @@ def _sections_text(sections: list[dict]) -> str:
     return "\n".join(f"- {s['id']}: {s['title']}. {s['description']}" for s in sections)
 
 
-def triage(provider, model: str, items: list[Item], sections: list[dict]) -> list[ItemAssessment]:
+def load_topics(path: Path) -> list[dict]:
+    return yaml.safe_load(path.read_text())["topics"] if path.exists() else []
+
+
+def triage(provider, model: str, items: list[Item], sections: list[dict],
+           topics: Optional[list[dict]] = None) -> list[ItemAssessment]:
+    topics = topics or []
+    topic_text = "\n".join(f"- {t['id']}: {t['description']}" for t in topics)
     system = (
         f"{AUDIENCE}\n\nYou are screening this week's raw items. For every item, judge relevance to that "
         "audience, assign a section, and summarize it using only what the item text says. Don't add facts. "
         "Score low (0-3) for items that only mention a keyword in passing (organ donors, unrelated "
-        "'foundation' uses), event listings, ads, and job posts.\n\nSections:\n"
+        "'foundation' uses), event listings, ads, and job posts. Impact investing and volunteering are "
+        "secondary interests: score them in the middle (4-6) unless the story is directly about "
+        "philanthropy, foundations, or generosity or is unusually significant. Routine corporate ESG "
+        "news is not relevant.\n\nSections:\n"
         f"{_sections_text(sections)}\n- none: not relevant"
     )
+    if topics:
+        system += (
+            "\n\nTag every relevant item with 1-3 topic ids from this list, best fit first. If a relevant "
+            "item represents a theme none of these capture well, also give that theme a short name in "
+            f"emerging_topic.\n\nTopics:\n{topic_text}"
+        )
+    valid_topics = {t["id"] for t in topics}
     results: list[ItemAssessment] = []
     for start in range(0, len(items), TRIAGE_BATCH):
         batch = items[start:start + TRIAGE_BATCH]
@@ -135,7 +156,12 @@ def triage(provider, model: str, items: list[Item], sections: list[dict]) -> lis
         prompt = f"Assess every one of these {len(batch)} items. Return one entry per id.\n\n{json.dumps(payload, indent=1)}"
         out = provider.structured(model, system, prompt, TriageResult, effort="low")
         valid = {i.id for i in batch}
-        results.extend(a for a in out.items if a.id in valid)
+        for a in out.items:
+            if a.id not in valid:
+                continue
+            a.topics = [t for t in dict.fromkeys(a.topics) if t in valid_topics][:3]
+            a.emerging_topic = a.emerging_topic.strip()
+            results.append(a)
     return results
 
 

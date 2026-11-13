@@ -48,6 +48,7 @@ def record(history_dir: Path, week: str, items: list[Item], assessments: list[ll
             "id": a.id, "title": item.title, "url": item.url, "source": item.source_name,
             "published": item.published.date().isoformat() if item.published else None,
             "relevance": a.relevance, "section": a.section, "summary": a.summary,
+            "topics": a.topics, "emerging_topic": a.emerging_topic,
             "in_brief": a.id in in_brief,
         })
     history_dir.mkdir(parents=True, exist_ok=True)
@@ -71,7 +72,7 @@ def load_recent(history_dir: Path, before: str, weeks: int = 8) -> list[dict]:
     return loaded
 
 
-def backfill(files: list[Path], config: dict, history_dir: Path) -> None:
+def backfill(files: list[Path], config: dict, history_dir: Path, topics: list[dict]) -> None:
     cfg = config["llm"]
     provider = llm.get_provider(cfg["provider"])
     for f in sorted(files):
@@ -85,9 +86,28 @@ def backfill(files: list[Path], config: dict, history_dir: Path) -> None:
         if brief.exists():
             urls = {e["url"] for sec in json.loads(brief.read_text()).get("sections", []) for e in sec["entries"]}
             in_brief = {i.id for i in items if i.url in urls}
-        assessments = llm.triage(provider, cfg["triage_model"], items, config["sections"])
+        assessments = llm.triage(provider, cfg["triage_model"], items, config["sections"], topics)
         path = record(history_dir, week, items, assessments, in_brief)
         log.info("%s: %d items -> %s", week, len(items), path.relative_to(ROOT) if path.is_relative_to(ROOT) else path)
+
+
+def retag(history_dir: Path, config: dict, topics: list[dict]) -> None:
+    """Add topic tags to history weeks saved before tagging existed. Keeps each item's original score."""
+    cfg = config["llm"]
+    provider = llm.get_provider(cfg["provider"])
+    for path in sorted(history_dir.glob("*.json")):
+        week = json.loads(path.read_text())
+        todo = [i for i in week["items"] if "topics" not in i]
+        if not todo:
+            continue
+        items = [Item("history", i["source"], i["title"], i["url"], None, i["summary"]) for i in todo]
+        tags = {a.id: a for a in llm.triage(provider, cfg["triage_model"], items, config["sections"], topics)}
+        for i in todo:
+            a = tags.get(i["id"])
+            i["topics"] = a.topics if a else []
+            i["emerging_topic"] = a.emerging_topic if a else ""
+        path.write_text(json.dumps(week, indent=1))
+        log.info("%s: tagged %d items", week["week"], len(todo))
 
 
 def main() -> int:
@@ -96,10 +116,17 @@ def main() -> int:
     b = sub.add_parser("backfill", help="Triage old drafts/<date>/sources.json files into history/")
     b.add_argument("files", nargs="+", type=Path)
     b.add_argument("--config", type=Path, default=ROOT / "config" / "sources.yaml")
+    r = sub.add_parser("retag", help="Add topic tags to history weeks that don't have them")
+    r.add_argument("--config", type=Path, default=ROOT / "config" / "sources.yaml")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)
-    backfill(args.files, yaml.safe_load(args.config.read_text()), HISTORY)
+    config = yaml.safe_load(args.config.read_text())
+    topics = llm.load_topics(args.config.parent / "topics.yaml")
+    if args.cmd == "backfill":
+        backfill(args.files, config, HISTORY, topics)
+    else:
+        retag(HISTORY, config, topics)
     return 0
 
 

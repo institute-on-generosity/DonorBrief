@@ -107,10 +107,12 @@ def main() -> int:
 
     if args.replay:
         saved = json.loads(args.replay.read_text())
-        assessments = [llm.ItemAssessment(**a) for a in saved["assessments"]]
+        # Runs saved before topic tags existed lack those fields.
+        assessments = [llm.ItemAssessment(**{"topics": [], "emerging_topic": "", **a}) for a in saved["assessments"]]
     else:
         provider = llm.get_provider(cfg["provider"])
-        assessments = llm.triage(provider, cfg["triage_model"], items, config["sections"])
+        assessments = llm.triage(provider, cfg["triage_model"], items, config["sections"],
+                                 llm.load_topics(args.config.parent / "topics.yaml"))
         runs = EVAL / "runs"
         runs.mkdir(exist_ok=True)
         stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")

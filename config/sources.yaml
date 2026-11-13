@@ -120,6 +120,12 @@ sources:
     type: rss
     url: https://news.google.com/rss/search?q=philanthropy+OR+philanthropist+when:7d&hl=en-US&gl=US&ceid=US:en
 
+  - id: impactalpha
+    name: ImpactAlpha
+    type: rss
+    url: https://impactalpha.com/feed/
+    note: Impact investing, a secondary interest for IoG; scored as such in triage.
+
   - id: nber
     name: NBER Working Papers
     type: rss
