@@ -99,7 +99,8 @@
   {%- endfor %}
   {%- endif %}
 
-  {#- BOTTOM HALF: the news, by category -#}
+  {#- BOTTOM HALF: the news, by category. The markers let the archive sync find which stories were sent. -#}
+  <!-- donorbrief:news -->
   {%- if sections %}
   {%- set ns = namespace(count=0) %}{% for s in sections %}{% set ns.count = ns.count + s.entries|length %}{% endfor %}
   {{ part(ns.count ~ " stories", "The news", "") }}
@@ -126,6 +127,7 @@
   </td></tr>
   {%- endfor %}
   {%- endif %}
+  <!-- /donorbrief:news -->
 
   <tr><td style="background:#FFFFFF;padding:0 0 28px;border-radius:0 0 3px 3px;">&nbsp;</td></tr>
 
@@ -133,10 +135,12 @@
   <tr><td style="padding:20px 28px;font-family:{{ body }};font-size:12px;line-height:1.5;color:#5E5E5E;">
     AI-drafted from public sources and reviewed by Institute on Generosity staff before sending.
     {%- if mailchimp %}
-    {#- Mailchimp fills these in; it won't send a campaign without them. #}
+    {#- Mailchimp fills these in; it won't send a campaign without them. The archive copy drops them. #}
+    <!-- donorbrief:mailchimp-footer -->
     <br><br>You're receiving this because you subscribed to Institute on Generosity updates.
     <a href="*|UNSUB|*" style="color:#5E5E5E;">Unsubscribe</a> &middot; <a href="*|UPDATE_PROFILE|*" style="color:#5E5E5E;">Update preferences</a>
     <br>*|LIST:ADDRESSLINE|*
+    <!-- /donorbrief:mailchimp-footer -->
     {%- endif %}
   </td></tr>
 </table>

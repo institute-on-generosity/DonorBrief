@@ -14,7 +14,7 @@ from typing import Optional
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
-from . import history, llm, mailchimp
+from . import history, llm, mailchimp, sent
 from .sources import collect
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -36,6 +36,9 @@ def main() -> int:
     week_of = now.strftime("%B %-d, %Y")
     out_dir = args.out / now.strftime("%Y-%m-%d")
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    # First, archive any brief staff sent since last time, so "already covered" matches what really went out.
+    sent.sync_if_configured(history_dir=args.history)
 
     log.info("Fetching sources...")
     items, results = collect(config, now)

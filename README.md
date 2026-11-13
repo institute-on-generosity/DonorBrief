@@ -55,7 +55,12 @@ Edit [`config/sources.yaml`](config/sources.yaml). Add a feed with `type: rss` a
 
 ## Public archive
 
-When a brief is sent, its `rendered.json` is copied to `archive/<YYYY-MM-DD>/`. Build the public archive (an index page plus one page per brief, in IoG's brand style) with:
+Staff may edit a draft in Mailchimp, cut stories, or not send it. So each weekly run starts by asking Mailchimp which DonorBrief campaigns were **sent** (it only reads; it never sends or changes anything there). For each new one it:
+
+- saves exactly what went out to `archive/<send date>/` (`email.html`, minus Mailchimp's unsubscribe lines, and `meta.json`), committed by the workflow; and
+- corrects that week's history so only stories that were really sent count as covered. A story staff cut can run another week.
+
+To sync by hand: `.venv/bin/python -m donorbrief.sent` (needs `MAILCHIMP_API_KEY`). Build the public archive (an index page plus each sent issue) with:
 
 ```bash
 .venv/bin/python -m donorbrief.archive   # writes site/
@@ -86,5 +91,5 @@ Models are set in `config/sources.yaml` under `llm:`. Provider code lives in [`d
 - [x] Source collection, triage, composition, HTML/Markdown draft
 - [x] Weekly GitHub Action with source-health report
 - [x] Mailchimp draft campaign with a preview copy to reviewers (waiting on IoG's Mailchimp key and audience)
-- [ ] Copy each sent brief into `archive/` for the public archive
+- [x] Copy each sent brief into `archive/` for the public archive
 - [x] Public archive pages (hosting to be decided)

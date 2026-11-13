@@ -56,10 +56,9 @@ def check_settings(cfg: dict) -> list[str]:
     return [f"mailchimp.{k} is empty in config/sources.yaml" for k in missing]
 
 
-def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> dict:
-    """Create the draft campaign and send preview copies. Returns ids and the edit link."""
-    dc = server_prefix(key)
-    base = f"https://{dc}.api.mailchimp.com/3.0"
+def api(client: httpx.Client, key: str):
+    """A small Mailchimp API caller: call(method, path, body=None) -> JSON, raising MailchimpError."""
+    base = f"https://{server_prefix(key)}.api.mailchimp.com/3.0"
     auth = ("donorbrief", key)
 
     def call(method: str, path: str, body: dict | None = None) -> dict:
@@ -77,6 +76,14 @@ def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> d
                 detail = r.text[:200]
             raise MailchimpError(f"{method} {path} -> {r.status_code}: {detail}")
         return r.json() if r.content else {}
+
+    return call
+
+
+def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> dict:
+    """Create the draft campaign and send preview copies. Returns ids and the edit link."""
+    dc = server_prefix(key)
+    call = api(client, key)
 
     title = f"DonorBrief: {rendered.get('week_of') or rendered['subject']}"
     campaign = call("POST", "/campaigns", {

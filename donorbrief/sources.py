@@ -35,7 +35,12 @@ class Item:
     id: str = field(init=False)
 
     def __post_init__(self) -> None:
-        self.id = hashlib.sha1(normalize_url(self.url).encode()).hexdigest()[:10]
+        self.id = item_id(self.url)
+
+
+def item_id(url: str) -> str:
+    """A story's id: stable for the same article, whatever tracking parameters the link carries."""
+    return hashlib.sha1(normalize_url(url).encode()).hexdigest()[:10]
 
 
 @dataclass
