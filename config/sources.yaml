@@ -143,6 +143,13 @@ sources:
     name: ImpactAlpha
     type: rss
     url: https://impactalpha.com/feed/
+    enabled: false
+    note: Blocks GitHub's servers (403) as of Nov 2026; replaced by the Google News search below.
+
+  - id: gnews_impact_investing
+    name: Google News
+    type: rss
+    url: https://news.google.com/rss/search?q=%22impact+investing%22+OR+%22mission-related+investment%22+OR+%22program-related+investment%22+when:7d&hl=en-US&gl=US&ceid=US:en
     note: Impact investing, a secondary interest for IoG; scored as such in triage.
 
   - id: nber
