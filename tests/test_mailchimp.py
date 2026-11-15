@@ -144,3 +144,23 @@ def test_campaign_subject_line_has_the_prefix(draft, monkeypatch):
     mailchimp.deliver(draft, CFG, recording_client(calls))
     create = next(c for c in calls if c[0] == "POST" and c[1].endswith("/campaigns"))
     assert create[2]["settings"]["subject_line"] == "DonorBrief: " + RENDERED["subject"]
+
+
+def test_tag_contacts_reports_counts_and_never_echoes_addresses():
+    from donorbrief import contacts
+    calls = []
+
+    def call(method, path, body=None):
+        calls.append((method, path, body))
+        if body and body.get("email_address") == "bad@example.org":
+            raise mailchimp.MailchimpError("PUT x -> 400: bad@example.org looks fake")
+        return {"status": "unsubscribed" if body and body.get("email_address") == "gone@example.org" else "subscribed"}
+
+    rows = [{"Email Address": "A@Example.org", "First Name": "A", "Last Name": ""},
+            {"Email Address": "gone@example.org"}, {"Email Address": "bad@example.org"}]
+    r = contacts.tag_contacts(rows, "aud1", "DonorBrief demo", call)
+    assert (r["total"], r["tagged"], r["not_subscribed"]) == (3, 2, 1)
+    assert r["failed_rows"] and "bad@example.org" not in r["failed_rows"][0] and r["failed_rows"][0].startswith("row 3")
+    put = calls[0]
+    assert put[2] == {"email_address": "a@example.org", "status_if_new": "subscribed", "merge_fields": {"FNAME": "A"}}
+    assert calls[1][2] == {"tags": [{"name": "DonorBrief demo", "status": "active"}]}
