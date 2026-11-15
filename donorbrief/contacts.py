@@ -26,7 +26,7 @@ EMAIL = re.compile(r"[^\s@'\"<>]+@[^\s@'\"<>]+")
 
 
 def tag_contacts(rows: list[dict], audience: str, tag: str, call) -> dict:
-    result = {"total": len(rows), "tagged": 0, "not_subscribed": 0, "failed_rows": []}
+    result = {"total": len(rows), "tagged": 0, "not_subscribed": 0, "failed_rows": [], "not_subscribed_rows": []}
     for n, row in enumerate(rows, 1):
         email = (row.get("Email Address") or "").strip().lower()
         member = f"/lists/{audience}/members/{hashlib.md5(email.encode()).hexdigest()}"
@@ -42,6 +42,7 @@ def tag_contacts(rows: list[dict], audience: str, tag: str, call) -> dict:
             result["tagged"] += 1
             if got.get("status") != "subscribed":
                 result["not_subscribed"] += 1  # tagged, but won't receive email (unsubscribed or pending)
+                result["not_subscribed_rows"].append(f"row {n}: {got.get('status')}")
         except MailchimpError as e:
             result["failed_rows"].append(f"row {n}: {EMAIL.sub('[email]', str(e))[:160]}")
     return result
@@ -64,6 +65,8 @@ def main() -> int:
     print(f"Tagged {result['tagged']} of {result['total']} contacts with {tag!r}; "
           f"{result['not_subscribed']} of them are not subscribed.")
     print(f"Mailchimp now shows {count} subscribed contacts with that tag.")
+    for f in result["not_subscribed_rows"]:
+        print("NOT SUBSCRIBED", f)
     for f in result["failed_rows"]:
         print("FAILED", f.replace(key, "REDACTED"))
     return 1 if result["failed_rows"] else 0
