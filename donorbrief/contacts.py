@@ -53,8 +53,8 @@ def tag_contacts(rows: list[dict], audience: str, tag: str, call) -> dict:
 def main() -> int:
     key = os.environ.get("MAILCHIMP_API_KEY", "").strip()
     data = os.environ.get("CONTACTS_CSV", "").strip()
-    if not key or not data:
-        print("Need MAILCHIMP_API_KEY and CONTACTS_CSV")
+    if not key:
+        print("Need MAILCHIMP_API_KEY")
         return 1
     cfg = yaml.safe_load((ROOT / "config" / "sources.yaml").read_text())["mailchimp"]
     tag = cfg["send_to_tag"]
@@ -63,6 +63,8 @@ def main() -> int:
         call = api(client, key)
         result = tag_contacts(rows, cfg["audience_id"], tag, call)
         segs = call("GET", f"/lists/{cfg['audience_id']}/segments?type=static&count=1000&fields=segments.name,segments.member_count")
+        signup = call("GET", f"/lists/{cfg['audience_id']}?fields=subscribe_url_long").get("subscribe_url_long")
+    print(f"Signup form (for people Mailchimp won't let us re-add): {signup}")
     count = next((s["member_count"] for s in segs.get("segments", []) if s["name"].lower() == tag.lower()), 0)
     print(f"Tagged {result['tagged']} of {result['total']} contacts with {tag!r}; "
           f"{result['not_subscribed']} of them are not subscribed.")
