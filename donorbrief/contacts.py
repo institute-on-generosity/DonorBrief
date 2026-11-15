@@ -38,6 +38,8 @@ def tag_contacts(rows: list[dict], audience: str, tag: str, call) -> dict:
                 got = call("PUT", member, {**body, "merge_fields": names} if names else body)
             except MailchimpError:
                 got = call("PUT", member, body)  # e.g. the audience has no name fields
+            if got.get("status") == "archived":  # archived is housekeeping, not an opt-out: restore it
+                got = call("PATCH", member, {"status": "subscribed"})
             call("POST", member + "/tags", {"tags": [{"name": tag, "status": "active"}]})
             result["tagged"] += 1
             if got.get("status") != "subscribed":

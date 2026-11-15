@@ -2,7 +2,7 @@ name: Weekly brief
 
 on:
   schedule:
-    - cron: "0 10 * * 1"   # Mondays 10:00 UTC (6am Eastern in summer, 5am in winter)
+    - cron: "30 14 * * 1"   # Mondays 14:30 UTC (6:30am Pacific in winter, 7:30am in summer)
   workflow_dispatch:
     inputs:
       dry_run:

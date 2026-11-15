@@ -164,3 +164,18 @@ def test_tag_contacts_reports_counts_and_never_echoes_addresses():
     put = calls[0]
     assert put[2] == {"email_address": "a@example.org", "status_if_new": "subscribed", "merge_fields": {"FNAME": "A"}}
     assert calls[1][2] == {"tags": [{"name": "DonorBrief demo", "status": "active"}]}
+
+
+def test_tag_contacts_restores_archived_but_not_unsubscribed():
+    from donorbrief import contacts
+    calls = []
+
+    def call(method, path, body=None):
+        calls.append((method, body))
+        if method == "PUT":
+            return {"status": "archived" if body["email_address"].startswith("arch") else "unsubscribed"}
+        return {"status": "subscribed"} if method == "PATCH" else {}
+
+    r = contacts.tag_contacts([{"Email Address": "arch@example.org"}, {"Email Address": "unsub@example.org"}], "a", "T", call)
+    assert [c for c in calls if c[0] == "PATCH"] == [("PATCH", {"status": "subscribed"})]
+    assert (r["tagged"], r["not_subscribed"]) == (2, 1)
