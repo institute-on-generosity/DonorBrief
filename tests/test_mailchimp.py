@@ -56,7 +56,7 @@ def test_creates_draft_sets_content_and_sends_preview_never_sends(draft, monkeyp
     ]
     create = calls[0][2]
     assert create["recipients"]["list_id"] == "abc123"
-    assert create["settings"]["subject_line"] == RENDERED["subject"]
+    assert create["settings"]["subject_line"] == "DonorBrief: " + RENDERED["subject"]
     assert create["settings"]["preview_text"] == "This week's giving news was dominated by size."
     html = calls[1][2]["html"]
     assert "*|UNSUB|*" in html and "*|LIST:ADDRESSLINE|*" in html
