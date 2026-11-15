@@ -31,6 +31,7 @@ mailchimp:              # each Monday's draft becomes a Mailchimp draft campaign
   audience_id: f0f2f5193b  # "Institute on Generosity" audience. Mailchimp: Audience -> Settings -> "Audience name and defaults" -> Audience ID
   from_name: Institute on Generosity
   reply_to: connect@instituteongenerosity.org   # must be on a domain verified in Mailchimp
+  send_to_tag: DonorBrief demo   # only contacts with this Mailchimp tag get the brief; empty = the whole audience
   test_emails: [muneeb@instituteongenerosity.org]   # reviewers who get a preview copy each Monday, e.g. [name@instituteongenerosity.org]
 
 llm:

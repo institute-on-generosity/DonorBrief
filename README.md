@@ -36,6 +36,7 @@ Each Monday's draft is created in IoG's Mailchimp account as a draft campaign (*
 To connect it:
 1. In Mailchimp, create an API key (**Profile → Extras → API keys**) and add it as the `MAILCHIMP_API_KEY` repository secret.
 2. In [`config/sources.yaml`](config/sources.yaml), under `mailchimp:`, fill in `audience_id` (**Audience → Settings → Audience name and defaults**), `reply_to` (an address verified in Mailchimp) and `test_emails`.
+3. To send to a smaller group, set `send_to_tag` to a Mailchimp tag (now: `DonorBrief demo`). Drafts go only to contacts with that tag; if the tag is missing or empty, no draft is created rather than falling back to the whole audience.
 
 Without the secret, this step is skipped and the draft stays on the run page as before. Once Mailchimp holds the draft, the public run page shows only a pointer to it, not the draft itself.
 

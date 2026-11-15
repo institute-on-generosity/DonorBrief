@@ -96,3 +96,37 @@ def test_regular_email_has_no_mailchimp_tags():
     env = Environment(loader=FileSystemLoader("donorbrief/templates"), autoescape=True)
     html = env.get_template("brief.html.j2").render(brief=RENDERED, sections=RENDERED["sections"], week_of="x")
     assert "*|UNSUB|*" not in html
+
+
+def tag_client(calls, segments):
+    def handler(req):
+        calls.append((req.method, req.url.path, json.loads(req.content) if req.content else None))
+        if "/segments" in req.url.path:
+            assert req.url.params["type"] == "static"
+            return httpx.Response(200, json={"segments": segments})
+        if req.url.path.endswith("/campaigns"):
+            return httpx.Response(200, json={"id": "c1", "web_id": 42})
+        return httpx.Response(204)
+    return httpx.Client(transport=httpx.MockTransport(handler))
+
+
+def test_tag_limits_recipients_to_tagged_contacts(draft, monkeypatch):
+    monkeypatch.setenv("MAILCHIMP_API_KEY", KEY)
+    cfg = {"mailchimp": {**CFG["mailchimp"], "send_to_tag": "donorbrief demo"}}
+    calls = []
+    result = mailchimp.deliver(draft, cfg, tag_client(calls, [{"id": 7, "name": "Board", "member_count": 9},
+                                                               {"id": 88, "name": "DonorBrief demo", "member_count": 12}]))
+    assert result["status"] == "draft_created"
+    create = next(c for c in calls if c[0] == "POST" and c[1].endswith("/campaigns"))
+    assert create[2]["recipients"] == {"list_id": "abc123", "segment_opts": {"saved_segment_id": 88}}
+
+
+@pytest.mark.parametrize("segments", [[{"id": 7, "name": "Board", "member_count": 9}],
+                                      [{"id": 88, "name": "DonorBrief demo", "member_count": 0}]])
+def test_missing_or_empty_tag_never_falls_back_to_whole_audience(draft, monkeypatch, segments):
+    monkeypatch.setenv("MAILCHIMP_API_KEY", KEY)
+    cfg = {"mailchimp": {**CFG["mailchimp"], "send_to_tag": "DonorBrief demo"}}
+    calls = []
+    result = mailchimp.deliver(draft, cfg, tag_client(calls, segments))
+    assert result["status"] == "failed" and "DonorBrief demo" in result["error"]
+    assert not any(c[0] == "POST" for c in calls)   # no campaign was created at all

@@ -80,6 +80,24 @@ def api(client: httpx.Client, key: str):
     return call
 
 
+def recipients(cfg: dict, call) -> dict:
+    """Who the campaign goes to. With `send_to_tag` set, only contacts carrying that tag; if the tag
+    can't be found or has no one on it, stop rather than ever falling back to the whole audience."""
+    tag = str(cfg.get("send_to_tag") or "").strip()
+    out = {"list_id": cfg["audience_id"]}
+    if not tag:
+        return out
+    found = call("GET", f"/lists/{cfg['audience_id']}/segments?type=static&count=1000&fields=segments.id,segments.name,segments.member_count")
+    match = [s for s in found.get("segments", []) if s.get("name", "").strip().lower() == tag.lower()]
+    if not match:
+        raise MailchimpError(f"Mailchimp tag {tag!r} not found in the audience; not creating a draft "
+                             "(it would otherwise go to the whole audience)")
+    if not match[0].get("member_count"):
+        raise MailchimpError(f"Mailchimp tag {tag!r} has no subscribed contacts; not creating a draft")
+    out["segment_opts"] = {"saved_segment_id": match[0]["id"]}
+    return out
+
+
 def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> dict:
     """Create the draft campaign and send preview copies. Returns ids and the edit link."""
     dc = server_prefix(key)
@@ -88,7 +106,7 @@ def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> d
     title = f"DonorBrief: {rendered.get('week_of') or rendered['subject']}"
     campaign = call("POST", "/campaigns", {
         "type": "regular",
-        "recipients": {"list_id": cfg["audience_id"]},
+        "recipients": recipients(cfg, call),
         "settings": {
             "subject_line": rendered["subject"][:150],
             "preview_text": preview_text(rendered["intro"]),
