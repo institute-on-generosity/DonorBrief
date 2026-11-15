@@ -46,6 +46,14 @@ def render_email(rendered: dict) -> str:
         brief=rendered, sections=rendered["sections"], week_of=rendered.get("week_of", ""), mailchimp=True)
 
 
+BRAND = re.compile(r"^\s*donor\s*brief\s*[:|\-–—]*\s*", re.I)
+
+
+def email_subject(subject: str) -> str:
+    """Every subject line starts with "DonorBrief:" so readers know who is emailing them."""
+    return ("DonorBrief: " + BRAND.sub("", subject).strip())[:150]
+
+
 def preview_text(intro: str, limit: int = 140) -> str:
     first = re.split(r"(?<=[.!?])\s", intro.strip(), maxsplit=1)[0]
     return first if len(first) <= limit else first[: limit - 1].rstrip() + "…"
@@ -108,7 +116,7 @@ def create_draft(rendered: dict, cfg: dict, key: str, client: httpx.Client) -> d
         "type": "regular",
         "recipients": recipients(cfg, call),
         "settings": {
-            "subject_line": rendered["subject"][:150],
+            "subject_line": email_subject(rendered["subject"]),
             "preview_text": preview_text(rendered["intro"]),
             "title": title,
             "from_name": cfg["from_name"],

@@ -130,3 +130,17 @@ def test_missing_or_empty_tag_never_falls_back_to_whole_audience(draft, monkeypa
     result = mailchimp.deliver(draft, cfg, tag_client(calls, segments))
     assert result["status"] == "failed" and "DonorBrief demo" in result["error"]
     assert not any(c[0] == "POST" for c in calls)   # no campaign was created at all
+
+
+def test_subject_always_starts_with_donorbrief_once():
+    assert mailchimp.email_subject("AI floods funders") == "DonorBrief: AI floods funders"
+    for already in ("DonorBrief: AI floods funders", "Donor Brief | AI floods funders", "donorbrief - AI floods funders"):
+        assert mailchimp.email_subject(already) == "DonorBrief: AI floods funders"
+
+
+def test_campaign_subject_line_has_the_prefix(draft, monkeypatch):
+    monkeypatch.setenv("MAILCHIMP_API_KEY", KEY)
+    calls = []
+    mailchimp.deliver(draft, CFG, recording_client(calls))
+    create = next(c for c in calls if c[0] == "POST" and c[1].endswith("/campaigns"))
+    assert create[2]["settings"]["subject_line"] == "DonorBrief: " + RENDERED["subject"]

@@ -62,7 +62,7 @@ class Trend(BaseModel):
 
 
 class Brief(BaseModel):
-    subject: str = Field(description="Email subject line, under 70 characters.")
+    subject: str = Field(description="Email subject line, under 60 characters. Don't include the name DonorBrief; it is added in front automatically.")
     takeaways: list[Takeaway] = Field(description="3-5 key takeaways from this week, most important first.")
     trends: list[Trend] = Field(description="0-3 patterns building across weeks.")
     sections: list[BriefSection] = Field(description="All of this week's news worth knowing, grouped by section.")

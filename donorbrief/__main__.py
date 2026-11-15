@@ -169,7 +169,9 @@ def render(brief: llm.Brief, sections: list[dict], items, past_weeks: list[dict]
 
     # `intro` (the takeaways as plain sentences) feeds the email preview text and the archive index.
     intro = " ".join(f"{t['lead'].rstrip('.')}." for t in takeaways)
-    return {"subject": brief.subject, "intro": intro, "week_of": week_of,
+    # The brand prefix is added to the subject line at send time; keep it out of the brief itself.
+    subject = mailchimp.BRAND.sub("", brief.subject).strip() or brief.subject
+    return {"subject": subject, "intro": intro, "week_of": week_of,
             "takeaways": takeaways, "trends": trends, "sections": rendered_sections}
 
 

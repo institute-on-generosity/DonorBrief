@@ -204,6 +204,8 @@ def test_brief_layout_takeaways_then_trends_then_news(tmp_path):
     assert [e["headline"] for e in policy] == ["Big one", "Second?"]           # each story once
     assert policy[0]["takeaways"] == [1, 2] and policy[1]["takeaways"] == []
     assert r["intro"] == "Ford is narrowing its focus. Two stories, one point."
+    r2 = main.render(brief(subject="DonorBrief: Ford narrows"), sections, items, [], "2026-10-12", "October 12, 2026")
+    assert r2["subject"] == "Ford narrows"   # the prefix is added once, at send time
     assert (r["trends"][0]["stories"], r["trends"][0]["weeks"]) == (3, 2)
     main.write_outputs(tmp_path, b, r, [])
     html = (tmp_path / "brief.html").read_text()
