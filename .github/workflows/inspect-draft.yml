@@ -1,0 +1,24 @@
+name: Inspect latest draft
+
+# Diagnostic: prints sizes and section markers of the latest DonorBrief drafts in Mailchimp,
+# never their text (this repo's logs are public).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+        run: python -m donorbrief.inspect_draft
