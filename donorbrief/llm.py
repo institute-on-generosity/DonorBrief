@@ -206,9 +206,11 @@ def compose(provider, model: str, picked: list[tuple[Item, ItemAssessment]], sec
         "Name the source in the text using its name exactly as given in the item's source field (for example, "
         "\"the Chronicle of Philanthropy reports\"); the link will be placed on that name.\n"
         "- No hype words (\"game-changing\", \"seismic\"), no jargon, no rhetorical questions.\n\n"
-        "Never repeat a story from an earlier brief. Stories marked already_in_a_previous_brief, and any "
-        "other coverage of those same stories, must not appear in the takeaways or the news, even with "
-        "new developments. They may appear only as supporting evidence inside a trend.\n\n"
+        "Never repeat a story from an earlier brief. Stories marked already_in_a_previous_brief must not "
+        "appear in the takeaways or the news; they may appear only as supporting evidence inside a trend. "
+        "Leave out this week's items only when they report the very same news event as one of those "
+        "stories; a related topic or a new development is not a repeat. This week's items have already "
+        "been screened, so the news should normally include most of them, and never fewer than four.\n\n"
         f"Sections, in order:\n{_sections_text(sections)}"
     )
     payload = [

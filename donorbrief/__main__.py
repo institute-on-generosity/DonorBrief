@@ -27,6 +27,9 @@ def main() -> int:
     parser.add_argument("--out", default=ROOT / "drafts", type=Path)
     parser.add_argument("--history", default=history.HISTORY, type=Path, help="Week-to-week memory (history/).")
     parser.add_argument("--dry-run", action="store_true", help="Fetch sources only; no LLM calls.")
+    parser.add_argument("--once-per-week", action="store_true",
+                        help="Do nothing if this week's brief was already built (used by scheduled runs, which "
+                             "GitHub sometimes starts late or twice).")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -36,6 +39,10 @@ def main() -> int:
     week_of = now.strftime("%B %-d, %Y")
     out_dir = args.out / now.strftime("%Y-%m-%d")
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.once_per_week and history.brief_built(args.history, history.week_label(now.date())):
+        log.info("This week's brief was already built; nothing to do.")
+        return 0
 
     # First, archive any brief staff sent since last time, so "already covered" matches what really went out.
     sent.sync_if_configured(history_dir=args.history)
@@ -80,12 +87,19 @@ def main() -> int:
     log.info("Writing brief with %s (%d earlier weeks for trends)...", cfg["editor_model"], len(past_weeks))
     brief = llm.compose(provider, cfg["editor_model"], picked, sections, week_of, past_weeks)
 
+    log.info("Editor returned %d takeaways, %d trends, %d sections with %d entries", len(brief.takeaways),
+             len(brief.trends), len(brief.sections), sum(len(s.entries) for s in brief.sections))
     rendered = render(brief, sections, items, past_weeks, week, week_of)
     write_outputs(out_dir, brief, rendered, failed)
     in_brief = {e["id"] for s in rendered["sections"] for e in s["entries"]}
-    history.record(args.history, week, items, assessments, in_brief)
     log.info("Draft written to %s (%d takeaways, %d trends, %d stories)", out_dir, len(rendered["takeaways"]),
              len(rendered["trends"]), len(in_brief))
+    # Never hand a thin or empty brief to Mailchimp: fail so GitHub emails the owner instead.
+    if not rendered["takeaways"] or len(in_brief) < MIN_STORIES:
+        log.error("Brief is too thin to send (%d takeaways, %d stories; need at least 1 and %d). "
+                  "No Mailchimp draft was created.", len(rendered["takeaways"]), len(in_brief), MIN_STORIES)
+        return 1
+    history.record(args.history, week, items, assessments, in_brief)
 
     delivery = mailchimp.deliver(out_dir, config)
     if delivery["status"] == "draft_created":
@@ -98,6 +112,7 @@ def main() -> int:
     return 0
 
 
+MIN_STORIES = 4        # a brief with fewer stories (or no takeaways) never reaches Mailchimp
 MIN_TREND_STORIES = 3
 MIN_TREND_WEEKS = 2
 

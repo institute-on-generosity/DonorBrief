@@ -242,6 +242,7 @@ def test_stories_from_earlier_briefs_only_return_inside_trends(tmp_path, monkeyp
                     llm.BriefEntry(id=old.id, headline="Ran last week", body="again", why_it_matters=""),
                     llm.BriefEntry(id=new1.id, headline="New A", body="fresh", why_it_matters="")])])
 
+    monkeypatch.setattr(main, "MIN_STORIES", 1)   # this test is about repeats, not the size floor
     monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
     monkeypatch.setattr(main, "collect", lambda config, now: ([old, new1], []))
     monkeypatch.setattr(main.mailchimp, "deliver", lambda out, cfg: {"status": "skipped", "reason": "test"})
@@ -395,3 +396,47 @@ def test_topics_config_is_valid():
     topics = llm.load_topics(Path(__file__).resolve().parent.parent / "config" / "topics.yaml")
     ids = [t["id"] for t in topics]
     assert len(ids) == len(set(ids)) >= 20 and all(t["description"] for t in topics)
+
+
+def run_main(tmp_path, monkeypatch, editor_brief, extra_args=()):
+    """Run the whole pipeline with a fake model; returns (exit code, Mailchimp called?)."""
+    import yaml
+    its = [item(f"Story {n}", f"https://e.org/{n}") for n in range(6)]
+
+    class Fake:
+        def structured(self, model, system, prompt, schema, effort):
+            if schema is llm.TriageResult:
+                return llm.TriageResult(items=[llm.ItemAssessment(id=i.id, relevance=8, section="sector", summary="s",
+                                                                  why_it_matters="w", topics=[], emerging_topic="") for i in its])
+            return editor_brief(its)
+
+    delivered = []
+    monkeypatch.setattr(llm, "get_provider", lambda name: Fake())
+    monkeypatch.setattr(main, "collect", lambda config, now: (its, []))
+    monkeypatch.setattr(main.mailchimp, "deliver", lambda out, cfg: delivered.append(1) or {"status": "skipped", "reason": "t"})
+    cfg = tmp_path / "config"; cfg.mkdir(exist_ok=True)
+    (cfg / "sources.yaml").write_text(yaml.safe_dump({"sections": [{"id": "sector", "title": "Sector", "description": ""}],
+        "llm": {"provider": "x", "triage_model": "m", "editor_model": "m", "max_items_in_brief": 12, "min_relevance": 6}}))
+    monkeypatch.setattr("sys.argv", ["donorbrief", "--config", str(cfg / "sources.yaml"), "--out", str(tmp_path / "drafts"),
+                                     "--history", str(tmp_path / "history"), *extra_args])
+    return main.main(), bool(delivered)
+
+
+def full_brief(its):
+    return brief(takeaways=[llm.Takeaway(lead="L", detail="d", item_ids=[its[0].id])],
+                 sections=[llm.BriefSection(section_id="sector", entries=[
+                     llm.BriefEntry(id=i.id, headline=i.title, body="b", why_it_matters="") for i in its[:5]])])
+
+
+def test_thin_brief_never_reaches_mailchimp(tmp_path, monkeypatch):
+    code, delivered = run_main(tmp_path, monkeypatch, lambda its: brief())   # the editor returned nothing
+    assert code == 1 and not delivered
+    assert not (tmp_path / "history").exists()      # and it isn't recorded as this week's brief
+
+
+def test_scheduled_runs_build_only_one_brief_per_week(tmp_path, monkeypatch):
+    assert run_main(tmp_path, monkeypatch, full_brief, ["--once-per-week"]) == (0, True)
+    # A late or backup scheduled run the same week does nothing at all...
+    assert run_main(tmp_path, monkeypatch, full_brief, ["--once-per-week"]) == (0, False)
+    # ...while a deliberate manual run still works.
+    assert run_main(tmp_path, monkeypatch, full_brief) == (0, True)

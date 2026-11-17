@@ -2,7 +2,11 @@ name: Weekly brief
 
 on:
   schedule:
-    - cron: "30 11 * * 1"   # Mondays 11:30 UTC (6:30am Eastern in winter, 7:30am in summer): draft + preview to the reviewer
+    # Mondays 6:17am Eastern (7:17 in summer), plus a backup half an hour later: GitHub sometimes
+    # starts scheduled runs late or skips them. Scheduled runs pass --once-per-week, so whichever
+    # starts second does nothing if the brief is already built.
+    - cron: "17 11 * * 1"
+    - cron: "47 11 * * 1"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -26,6 +30,11 @@ on:
         type: boolean
         default: false
 
+# Scheduled runs wait for each other, so the second sees the first one's history commit.
+concurrency:
+  group: weekly-brief-${{ github.event_name == 'schedule' && 'scheduled' || github.run_id }}
+  cancel-in-progress: false
+
 permissions:
   contents: write   # commits history/ (week-to-week memory for trends)
   issues: write     # source-health alerts
@@ -36,6 +45,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}   # the branch as it is now, including history committed by an earlier run
 
       - uses: actions/setup-python@v7
         with:
@@ -64,7 +75,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           MAILCHIMP_API_KEY: ${{ !inputs.demo && secrets.MAILCHIMP_API_KEY || '' }}
-        run: python -m donorbrief ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: python -m donorbrief ${{ github.event_name == 'schedule' && '--once-per-week' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Save history and archive
         if: success() && !inputs.dry_run && !inputs.sample && !inputs.demo

@@ -72,6 +72,12 @@ def load_recent(history_dir: Path, before: str, weeks: int = 8) -> list[dict]:
     return loaded
 
 
+def brief_built(history_dir: Path, week: str) -> bool:
+    """True if a full run already built this week's brief (it records which stories made the brief)."""
+    path = history_dir / f"{week}.json"
+    return path.exists() and any(i.get("in_brief") for i in json.loads(path.read_text())["items"])
+
+
 def covered_ids(past_weeks: list[dict]) -> set[str]:
     """Ids of stories that already ran in an earlier brief."""
     return {i["id"] for w in past_weeks for i in w["items"] if i.get("in_brief")}
