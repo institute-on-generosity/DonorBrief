@@ -6,3 +6,6 @@ drafts/
 .DS_Store
 site/
 eval/runs/
+.vercel/
+.vercel
+.env*

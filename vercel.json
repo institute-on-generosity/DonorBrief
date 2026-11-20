@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "python3 -m venv /tmp/build-venv && /tmp/build-venv/bin/pip install --quiet 'Jinja2>=3.1'",
+  "buildCommand": "/tmp/build-venv/bin/python -m donorbrief.archive --out site",
+  "outputDirectory": "site"
+}

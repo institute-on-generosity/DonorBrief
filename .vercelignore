@@ -1,0 +1,6 @@
+# The public archive site (vercel.json) is built from the sent briefs only. Upload nothing else:
+# in particular never .env (API keys), drafts/ or history/.
+/*
+!/donorbrief
+!/archive
+!/vercel.json
