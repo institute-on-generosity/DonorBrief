@@ -95,3 +95,17 @@ def test_sync_errors_never_fail_the_run_or_leak_the_key(monkeypatch, tmp_path, c
         lambda req: httpx.Response(401, json={"detail": f"bad key {KEY}"}))))
     assert sent.sync_if_configured(tmp_path / "archive", tmp_path / "history") == []
     assert "Sent-brief sync failed" in caplog.text and KEY not in caplog.text
+
+
+def test_sent_stories_missing_from_history_are_still_marked_covered(tmp_path):
+    known, unsaved = story("Known", "https://e.org/known"), story("Never saved", "https://e.org/unsaved")
+    a = llm.ItemAssessment(id=known.id, relevance=8, section="sector", summary="s", why_it_matters="w", topics=[], emerging_topic="")
+    hist = tmp_path / "history"
+    history.record(hist, "2026-11-16", [known], [a])
+    html = sent_email([known, unsaved], trend_link="https://e.org/trend")
+    campaigns = [{"id": "c9", "send_time": "2026-11-20T17:00:00+00:00",
+                  "settings": {"title": "DonorBrief: November 20, 2026", "subject_line": "S", "preview_text": "P"}}]
+    with fake_mailchimp(campaigns, {"c9": html}, []) as client:
+        sent.sync(KEY, client, tmp_path / "archive", hist)
+    weeks = history.load_recent(hist, before="2026-11-23")
+    assert {known.id, unsaved.id} <= history.covered_ids(weeks)

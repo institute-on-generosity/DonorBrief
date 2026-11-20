@@ -53,7 +53,7 @@ def public_copy(html: str) -> str:
     return re.sub(r"[^<>\n]*\*\|[A-Z_:]+\|\*[^<>\n]*", "", html)
 
 
-def reconcile(history_dir: Path, sent_on: date, sent_ids: set[str]) -> Optional[str]:
+def reconcile(history_dir: Path, sent_on: date, sent_ids: set[str], links: Optional[list[str]] = None) -> Optional[str]:
     """Mark exactly the sent stories as covered in the week the draft came from.
 
     The draft's week is the recent history file sharing the most stories with the email (usually the
@@ -72,6 +72,15 @@ def reconcile(history_dir: Path, sent_on: date, sent_ids: set[str]) -> Optional[
     week = json.loads(best.read_text())
     for i in week["items"]:
         i["in_brief"] = i["id"] in sent_ids
+    # Sent stories that history never saved (e.g. a run whose history commit failed) are added,
+    # so they still count as covered next week.
+    known = {i["id"] for i in week["items"]}
+    for url in links or []:
+        if item_id(url) in sent_ids and item_id(url) not in known:
+            week["items"].append({"id": item_id(url), "title": url, "url": url, "source": "", "published": None,
+                                  "relevance": 0, "section": "none", "summary": "", "topics": [],
+                                  "emerging_topic": "", "in_brief": True})
+            known.add(item_id(url))
     best.write_text(json.dumps(week, indent=1))
     return week["week"]
 
@@ -96,7 +105,7 @@ def sync(key: str, client: httpx.Client, archive_dir: Path = ARCHIVE, history_di
         folder.mkdir(parents=True)
         links = story_links(html)
         (folder / "email.html").write_text(public_copy(html))
-        week = reconcile(history_dir, sent_on, {item_id(u) for u in links})
+        week = reconcile(history_dir, sent_on, {item_id(u) for u in links}, links)
         meta = {"campaign_id": c["id"], "subject": settings.get("subject_line", ""),
                 "preview_text": settings.get("preview_text", ""), "sent_at": c["send_time"],
                 "mailchimp_archive_url": c.get("long_archive_url"), "stories": links, "history_week": week}

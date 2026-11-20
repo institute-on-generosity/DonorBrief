@@ -85,7 +85,9 @@ jobs:
           git add history/ archive/
           if git diff --cached --quiet; then echo "No history or archive changes"; exit 0; fi
           git commit -m "Record DonorBrief history and sent briefs ($(date -u +%Y-%m-%d))"
-          git pull --rebase -q && git push -q
+          # Someone may push while the run is going; rebase and retry a few times.
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && exit 0; sleep $((i * 5)); done
+          exit 1
 
       - name: Show draft in run summary
         if: always() && !inputs.backfill && !inputs.retag && !inputs.demo
