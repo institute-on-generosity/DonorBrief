@@ -10,32 +10,32 @@
 <title>{{ brief.subject }}</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
 </head>
-<body style="margin:0;padding:0;background:#FBF8F2;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FBF8F2;">
+<body style="margin:0;padding:0;background:#F1F5F9;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F1F5F9;">
 <tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;font-family:{{ body }};color:#000000;">
 
   {#- Top bar -#}
   <tr><td style="background:#000000;padding:14px 28px;border-radius:3px 3px 0 0;">
-    <div style="font-family:{{ body }};font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#C7E263;line-height:1.4;">Institute on Generosity</div>
-    <div style="font-family:{{ body }};font-size:11.5px;color:#B5B3AE;line-height:1.4;">DonorBrief &middot; Week of {{ week_of }}</div>
+    <div style="font-family:{{ body }};font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#FF2C00;line-height:1.4;">Institute on Generosity</div>
+    <div style="font-family:{{ body }};font-size:11.5px;color:#979797;line-height:1.4;">DonorBrief &middot; Week of {{ week_of }}</div>
   </td></tr>
 
-  {#- Lime header -#}
-  <tr><td style="background:#C7E263;padding:32px 28px 28px;">
-    <div style="display:inline-block;background:#000000;color:#C7E263;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px;border-radius:3px;">Weekly briefing</div>
+  {#- Blue header -#}
+  <tr><td style="background:#00BFFF;padding:32px 28px 28px;">
+    <div style="display:inline-block;background:#000000;color:#00BFFF;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px;border-radius:3px;">Weekly briefing</div>
     <h1 style="font-family:{{ display }};font-weight:400;font-size:32px;line-height:1.15;margin:14px 0 0;color:#000000;">{{ brief.subject }}</h1>
   </td></tr>
 
 
   {#- Reusable bits -#}
-  {%- macro label(text, color="#42820F") -%}
+  {%- macro label(text, color="#324ECD") -%}
   <div style="font-family:{{ body }};font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:{{ color }};line-height:1.4;">{{ text }}</div>
   {%- endmacro -%}
   {%- macro part(eyebrow, title, note) -%}
   <tr><td style="background:#FFFFFF;padding:36px 28px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-      <tr><td style="border-top:3px solid #000000;padding:12px 0 10px;border-bottom:1px solid #EBE7DF;">
+      <tr><td style="border-top:3px solid #000000;padding:12px 0 10px;border-bottom:1px solid #DCE3EB;">
         {{ label(eyebrow) }}
         <div style="font-family:{{ display }};font-weight:400;font-size:24px;line-height:1.25;color:#000000;margin:4px 0 0;">{{ title }}</div>
         {%- if note %}<div style="font-family:{{ body }};font-size:13px;line-height:1.5;color:#5E5E5E;margin:4px 0 0;">{{ note }}</div>{% endif %}
@@ -44,15 +44,15 @@
   </td></tr>
   {%- endmacro -%}
   {%- macro chip(text) -%}
-  <span style="display:inline-block;background:#C7E263;color:#000000;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;vertical-align:middle;">{{ text }}</span>&nbsp;
+  <span style="display:inline-block;background:#00BFFF;color:#000000;font-family:{{ body }};font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;vertical-align:middle;">{{ text }}</span>&nbsp;
   {%- endmacro -%}
   {%- macro tags(e) -%}
   {%- for n in e.takeaways %}{{ chip("Takeaway " ~ n) }}{% endfor -%}
   {%- endmacro -%}
   {%- macro text(e) -%}
   {#- NPR style: the link sits on the source's name in the sentence; a small source link only if the text never names it -#}
-  {%- if e.body_parts -%}{{ e.body_parts[0] }}<a href="{{ e.url }}" style="color:#42820F;text-decoration:underline;font-weight:700;">{{ e.body_parts[1] }}</a>{{ e.body_parts[2] }}
-  {%- else -%}{{ e.body }} <a href="{{ e.url }}" style="color:#42820F;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a>{%- endif -%}
+  {%- if e.body_parts -%}{{ e.body_parts[0] }}<a href="{{ e.url }}" style="color:#324ECD;text-decoration:underline;font-weight:700;">{{ e.body_parts[1] }}</a>{{ e.body_parts[2] }}
+  {%- else -%}{{ e.body }} <a href="{{ e.url }}" style="color:#324ECD;text-decoration:none;font-weight:700;font-size:12px;">{{ e.source }}&nbsp;&rarr;</a>{%- endif -%}
   {%- endmacro -%}
   {%- set takeaways = brief.takeaways or [] -%}
   {%- set trends = brief.trends or [] -%}
@@ -63,16 +63,16 @@
     {{ label("Key takeaways", "#000000") }}
     <div style="font-family:{{ body }};font-size:12.5px;color:#8C8C8C;margin:2px 0 6px;">The week in 30 seconds. The stories behind each point are below.</div>
     {%- for t in takeaways %}
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #EBE7DF;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #DCE3EB;">
       <tr>
         <td width="34" valign="top" style="padding:14px 0 12px;">
-          <div style="width:24px;height:24px;line-height:24px;text-align:center;background:#C7E263;border-radius:3px;font-family:{{ body }};font-size:13px;font-weight:700;color:#000000;">{{ t.n }}</div>
+          <div style="width:24px;height:24px;line-height:24px;text-align:center;background:#00BFFF;border-radius:3px;font-family:{{ body }};font-size:13px;font-weight:700;color:#000000;">{{ t.n }}</div>
         </td>
         <td valign="top" style="padding:14px 0 12px;font-family:{{ body }};color:#000000;">
           <div style="font-size:16px;line-height:1.35;font-weight:700;">{{ t.lead }}</div>
           <div style="font-size:14.5px;line-height:1.5;margin:4px 0 0;">{{ t.detail }}</div>
           <div style="font-size:12px;line-height:1.5;margin:4px 0 0;">
-            {%- for st in t.stories %}<a href="{{ st.url }}" style="color:#42820F;text-decoration:none;font-weight:700;">{{ st.source }}&nbsp;&rarr;</a>{% if not loop.last %}&nbsp;&nbsp; {% endif %}{% endfor %}
+            {%- for st in t.stories %}<a href="{{ st.url }}" style="color:#324ECD;text-decoration:none;font-weight:700;">{{ st.source }}&nbsp;&rarr;</a>{% if not loop.last %}&nbsp;&nbsp; {% endif %}{% endfor %}
           </div>
         </td>
       </tr>
@@ -85,13 +85,13 @@
   {{ part(trends|length ~ (" trend" if trends|length == 1 else " trends") ~ " across recent weeks", "What's building", "Patterns that keep showing up, week after week.") }}
   {%- for t in trends %}
   <tr><td style="background:#FFFFFF;padding:20px 28px 0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FBF8F2;border-left:3px solid #C7E263;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F1F5F9;border-left:3px solid #00BFFF;">
       <tr><td style="padding:16px 18px;">
         {{ label(t.stories ~ " stories over " ~ t.weeks ~ " weeks") }}
         <div style="font-family:{{ display }};font-weight:400;font-size:20px;line-height:1.28;color:#000000;margin:4px 0 6px;">{{ t.title }}</div>
         <p style="font-family:{{ body }};font-size:14.5px;line-height:1.55;margin:0 0 8px;color:#000000;">{{ t.body }}</p>
         {%- for s in t.evidence %}
-        <div style="font-family:{{ body }};font-size:12.5px;line-height:1.45;padding:3px 0 0;"><a href="{{ s.url }}" style="color:#000000;text-decoration:underline;text-decoration-color:#C7E263;">{{ s.title }}</a> <span style="color:#8C8C8C;">&middot; {{ s.source }}</span></div>
+        <div style="font-family:{{ body }};font-size:12.5px;line-height:1.45;padding:3px 0 0;"><a href="{{ s.url }}" style="color:#000000;text-decoration:underline;text-decoration-color:#00BFFF;">{{ s.title }}</a> <span style="color:#8C8C8C;">&middot; {{ s.source }}</span></div>
         {%- endfor %}
       </td></tr>
     </table>
@@ -109,7 +109,7 @@
   </td></tr>
   {%- for section in sections %}
   <tr><td style="background:#FFFFFF;padding:24px 28px 0;">
-    <div style="border-bottom:1px solid #EBE7DF;padding-bottom:6px;">{{ label(section.title) }}</div>
+    <div style="border-bottom:1px solid #DCE3EB;padding-bottom:6px;">{{ label(section.title) }}</div>
     {%- for e in section.entries %}
     {%- if e.takeaways %}
     <div style="padding:14px 0 2px;">
@@ -117,7 +117,7 @@
       <div style="font-family:{{ display }};font-weight:400;font-size:19px;line-height:1.3;margin:0 0 4px;"><a href="{{ e.url }}" style="color:#000000;text-decoration:none;">{{ e.headline }}</a></div>
       <div style="font-family:{{ body }};font-size:14.5px;line-height:1.55;color:#000000;">{{ text(e) }}</div>
       {%- if e.why_it_matters %}
-      <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;border-left:3px solid #C7E263;padding:2px 0 2px 10px;margin:8px 0 0;"><span style="font-weight:700;">Why it matters:</span> {{ e.why_it_matters }}</div>
+      <div style="font-family:{{ body }};font-size:14px;line-height:1.5;color:#000000;border-left:3px solid #00BFFF;padding:2px 0 2px 10px;margin:8px 0 0;"><span style="font-weight:700;">Why it matters:</span> {{ e.why_it_matters }}</div>
       {%- endif %}
     </div>
     {%- else %}

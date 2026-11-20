@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 NAV = ('<div style="background:#000;padding:12px 16px;font-family:\'DM Sans\',Arial,sans-serif;font-size:13px;">'
-       '<a href="../" style="color:#C7E263;text-decoration:none;font-weight:700;">&larr; All DonorBrief issues</a></div>')
+       '<a href="../" style="color:#00BFFF;text-decoration:none;font-weight:700;">&larr; All DonorBrief issues</a></div>')
 
 
 def load_briefs(archive: Path) -> list[dict]:
