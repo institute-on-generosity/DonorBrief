@@ -1,0 +1,29 @@
+name: Delete DonorBrief drafts
+
+# Deletes the listed unsent DonorBrief drafts in Mailchimp (by web id). Never touches sent
+# campaigns or campaigns not titled "DonorBrief...".
+on:
+  workflow_dispatch:
+    inputs:
+      web_ids:
+        description: "Space-separated Mailchimp web ids (the ?id= number in the edit link)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          WEB_IDS: ${{ inputs.web_ids }}
+        run: python -m donorbrief.cleanup_drafts $WEB_IDS
