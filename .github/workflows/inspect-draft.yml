@@ -22,3 +22,9 @@ jobs:
       - env:
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
         run: python -m donorbrief.inspect_draft
+      - name: Latest sent brief's recipients (by row of the DEMO_CONTACTS secret)
+        if: always()
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          CONTACTS_CSV: ${{ secrets.DEMO_CONTACTS }}
+        run: python -m donorbrief.inspect_sent
