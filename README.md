@@ -67,7 +67,7 @@ To sync by hand: `.venv/bin/python -m donorbrief.sent` (needs `MAILCHIMP_API_KEY
 .venv/bin/python -m donorbrief.archive   # writes site/
 ```
 
-`site/` is plain HTML and can be hosted on Vercel, GitHub Pages, or IoG's website.
+`site/` is plain HTML. It is live at **https://donorbrief.vercel.app**: the Vercel project `donorbrief` builds it with `vercel.json` and redeploys whenever `main` changes, including the weekly workflow's commits to `archive/`. `.vercelignore` uploads only `donorbrief/`, `archive/` and `vercel.json`, so keys, drafts and history never leave the repository.
 
 ## Checking quality
 
@@ -93,4 +93,4 @@ Models are set in `config/sources.yaml` under `llm:`. Provider code lives in [`d
 - [x] Weekly GitHub Action with source-health report
 - [x] Mailchimp draft campaign with a preview copy to reviewers (waiting on IoG's Mailchimp key and audience)
 - [x] Copy each sent brief into `archive/` for the public archive
-- [x] Public archive pages (hosting to be decided)
+- [x] Public archive pages, hosted at https://donorbrief.vercel.app
